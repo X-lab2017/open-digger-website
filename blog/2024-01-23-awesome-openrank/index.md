@@ -1,0 +1,40 @@
+---
+slug: awesome-openrank
+title: OpenRank 资源清单
+authors: [ww]
+tags: [openrank]
+---
+
+## 1、文档
+
+- [OpenDigger 技术报告](https://github.com/X-lab2017/open-research/files/12237903/Opendigger.-.pdf)
+- [如何评价一个开源项目（一、活跃度）](http://blog.frankzhao.cn/how_to_measure_open_source_1/)
+- [如何评价一个开源项目（二、影响力）](http://blog.frankzhao.cn/how_to_measure_open_source_2/)
+- [如何评价一个开源项目（三、价值流网络）](http://blog.frankzhao.cn/how_to_measure_open_source_3/)
+- [开源码力榜背后的算法模型](https://blog.frankzhao.cn/algorithm_behind_hacking_force/)
+- [开放协作的世界里，每一份贡献都值得回报](https://blog.frankzhao.cn/how_to_measure_open_source_4/)
+- [基于 OpenRank 的开源项目内开发者贡献评价](https://blog.frankzhao.cn/openrank_in_project/)
+- [OpenRank 算法实现优化历程](https://blog.frankzhao.cn/openrank_optimize/)
+
+## 2、视频
+
+- [OpenRank： 一种开源社区贡献计算方法](https://www.bilibili.com/video/BV1kk4y1478h/)
+- [OpenRank精讲（上）](https://www.bilibili.com/video/BV1Re41197FL/)
+- [OpenRank精讲（下）](https://www.bilibili.com/video/BV1iM411D7uB/)
+- [OpenRank 应用：Node 开源项目排名分析](https://www.bilibili.com/video/BV1bh4y147Xd/)
+- [OpenRank 应用：NPM 开源生态网络分析](https://www.bilibili.com/video/BV1ge4y1H7QW/)
+
+## 3、论文
+
+- OpenRank position paper
+- [OpenDigger position paper](https://arxiv.org/abs/2311.15204)
+- [OpenPerf position paper](https://arxiv.org/abs/2311.15212)
+
+## 4、大赛
+
+- [开放原子2023 OpenSODA 大赛](https://atomgit.com/x-lab/OpenSODA)
+
+## 5、支持标准
+
+- [信息技术 开源治理 第3部分：社区治理框架](https://www.ttbz.org.cn/StandardManage/Detail/101704/)
+- [信息技术 开源治理 第5部分：开源贡献者评价模型](https://www.ttbz.org.cn/StandardManage/Detail/101699/)
