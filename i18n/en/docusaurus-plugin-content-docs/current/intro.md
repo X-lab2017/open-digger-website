@@ -1,33 +1,33 @@
 ---
 sidebar_position: 1
-title: 简介
+title: Introduction
 ---
 
 # OpenDigger
 
 [![apache2](https://img.shields.io/badge/license-Apache%202-blue)](https://github.com/X-lab2017/open-digger/blob/master/LICENSE) [![](https://img.shields.io/badge/Data-OpenDigger-2097FF)](https://github.com/X-lab2017/open-digger) [![Node.js CI](https://github.com/X-lab2017/open-digger/actions/workflows/node_ci.yml/badge.svg?branch=master)](https://github.com/X-lab2017/open-digger/actions/workflows/node_ci.yml)
 
-[OpenDigger](https://github.com/X-lab2017/open-digger) 是由 X-lab 发起的一个开源数据分析与指标生产开源项目，这个项目旨在凝聚全球开发者的智慧共同对开源相关数据进行分析统计，以使开发者可以更好的理解和参与开源。
+OpenDigger is an open source analysis platform for all open source data initiated by [X-lab](https://x-lab.info), this project aims to combine the wisdom of global developers to jointly analyze and insight into open source related data to help everyone better understand and participate in open source.
 
-## 指标使用
+## Metrics or Indices Usage
 
-OpenDigger 实现的所有指标对所有人开放使用, 您可以通过以下链接找到数据，OpenDigger 的静态数据根链接为 `https://oss.x-lab.info/open-digger/{platform}/{org/login}/{repo}/`，其中 `platform` 支持 `github` 或 `gitee`，只需要替换 `org/repo` 或用户 `login` 即可获取数据。
+All implemented metrics are open for anyone to use, you can find the data with following URLs, The root URL of OpenDigger static data is `https://oss.x-lab.info/open-digger/{platform}/{org/login}/{repo}`, you can use `github` or `gitee` for platform, then just replace the `org/repo` or user `login` to get your data.
 
-您可随意使用这些数据来构建自己的数据应用程序，您可以将 OpenDigger 作为您的数据源，并且欢迎在您的项目中使用以下徽章来展示数据源。
+Feel free to use the data to construct your own data application and you can refer OpenDigger as your data source and welcome to use the following badge in your project to show the data source.
 
 [![](https://img.shields.io/badge/Data-OpenDigger-2097FF)](https://github.com/X-lab2017/open-digger)
 
-### 仓库指标
+### For repos
 
 <table>
   <thead>
     <tr>
-      <th>类型</th><th>名称</th><th>来源</th><th>例子</th><th>代码</th><th>CodePen</th>
+      <th>Type</th><th>Name</th><th>From</th><th>Example</th><th>Code</th><th>CodePen</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td rowspan="3">指标</td>
+      <td rowspan="3">Index</td>
       <td>OpenRank</td>
       <td><a href="https://blog.frankzhao.cn/how_to_measure_open_source_2/">X-lab</a></td>
       <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/openrank.json">openrank.json</a></td>
@@ -49,7 +49,7 @@ OpenDigger 实现的所有指标对所有人开放使用, 您可以通过以下�
       <td><a href="https://codepen.io/frank-zsy/pen/MWBdpNg?type=attention">Demo</a></td>
     </tr>
     <tr>
-      <td rowspan="25">度量</td>
+      <td rowspan="25">Metric</td>
       <td>Active dates and times</td>
       <td><a href="https://chaoss.community/metric-activity-dates-and-times/">CHAOSS</a></td>
       <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/active_dates_and_times.json">active_dates_and_times.json</a></td>
@@ -215,7 +215,7 @@ OpenDigger 实现的所有指标对所有人开放使用, 您可以通过以下�
       <td><a href="https://codepen.io/tyn1998/pen/KKGxVrm">Demo</a></td>
     </tr>
     <tr>
-      <td rowspan="3">网络</td>
+      <td rowspan="3">Network</td>
       <td>Developer network</td>
       <td><a href="https://blog.frankzhao.cn/github_activity_with_wpr/">X-lab</a></td>
       <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/developer_network.json">developer_network.json</a></td>
@@ -239,17 +239,17 @@ OpenDigger 实现的所有指标对所有人开放使用, 您可以通过以下�
   </tbody>
 </table>
 
-### 开发者指标
+### For users
 
 <table>
   <thead>
     <tr>
-      <th>类型</th><th>名称</th><th>来源</th><th>例子</th><th>代码</th><th>CodePen</th>
+      <th>Type</th><th>Name</th><th>From</th><th>Example</th><th>Code</th><th>CodePen</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td rowspan="2">指标</td>
+      <td rowspan="2">Index</td>
       <td>OpenRank</td>
       <td><a href="https://blog.frankzhao.cn/how_to_measure_open_source_3">X-lab</a ></td>
       <td><a href="https://oss.x-lab.info/open_digger/github/frank-zsy/openrank.json">openrank.json</a></td>
@@ -264,7 +264,7 @@ OpenDigger 实现的所有指标对所有人开放使用, 您可以通过以下�
       <td><a href="https://codepen.io/frank-zsy/pen/bGjyqQj?type=activity&name=frank-zsy">Demo</a></td>
     </tr>
     <tr>
-      <td rowspan="2">网络</td>
+      <td rowspan="2">Network</td>
       <td>Developer network</td>
       <td><a href="https://blog.frankzhao.cn/github_activity_with_wpr/">X-lab</a></td>
       <td><a href="https://oss.x-lab.info/open_digger/github/frank-zsy/developer_network.json">developer_network.json</a></td>
@@ -281,54 +281,51 @@ OpenDigger 实现的所有指标对所有人开放使用, 您可以通过以下�
   </tbody>
 </table>
 
-## 用户案例
+## Users
 
-对于以上数据，OpenDigger 目前有一些用户。
+For above data, there are some users of OpenDigger right now.
 
-### 应用
+### Applications
 
-- [OpenLeaderboard](https://open-leaderboard.x-lab.info/): 带有标签数据的 Github 排行榜
-- [HyperCRX](https://github.com/hypertrons/hypertrons-crx): 对查看 Github 用户和仓库有帮助的浏览器插件
-- [Mulan Dashboard](http://dataease.nzcer.cn/link/1VxPsUCX): 用于 [木兰社区](https://portal.mulanos.cn/) 的仪表板.
-- [Hacking Force China](https://opensource.win/): 与 [思否](https://segmentfault.com/) 合作发布的 Github 中国开发者排行榜
+- [OpenLeaderboard](https://open-leaderboard.x-lab.info/): A leaderboard of GitHub world with labeled data.
+- [HyperCRX](https://github.com/hypertrons/hypertrons-crx): A browser plugin helps to look into GitHub users and repos.
+- [Mulan Dashboard](http://dataease.nzcer.cn/link/1VxPsUCX): A dashboard for [Mulan community](https://portal.mulanos.cn/).
+- [Hacking Force China](https://opensource.win/): A ranking list of Chinese developers on GitHub cooperate with [SegmentFault](https://segmentfault.com/).
 
-### 开源报告
+### Open source reports
 
-- [2021中国开源报告](https://kaiyuanshe.cn/document/china-os-report-2021/): 中国最全面的开源报告 [开源社](https://kaiyuanshe.cn/).
-- [2022中国开源蓝皮书](http://www.copu.org.cn/new/308): 中国开源开发蓝皮书 [COPU](http://www.copu.org.cn/).
-- [开源大数据热力报告](https://github.com/X-lab2017/open-digger/blob/master/cooperations/big_data_open_source_heat_report/开源大数据热力报告2022.pdf): 大数据领域内开源项目热力报告
+- [China Open Source Report 2021](https://kaiyuanshe.cn/document/china-os-report-2021/): Most comprehensive open source report in China by [kaiyuanshe](https://kaiyuanshe.cn/).
+- [China Open Source Blue Paper 2022](http://www.copu.org.cn/new/308): A blue paper of Chinese open source development by [COPU](http://www.copu.org.cn/).
+- [Big Data Open Source Heat Report](https://github.com/X-lab2017/open-digger/blob/master/cooperations/big_data_open_source_heat_report/开源大数据热力报告2022.pdf): A heat report of open source projects in big data area.
 
-## 活动
 
-OpenDigger 社区也主办或参加社区间的合作活动，如竞赛或黑客松。
+## Events
 
-- [开放原子开源大赛 OpenDigger 开源软件生态数据分析挖掘平台挑战赛](https://competition.atomgit.com/competitionInfo?id=bc6603e0b8bf11ed804e6b78b4426d45)。
-- [第三届 PaddlePaddle 黑客松](https://www.paddlepaddle.org.cn/PaddlePaddleHackathon-2022-6)，黑客马拉松的最终报告在 [这里](https://github.com/X-lab2017/open-digger/tree/master/cooperations/paddle_hackathon_3rd)。
+OpenDigger community also open to inter-community cooperation events, like contests or hackathons.
 
-## 数据
+- [OpenSODA 2023](https://competition.atomgit.com/competitionInfo?id=bc6603e0b8bf11ed804e6b78b4426d45)。
+- [PaddlePaddle Hackathon 3rd](https://www.paddlepaddle.org.cn/PaddlePaddleHackathon-2022-6), the hackathon final reports are [here](https://github.com/X-lab2017/open-digger/tree/master/cooperations/paddle_hackathon_3rd).
 
-### GitHub 全域日志数据
+## Data
 
-我们使用 [GHArchive](https://www.gharchive.org/) 作为 GitHub 日志数据源，数据服务由 X-lab 维护的 [ClickHouse](https://clickhouse.tech/) 云服务。关于数据的详细细节，请查看[数据](/docs/intro)文档。
+### GitHub Event Log
 
-### 标签数据
+We use [GHArchive](https://www.gharchive.org/) as our data source for GitHub event logs and the data service is provided by [clickhouse](https://clickhouse.tech/) cluster cloud service. For data details, please check the [data](/docs/intro) docs.
 
-为了进行更深入的分析，我们正在收集打过标签的数据。您可以在 “labeled_data” 文件夹中查看相应的数据。关于数据的详细细节，请查看[标签数据](/docs/intro) 文档。
+### Labeled Data
 
-### 采样数据集
+We are collecting labeled data for more deeper analysis. You can view the corresponding data in the `labeled_data` folder. For more details, please check [labeled_data](/docs/intro) docs.
 
-OpenDigger 提供 ClickHouse 示例数据和 Jupyter notebook，从而可以在本地环境运行 OpenDigger，详情可参考 [示例数据文档](/docs/intro)。
+### Sample Data Usage
 
-## 贡献指南
+OpenDigger provides ClickHouse sample data and Jupyter notebook image to run OpenDigger in local environment, please refer to [sample data doc](/docs/intro).
 
-在对项目贡献之前，请务必查阅我们的[贡献指南](/docs/intro)。
+## Communication
 
-## 沟通
-
-如果想和我们取得联系，欢迎在 GitHub 提交 Issue 或 Discussion，也欢迎通过下面的微信群二维码加入微信群交流。
+Welcome to join the WeChat group by scanning the QRCode and I will invite you into our WeChat group.
 
 ![qrcode](@site/static/img/wechat-qrcode.jpeg)
 
-## 许可证
+## License
 
-对于代码部分，我们使用了 [Apache-2.0 许可证](https://github.com/X-lab2017/open-digger/blob/master/LICENSE)，对于文档目前，我们使用了 [CC-BY-4.0 许可证](https://github.com/X-lab2017/open-digger/blob/master/LICENSE-CC-BY)。在使用项目输出内容前请确保使用符合许可证要求。
+We use [Apache-2.0 license](https://github.com/X-lab2017/open-digger/blob/master/LICENSE) for code part, please make sure abide by the licenses when using the project.

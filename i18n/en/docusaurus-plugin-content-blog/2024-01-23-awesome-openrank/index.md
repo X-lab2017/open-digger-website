@@ -1,0 +1,40 @@
+---
+slug: awesome-openrank
+title: Awesome OpenRank
+authors: [ww]
+tags: [openrank]
+---
+
+## 1. Documentations
+
+- [OpenDigger technical report](https://github.com/X-lab2017/open-research/files/12237903/Opendigger.-.pdf)
+- [How to measure an open source project - Activity](http://blog.frankzhao.cn/how_to_measure_open_source_1/)
+- [How to measure an open source project - Influence](http://blog.frankzhao.cn/how_to_measure_open_source_2/)
+- [How to measure an open source project - Value Network](http://blog.frankzhao.cn/how_to_measure_open_source_3/)
+- [Algorithm Behind Hacking Force](https://blog.frankzhao.cn/algorithm_behind_hacking_force/)
+- [Every contribution matters in open source world](https://blog.frankzhao.cn/how_to_measure_open_source_4/)
+- [Contribution evaluation based on OpenRank](https://blog.frankzhao.cn/openrank_in_project/)
+- [OpenRank algorithm optimize journey](https://blog.frankzhao.cn/openrank_optimize/)
+
+## 2. Videos
+
+- [OpenRank: a contribution evaluation method](https://www.bilibili.com/video/BV1kk4y1478h/)
+- [OpenRank in detail: part 1](https://www.bilibili.com/video/BV1Re41197FL/)
+- [OpenRank in detail: part 2](https://www.bilibili.com/video/BV1iM411D7uB/)
+- [OpenRank application: Node projects ranking](https://www.bilibili.com/video/BV1bh4y147Xd/)
+- [OpenRank application: Network analysis for NPM ecology](https://www.bilibili.com/video/BV1ge4y1H7QW/)
+
+## 3. Papers
+
+- [OpenRank position paper](https://www.researchgate.net/publication/376686121_OpenRank_Leaderboard_Motivating_Open_Source_Collaborations_Through_Social_Network_Evaluation_in_Alibaba)
+- [OpenDigger position paper](https://arxiv.org/abs/2311.15204)
+- [OpenPerf position paper](https://arxiv.org/abs/2311.15212)
+
+## 4. Events
+
+- [OpenSODA 2023](https://atomgit.com/x-lab/OpenSODA)
+
+## 5. Standards
+
+- [Information Technology, Open Source Goverancem, Part 3: Community Goverance Framework](https://www.ttbz.org.cn/StandardManage/Detail/101704/)
+- [Information Technology, Open Source Goverancem, Part 5: Open Source Contribution Evaluation Model](https://www.ttbz.org.cn/StandardManage/Detail/101699/)

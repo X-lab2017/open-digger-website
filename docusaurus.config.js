@@ -6,10 +6,12 @@
 
 import {themes as prismThemes} from 'prism-react-renderer';
 
+const defaultLocale = 'zh';
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'OpenDigger',
-  tagline: '开源数据分析平台',
+  tagline: 'Open Source Analysis Platform',
   favicon: 'img/favicon.ico',
 
   url: 'https://open-digger.x-lab.info/',
@@ -18,12 +20,9 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'zh-Hans',
-    locales: ['zh-Hans'],
+    defaultLocale,
+    locales: ['zh', 'en'],
   },
 
   presets: [
@@ -33,14 +32,20 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          editUrl:
-            'https://github.com/X-lab2017/open-digger-website/tree/main/',
+          editUrl: ({locale, docPath}) => {
+            const url = `https://github.com/X-lab2017/open-digger-website/tree/master/${locale === defaultLocale ? '' : `i18n/${locale}/docusaurus-plugin-content-docs/current/`}${docPath}`;
+            console.log(url);
+            return url;
+          },
         },
         blog: {
           showReadingTime: true,
-          blogSidebarTitle: '最新文章',
-          editUrl:
-            'https://github.com/X-lab2017/open-digger-website/tree/main/',
+          blogSidebarTitle: 'Recent Posts',
+          editUrl: ({locale, blogDirPath, blogPath}) => {
+            const url = `https://github.com/X-lab2017/open-digger-website/tree/master/${locale === defaultLocale ? '' : `i18n/${locale}/docusaurus-plugin-content-blog/`}${blogDirPath}/${blogPath}`;
+            console.log(url);
+            return url;
+          },
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -52,8 +57,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/logo/logo-black-blue-combination-vertical.png',
       navbar: {
         title: 'OpenDigger',
         logo: {
@@ -65,11 +69,11 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: '文档',
+            label: 'docs',
           },
           {
             to: '/blog',
-            label: '博客',
+            label: 'blog',
             position: 'left'
           },
           {
@@ -87,14 +91,14 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: '链接',
+            title: 'Links',
             items: [
               {
-                label: '文档',
+                label: 'docs',
                 to: '/docs/intro',
               },
               {
-                label: '博客',
+                label: 'blog',
                 to: '/blog',
               },
               {
@@ -104,7 +108,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} X-lab.`,
+        copyright: `Copyright © ${new Date().getFullYear()} X-lab`,
       },
       prism: {
         theme: prismThemes.github,

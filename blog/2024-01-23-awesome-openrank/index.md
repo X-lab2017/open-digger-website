@@ -26,7 +26,7 @@ tags: [openrank]
 
 ## 3、论文
 
-- OpenRank position paper
+- [OpenRank position paper](https://www.researchgate.net/publication/376686121_OpenRank_Leaderboard_Motivating_Open_Source_Collaborations_Through_Social_Network_Evaluation_in_Alibaba)
 - [OpenDigger position paper](https://arxiv.org/abs/2311.15204)
 - [OpenPerf position paper](https://arxiv.org/abs/2311.15212)
 
