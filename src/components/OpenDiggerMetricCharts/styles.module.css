@@ -1,0 +1,31 @@
+.div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.select {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.input {
+  padding: 5px;
+  margin-right: 10px;
+  width: 200px;
+}
+
+.button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: blue;
+  color: white;
+  border: none;
+}
+
+.chart {
+  height: 600px !important;
+  width: 100%;
+  background: white;
+}

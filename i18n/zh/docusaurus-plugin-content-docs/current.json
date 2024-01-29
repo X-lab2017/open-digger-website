@@ -2,5 +2,13 @@
   "version.label": {
     "message": "最新版本",
     "description": "The label for version current"
+  },
+  "sidebar.docSidebar.category.metrics": {
+    "message": "指标数据",
+    "description": "The label for category metrics in sidebar docSidebar"
+  },
+  "sidebar.docSidebar.category.openrank": {
+    "message": "OpenRank",
+    "description": "The label for category openrank in sidebar docSidebar"
   }
 }

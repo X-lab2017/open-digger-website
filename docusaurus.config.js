@@ -4,7 +4,7 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 
 const defaultLocale = 'zh';
 
@@ -32,23 +32,18 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          editUrl: ({locale, docPath}) => {
-            const url = `https://github.com/X-lab2017/open-digger-website/tree/master/${locale === defaultLocale ? '' : `i18n/${locale}/docusaurus-plugin-content-docs/current/`}${docPath}`;
-            console.log(url);
-            return url;
-          },
+          // docItemComponent: '@theme/DocItem',
+          editUrl: ({ locale, docPath }) =>
+            `https://github.com/X-lab2017/open-digger-website/tree/master/${locale === defaultLocale ? 'docs/' : `i18n/${locale}/docusaurus-plugin-content-docs/current/`}${docPath}`,
         },
         blog: {
           showReadingTime: true,
           blogSidebarTitle: 'Recent Posts',
-          editUrl: ({locale, blogDirPath, blogPath}) => {
-            const url = `https://github.com/X-lab2017/open-digger-website/tree/master/${locale === defaultLocale ? '' : `i18n/${locale}/docusaurus-plugin-content-blog/`}${blogDirPath}/${blogPath}`;
-            console.log(url);
-            return url;
-          },
+          editUrl: ({ blogDirPath, blogPath }) =>
+            `https://github.com/X-lab2017/open-digger-website/tree/master/${blogDirPath}/${blogPath}`,
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: require.resolve('./src/css/custom.css'),
         },
       }),
     ],
@@ -67,7 +62,7 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'docSidebar',
             position: 'left',
             label: 'docs',
           },

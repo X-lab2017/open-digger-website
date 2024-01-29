@@ -1,39 +1,4 @@
 {
-  "homepage.tagLine": {
-    "message": "Open Source Analysis Platform"
-  },
-  "homepage.getStarted": {
-    "message": "OpenDigger Introduction in 3min ⏱️"
-  },
-
-  "features.richMetrics.title": {
-    "message": "Rich Metrics"
-  },
-  "features.richMetrics.url": {
-    "message": "/en/docs/intro"
-  },
-  "features.richMetrics.desc": {
-    "message": "OpenDigger implements metrics from <a href='https://chaoss.community/metrics/'>CHAOSS community</a> as many as possible as well as metrics developed by X-lab like <a href='/en/blog/awesome-openrank'>OpenRank</a>."
-  },
-  "features.easyToUse.title": {
-    "message": "Easy to Use"
-  },
-  "features.easyToUse.url": {
-    "message": "/en/docs/intro"
-  },
-  "features.easyToUse.desc": {
-    "message": "OpenDigger exports and stores all the implemented metrics as separate files on cloud for anyone and any applications to use."
-  },
-  "features.variousApplications.title": {
-    "message": "Various Applications"
-  },
-  "features.variousApplications.url": {
-    "message": ""
-  },
-  "features.variousApplications.desc": {
-    "message": "There are lots of downstream applications using metrics data from OpenDigger like <a href='https://open-leaderboard.x-lab.info/'>OpenLeaderboard</a>, <a href='https://github.com/hypertrons/hypertrons-crx'>HyperCRX</a>, <a href='https://open-galaxy.x-lab.info/'>OpenGalaxy</a> and etc."
-  },
-  
   "theme.ErrorPageContent.title": {
     "message": "This page crashed.",
     "description": "The title of the fallback page when the page crashed"
@@ -320,5 +285,50 @@
   "theme.unlistedContent.message": {
     "message": "This page is unlisted. Search engines will not index it, and only users having a direct link can access it.",
     "description": "The unlisted content banner message"
+  },
+  "homepage.tagLine": {
+    "message": "Open Source Analysis Platform"
+  },
+  "homepage.getStarted": {
+    "message": "OpenDigger Introduction in 3min ⏱️"
+  },
+  "features.richMetrics.title": {
+    "message": "Rich Metrics"
+  },
+  "features.richMetrics.url": {
+    "message": "/en/docs/metrics/playground"
+  },
+  "features.richMetrics.desc": {
+    "message": "OpenDigger implements metrics from <a href='https://chaoss.community/metrics/'>CHAOSS community</a> as many as possible as well as metrics developed by X-lab like <a href='/en/docs/metrics/openrank/community_openrank'>OpenRank</a>."
+  },
+  "features.easyToUse.title": {
+    "message": "Easy to Use"
+  },
+  "features.easyToUse.url": {
+    "message": "/en/docs/intro"
+  },
+  "features.easyToUse.desc": {
+    "message": "OpenDigger exports and stores all the implemented metrics as separate files on cloud for anyone and any applications to use."
+  },
+  "features.variousApplications.title": {
+    "message": "Various Applications"
+  },
+  "features.variousApplications.url": {
+    "message": ""
+  },
+  "features.variousApplications.desc": {
+    "message": "There are lots of downstream applications using metrics data from OpenDigger like <a href='https://open-leaderboard.x-lab.info/'>OpenLeaderboard</a>, <a href='https://github.com/hypertrons/hypertrons-crx'>HyperCRX</a>, <a href='https://open-galaxy.x-lab.info/'>OpenGalaxy</a> and etc."
+  },
+  "metricCharts.title": {
+    "message": "Metric {metric} for {name}"
+  },
+  "metricCharts.dataNotFound": {
+    "message": "Data not found"
+  },
+  "metricCharts.input.placeholder": {
+    "message": "Repo name or user login"
+  },
+  "metricCharts.submit": {
+    "message": "Submit"
   }
 }

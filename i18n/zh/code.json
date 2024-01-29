@@ -1,39 +1,4 @@
 {
-  "homepage.tagLine": {
-    "message": "开源数据分析平台"
-  },
-  "homepage.getStarted": {
-    "message": "OpenDigger 3 分钟简介 ⏱️"
-  },
-
-  "features.richMetrics.title": {
-    "message": "丰富的指标实现"
-  },
-  "features.richMetrics.url": {
-    "message": "/docs/intro"
-  },
-  "features.richMetrics.desc": {
-    "message": "OpenDigger 实现了 <a href='https://chaoss.community/metrics/'>CHAOSS 社区</a>开发的各种指标，同时也实现了如 <a href=\"/blog/awesome-openrank\">OpenRank</a> 等 X-lab 开发的指标。"
-  },
-  "features.easyToUse.title": {
-    "message": "简单的上手体验"
-  },
-  "features.easyToUse.url": {
-    "message": "/docs/intro"
-  },
-  "features.easyToUse.desc": {
-    "message": "OpenDigger 将所有实现的指标导出为静态数据文件并发布到云存储中，供任何开发者和应用随意使用。"
-  },
-  "features.variousApplications.title": {
-    "message": "丰富的下游应用"
-  },
-  "features.variousApplications.url": {
-    "message": ""
-  },
-  "features.variousApplications.desc": {
-    "message": "OpenDigger 有多样的下游衍生应用，例如 <a href='https://open-leaderboard.x-lab.info/'>OpenLeaderboard</a>、 <a href='https://github.com/hypertrons/hypertrons-crx'>HyperCRX</a>、 <a href='https://open-galaxy.x-lab.info/'>OpenGalaxy</a> 等。"
-  },
-  
   "theme.ErrorPageContent.title": {
     "message": "页面已崩溃。",
     "description": "The title of the fallback page when the page crashed"
@@ -320,5 +285,50 @@
   "theme.unlistedContent.message": {
     "message": "此页面未列出。搜索引擎不会对其索引，只有拥有直接链接的用户才能访问。",
     "description": "The unlisted content banner message"
+  },
+  "homepage.tagLine": {
+    "message": "开源数据分析平台"
+  },
+  "homepage.getStarted": {
+    "message": "OpenDigger 3 分钟简介 ⏱️"
+  },
+  "features.richMetrics.title": {
+    "message": "丰富的指标实现"
+  },
+  "features.richMetrics.url": {
+    "message": "/docs/metrics/playground"
+  },
+  "features.richMetrics.desc": {
+    "message": "OpenDigger 实现了 <a href='https://chaoss.community/metrics/'>CHAOSS 社区</a>开发的各种指标，同时也实现了如 <a href=\"/docs/metrics/openrank/community_openrank\">OpenRank</a> 等 X-lab 开发的指标。"
+  },
+  "features.easyToUse.title": {
+    "message": "简单的上手体验"
+  },
+  "features.easyToUse.url": {
+    "message": "/docs/intro"
+  },
+  "features.easyToUse.desc": {
+    "message": "OpenDigger 将所有实现的指标导出为静态数据文件并发布到云存储中，供任何开发者和应用随意使用。"
+  },
+  "features.variousApplications.title": {
+    "message": "丰富的下游应用"
+  },
+  "features.variousApplications.url": {
+    "message": ""
+  },
+  "features.variousApplications.desc": {
+    "message": "OpenDigger 有多样的下游衍生应用，例如 <a href='https://open-leaderboard.x-lab.info/'>OpenLeaderboard</a>、 <a href='https://github.com/hypertrons/hypertrons-crx'>HyperCRX</a>、 <a href='https://open-galaxy.x-lab.info/'>OpenGalaxy</a> 等。"
+  },
+  "metricCharts.title": {
+    "message": "{name} 的 {metric} 指标"
+  },
+  "metricCharts.dataNotFound": {
+    "message": "数据未找到"
+  },
+  "metricCharts.input.placeholder": {
+    "message": "请输入要查询的项目或开发者名称"
+  },
+  "metricCharts.submit": {
+    "message": "提交"
   }
 }
