@@ -41,6 +41,25 @@ export function leaderboardConfigReducer(config, action) {
       newColumnOptions[index] = option;
       return { ...config, columnOptions: newColumnOptions };
     }
+    case 'updateColumnNumber': {
+      // if the given number is greater than the current number of column options, add new column options
+      // else splice the column options
+      const number = action.payload;
+      const newColumnOptions = [...config.columnOptions];
+      if (number > newColumnOptions.length) {
+        for (let i = newColumnOptions.length; i < number; i++) {
+          newColumnOptions.push({
+            name: `Column ${i + 1}`,
+            type: 'String',
+            width: 100,
+            fields: [],
+          });
+        }
+      } else {
+        newColumnOptions.splice(number);
+      }
+      return { ...config, columnOptions: newColumnOptions };
+    }
     default:
       return config;
   }

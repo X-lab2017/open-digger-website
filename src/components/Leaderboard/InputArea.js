@@ -18,6 +18,11 @@ export function InputArea() {
     dispatch({ type: 'updateTitle', payload: e.target.value });
   }
 
+  const onNumberChange = e => {
+    const number = parseInt(e.target.value);
+    dispatch({ type: 'updateColumnNumber', payload: number });
+  }
+
   const inputColHeaderItems = Array(colCount).fill(undefined).map((_, i) => <InputColHeaderItem key={i} index={i} />);
 
   return (
@@ -28,7 +33,7 @@ export function InputArea() {
         </div>
         <div className={styles.inputRow}>
           <input className={styles.titleInput} placeholder={translate({ id: 'leaderboard.titleInputPlaceHolder' })} autoComplete='false' spellCheck='false' onChange={onTitleChange} />
-          <input className={styles.columnCountInput} type='number' value={colCount} min='1' max='10' onChange={() => { }} />
+          <input className={styles.columnCountInput} type='number' value={colCount} min='1' max='10' onChange={onNumberChange} />
         </div>
         <div className={styles.inputColHeaderContainer}>
           {inputColHeaderItems}
