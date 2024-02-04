@@ -6,7 +6,7 @@ export const BoardContainer = ({ children, title }) => {
     <div className={`${styles.boardContainer}`}>
       <div className={styles.boardTitle}>
         <img src={orbit} alt="" className={styles.boardTitleIcon} />
-        <span className={styles.boardTitleText}>{title?.value ?? ''}</span>
+        <span className={styles.boardTitleText}>{title}</span>
       </div>
       {children}
     </div>

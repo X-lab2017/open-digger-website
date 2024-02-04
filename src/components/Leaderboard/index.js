@@ -1,56 +1,43 @@
-import { useRef, useState, useMemo } from 'react';
+import { LeaderboardContext, intialLeaderboardConfig, leaderboardConfigReducer } from './context';
 import { BaseBoard } from './BaseBoard';
 import { BoardContainer } from './BoardContainer';
 import { InputArea } from './InputArea';
+
+import { useReducer } from 'react';
 import { useReactTable, createColumnHelper, getCoreRowModel } from '@tanstack/react-table';
 
+const helper = createColumnHelper();
+
 export default () => {
+  const [leaderboardConfig, dispatch] = useReducer(leaderboardConfigReducer, intialLeaderboardConfig);
+  const { inputData, title, columnOptions } = leaderboardConfig;
 
-  const dataRef = useRef(null);
-  const tableTitleRef = useRef(null);
-  const headerDataRef = useRef({});
-  const [colCount, setColCount] = useState(3);
-  const [forceUpdate, setForceUpdate] = useState(1);
-
-  const columnWidth = (() => {
-    const obj = {};
-    Object.keys(headerDataRef.current).forEach((k, index) => obj[`id-${index}`] = headerDataRef.current[k].width);
-    return obj;
-  })();
-
-  const helper = createColumnHelper();
-  const columns = useMemo(() => {
-    console.log('Re calculate columns', headerDataRef.current);
-    return Object.keys(headerDataRef.current).map((k, index) => {
-      const fields = [...headerDataRef.current[k].fieldNames];
-      return helper.accessor(row => { console.log(fields); return fields.map(f => row[f]) }, {
-        id: 'id-' + index,
-        cell: info => <>{info.getValue()[0]}</>,
-        header: headerDataRef.current[k].name,
-      });
+  const tableColumns = columnOptions.map((option, index) => {
+    const { name, width, type } = option;
+    const column = helper.accessor(name, {
+      header: () => name,
+      cell: info => {
+        const value = info.getValue();
+        switch (type) {
+          case 'Text':
+            return value;
+          default:
+            return value;
+        }
+      },
+      size: width,
     });
-  }, [headerDataRef.current]);
-  const data = useMemo(() => JSON.parse(dataRef.current?.value ?? '[{}]'), [dataRef.current]);
+    return column;
+  })
 
-  const table = useReactTable({ columns, data, getCoreRowModel: getCoreRowModel() });
+  const table = useReactTable({ columns: tableColumns, data: inputData, getCoreRowModel: getCoreRowModel() });
 
   return (
-    <>
-      <InputArea
-        dataRef={dataRef}
-        tableTitleRef={tableTitleRef}
-        headerDataRef={headerDataRef}
-        colCount={colCount}
-        setColCount={setColCount}
-        onSubmit={() => {
-          headerDataRef.current = JSON.parse(JSON.stringify(headerDataRef.current));
-          table.setOptions({ columns, data });
-          setForceUpdate(forceUpdate + 1);
-        }}
-      />
-      <BoardContainer title={tableTitleRef.current}>
-        <BaseBoard table={table} columnWidth={columnWidth} />
+    <LeaderboardContext.Provider value={{ leaderboardConfig, dispatch }}>
+      <InputArea />
+      <BoardContainer title={title}>
+        <BaseBoard table={table} />
       </BoardContainer>
-    </>
+    </LeaderboardContext.Provider>
   );
 };

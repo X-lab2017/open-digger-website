@@ -1,8 +1,7 @@
 import { flexRender } from '@tanstack/react-table';
 import styles from './styles.module.css';
 
-export function BaseBoard({ table, columnWidth }) {
-  console.log('Re redner base board');
+export function BaseBoard({ table }) {
   return (
     <div>
       <table className={styles.table}>
@@ -10,7 +9,7 @@ export function BaseBoard({ table, columnWidth }) {
           {table.getHeaderGroups().map(headerGroup => (
             <tr key={headerGroup.id} className={styles.thr}>
               {headerGroup.headers.map(header => (
-                <th key={header.id} className={styles.th} style={{ width: columnWidth[header.id] }}>
+                <th key={header.id} className={styles.th} style={{ width: header.getSize() }}>
                   {header.isPlaceholder ? null : flexRender(header.column.columnDef.header, header.getContext())}
                 </th>
               ))}
@@ -23,7 +22,7 @@ export function BaseBoard({ table, columnWidth }) {
           {table.getRowModel().rows.map(row => (
             <tr key={row.id} className={styles.tr}>
               {row.getVisibleCells().map(cell => {
-                return <td key={cell.id} className={styles.td} style={{ width: columnWidth[cell.column.id] }}>
+                return <td key={cell.id} className={styles.td} style={{ width: cell.column.getSize() }}>
                   {flexRender(cell.column.columnDef.cell, cell.getContext())}
                 </td>
               })}
