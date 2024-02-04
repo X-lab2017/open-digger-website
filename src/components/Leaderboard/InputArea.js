@@ -27,6 +27,15 @@ export function InputArea({
     setColCount(newColCount);
   };
 
+  const inputColHeaderItems = Array(colCount).fill(undefined).map((_, i) =>
+    <InputColHeaderItem
+      key={i}
+      width={`${100 / colCount}%`}
+      fields={fields}
+      data={headerDataRef.current}
+      index={i}
+    />);
+
   return (
     <>
       <div className={styles.inputDiv}>
@@ -38,11 +47,7 @@ export function InputArea({
           <input className={styles.columnCountInput} type='number' value={colCount} min='1' max='10' onChange={onColCountChange} />
         </div>
         <div className={styles.inputRow}>
-          {(() => {
-            return [...Array(colCount)].map((_, i) => <InputColHeaderItem key={i} width={`${100 / colCount}%`}
-              fields={fields} data={headerDataRef.current} index={i} />)
-          })()
-          }
+          {inputColHeaderItems}
         </div>
         <div className={styles.inputRow}>
           <button className={styles.submitButton} onClick={onSubmit}>{translate({ id: 'leaderboard.submit' })}</button>
