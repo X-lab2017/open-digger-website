@@ -341,7 +341,7 @@
     "message": "表头文本"
   },
   "leaderboard.headerWidth": {
-    "message": "表头宽度(百分比)"
+    "message": "表头宽度"
   },
   "leaderboard.headerType.String": {
     "message": "字符串"

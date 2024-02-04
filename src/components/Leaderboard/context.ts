@@ -6,19 +6,22 @@ export const intialLeaderboardConfig = {
   title: 'Example OpenRank Leaderboard',
   columnOptions: [ // TODO: add fields back
     {
-      name: 'no',
-      type: 'Text',
+      name: '#',
+      type: 'String',
       width: 100,
+      fields: ['no'],
     },
     {
-      name: 'name',
-      type: 'Text',
+      name: 'Company',
+      type: 'StringWithIcon',
       width: 300,
+      fields: ['logo', 'name'],
     },
     {
-      name: 'openrank',
-      type: 'Number',
+      name: 'OpenRank',
+      type: 'NumberWithDelta',
       width: 200,
+      fields: ['openrank', 'delta'],
     }
   ],
 }
@@ -30,6 +33,13 @@ export function leaderboardConfigReducer(config, action) {
     }
     case 'updateTitle': {
       return { ...config, title: action.payload };
+    }
+    case 'updateColumnOption': {
+      const { index, option } = action.payload;
+      // replace the column option at the given index
+      const newColumnOptions = [...config.columnOptions];
+      newColumnOptions[index] = option;
+      return { ...config, columnOptions: newColumnOptions };
     }
     default:
       return config;

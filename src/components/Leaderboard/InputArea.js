@@ -18,12 +18,7 @@ export function InputArea() {
     dispatch({ type: 'updateTitle', payload: e.target.value });
   }
 
-  // const inputColHeaderItems = Array(colCount).fill(undefined).map((_, i) =>
-  //   <InputColHeaderItem
-  //     key={i}
-  //     width={`${100 / colCount}%`}
-  //     index={i}
-  //   />);
+  const inputColHeaderItems = Array(colCount).fill(undefined).map((_, i) => <InputColHeaderItem key={i} index={i} />);
 
   return (
     <>
@@ -33,13 +28,10 @@ export function InputArea() {
         </div>
         <div className={styles.inputRow}>
           <input className={styles.titleInput} placeholder={translate({ id: 'leaderboard.titleInputPlaceHolder' })} autoComplete='false' spellCheck='false' onChange={onTitleChange} />
-          <input className={styles.columnCountInput} type='number' value={colCount} min='1' max='10' onChange={() => {}} />
+          <input className={styles.columnCountInput} type='number' value={colCount} min='1' max='10' onChange={() => { }} />
         </div>
-        <div className={styles.inputRow}>
-          {/* {inputColHeaderItems} */}
-        </div>
-        <div className={styles.inputRow}>
-          <button className={styles.submitButton} disabled>{translate({ id: 'leaderboard.submit' })}</button>
+        <div className={styles.inputColHeaderContainer}>
+          {inputColHeaderItems}
         </div>
       </div>
     </>
