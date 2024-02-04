@@ -367,25 +367,21 @@ export default () => {
 
   return (
     <>
-      <div className={styles.div}>
-        <select className={styles.select} value={platform} onChange={e => setPlatform(e.target.value)}>
+      <div className={styles.inputDiv}>
+        <select className={styles.platformSelect} value={platform} onChange={e => setPlatform(e.target.value)}>
           {[...platformOptionMap.keys()].map(p => (
             <option>{p}</option>
           ))}
         </select>
-        <input className={styles.input} type="text" placeholder={translate({ id: 'metricCharts.input.placeholder' })} value={name} onChange={e => setName(e.target.value)} />
-        <select className={styles.select} value={metric} onChange={e => setMetric(e.target.value)} style={{ padding: '5px', borderRadius: '5px', marginRight: '10px' }}>
+        <input className={styles.nameInput} type="text" placeholder={translate({ id: 'metricCharts.input.placeholder' })} value={name} onChange={e => setName(e.target.value)} />
+        <select className={styles.metricSelect} value={metric} onChange={e => setMetric(e.target.value)}>
           {[...metricOptionMap.keys()].map(k => (
             <option>{k}</option>
           ))}
         </select>
-        <button className={styles.button} onClick={fetchData}>{translate({ id: 'metricCharts.submit' })}</button>
+        <button className={styles.submitButton} onClick={fetchData}>{translate({ id: 'metricCharts.submit' })}</button>
       </div>
-      <ReactECharts
-        className={styles.chart}
-        ref={echartsRef}
-        option={options}
-      />
+      <ReactECharts className={styles.chart} ref={echartsRef} option={options} />
     </>
   );
 };

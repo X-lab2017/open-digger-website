@@ -13,24 +13,61 @@
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
-  docSidebar: [
-    'intro',
+  userDocSidebar: [
+    'user_docs/intro',
+    'user_docs/playground',
+    {
+      type: 'category',
+      label: 'data_sources',
+      collapsed: false,
+      items: [
+        'user_docs/data_sources/github',
+        'user_docs/data_sources/gitee'
+      ],
+    },
+    'user_docs/label_data',
     {
       type: 'category',
       label: 'metrics',
+      collapsed: false,
       items: [
-        'metrics/playground',
+        'user_docs/metrics/how_to_use',
         {
           type: 'category',
           label: 'openrank',
+          collapsed: false,
           items: [
-            'metrics/openrank/global_openrank',
-            'metrics/openrank/community_openrank'
+            'user_docs/metrics/openrank/global_openrank',
+            'user_docs/metrics/openrank/community_openrank'
           ],
         },
       ],
     },
+    'user_docs/FAQ'
   ],
+  developerDocSidebar: [
+    'dev_docs/intro',
+    'dev_docs/database_table_schema',
+    'dev_docs/metrics',
+    'dev_docs/cron_task',
+    {
+      type: 'category',
+      label: 'jupyter_notebook',
+      collapsed: false,
+      items: [
+        'dev_docs/jupyter_notebook/node_kernel',
+        'dev_docs/jupyter_notebook/python_kernel',
+      ]
+    },
+    {
+      type: 'category',
+      label: 'tools',
+      collapsed: false,
+      items: [
+        'dev_docs/tools/leaderboard',
+      ]
+    }
+  ]
 };
 
 export default sidebars;

@@ -330,5 +330,29 @@
   },
   "metricCharts.submit": {
     "message": "提交"
+  },
+  "leaderboard.dataInputPlaceHolder": {
+    "message": "数据输入，内容为 JSON 数据，每项为表格一行内容"
+  },
+  "leaderboard.titleInputPlaceHolder": {
+    "message": "排行榜名称"
+  },
+  "leaderboard.headerInput": {
+    "message": "表头文本"
+  },
+  "leaderboard.headerWidth": {
+    "message": "表头宽度(百分比)"
+  },
+  "leaderboard.headerType.String": {
+    "message": "字符串"
+  },
+  "leaderboard.headerType.StringWithIcon": {
+    "message": "字符串与图标"
+  },
+  "leaderboard.headerType.NumberWithDelta": {
+    "message": "数字与变化"
+  },
+  "leaderboard.submit": {
+    "message": "提交"
   }
 }

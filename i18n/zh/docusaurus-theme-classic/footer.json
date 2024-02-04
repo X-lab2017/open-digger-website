@@ -1,20 +1,4 @@
 {
-  "link.title.Links": {
-    "message": "链接",
-    "description": "The title of the footer links column with title=Links in the footer"
-  },
-  "link.item.label.docs": {
-    "message": "文档",
-    "description": "The label of footer link with label=docs linking to /docs/intro"
-  },
-  "link.item.label.blog": {
-    "message": "博客",
-    "description": "The label of footer link with label=blog linking to /blog"
-  },
-  "link.item.label.GitHub": {
-    "message": "GitHub",
-    "description": "The label of footer link with label=GitHub linking to https://github.com/X-lab2017/open-digger"
-  },
   "copyright": {
     "message": "Copyright © 2024 X-lab",
     "description": "The footer copyright"

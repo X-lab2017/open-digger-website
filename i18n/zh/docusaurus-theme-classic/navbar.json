@@ -18,5 +18,13 @@
   "item.label.GitHub": {
     "message": "GitHub",
     "description": "Navbar item with label GitHub"
+  },
+  "item.label.userDocs": {
+    "message": "用户文档",
+    "description": "Navbar item with label userDocs"
+  },
+  "item.label.devDocs": {
+    "message": "开发者文档",
+    "description": "Navbar item with label devDocs"
   }
 }

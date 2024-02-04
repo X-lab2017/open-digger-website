@@ -11,15 +11,21 @@ export default function EditThisPage({ editUrl }) {
         return <button onClick={(() => {
           const Stackedit = require('stackedit-js');
           const stackedit = new Stackedit();
-          const url = editUrl.replace('github.com', 'raw.githubusercontent.com').replace('tree/', '');
-          axios.get(url).then(res => {
-            stackedit.openFile({
-              name: 'Test file',
-              content: {
-                text: res.data,
-              },
-            });
-          }).catch(e => alert(e.toString() + url));
+          let originalContent = '';
+          let content = '';
+          axios.get(editUrl).then(res => {
+            document.body.style.overflow = 'hidden';
+            originalContent = res.data;
+            stackedit.openFile({ content: { text: originalContent } });
+          }).catch(e => alert(e.toString() + editUrl));
+          stackedit.on('fileChange', file => content = file.content.text);
+          stackedit.on('close', async () => {
+            document.body.style.overflow = '';
+            if (originalContent.charCodeAt(originalContent.length - 1) === 10) {
+              // add an LF in the end of the file if there is an LF in the original file
+              content += String.fromCharCode(10);
+            }
+          });
         })}>
           <IconEdit />
           <Translate id="theme.common.editThisPage" />

@@ -3,12 +3,28 @@
     "message": "最新版本",
     "description": "The label for version current"
   },
-  "sidebar.docSidebar.category.metrics": {
-    "message": "指标数据",
-    "description": "The label for category metrics in sidebar docSidebar"
+  "sidebar.userDocSidebar.category.data_sources": {
+    "message": "数据来源",
+    "description": "The label for category data_sources in sidebar userDocSidebar"
   },
-  "sidebar.docSidebar.category.openrank": {
+  "sidebar.userDocSidebar.category.metrics": {
+    "message": "指标数据",
+    "description": "The label for category metrics in sidebar userDocSidebar"
+  },
+  "sidebar.userDocSidebar.category.label_data": {
+    "message": "标签数据",
+    "description": "The label for category metrics in sidebar userDocSidebar"
+  },
+  "sidebar.userDocSidebar.category.openrank": {
     "message": "OpenRank",
-    "description": "The label for category openrank in sidebar docSidebar"
+    "description": "The label for category openrank in sidebar userDocSidebar"
+  },
+  "sidebar.developerDocSidebar.category.jupyter_notebook": {
+    "message": "Jupyter Notebook",
+    "description": "The label for category jupyter_notebook in sidebar developerDocSidebar"
+  },
+  "sidebar.developerDocSidebar.category.tools": {
+    "message": "工具集",
+    "description": "The label for category tools in sidebar developerDocSidebar"
   }
 }

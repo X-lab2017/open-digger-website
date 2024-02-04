@@ -1,0 +1,151 @@
+.boardContainer {
+  box-sizing: border-box;
+  background: rgba(17, 30, 51, 0.6);
+  box-shadow: inset 0px -1px 4px rgba(157, 195, 230, 0.6);
+  border-radius: 12px;
+  overflow-y: hidden;
+  margin: 0px;
+  padding: 10px;
+  color: #EDF9FF;
+}
+
+.boardTitle {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.boardTitleIcon {
+  width: 36px;
+  height: 36px;
+  margin-right: 8px;
+}
+
+.boardTitleText {
+  color: #CCE7FF;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.nameContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-right: 8px;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 12px;
+}
+
+.iconRounded {
+  border-radius: 50%;
+}
+
+.openrankContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.tag {
+  height: 1em;
+  margin-left: 1em;
+  margin-right: 0.2em;
+}
+
+.table {
+  table-layout: fixed;
+  width: 100%;
+  border: none;
+  border-collapse: collapse;
+  --ifm-table-stripe-background: transparent;
+  --ifm-table-cell-padding: 0px;
+}
+
+.th {
+  border: none;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.tr {
+  border-top: 1px solid rgba(175, 206, 232, 0.2)
+}
+
+.thr {
+  border-top: none;
+}
+
+.tr:first-child {
+  border-top: unset;
+}
+
+.td {
+  border: none;
+  padding: 5px 0px 6px 0px;
+  font-family: Arial;
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, rgba(175, 206, 232, 0) 0.04%, rgba(175, 206, 232, 0.6) 39.59%, rgba(175, 206, 232, 0.6) 64.05%, rgba(175, 206, 232, 0) 99.96%);
+}
+
+.flagContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flag {
+  line-height: 16px;
+  font-size: 16px;
+  margin-right: 12px;
+}
+
+.bg {
+  width: 90vw;
+  padding: 40px;
+  background-color: #070F1A;
+}
+
+.inputDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.inputRow {
+  width: 100%;
+  margin-bottom: 5px;
+  display: flex;
+}
+
+.dataInput {
+  width: 100%;
+  padding: 5px;
+}
+
+.titleInput {
+  width: 80%;
+  padding: 5px;
+}
+
+.columnCountInput {
+  width: 20%;
+  padding: 5px;
+  margin-left: 5px;
+}

@@ -17,6 +17,13 @@ const config = {
   url: 'https://open-digger.x-lab.info/',
   baseUrl: '/',
 
+  scripts: [
+    {
+      src: 'https://hm.baidu.com/hm.js?76f9400bbb45cc03543b7febac4a77cf',
+      async: true,
+    }
+  ],
+
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
@@ -32,9 +39,8 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          // docItemComponent: '@theme/DocItem',
           editUrl: ({ locale, docPath }) =>
-            `https://github.com/X-lab2017/open-digger-website/tree/master/${locale === defaultLocale ? 'docs/' : `i18n/${locale}/docusaurus-plugin-content-docs/current/`}${docPath}`,
+            `https://raw.githubusercontent.com/X-lab2017/open-digger-website/master/${locale === defaultLocale ? 'docs/' : `i18n/${locale}/docusaurus-plugin-content-docs/current/`}${docPath}`,
         },
         blog: {
           showReadingTime: true,
@@ -62,9 +68,15 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'docSidebar',
+            sidebarId: 'userDocSidebar',
+            label: 'userDocs',
             position: 'left',
-            label: 'docs',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'developerDocSidebar',
+            label: 'devDocs',
+            position: 'left',
           },
           {
             to: '/blog',
@@ -84,25 +96,6 @@ const config = {
       },
       footer: {
         style: 'dark',
-        links: [
-          {
-            title: 'Links',
-            items: [
-              {
-                label: 'docs',
-                to: '/docs/intro',
-              },
-              {
-                label: 'blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/X-lab2017/open-digger',
-              },
-            ],
-          },
-        ],
         copyright: `Copyright © ${new Date().getFullYear()} X-lab`,
       },
       prism: {

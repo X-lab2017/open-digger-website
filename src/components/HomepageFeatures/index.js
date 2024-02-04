@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
-import {translate} from '@docusaurus/Translate';
+import { translate } from '@docusaurus/Translate';
 
 const FeatureList = [
   {
@@ -24,7 +24,7 @@ const FeatureList = [
   },
 ];
 
-function Feature({Svg, title, description, url}) {
+function Feature({ Svg, title, description, url }) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
@@ -40,7 +40,7 @@ function Feature({Svg, title, description, url}) {
   );
 }
 
-export default function HomepageFeatures() {
+export default () => {
   return (
     <section className={styles.features}>
       <div className="container">
