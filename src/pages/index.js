@@ -14,11 +14,11 @@ function HomepageHeader() {
         <img src="img/logo/logo-black-blue-combination-horizontal.png" alt="Logo" /> {/* 插入图片 */}
         <p className="hero__subtitle">{translate({ id: 'homepage.tagLine' })}</p>
         <div className={styles.buttons}>
-            <Link
-              className="button button--secondary button--lg"
-              to="/docs/intro">
-              <Translate id="homepage.getStarted" />
-            </Link>
+          <Link
+            className="button button--secondary button--lg"
+            to="/docs/user_docs/intro">
+            <Translate id="homepage.getStarted" />
+          </Link>
         </div>
       </div>
     </header>
@@ -26,7 +26,7 @@ function HomepageHeader() {
 }
 
 export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
       title={`${siteConfig.title}`}

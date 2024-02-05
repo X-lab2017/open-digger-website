@@ -3,7 +3,7 @@ import { createContext } from 'react';
 
 export const intialLeaderboardConfig = {
   inputData: mockData,
-  title: 'Example OpenRank Leaderboard',
+  title: 'Chinese Company OpenRank Leaderboard Example',
   columnOptions: [
     {
       name: 'Company',

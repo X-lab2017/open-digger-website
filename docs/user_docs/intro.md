@@ -6,7 +6,7 @@
 
 ## 指标使用
 
-OpenDigger 实现的所有指标对所有人开放使用, 您可以通过以下链接找到数据，OpenDigger 的静态数据根链接为 `https://oss.x-lab.info/open-digger/{platform}/{org/login}/{repo}/`，其中 `platform` 支持 `github` 或 `gitee`，只需要替换 `org/repo` 或用户 `login` 即可获取数据。
+OpenDigger 实现的所有指标对所有人开放使用, 您可以通过以下链接找到数据，OpenDigger 的静态数据根链接为 `https://oss.x-lab.info/open_digger/{platform}/{org/login}/{repo}/`，其中 `platform` 支持 `github` 或 `gitee`，只需要替换 `org/repo` 或用户 `login` 即可获取数据。
 
 您可随意使用这些数据来构建自己的数据应用程序，您可以将 OpenDigger 作为您的数据源，并且欢迎在您的项目中使用以下徽章来展示数据源。
 
@@ -304,19 +304,19 @@ OpenDigger 社区也主办或参加社区间的合作活动，如竞赛或黑客
 
 ### GitHub 全域日志数据
 
-我们使用 [GHArchive](https://www.gharchive.org/) 作为 GitHub 日志数据源，数据服务由 X-lab 维护的 [ClickHouse](https://clickhouse.tech/) 云服务。关于数据的详细细节，请查看[数据](/docs/intro)文档。
+我们使用 [GHArchive](https://www.gharchive.org/) 作为 GitHub 日志数据源，数据服务由 X-lab 维护的 [ClickHouse](https://clickhouse.tech/) 云服务。关于数据的详细细节，请查看[数据](/docs/user_docs/intro)文档。
 
 ### 标签数据
 
-为了进行更深入的分析，我们正在收集打过标签的数据。您可以在 “labeled_data” 文件夹中查看相应的数据。关于数据的详细细节，请查看[标签数据](/docs/intro) 文档。
+为了进行更深入的分析，我们正在收集打过标签的数据。您可以在 “labeled_data” 文件夹中查看相应的数据。关于数据的详细细节，请查看[标签数据](/docs/user_docs/intro) 文档。
 
 ### 采样数据集
 
-OpenDigger 提供 ClickHouse 示例数据和 Jupyter notebook，从而可以在本地环境运行 OpenDigger，详情可参考 [示例数据文档](/docs/intro)。
+OpenDigger 提供 ClickHouse 示例数据和 Jupyter notebook，从而可以在本地环境运行 OpenDigger，详情可参考 [示例数据文档](/docs/user_docs/intro)。
 
 ## 贡献指南
 
-在对项目贡献之前，请务必查阅我们的[贡献指南](/docs/intro)。
+在对项目贡献之前，请务必查阅我们的[贡献指南](/docs/user_docs/intro)。
 
 ## 沟通
 
