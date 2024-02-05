@@ -1,78 +1,72 @@
+import { LeaderboardContext } from './context';
+import { COLUMN_TYPE_RULES } from '.';
+
+import { useContext } from 'react';
 import { translate } from '@docusaurus/Translate';
 import styles from './styles.module.css';
-import { useState } from 'react';
 
-export function InputColHeaderItem({ width, fields, data, index }) {
-  const fieldTypes = ['String', 'StringWithIcon', 'NumberWithDelta'];
-  if (!data[index]) data[index] = {};
-  const ownData = data[index];
-  if (!ownData.type) ownData.type = 'String';
-  const [fieldType, setFieldType] = useState(ownData.type);
 
-  const onFieldSelectChange = (e, i) => {
-    ownData.fieldNames[i] = e.target.value;
-  };
+function Select({ options, value, onChange }) {
+  return (
+    <select className={styles.inputSelect} value={value} onChange={onChange}>
+      {options}
+    </select>
+  );
+}
 
-  const fieldTypeItem = {
-    String: () => ({
-      count: 1,
-      item: <>
-        <select className={styles.inputSelect} onChange={e => onFieldSelectChange(e, 0)}>
-          {fields.map(f => <option key={f}>{f}</option>)}
-        </select>
-      </>
-    }),
-    StringWithIcon: () => ({
-      count: 2,
-      item: <>
-        <select className={styles.inputSelect} onChange={e => onFieldSelectChange(e, 0)}>
-          {fields.map(f => <option key={f}>{f}</option>)}
-        </select>
-        <select className={styles.inputSelect} onChange={e => onFieldSelectChange(e, 1)}>
-          {fields.map(f => <option key={f}>{f}</option>)}
-        </select>
-      </>,
-    }),
-    NumberWithDelta: () => ({
-      count: 2,
-      item: <>
-        <select className={styles.inputSelect} onChange={e => onFieldSelectChange(e, 0)}>
-          {fields.map(f => <option key={f}>{f}</option>)}
-        </select>
-        <select className={styles.inputSelect} onChange={e => onFieldSelectChange(e, 1)}>
-          {fields.map(f => <option key={f}>{f}</option>)}
-        </select>
-      </>,
-    }),
-  };
+export function InputColHeaderItem({ index }) {
+  const { leaderboardConfig, dispatch } = useContext(LeaderboardContext);
+  const { inputData, columnOptions } = leaderboardConfig;
+  const fields = inputData[0] ? Object.keys(inputData[0]) : [];
+  const option = columnOptions[index];
 
-  return (<>
-    <div style={{ width }}>
+  const updateColumnOption = (option) => {
+    dispatch({ type: 'updateColumnOption', payload: { index, option } });
+  }
+
+  const onNameChange = e => {
+    const newOption = { ...option, name: e.target.value };
+    updateColumnOption(newOption);
+  }
+
+  const onWidthChange = e => {
+    const newOption = { ...option, width: e.target.value };
+    updateColumnOption(newOption);
+  }
+
+  const onTypeChange = e => {
+    const newOption = { ...option, type: e.target.value };
+    updateColumnOption(newOption);
+  }
+
+  const onFieldsChange = (e, index) => {
+    const newFields = [...option.fields];
+    newFields[index] = e.target.value;
+    const newOption = { ...option, fields: newFields };
+    updateColumnOption(newOption);
+  }
+
+  const fieldTypeOptions = COLUMN_TYPE_RULES.map(rule => <option key={rule.name} value={rule.name}>{translate({ id: `leaderboard.headerType.${rule.name}` })}</option>);
+  const fieldOptions = fields.map(field => <option key={field} value={field}>{field}</option>);
+  const fieldSelects = Array(COLUMN_TYPE_RULES.find(rule => rule.name === option.type).fieldsNeeded).fill(undefined).map((_, i) => {
+    const field = option.fields[i];
+    return (
+      <Select key={i} options={fieldOptions} value={field} onChange={e => onFieldsChange(e, i)} />
+    );
+  })
+
+  return (
+    <div className={styles.inputColHeaderItem}>
       <div className={styles.inputRow}>
-        <input placeholder={translate({ id: 'leaderboard.headerInput' })} style={{ width: '50%' }} onChange={e => {
-          ownData.name = e.target.value;
-        }} />
-        <input placeholder={translate({ id: 'leaderboard.headerWidth' })} style={{ width: '50%' }} onChange={e => {
-          ownData.width = e.target.value + '%';
-        }} />
+        <input placeholder={translate({ id: 'leaderboard.headerInput' })} onChange={onNameChange} />
+        <input placeholder={translate({ id: 'leaderboard.headerWidth' })} onChange={onWidthChange} />
       </div>
       <div className={styles.inputRow}>
-        <select className={styles.inputSelect} style={{ width: '100%' }} onChange={e => {
-          setFieldType(e.target.value);
-          ownData.type = e.target.value;
-        }} >
-          {fieldTypes.map(t => <option key={t} value={t}>{translate({ id: `leaderboard.headerType.${t}` })}</option>)}
-        </select>
+        <Select options={fieldTypeOptions} value={option.type} onChange={onTypeChange} />
       </div>
       <div className={styles.inputRow}>
-        {(() => {
-          const i = fieldTypeItem[fieldType]();
-          if (!ownData.fieldNames || ownData.fieldNames.length !== i.count) {
-            ownData.fieldNames = [...Array(i.count)].fill(fields[0]);
-          }
-          return i.item;
-        })()}
+        {fieldSelects}
       </div>
     </div>
-  </>);
+  );
 }

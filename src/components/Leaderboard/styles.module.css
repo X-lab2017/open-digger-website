@@ -128,10 +128,23 @@
   margin-bottom: 20px;
 }
 
+.inputColHeaderContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 10px;
+  width: 100%;
+}
+
+.inputColHeaderItem {
+  width: calc((100% - 20px) / 3);
+}
+
 .inputRow {
   width: 100%;
   margin-bottom: 5px;
   display: flex;
+  justify-content: space-between;
 }
 
 .dataInput {
@@ -148,4 +161,8 @@
   width: 20%;
   padding: 5px;
   margin-left: 5px;
+}
+
+.inputSelect {
+  flex-grow: 1;
 }
