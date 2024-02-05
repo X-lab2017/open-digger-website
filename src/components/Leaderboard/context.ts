@@ -4,24 +4,30 @@ import { createContext } from 'react';
 export const intialLeaderboardConfig = {
   inputData: mockData,
   title: 'Example OpenRank Leaderboard',
-  columnOptions: [ // TODO: add fields back
-    {
-      name: '#',
-      type: 'String',
-      width: 100,
-      fields: ['no'],
-    },
+  columnOptions: [
     {
       name: 'Company',
       type: 'StringWithIcon',
-      width: 300,
-      fields: ['logo', 'name'],
+      width: 250,
+      fields: ['name', 'logo'],
     },
     {
       name: 'OpenRank',
       type: 'NumberWithDelta',
-      width: 200,
+      width: 250,
       fields: ['openrank', 'delta'],
+    },
+    {
+      name: 'Repo Count',
+      type: 'String',
+      width: 200,
+      fields: ['repo_count'],
+    },
+    {
+      name: 'Participant Count',
+      type: 'String',
+      width: 200,
+      fields: ['participant_count'],
     }
   ],
 }

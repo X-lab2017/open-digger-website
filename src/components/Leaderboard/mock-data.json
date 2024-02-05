@@ -1,6 +1,6 @@
 [
   {
-    "no": 1,
+    "__index__": 1,
     "id": ":companies/huawei",
     "platform": "All",
     "name": "Huawei",
@@ -33,7 +33,7 @@
     "logo": "https://oss.x-lab.info/open_digger/logos/companies/huawei.png"
   },
   {
-    "no": 2,
+    "__index__": 2,
     "id": ":companies/alibaba",
     "platform": "All",
     "name": "Alibaba",
@@ -66,7 +66,7 @@
     "logo": "https://oss.x-lab.info/open_digger/logos/companies/alibaba.png"
   },
   {
-    "no": 3,
+    "__index__": 3,
     "id": ":companies/baidu",
     "platform": "All",
     "name": "Baidu",
@@ -99,7 +99,7 @@
     "logo": "https://oss.x-lab.info/open_digger/logos/companies/baidu.png"
   },
   {
-    "no": 4,
+    "__index__": 4,
     "id": ":companies/antgroup",
     "platform": "All",
     "name": "Ant group",
@@ -132,7 +132,7 @@
     "logo": "https://oss.x-lab.info/open_digger/logos/companies/antgroup.png"
   },
   {
-    "no": 5,
+    "__index__": 5,
     "id": ":companies/tencent",
     "platform": "All",
     "name": "Tencent",

@@ -1,6 +1,6 @@
 .boardContainer {
   box-sizing: border-box;
-  background: rgba(17, 30, 51, 0.6);
+  background: rgba(17, 30, 51);
   box-shadow: inset 0px -1px 4px rgba(157, 195, 230, 0.6);
   border-radius: 12px;
   overflow-y: hidden;
@@ -165,4 +165,39 @@
 
 .inputSelect {
   flex-grow: 1;
+}
+
+.numberContainer {
+  display: flex-start;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.tag {
+  height: 1em;
+  margin-left: 0.5em;
+  margin-right: 0.3em;
+}
+
+.nameContainer {
+  display: flex-start;
+  justify-content: flex-start;
+  align-items: center;
+  padding-right: 8px;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 12px;
+}
+
+.iconRounded {
+  border-radius: 50%;
 }

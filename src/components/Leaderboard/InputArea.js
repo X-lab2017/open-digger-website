@@ -11,6 +11,7 @@ export function InputArea() {
   const onDataInputBlur = e => {
     const inputValue = e.target.value;
     const newData = inputValue ? JSON.parse(inputValue) : [];
+    newData.forEach((row, index) => row.__index__ = index + 1);
     dispatch({ type: 'updateInputData', payload: newData });
   };
 
