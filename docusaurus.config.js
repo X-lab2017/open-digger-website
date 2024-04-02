@@ -96,7 +96,8 @@ const config = {
       },
       footer: {
         style: 'dark',
-        copyright: `Copyright © ${new Date().getFullYear()} X-lab`,
+        copyright: `Copyright © ${new Date().getFullYear()} X-lab<br>
+          <a href="https://beian.miit.gov.cn/" target="_blank">浙ICP备18048778号-4</a>`,
       },
       prism: {
         theme: prismThemes.github,
