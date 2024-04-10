@@ -1,0 +1,88 @@
+---
+slug: redis-analysis
+title: Redis 修改开源协议！云厂商真的在白嫖开源社区吗？
+authors: [zsy]
+tags: [redis]
+draft: true
+---
+
+## 缘起
+
+2024 年 3 月 21 日，著名的键值数据库开源项目 [Redis](https://github.com/redis/redis) 背后的公司 [Redis](https://redis.com/) 的 CEO Rowan Trollope 宣布[修改项目的许可证类型](https://redis.com/blog/redis-adopts-dual-source-available-licensing/)，从原先的 BSD 开源协议修改为 [RSALv2](https://redis.com/legal/rsalv2-agreement/) 和 [SSPLv1](https://www.mongodb.com/legal/licensing/server-side-public-license) 双协议。
+
+这次的许可证变更主要是为了保护 Redis 自己的商业化利益，避免云厂商免费使用开源版本提供 Redis SaaS 收费服务。这样的操作其实并不少见，之前如 Confluent、MongoDB、Elastic 等公司就对旗下的开源项目进行过类似的许可证变更以保护自己的权益。而这次 Redis 的操作却引发了很多开发者的愤怒，其中很重要的原因就是 Redis 社区中包含了大量外部的贡献者参与，这种单方面的协议修改显然是破坏社区和伤害这些贡献者的行为。
+
+那么到底是谁在深度的参与 Redis 的社区贡献呢？
+
+## 深入
+
+从下面的图中可以看出，自 2020 年至今，从每年 Redis 项目社区 OpenRank 前十位的开发者贡献度来看，Redis 项目社区其实一直在趋向于多元化，Redis 内部开发者的贡献比例从 2020 年的将近 80% 逐年下降，截止到 2024 年第一季度，贡献度前十位的开发者中 Redis 内部的贡献比例已经不足四成，AWS、阿里云、腾讯云、爱立信等众多厂商均已常年深度参与到了 Redis 社区的贡献之中，并且贡献强度都还在逐年增加。
+
+import SimpleECharts from '@site/src/components/SimpleECharts';
+
+<SimpleECharts option={{
+  tooltip: { trigger: 'axis', axisPointer: { type: 'cross', label: { backgroundColor: '#6a7985' } } },
+  legend: {
+    data: ['Redis', 'AWS', 'Aliyun', 'Google', 'Tencent', 'Huawei', 'Ericsson', 'Netease', 'Mozilla', 'Meituan', 'Others']
+  },
+  backgroundColor: '#f5f5f5',
+  grid: { left: '3%', right: '4%', bottom: '3%', containLabel: true },
+  xAxis: [{ type: 'category', boundaryGap: false, data: [2020, 2021, 2022, 2023, 2024] }],
+  yAxis: [{ type: 'value', min: 0, max: 100 }],
+  series: [{"name":"Redis","type":"line","stack":"Total","areaStyle":{},"data":[73.31,61.17,59.29,47.21,34.4]},{"name":"AWS","type":"line","stack":"Total","areaStyle":{},"data":[7.15,10.35,13.28,19.58,14.56]},{"name":"Aliyun","type":"line","stack":"Total","areaStyle":{},"data":[3.88,2.09,3.46,6.11,9.86]},{"name":"Google","type":"line","stack":"Total","areaStyle":{},"data":[0,0,1.76,0.9,1.25]},{"name":"Tencent","type":"line","stack":"Total","areaStyle":{},"data":[0,1.52,0,13.76,24.68]},{"name":"Huawei","type":"line","stack":"Total","areaStyle":{},"data":[5.43,2.89,3.23,4.62,2.11]},{"name":"Ericsson","type":"line","stack":"Total","areaStyle":{},"data":[0,3.84,4.39,5.21,6.43]},{"name":"Others","type":"line","stack":"Total","areaStyle":{},"data":[10.25,18.13,14.58,2.61,6.71]}]
+}} />
+
+2020 年 6 月底，Redis 的最初作者 Salvatore Sanfilippo（[@antirez](https://github.com/antirez)）发表[博客](http://antirez.com/news/133)退出了 Redis 社区的日常维护工作，将社区维护任务交由当时还名为 RedisLabs 的 Yossi Gottlieb（[@yossigo](https://github.com/yossigo)）和 Oran Agra（[@oranagra](https://github.com/oranagra)），同一时间上述两人[发文](https://redis.com/blog/new-governance-for-redis/)表示将开启新的社区治理模式，并与 Itamar Haber（[@itamarhaber](https://github.com/itamarhaber)）率先组成 Redis 社区的核心开发小组，[次月](https://redis.com/blog/redis-core-team-update/) AWS 的 Madelyn Olson（[@madolson](https://github.com/madolson)）和阿里云的赵钊（[@soloestoy](https://github.com/soloestoy)）加入核心开发小组，而这个五人小组也是直到这次 Redis 修改许可证之前一直稳定的 Redis 社区的核心小组。
+
+除了上述提到的六位核心开发者外，腾讯云的朱彬彬（[@enjoy-binbin](https://github.com/enjoy-binbin)）是因为长期参与 Redis 而在 2023 年 9 月底加入了腾讯云数据库产品部，而阿里云除了赵钊外还有三位开发者出现在了历年贡献前十位的榜单之中。整体而言，目前 AWS、阿里云、Google、腾讯云等云厂商日常参与到 Redis 社区贡献的共有近 20 人，云厂商在 Redis 社区的投入还是显而易见的，这与大众意识中云厂商白嫖开源社区的印象大相径庭。
+
+## 分裂
+
+也正是由于大量云厂商贡献者的参与，在 Redis 宣布修改许可证后，AWS 的 Madelyn Olson 便立即发起了一个 Redis 的 Fork 项目 [Valkey](https://github.com/valkey-io/valkey)，并计划将其[托管在 Linux 基金会](https://www.linuxfoundation.org/press/linux-foundation-launches-open-source-valkey-community)，而 Google、爱立信都已明确表示将投入支持 Valkey 社区的发展。
+
+而其他的云厂商的开发者也将几乎别无选择的将迁移到 Valkey 项目中，因为新的 Redis 对云厂商的排斥使他们没有办法继续留在 Redis 社区中进行贡献。而 Redis 似乎也没有打算再让社区深度参与到后续的研发中，根据几位中国 committer 的反馈，GitHub 上 redis-committers team 的权限已在一周内被回收，取消了外部 committer 的仓库写权限和 Issue/PR 的管理权限，现在他们在 Redis 项目中里的权限，其实就跟普通用户完全一样了。
+
+“除了参与到 Redis 社区具体的功能贡献外，我们也会将在云产品中积累包括功能、性能、稳定性和可观测性等等方面的修复和改进贡献会社区，同时云产品丰富的用户基础也为上游社区传递了大量业务场景中的真实需求。我们相信这是我们的责任，也相信一个蓬勃发展的开源社区值得我们去维护。”阿里云的赵钊提到。
+
+从数据上来看，在 2024 年 Redis 贡献前十位的开发者中，除了 Redis 公司的两位研发人员外，剩下有七位都已经参与到了 Valkey 项目的研发当中，这意味着事实上 Valkey 项目已经成为新的社区进入了正常的运作，而 Redis 公司的研发人员后续将独立开发维护 Redis 项目。
+
+<SimpleECharts option={{
+  backgroundColor: '#f5f5f5',
+  tooltip: { trigger: 'axis', axisPointer: { type: 'cross', crossStyle: { color: '#999' } } },
+  legend: { data: ['Redis-OpenRank', 'Valkey-OpenRank', 'Redis-Participant', 'Valkey-Participant'] },
+  xAxis: [{ type: 'category', data: ['2023.10', '2023.11', '2023.12', '2024.01', '2024.02', '2024.03'] }],
+  yAxis: [{ type: 'value', name: 'OpenRank' }, { type: 'value', name: 'Participant' }],
+  series: [
+    { name: 'Redis-OpenRank', type: 'bar', data: [67.65,77.12,79.88,81.26,77.38,79.97] },
+    { name: 'Valkey-OpenRank', type: 'bar', data: [0,0,0,0,0,38.53] },
+    { name: 'Redis-Participant', type: 'bar', yAxisIndex: 1, data: [102,101,100,104,94,220] },
+    { name: 'Valkey-Participant', type: 'bar', yAxisIndex: 1, data: [0,0,0,0,0,146] },
+  ]
+}} />
+
+从宏观数据来看，Redis 社区近半年的 OpenRank 协作影响力维持在 80 左右，而 Valkey 在三月仅开源十天，OpenRank 已飙升至 40 左右，达到了 Redis 项目的一半。从社区参与开发者人数来看，Redis 基本维持在每月 100 人左右的规模，在三月因为许可证修改有不少开发者在 Redis 社区进行讨论，导致参与人数翻倍，达到了 220 人，而 Valkey 开源十天，参与人数达到了 146 人，已超过了 Redis 的日常规模。
+
+总体来看，Redis 社区的分裂之势已无法逆转，随着 Valkey 捐献到 Linux 基金会，相信会有更多开源开发者参与到 Valkey 的贡献和研发之中。
+
+## 涟漪
+
+就像 OpenRank 算法背后的主张，这个世界总是相互联系和影响的，任何的事件将不仅仅会影响到自己，而是会波及到与其相关的其他部分。就像在 2023 中国开源年报中，我们通过数据发现，2023 年 9 月 Unity 修改[收费策略](https://www.theverge.com/2023/9/12/23870547/unit-price-change-game-development)，直接导致开源游戏引擎 [godotengine](https://github.com/godotengine/godot) 在当月迎来了其开源以来的最大一波增长，这个开源已经超过十年的项目的 8 万 Star 中有超过 1 万 Star 是来自 2023 年 9 月，游戏开发者们用对开源的支持回应了 Unity 的决策。
+
+而 Redis 的协议变更除了带来了一个新的分叉社区 Valkey 以外，也有很多对键值数据库有需求的开发者开始关注到与 Redis 相关的其他开源项目。Apache 软件基金会的 kvrocks 就是其中之一。与 Redis 是内存型键值数据库不同，kvrocks 是一款磁盘型键值数据库。从下图可以看到，三月份 kvrocks 的各项指标数据都有一波明显的增长，可能也是因为它是基金会项目，在这个开源项目背后的企业可以跳过设定的社区规则单方面随时更改许可证的时代，托管在基金会的项目会让开发者更有安全感一些。
+
+<SimpleECharts option={{
+  backgroundColor: '#f5f5f5',
+  legend: { data: ['stars', 'participants'] },
+  xAxis: { type: 'category', data: ['2023-10', '2023-11', '2023-12', '2024-01', '2024-02', '2024-03'] },
+  yAxis: [{ type: 'value' }, { type: 'value' }],
+  series: [
+    { name: 'stars', type: 'line', smooth: true, data: [141, 71, 49, 47, 30, 229] },
+    { name: 'participants', yAxisIndex: 1, type: 'line', smooth: true, data: [25, 32, 28, 29, 22, 39] }
+  ]
+}} />
+
+## 结语
+
+云厂商吸血开源项目在过去几年来一直是被开源开发者们所诟病的，但一切都在悄悄发生着变化，有更多的云厂商也意识到社区的重要性，愿意投入人力甚至物力到自己以来的开源社区中去，以保证自己的云服务可以更好的与上游协同发展。
+
+在未来，我们相信开源社区的上下游可以更好的协作从而形成共赢多赢。有效的开源贡献和影响力评价是形成更健康更有效的协同机制的前提，发现那些真正贡献的开发者，让他们创造的也能够属于他们。

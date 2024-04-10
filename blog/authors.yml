@@ -5,13 +5,13 @@ ww:
   image_url: https://github.com/will-ww.png
 
 zsy:
-  name: Zhao Shengyu
-  title: Ph.D candidate at X-lab, author of OpenDigger
+  name: 赵生宇
+  title: X-lab 开源博士 / OpenDigger 作者
   url: https://blog.frankzhao.cn/
   image_url: https://github.com/frank-zsy.png
 
 xiaoya:
-  name: Xia Xiaoya
-  title: Ph.D candidate at X-lab, CHAOSS APAC Manager
+  name: 夏小雅
+  title: X-lab 开源博士 / CHAOSS 亚太社区经理
   url: https://github.com/xiaoya-yaya
   image_url: https://github.com/xiaoya-yaya.png
