@@ -296,7 +296,7 @@
     "message": "Rich Metrics"
   },
   "features.richMetrics.url": {
-    "message": "/en/docs/metrics/playground"
+    "message": "/en/docs/user_docs/playground"
   },
   "features.richMetrics.desc": {
     "message": "OpenDigger implements metrics from <a href='https://chaoss.community/metrics/'>CHAOSS community</a> as many as possible as well as metrics developed by X-lab like <a href='/en/docs/metrics/openrank/community_openrank'>OpenRank</a>."
@@ -305,7 +305,7 @@
     "message": "Easy to Use"
   },
   "features.easyToUse.url": {
-    "message": "/en/docs/intro"
+    "message": "/en/docs/user_docs/intro"
   },
   "features.easyToUse.desc": {
     "message": "OpenDigger exports and stores all the implemented metrics as separate files on cloud for anyone and any applications to use."
