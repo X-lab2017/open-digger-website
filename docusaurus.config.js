@@ -14,7 +14,7 @@ const config = {
   tagline: 'Open Source Analysis Platform',
   favicon: 'img/favicon.ico',
 
-  url: 'https://open-digger.x-lab.info/',
+  url: 'https://open-digger.cn',
   baseUrl: '/',
 
   scripts: [
