@@ -19,7 +19,7 @@ const config = {
 
   scripts: [
     {
-      src: 'https://hm.baidu.com/hm.js?76f9400bbb45cc03543b7febac4a77cf',
+      src: 'https://hm.baidu.com/hm.js?b18671b05d4a87c3cc08f76cb6ef79c7',
       async: true,
     }
   ],
