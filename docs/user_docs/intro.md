@@ -22,7 +22,7 @@ OpenDigger 实现的所有指标对所有人开放使用, 您可以通过以下�
   </thead>
   <tbody>
     <tr>
-      <td rowspan="3">指标</td>
+      <td rowSpan="3">指标</td>
       <td>OpenRank</td>
       <td><a href="https://blog.frankzhao.cn/how_to_measure_open_source_2/">X-lab</a></td>
       <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/openrank.json">openrank.json</a></td>
@@ -44,7 +44,7 @@ OpenDigger 实现的所有指标对所有人开放使用, 您可以通过以下�
       <td><a href="https://codepen.io/frank-zsy/pen/MWBdpNg?type=attention">Demo</a></td>
     </tr>
     <tr>
-      <td rowspan="25">度量</td>
+      <td rowSpan="25">度量</td>
       <td>Active dates and times</td>
       <td><a href="https://chaoss.community/metric-activity-dates-and-times/">CHAOSS</a></td>
       <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/active_dates_and_times.json">active_dates_and_times.json</a></td>
@@ -73,11 +73,11 @@ OpenDigger 实现的所有指标对所有人开放使用, 您可以通过以下�
       <td><a href="https://codepen.io/frank-zsy/pen/RwBmpYZ">Demo</a></td>
     </tr>
     <tr>
-      <td rowspan="2">New contributors</td>
-      <td rowspan="2"><a href="https://chaoss.community/metric-new-contributors/">CHAOSS</a></td>
+      <td rowSpan="2">New contributors</td>
+      <td rowSpan="2"><a href="https://chaoss.community/metric-new-contributors/">CHAOSS</a></td>
       <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/new_contributors.json">new_contributors.json</a></td>
-      <td rowspan="2"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L862">Link</a></td>
-      <td rowspan="2"><a href="https://codepen.io/frank-zsy/pen/RwBmpYZ">Demo</a></td>
+      <td rowSpan="2"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L862">Link</a></td>
+      <td rowSpan="2"><a href="https://codepen.io/frank-zsy/pen/RwBmpYZ">Demo</a></td>
     </tr>
     <tr>
       <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/new_contributors_detail.json">new_contributors_detail.json</a></td>
@@ -90,11 +90,11 @@ OpenDigger 实现的所有指标对所有人开放使用, 您可以通过以下�
       <td><a href="https://codepen.io/frank-zsy/pen/RwBmpYZ">Demo</a></td>
     </tr>
     <tr>
-      <td rowspan="2">Bus factor</td>
-      <td rowspan="2"><a href="https://chaoss.community/metric-bus-factor/">CHAOSS</a></td>
+      <td rowSpan="2">Bus factor</td>
+      <td rowSpan="2"><a href="https://chaoss.community/metric-bus-factor/">CHAOSS</a></td>
       <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/bus_factor.json">bus_factor.json</a></td>
-      <td rowspan="2"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L780">Link</a></td>
-      <td rowspan="2"><a href="https://codepen.io/frank-zsy/pen/bGjyqQj?type=bus_factor">Demo</a></td>
+      <td rowSpan="2"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L780">Link</a></td>
+      <td rowSpan="2"><a href="https://codepen.io/frank-zsy/pen/bGjyqQj?type=bus_factor">Demo</a></td>
     </tr>
     <tr>
       <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/bus_factor_detail.json">bus_factor_detail.json</a></td>
@@ -104,7 +104,7 @@ OpenDigger 实现的所有指标对所有人开放使用, 您可以通过以下�
       <td><a href="https://chaoss.community/metric-issues-new/">CHAOSS</a></td>
       <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/issues_new.json">issues_new.json</a></td>
       <td><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L146">Link</a></td>
-      <td rowspan="3"><a href="https://codepen.io/frank-zsy/pen/mdjaZMw">Demo</a></td>
+      <td rowSpan="3"><a href="https://codepen.io/frank-zsy/pen/mdjaZMw">Demo</a></td>
     </tr>
     <tr>
       <td>Issues closed</td>
@@ -210,7 +210,7 @@ OpenDigger 实现的所有指标对所有人开放使用, 您可以通过以下�
       <td><a href="https://codepen.io/tyn1998/pen/KKGxVrm">Demo</a></td>
     </tr>
     <tr>
-      <td rowspan="3">网络</td>
+      <td rowSpan="3">网络</td>
       <td>Developer network</td>
       <td><a href="https://blog.frankzhao.cn/github_activity_with_wpr/">X-lab</a></td>
       <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/developer_network.json">developer_network.json</a></td>
@@ -244,7 +244,7 @@ OpenDigger 实现的所有指标对所有人开放使用, 您可以通过以下�
   </thead>
   <tbody>
     <tr>
-      <td rowspan="2">指标</td>
+      <td rowSpan="2">指标</td>
       <td>OpenRank</td>
       <td><a href="https://blog.frankzhao.cn/how_to_measure_open_source_3">X-lab</a ></td>
       <td><a href="https://oss.x-lab.info/open_digger/github/frank-zsy/openrank.json">openrank.json</a></td>
@@ -259,7 +259,7 @@ OpenDigger 实现的所有指标对所有人开放使用, 您可以通过以下�
       <td><a href="https://codepen.io/frank-zsy/pen/bGjyqQj?type=activity&name=frank-zsy">Demo</a></td>
     </tr>
     <tr>
-      <td rowspan="2">网络</td>
+      <td rowSpan="2">网络</td>
       <td>Developer network</td>
       <td><a href="https://blog.frankzhao.cn/github_activity_with_wpr/">X-lab</a></td>
       <td><a href="https://oss.x-lab.info/open_digger/github/frank-zsy/developer_network.json">developer_network.json</a></td>
