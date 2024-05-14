@@ -1,0 +1,13 @@
+{
+    "ignorePatterns": [
+        {
+            "pattern": "^(?!https?:\/\/)"
+        },
+        {
+            "pattern": "^https://open-digger.cn/"
+        },
+        {
+            "pattern": "^https://hm.baidu.com/"
+        }
+    ]
+}

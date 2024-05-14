@@ -13,10 +13,9 @@ const config = {
   title: 'OpenDigger',
   tagline: 'Open Source Analysis Platform',
   favicon: 'img/favicon.ico',
-
   url: 'https://open-digger.cn',
   baseUrl: '/',
-
+  
   scripts: [
     {
       src: 'https://hm.baidu.com/hm.js?b18671b05d4a87c3cc08f76cb6ef79c7',
@@ -28,8 +27,17 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
 
   i18n: {
-    defaultLocale,
+    defaultLocale: 'zh',
     locales: ['zh', 'en'],
+    localeConfigs: {
+      en: {
+        htmlLang: "en-GB",
+      },
+      // You can omit a locale (e.g. fr) if you don't need to override the defaults
+      fa: {
+        direction: "rtl",
+      },
+    },
   },
 
   presets: [
@@ -45,13 +53,22 @@ const config = {
         blog: {
           showReadingTime: true,
           blogSidebarTitle: 'Recent Posts',
-          editUrl: ({ blogDirPath, blogPath }) =>
-            `https://github.com/X-lab2017/open-digger-website/tree/master/${blogDirPath}/${blogPath}`,
+          editUrl: ({ blogDirPath, blogPath, locale }) =>
+            `https://github.com/X-lab2017/open-digger-website/tree/master/${locale === defaultLocale ? `${blogDirPath}/${blogPath}` : `i18n/${locale}/docusaurus-plugin-content-blog/${blogPath}`}`,
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
       }),
+    ],
+  ],
+
+  plugins: [
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      {
+        indexDocs: true,
+      },
     ],
   ],
 
@@ -65,6 +82,7 @@ const config = {
           alt: 'OpenDigger Logo',
           src: 'img/logo/logo-blue-round-corner.png',
         },
+        hideOnScroll: true,
         items: [
           {
             type: 'docSidebar',
@@ -89,7 +107,7 @@ const config = {
           },
           {
             href: 'https://github.com/X-lab2017/open-digger',
-            label: 'GitHub',
+            className: 'header--github-link',
             position: 'right',
           },
         ],
