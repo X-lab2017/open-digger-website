@@ -9,10 +9,14 @@ export function InputArea() {
   const colCount = leaderboardConfig.columnOptions.length;
 
   const onDataInputBlur = e => {
-    const inputValue = e.target.value;
-    const newData = inputValue ? JSON.parse(inputValue) : [];
-    newData.forEach((row, index) => row.__index__ = index + 1);
-    dispatch({ type: 'updateInputData', payload: newData });
+    try {
+      const inputValue = e.target.value;
+      const newData = inputValue ? JSON.parse(inputValue) : [];
+      newData.forEach((row, index) => row.__index__ = index + 1);
+      dispatch({ type: 'updateInputData', payload: newData });
+    } catch {
+      alert(translate({ id: 'leaderboard.invalidDataAlert' }));
+    }
   };
 
   const onTitleChange = e => {
