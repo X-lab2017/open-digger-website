@@ -330,5 +330,32 @@
   },
   "metricCharts.submit": {
     "message": "Submit"
+  },
+  "leaderboard.dataInputPlaceHolder": {
+    "message": "Data input, JSON format with each item as a row in the table"
+  },
+  "leaderboard.titleInputPlaceHolder": {
+    "message": "Leaderboard title"
+  },
+  "leaderboard.headerInput": {
+    "message": "Header title"
+  },
+  "leaderboard.headerWidth": {
+    "message": "Header width"
+  },
+  "leaderboard.headerType.String": {
+    "message": "String"
+  },
+  "leaderboard.headerType.StringWithIcon": {
+    "message": "String with icon"
+  },
+  "leaderboard.headerType.NumberWithDelta": {
+    "message": "Number with delta"
+  },
+  "leaderboard.submit": {
+    "message": "Submit"
+  },
+  "leaderboard.invalidDataAlert": {
+    "message": "Invalid JSON input, please check your input"
   }
 }

@@ -354,5 +354,8 @@
   },
   "leaderboard.submit": {
     "message": "提交"
+  },
+  "leaderboard.invalidDataAlert": {
+    "message": "数据输入不是合法的 JSON 字符串，请检查输入"
   }
 }
