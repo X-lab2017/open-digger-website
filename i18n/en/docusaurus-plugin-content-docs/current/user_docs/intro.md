@@ -310,15 +310,15 @@ OpenDigger community also open to inter-community cooperation events, like conte
 
 ### GitHub Event Log
 
-We use [GHArchive](https://www.gharchive.org/) as our data source for GitHub event logs and the data service is provided by [clickhouse](https://clickhouse.tech/) cluster cloud service. For data details, please check the [data](/docs/intro) docs.
+We use [GHArchive](https://www.gharchive.org/) as our data source for GitHub event logs and the data service is provided by [clickhouse](https://clickhouse.tech/) cluster cloud service. For data details, please check the [data](/en/docs/user_docs/intro) docs.
 
 ### Labeled Data
 
-We are collecting labeled data for more deeper analysis. You can view the corresponding data in the `labeled_data` folder. For more details, please check [labeled_data](/docs/intro) docs.
+We are collecting labeled data for more deeper analysis. You can view the corresponding data in the `labeled_data` folder. For more details, please check [labeled_data](/en/docs/user_docs/intro) docs.
 
 ### Sample Data Usage
 
-OpenDigger provides ClickHouse sample data and Jupyter notebook image to run OpenDigger in local environment, please refer to [sample data doc](/docs/intro).
+OpenDigger provides ClickHouse sample data and Jupyter notebook image to run OpenDigger in local environment, please refer to [sample data doc](/en/docs/user_docs/intro).
 
 ## Communication
 
