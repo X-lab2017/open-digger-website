@@ -15,7 +15,7 @@ const config = {
   favicon: 'img/favicon.ico',
   url: 'https://open-digger.cn',
   baseUrl: '/',
-  
+
   scripts: [
     {
       src: 'https://hm.baidu.com/hm.js?b18671b05d4a87c3cc08f76cb6ef79c7',
@@ -27,7 +27,7 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
 
   i18n: {
-    defaultLocale: 'zh',
+    defaultLocale,
     locales: ['zh', 'en'],
     localeConfigs: {
       en: {
