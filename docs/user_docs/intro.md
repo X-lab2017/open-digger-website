@@ -326,4 +326,4 @@ OpenDigger 提供 ClickHouse 示例数据和 Jupyter notebook，从而可以在�
 
 ## 许可证
 
-对于代码部分，我们使用了 [Apache-2.0 许可证](https://github.com/X-lab2017/open-digger/blob/master/LICENSE)，对于文档目前，我们使用了 [CC-BY-4.0 许可证](https://github.com/X-lab2017/open-digger/blob/master/LICENSE-CC-BY)。在使用项目输出内容前请确保使用符合许可证要求。
+对于代码部分，我们使用了 [Apache-2.0 许可证](https://github.com/X-lab2017/open-digger/blob/master/LICENSE)。在使用项目输出内容前请确保使用符合许可证要求。

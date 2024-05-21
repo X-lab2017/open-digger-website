@@ -8,6 +8,12 @@
         },
         {
             "pattern": "^https://hm.baidu.com/"
+        },
+        {
+            "pattern": "^https://www.copu.org.cn/"
+        },
+        {
+            "pattern": "^https://dataease.nzcer.cn/"
         }
     ]
 }
