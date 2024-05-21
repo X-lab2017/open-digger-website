@@ -70,7 +70,13 @@ const config = {
         indexDocs: true,
       },
     ],
+    require.resolve("docusaurus-plugin-image-zoom"),
   ],
+
+  themes: ['@docusaurus/theme-mermaid'],
+  markdown: {
+    mermaid: true, 
+  },
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -111,6 +117,15 @@ const config = {
             position: 'right',
           },
         ],
+      },
+      zoom: {
+        selector: '.markdown :not(em) > img',
+        config: {
+          background: {
+            light: 'rgb(255, 255, 255)',
+            dark: 'rgb(50, 50, 50)'
+          }
+        }
       },
       footer: {
         style: 'dark',

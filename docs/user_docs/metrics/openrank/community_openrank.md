@@ -8,7 +8,28 @@
 
 与全域 OpenRank 指标的计算方法类似，该算法使用项目内的 Issue、PR 等协作数据来构建网络，其网络模型为：
 
-![Project OpenRank](https://www.plantuml.com/plantuml/png/SoWkIImgAStDuU8gpixCAqWiIinLI4bDIopDAN7BpolnIynDLN0CKWZmKGZrJinKSFRZuifDB51ukgVXQV_45msj2jLS2Wh-1QbvGObvsGgsTWhFfcvush27gnQYxidkoKztJIQWABEuk3ILW9g2qfoS-ABKmjBKuX8yIX7kij7LjOEQRANmRClk5zkRqMHHp4Ge0ki1Au2w7YZrTEEy9xlwk90rO5VXa9gN0WnD0000)
+```mermaid
+graph TD
+    classDef rounded rx:5,ry:5;
+    
+    Developer["开发者\n---------------------\nOpenRank | 数值"]:::rounded
+    issue["issue\n---------------------\nOpenRank | 数值"]:::rounded
+    pull_request["pull_request\n---------------------\nOpenRank | 数值"]:::rounded
+    repo["仓库\n---------------------\nOpenRank | 数值"]:::rounded
+
+    Developer -->|活跃| issue
+    Developer -->|活跃| pull_request
+    issue -->|属于| repo
+    pull_request -->|属于| repo
+```
+<br/>
+
+<details>
+<summary>Tap on **this** to view the high-res image of the UML diagram ▼</summary>
+<center><img src="https://www.plantuml.com/plantuml/png/SoWkIImgAStDuU8gpixCAqWiIinLI4bDIopDAN7BpolnIynDLN0CKWZmKGZrJinKSFRZuifDB51ukgVXQV_45msj2jLS2Wh-1QbvGObvsGgsTWhFfcvush27gnQYxidkoKztJIQWABEuk3ILW9g2qfoS-ABKmjBKuX8yIX7kij7LjOEQRANmRClk5zkRqMHHp4Ge0ki1Au2w7YZrTEEy9xlwk90rO5VXa9gN0WnD0000" alt="PlantUML" /></center>
+</details>
+
+<br/>
 
 ## 代码
 
