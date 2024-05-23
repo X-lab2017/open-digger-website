@@ -41,7 +41,7 @@ const sidebars = {
             'user_docs/metrics/openrank/community_openrank'
           ],
         },
-        'user_docs/metrics/technicalFork/technical_fork',
+        'user_docs/metrics/technical_fork',
       ],
     },
     'user_docs/FAQ'
