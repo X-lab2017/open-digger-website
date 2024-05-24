@@ -1,4 +1,4 @@
-# Technical Fork
+# Technical Fork (To be Translated)
 
 ![Type](https://img.shields.io/badge/Type-Metric-blue) ![From](https://img.shields.io/badge/From-CHAOSS-blue) ![For](https://img.shields.io/badge/For-Repo-blue)
 
