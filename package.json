@@ -16,11 +16,13 @@
   "dependencies": {
     "@docusaurus/core": "3.3.2",
     "@docusaurus/preset-classic": "3.3.2",
+    "@docusaurus/theme-mermaid": "^3.3.2",
     "@easyops-cn/docusaurus-search-local": "^0.40.1",
     "@mdx-js/react": "^3.0.1",
     "@tanstack/react-table": "^8.17.0",
     "axios": "^1.6.8",
     "clsx": "^2.1.1",
+    "docusaurus-plugin-image-zoom": "^2.0.0",
     "echarts": "^5.5.0",
     "echarts-for-react": "^3.0.2",
     "prism-react-renderer": "^2.3.1",

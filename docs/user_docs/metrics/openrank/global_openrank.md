@@ -8,7 +8,24 @@
 
 全域 OpenRank 是`活跃度`指标的一个下游指标，借鉴了`活跃度`来构建 GitHub 全域项目与开发者之间的一个协作网络，其网络模型是：
 
-![OpenRankUML](https://www.plantuml.com/plantuml/png/SoWkIImgAStDuIhEpimhI2nAp5L8IKrBBCqfSSlFA_5Bp4rLS0nI2F1H2FLEp5HmzkFYoaqiK7Ywf-5f_yGN3QqArLmA2lu5gNb1YNdP2hPs2i-cRdZQi8Uh5gBkoUx9JtTDngC8OP2DhguTJBsLmhCjkrziR-PoICrB0JeE0000)
+
+```mermaid
+graph TD
+    classDef rounded rx:5,ry:5;
+    
+    Developer["开发者\n---------------------\nOpenRank | 数值"]:::rounded
+    repo["仓库\n---------------------\nOpenRank | 数值"]:::rounded
+
+    Developer --> |活跃| repo
+```
+<br/>
+
+<!-- <details>
+<summary>Tap on **this** to view the high-res image of the UML diagram ▼</summary>
+<center><img src="https://www.plantuml.com/plantuml/png/SoWkIImgAStDuIhEpimhI2nAp5L8IKrBBCqfSSlFA_5Bp4rLS0nI2F1H2FLEp5HmzkFYoaqiK7Ywf-5f_yGN3QqArLmA2lu5gNb1YNdP2hPs2i-cRdZQi8Uh5gBkoUx9JtTDngC8OP2DhguTJBsLmhCjkrziR-PoICrB0JeE0000" alt="OpenRankUML" /></center>
+</details>
+
+<br/> -->
 
 在全域 OpenRank 指标的实现中，使用`活跃度`指标作为开发者与仓库之间的边的权重，从而构建出全域协作网络来计算网络中每个节点在每个月的全域 OpenRank 值。但与`活跃度`不同的地方在于，我们并没有对开发者的加权活跃值进行开方运算，这是由于`活跃度`指标中的开方运算是为了将社区参与人数（社区规模）的因素引入到指标计算中，但对于协作网络而言，社区参与人数这个变量已经隐含在了网络结构中。
 
