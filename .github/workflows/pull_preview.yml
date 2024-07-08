@@ -56,7 +56,7 @@ jobs:
         run: |
           git config --global url."https://github.com/".insteadOf git://github.com/
           npm install
-          npm run build
+          BASE_URL=/pull_${{ github.event.issue.number }}/ npm run build
 
       - name: Upload to OSS
         if: ${{ steps.regex-match.outputs.match != '' }}

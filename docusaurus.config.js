@@ -14,7 +14,7 @@ const config = {
   tagline: 'Open Source Analysis Platform',
   favicon: 'img/favicon.ico',
   url: 'https://open-digger.cn',
-  baseUrl: '/',
+  baseUrl: process.env.BASE_URL || '/',
 
   scripts: [
     {
@@ -75,7 +75,7 @@ const config = {
 
   themes: ['@docusaurus/theme-mermaid'],
   markdown: {
-    mermaid: true, 
+    mermaid: true,
   },
 
   themeConfig:
