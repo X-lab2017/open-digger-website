@@ -1,6 +1,6 @@
 # 巴士系数(Bus Factor)
 
-![From](https://img.shields.io/badge/来自-CHAOSS-blue) ![For](https://img.shields.io/badge/为了-仓库-blue)
+![From](https://img.shields.io/badge/来自-CHAOSS-blue) ![For](https://img.shields.io/badge/用于-仓库-blue)
 
 ## 定义
 
