@@ -1,6 +1,6 @@
 # Bus Factor
 
-![Type](https://img.shields.io/badge/Type-Metric-blue) ![From](https://img.shields.io/badge/From-CHAOSS-blue) ![For](https://img.shields.io/badge/For-Repo-blue)
+![From](https://img.shields.io/badge/From-CHAOSS-blue) ![For](https://img.shields.io/badge/For-Repo-blue)
 
 ## Definition
 
@@ -13,20 +13,20 @@ The Bus Factor is a compelling metric because it visualizes the question "How ma
 
 ## Data
 
-- **Link (base):** `https://oss.x-lab.info/open_digger/github/{owner}/{repo}/bus_factor.json`
-- **Link (detail):** `https://oss.x-lab.info/open_digger/github/{owner}/{repo}/bus_factor_detail.json`
+- **Link (base):** `https://oss.x-lab.info/open_digger/{platform}/{owner}/{repo}/bus_factor.json`
+- **Link (detail):** `https://oss.x-lab.info/open_digger/{platform}/{owner}/{repo}/bus_factor_detail.json`
 
 
-To get the data for a certain repository, replace `{owner}` and `{repo}` with the actual name. Here is an [example](https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/bus_factor.json).
+To get the data for a certain repository, replace `{platform}`, `{owner}` and `{repo}` with the actual name. Here is an [example](https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/bus_factor.json).
 
 ## Code
 
-Here's the [**implementation code**](https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L780).
+Here's the [**implementation code**](hhttps://github.com/X-lab2017/open-digger/blob/54478a97911a24a33e69147a985115b084c24f3f/src/metrics/chaoss.ts#L672).
 
 
 ## CodePen Demo
 
-<iframe height="600" scrolling="no" title="OpenDigger — [X-lab] OpenRank/Activity/Bus Factor" src="https://codepen.io/frank-zsy/embed/bGjyqQj?default-tab=js%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="600" scrolling="no" title="OpenDigger — [X-lab] OpenRank/Activity/Bus Factor" src="https://codepen.io/frank-zsy/embed/bGjyqQj?type=bus_factor&default-tab=js%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/frank-zsy/pen/bGjyqQj">
   OpenDigger - [X-lab] OpenRank/Activity/Bus Factor</a> by Frank Zhao (<a href="https://codepen.io/frank-zsy">@frank-zsy</a>)
   on <a href="https://codepen.io">CodePen</a>.
