@@ -1,29 +1,26 @@
-# Technical Fork (To be Translated)
+# 技术分叉(Technical Fork)
 
-![Type](https://img.shields.io/badge/Type-Metric-blue) ![From](https://img.shields.io/badge/From-CHAOSS-blue) ![For](https://img.shields.io/badge/For-Repo-blue)
+![From](https://img.shields.io/badge/来自-CHAOSS-blue) ![For](https://img.shields.io/badge/用于-仓库-blue)
 
-## Definition
+## 定义
 
-Technical Fork is a metric defined by [CHAOSS](https://chaoss.community), see [CHAOSS Metrics - Technical Fork](https://chaoss.community/kb/metric-technical-fork/) for the detailed definition of this metric.
+技术分叉是由 [CHAOSS 社区](https://chaoss.community)定义的一个指标，有关该指标的详细定义，请参阅 [CHAOSS Metrics - Technical Fork](https://chaoss.community/kb/metric-technical-fork/)。
 
-A technical fork is a distributed version control copy of a project. The number of technical forks indicates the number of copies of a project on the same code development platform.
+技术分叉是仓库的分布式版本控制的副本。技术分叉的数量表示同一代码开发平台上仓库的副本数量。
 
-> Fork from the same developer will be double counted. For example, if a developer has deleted the forked repository and then fork again, the latter fork will also be counted in the total.
+> 来自同一开发人员的分叉将被重复计算。例如，如果开发人员已经删除了分叉的仓库，然后再次分叉，则后者也将计入总数。
 
+## 数据
 
-## Data
+**链接：** `https://oss.x-lab.info/open_digger/{platform}/{owner}/{repo}/technical_fork.json`
 
-**Link:** `https://oss.x-lab.info/open_digger/github/{owner}/{repo}/technical_fork.json`
+要获取特定存储库的数据，请将`{platform}`、`{owner}`和`{repo}`替换为实际名称。这里有一个[示例](https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/technical_fork.json)。
 
-To get the data for a certain repository, replace `{owner}` and `{repo}` with the actual name. Here is an [example](https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/technical_fork.json).
+## 代码
 
-## Code
+这里是[**实现代码**](https://github.com/X-lab2017/open-digger/blob/465d2e3ddb57c0da7fab18435f711d4fa0a63f22/src/metrics/chaoss.ts#L12)。
 
-Here's the [**implementation code**](https://github.com/X-lab2017/open-digger/blob/465d2e3ddb57c0da7fab18435f711d4fa0a63f22/src/metrics/chaoss.ts#L12).
-
-
-
-## CodePen Demo
+## CodePen 演示
 
 <iframe height="600" scrolling="no" title="OpenDigger - [X-lab] Attention/Stars/Technical Fork/Bus Factor" src="https://codepen.io/frank-zsy/embed/MWBdpNg?type=technical_fork&default-tab=js%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/frank-zsy/pen/MWBdpNg?type=technical_fork">

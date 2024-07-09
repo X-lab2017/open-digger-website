@@ -42,6 +42,7 @@ const sidebars = {
           ],
         },
         'user_docs/metrics/technical_fork',
+        'user_docs/metrics/bus_factor',
       ],
     },
     'user_docs/FAQ'
