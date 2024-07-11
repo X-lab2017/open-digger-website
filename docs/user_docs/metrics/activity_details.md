@@ -24,7 +24,7 @@
 
 ## CodePen 演示
 
-<iframe height="600" scrolling="no" title="OpenDigger - [X-lab] Project Activity Details" src="https://codepen.io/tyn1998/embed/KKGxVrm?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="600" scrolling="no" title="OpenDigger - [X-lab] Project Activity Details" src="https://codepen.io/tyn1998/embed/KKGxVrm?default-tab=js%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/tyn1998/pen/KKGxVrm">
   OpenDigger - [X-lab] Project Activity Details</a> by tyn1998 (<a href="https://codepen.io/tyn1998">@tyn1998</a>)
   on <a href="https://codepen.io">CodePen</a>.
