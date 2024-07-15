@@ -41,11 +41,11 @@ const sidebars = {
             'user_docs/metrics/openrank/community_openrank'
           ],
         },
+        'user_docs/metrics/activity',
         'user_docs/metrics/technical_fork',
         'user_docs/metrics/inactive_contributors',
         'user_docs/metrics/bus_factor',
         'user_docs/metrics/issue_response_time',
-        'user_docs/metrics/activity_details',
       ],
     },
     'user_docs/FAQ'

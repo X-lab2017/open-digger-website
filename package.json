@@ -25,9 +25,12 @@
     "docusaurus-plugin-image-zoom": "^2.0.0",
     "echarts": "^5.5.1",
     "echarts-for-react": "^3.0.2",
+    "katex": "^0.16.11",
     "prism-react-renderer": "^2.3.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "rehype-katex": "^7.0.0",
+    "remark-math": "^6.0.0",
     "stackedit-js": "^1.0.7"
   },
   "devDependencies": {
