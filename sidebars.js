@@ -19,7 +19,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'data_sources',
-      collapsed: false,
+      collapsed: true,
       items: [
         'user_docs/data_sources/github',
         'user_docs/data_sources/gitee'
@@ -44,6 +44,33 @@ const sidebars = {
         'user_docs/metrics/technical_fork',
         'user_docs/metrics/bus_factor',
       ],
+    },
+    {
+      type: 'category',
+      label: 'downstream',
+      collapsed: false,
+      items: [
+        {
+          type: 'link',
+          label: 'HyperCRX',
+          href: 'https://github.com/hypertrons/hypertrons-crx',
+        },
+        {
+          type: 'link',
+          label: 'OpenGalaxy',
+          href: 'https://open-galaxy.x-lab.info/',
+        },
+        {
+          type: 'link',
+          label: 'OpenAtomDashboard',
+          href: 'https://openatom-dashboard.x-lab.info/',
+        },
+        {
+          type: 'link',
+          label: 'PolarDBDashboard',
+          href: 'https://dataease.x-lab.info/link/RyaY6hry',
+        },
+      ]
     },
     'user_docs/FAQ'
   ],
