@@ -15,6 +15,18 @@
     "message": "OpenRank",
     "description": "The label for category openrank in sidebar docSidebar"
   },
+  "sidebar.userDocSidebar.category.downstream": {
+    "message": "Downstream Apps",
+    "description": "The label for category downstream in sidebar userDocSidebar"
+  },
+  "sidebar.userDocSidebar.link.PolarDBDashboard": {
+    "message": "PolarDB Dashboard",
+    "description": "The label for link PolarDBDashboard in sidebar userDocSidebar"
+  },
+  "sidebar.userDocSidebar.link.OpenAtomDashboard": {
+    "message": "OpenAtom Dashboard",
+    "description": "The label for link OpenAtomDashboard in sidebar userDocSidebar"
+  },
   "sidebar.developerDocSidebar.category.jupyter_notebook": {
     "message": "Jupyter Notebook",
     "description": "The label for category jupyter_notebook in sidebar developerDocSidebar"
