@@ -18,9 +18,9 @@
 
 ## 数据
 
-**链接（基础）：** `https://oss.x-lab.info/open_digger/{platform}/{owner}/{repo}/activity.json`
+- **链接（基础）：** `https://oss.x-lab.info/open_digger/{platform}/{owner}/{repo}/activity.json`
 
-**链接（详情）：** `https://oss.x-lab.info/open_digger/{platform}/{owner}/{repo}/activity_details.json`
+- **链接（详情）：** `https://oss.x-lab.info/open_digger/{platform}/{owner}/{repo}/activity_details.json`
 
 要获取特定仓库的数据，请将 `{platform}`，`{owner}` 和 `{repo}` 替换为实际名称。这里有一个[活跃度示例](https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/activity.json)以及[活跃度详情示例](https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/activity_details.json)。
 
@@ -34,11 +34,13 @@
 
 ### 活跃度演示
 
-<iframe height="300" scrolling="no" title="OpenDigger - [X-lab] OpenRank/Activity/Bus Factor" src="https://codepen.io/frank-zsy/embed/bGjyqQj?type=activity&default-tab=js%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="600" scrolling="no" title="OpenDigger - [X-lab] OpenRank/Activity/Bus Factor" src="https://codepen.io/frank-zsy/embed/bGjyqQj?type=activity&default-tab=js%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/frank-zsy/pen/bGjyqQj">
   OpenDigger - [X-lab] OpenRank/Activity/Bus Factor</a> by Frank Zhao (<a href="https://codepen.io/frank-zsy">@frank-zsy</a>)
   on <a href="https://codepen.io">CodePen</a>.
 </iframe>
+
+<br/>
 
 ### 活跃度详情演示
 
