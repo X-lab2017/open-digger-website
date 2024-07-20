@@ -20,7 +20,7 @@ To get the data for a certain repository, replace `{platform}`, `{owner}` and `{
 
 ## Code
 
-Here's the [**implementation code**](https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L674).
+Here's the [**implementation code**](https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L960).
 
 
 ## CodePen Demo

@@ -1,4 +1,4 @@
-# Activity Details
+# Activity
 
 ![From](https://img.shields.io/badge/From-x--Lab-blue) ![For](https://img.shields.io/badge/For-Repo-blue)
 
@@ -30,7 +30,7 @@ The activity data contains the historical activity statistics of the repository,
 
 ## Code
 
-Here's the [**implementation code**](https://github.com/X-lab2017/open-digger/blob/0432ecbd9b9d75d36b249fb5eb2b101d16a414be/src/metrics/indices.ts#L112).
+Here's the [**implementation code**](https://github.com/X-lab2017/open-digger/blob/master/src/metrics/indices.ts#L185).
 
 
 ## CodePen Demo
