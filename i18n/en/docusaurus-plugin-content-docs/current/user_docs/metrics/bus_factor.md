@@ -4,7 +4,7 @@
 
 ## Definition
 
-Bus Factor, or modernly Contributor Absence Factor is a metric defined by [CHAOSS](https://chaoss.community), see [CHAOSS Metrics - Bus Factor](https://chaoss.community/metric-bus-factor/) for a detailed definition of this metric.
+The Bus Factor, also known as the Contributor Absence Factor, is an indicator defined by the [CHAOSS community](https://chaoss.community). For a detailed definition of this indicator, please refer to [CHAOSS Metrics - Bus Factor](https://chaoss.community/metric-bus-factor/).
 
 The Bus Factor is a compelling metric because it visualizes the question "How many contributors can we lose before a project stalls?". It is the smallest number of people that make 50% of contributions to the project & indicates a measure of the project's resilience to losing key contributors (including maintainers).
 
@@ -21,7 +21,7 @@ To get the data for a certain repository, replace `{platform}`, `{owner}` and `{
 
 ## Code
 
-Here's the [**implementation code**](hhttps://github.com/X-lab2017/open-digger/blob/54478a97911a24a33e69147a985115b084c24f3f/src/metrics/chaoss.ts#L672).
+Here's the [**implementation code**](https://github.com/X-lab2017/open-digger/blob/54478a97911a24a33e69147a985115b084c24f3f/src/metrics/chaoss.ts#L672).
 
 
 ## CodePen Demo

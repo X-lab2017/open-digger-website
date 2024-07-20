@@ -5,6 +5,8 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import { themes as prismThemes } from 'prism-react-renderer';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 
 const defaultLocale = 'zh';
 
@@ -49,18 +51,32 @@ const config = {
           sidebarPath: './sidebars.js',
           editUrl: ({ locale, docPath }) =>
             `https://raw.githubusercontent.com/X-lab2017/open-digger-website/master/${locale === defaultLocale ? 'docs/' : `i18n/${locale}/docusaurus-plugin-content-docs/current/`}${docPath}`,
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
         },
         blog: {
           showReadingTime: true,
           blogSidebarTitle: 'Recent Posts',
           editUrl: ({ blogDirPath, blogPath, locale }) =>
             `https://github.com/X-lab2017/open-digger-website/tree/master/${locale === defaultLocale ? `${blogDirPath}/${blogPath}` : `i18n/${locale}/docusaurus-plugin-content-blog/${blogPath}`}`,
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
       }),
     ],
+  ],
+
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
+      type: 'text/css',
+      integrity:
+        'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
+      crossorigin: 'anonymous',
+    },
   ],
 
   plugins: [
