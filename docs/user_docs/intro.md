@@ -45,7 +45,7 @@ OpenDigger 实现的所有指标对所有人开放使用, 您可以通过以下�
     </tr>
     <tr>
       <td rowSpan="25">度量</td>
-      <td>Active dates and times</td>
+      <td>Activity dates and times</td>
       <td><a href="https://chaoss.community/metric-activity-dates-and-times/">CHAOSS</a></td>
       <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/active_dates_and_times.json">active_dates_and_times.json</a></td>
       <td><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L1050">Link</a></td>
