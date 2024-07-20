@@ -15,6 +15,18 @@
     "message": "标签数据",
     "description": "The label for category metrics in sidebar userDocSidebar"
   },
+  "sidebar.userDocSidebar.category.downstream": {
+    "message": "下游应用",
+    "description": "The label for category downstream in sidebar userDocSidebar"
+  },
+  "sidebar.userDocSidebar.link.PolarDBDashboard": {
+    "message": "PolarDB 社区大屏",
+    "description": "The label for link PolarDBDashboard in sidebar userDocSidebar"
+  },
+  "sidebar.userDocSidebar.link.OpenAtomDashboard": {
+    "message": "开放原子全球协作大屏",
+    "description": "The label for link OpenAtomDashboard in sidebar userDocSidebar"
+  },
   "sidebar.userDocSidebar.category.openrank": {
     "message": "OpenRank",
     "description": "The label for category openrank in sidebar userDocSidebar"
