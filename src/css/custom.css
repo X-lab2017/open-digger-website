@@ -30,7 +30,6 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-
 .header--github-link {
   width: 32px;
   height: 32px;
@@ -59,19 +58,19 @@ blockquote {
   border-left: 6px solid #e0e1da;
   background-color: #ebfbfa;
   color: #5b626b;
-  font-size: 1rem; 
-  margin: 0 0 1rem 0; 
-  padding: 1rem 1.5rem; 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-  border-radius: 4px; 
-  font-style: italic; 
+  font-size: 1rem;
+  margin: 0 0 1rem 0;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  font-style: italic;
 }
 
 html[data-theme="dark"] blockquote {
   border-left: 6px solid #5c5d5f;
-  background-color: #111c28; 
+  background-color: #111c28;
   color: #bcc3cc;
-  box-shadow: none; 
+  box-shadow: none;
 }
 
 iframe {
