@@ -30,7 +30,7 @@ OpenDigger 实现的所有指标对所有人开放使用, 您可以通过以下�
       <td><a href="https://codepen.io/frank-zsy/pen/bGjyqQj?type=openrank">Demo</a></td>
     </tr>
     <tr>
-      <td>Activity</td>
+      <td><a href="/docs/user_docs/metrics/activity"><b>Activity</b></a></td>
       <td><a href="https://blog.frankzhao.cn/how_to_measure_open_source_1/">X-lab</a></td>
       <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/activity.json">activity.json</a></td>
       <td><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/indices.ts#L109">Link</a></td>
@@ -45,7 +45,7 @@ OpenDigger 实现的所有指标对所有人开放使用, 您可以通过以下�
     </tr>
     <tr>
       <td rowSpan="25">度量</td>
-      <td>Activity dates and times</td>
+      <td><a href="/docs/user_docs/metrics/activity_dates_and_times"><b>Activity dates and times</b></a></td>
       <td><a href="https://chaoss.community/metric-activity-dates-and-times/">CHAOSS</a></td>
       <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/active_dates_and_times.json">active_dates_and_times.json</a></td>
       <td><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L1050">Link</a></td>
@@ -59,7 +59,7 @@ OpenDigger 实现的所有指标对所有人开放使用, 您可以通过以下�
       <td><a href="https://codepen.io/frank-zsy/pen/MWBdpNg?type=stars">Demo</a></td>
     </tr>
     <tr>
-      <td>Technical fork</td>
+      <td><a href="/docs/user_docs/metrics/technical_fork"><b>Technical Fork</b></a></td>
       <td><a href="https://chaoss.community/metric-technical-fork/">CHAOSS</a></td>
       <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/technical_fork.json">technical_fork.json</a></td>
       <td><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L12">Link</a></td>
@@ -73,7 +73,7 @@ OpenDigger 实现的所有指标对所有人开放使用, 您可以通过以下�
       <td><a href="https://codepen.io/frank-zsy/pen/RwBmpYZ">Demo</a></td>
     </tr>
     <tr>
-      <td rowSpan="2">New contributors</td>
+      <td rowSpan="2"><a href="/docs/user_docs/metrics/new_contributors"><b>New contributors</b></a></td>
       <td rowSpan="2"><a href="https://chaoss.community/metric-new-contributors/">CHAOSS</a></td>
       <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/new_contributors.json">new_contributors.json</a></td>
       <td rowSpan="2"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L862">Link</a></td>
@@ -83,14 +83,14 @@ OpenDigger 实现的所有指标对所有人开放使用, 您可以通过以下�
       <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/new_contributors_detail.json">new_contributors_detail.json</a></td>
     </tr>
     <tr>
-      <td>Inactive contributors</td>
+      <td><a href="/docs/user_docs/metrics/inactive_contributors"><b>Inactive contributors</b></a></td>
       <td><a href="https://chaoss.community/metric-inactive-contributors/">CHAOSS</a></td>
       <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/inactive_contributors.json">inactive_contributors.json</a></td>
       <td><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L965">Link</a></td>
       <td><a href="https://codepen.io/frank-zsy/pen/RwBmpYZ">Demo</a></td>
     </tr>
     <tr>
-      <td rowSpan="2">Bus factor</td>
+      <td rowSpan="2"><a href="/docs/user_docs/metrics/bus_factor"><b>Bus factor</b></a></td>
       <td rowSpan="2"><a href="https://chaoss.community/metric-bus-factor/">CHAOSS</a></td>
       <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/bus_factor.json">bus_factor.json</a></td>
       <td rowSpan="2"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L780">Link</a></td>
@@ -167,7 +167,7 @@ OpenDigger 实现的所有指标对所有人开放使用, 您可以通过以下�
       <td><a href="https://codepen.io/frank-zsy/pen/bGjPGxw">Demo</a></td>
     </tr>
     <tr>
-      <td>Change requests reviews</td>
+      <td>Change request reviews</td>
       <td><a href="https://chaoss.community/metric-change-request-reviews/">CHAOSS</a></td>
       <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/change_requests_reviews.json">change_requests_reviews.json</a></td>
       <td><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L734">Link</a></td>
