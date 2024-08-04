@@ -124,6 +124,11 @@ const config = {
             position: 'left'
           },
           {
+            to: '/leaderboard',
+            label: 'leaderboard',
+            position: 'left'
+          },
+          {
             type: 'localeDropdown',
             position: 'right',
           },
