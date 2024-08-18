@@ -1,0 +1,68 @@
+#main {
+  display: flex;
+}
+
+#graph {
+  height: 800px;
+}
+
+.graph-container {
+  width: 800px;
+}
+
+#control {
+  width: 320px;
+  height: 800px;
+}
+
+#list {
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+}
+
+#details {
+  width: 300px;
+  height: 440px;
+  margin: 10px;
+}
+
+#title {
+  text-align: center;
+  font-size: 12px;
+}
+
+#leaderboard_table {
+  width: 95%;
+  margin: 10px;
+}
+
+#details_table {
+  width: 95%;
+  margin: 10px;
+}
+
+.bordered {
+  border: 2px solid grey;
+}
+
+#leaderboard_div {
+  height: 240px;
+}
+
+#details_div {
+  height: 380px;
+}
+
+.scrollit {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+tr:nth-child(even) {
+  background-color: #D6EEEE;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
