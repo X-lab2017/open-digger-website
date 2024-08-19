@@ -42,6 +42,10 @@ const config = {
     },
   },
 
+  customFields: {
+    ossBaseUrl: 'https://oss.x-lab.info/open_digger/',
+  },
+
   presets: [
     [
       'classic',
