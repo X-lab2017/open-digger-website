@@ -325,11 +325,14 @@
   "metricCharts.dataNotFound": {
     "message": "Data not found"
   },
-  "metricCharts.input.placeholder": {
-    "message": "Repo name or user login"
+  "metricCharts.invalidInput": {
+    "message": "Invalid input, please check your input."
   },
-  "metricCharts.submit": {
+  "searchInput.submit": {
     "message": "Submit"
+  },
+  "searchInput.placeholder": {
+    "message": "Search for a name..."
   },
   "leaderboard.dataInputPlaceHolder": {
     "message": "Data input, JSON format with each item as a row in the table"
