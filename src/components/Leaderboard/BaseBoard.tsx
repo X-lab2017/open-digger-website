@@ -1,7 +1,7 @@
 import { flexRender } from '@tanstack/react-table';
 import styles from './styles.module.css';
 
-export function BaseBoard({ table }) {
+export function BaseBoard({ table }): JSX.Element {
   return (
     <div>
       <table className={styles.table}>

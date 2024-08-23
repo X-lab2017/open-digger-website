@@ -1,0 +1,14 @@
+{
+  "extends": "@docusaurus/tsconfig",
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "ES2015",
+    "downlevelIteration": true
+  }
+}

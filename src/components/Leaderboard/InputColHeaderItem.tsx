@@ -14,7 +14,7 @@ function Select({ options, value, onChange }) {
   );
 }
 
-export function InputColHeaderItem({ index }) {
+export function InputColHeaderItem({ index }): JSX.Element {
   const { leaderboardConfig, dispatch } = useContext(LeaderboardContext);
   const { inputData, columnOptions } = leaderboardConfig;
   const fields = inputData[0] ? Object.keys(inputData[0]) : [];

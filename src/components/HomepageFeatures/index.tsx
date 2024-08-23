@@ -1,9 +1,17 @@
+import React from 'react';
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 import { translate } from '@docusaurus/Translate';
 
-const FeatureList = [
+type FeatureItem = {
+  title: string;
+  url: string;
+  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  description: string;
+};
+
+const FeatureList: FeatureItem[] = [
   {
     title: 'features.richMetrics.title',
     url: 'features.richMetrics.url',
@@ -24,7 +32,7 @@ const FeatureList = [
   },
 ];
 
-function Feature({ Svg, title, description, url }) {
+function Feature({ Svg, title, description, url }: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
@@ -40,7 +48,7 @@ function Feature({ Svg, title, description, url }) {
   );
 }
 
-export default () => {
+export default (): JSX.Element => {
   return (
     <section className={styles.features}>
       <div className="container">

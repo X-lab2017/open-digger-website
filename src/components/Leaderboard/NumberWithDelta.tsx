@@ -1,10 +1,10 @@
 import styles from './styles.module.css';
 
-const formatNumber = num => {
+const formatNumber = (num: number) => {
   return Math.round(num);
 }
 
-export const NumberWithDelta = ({ number, delta }) => {
+export const NumberWithDelta = ({ number, delta }): JSX.Element => {
   if (delta === '-') {
     return (
       <div className={styles.numberContainer}>
