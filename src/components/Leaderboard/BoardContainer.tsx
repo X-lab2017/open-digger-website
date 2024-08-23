@@ -1,6 +1,6 @@
 import styles from './styles.module.css';
 
-export const BoardContainer = ({ children, title }) => {
+export const BoardContainer = ({ children, title }): JSX.Element => {
   return (
     <div className={`${styles.boardContainer}`}>
       <div className={styles.boardTitle}>
