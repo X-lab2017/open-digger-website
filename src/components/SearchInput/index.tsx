@@ -38,7 +38,7 @@ const submitStyles = {
 
 const platforms = ['GitHub', 'Gitee'];
 const types = ['Repo', 'User'];
-export const repoMetricOptionMap = new Map([
+export const repoMetricOptionMap = new Map<string, string | string[]>([
   ['OpenRank', 'openrank'],
   ['Activity', 'activity'],
   ['Stars', 'stars'],
@@ -54,12 +54,19 @@ export const repoMetricOptionMap = new Map([
   ['Change Request Resolution Duration', 'change_request_resolution_duration'],
   ['Code Change Lines', ['code_change_lines_add', 'code_change_lines_remove']],
 ]);
-export const userMetricOptionMap = new Map([
+export const userMetricOptionMap = new Map<string, string | string[]>([
   ['OpenRank', 'openrank'],
   ['Activity', 'activity'],
 ]);
 
-export default ({ platform, type, metric, onSubmit }) => {
+interface SearchInputProps {
+  platform?: string | boolean;
+  type?: string | boolean;
+  metric?: string | boolean;
+  onSubmit: (arg0: { platform: string; type: string; name: string; metric: string; metricDisplayName: string }) => void;
+};
+
+export default ({ platform, type, metric, onSubmit }: SearchInputProps): JSX.Element => {
   const optionsLimitCount = 20;
   const [repoList, setRepoList] = useState([]);
   const [userList, setUserList] = useState([]);
@@ -77,7 +84,7 @@ export default ({ platform, type, metric, onSubmit }) => {
   useEffect(() => {
     let typeValue = type;
     if (type) {
-      if (!types.includes(type)) {
+      if (!types.includes(type as string)) {
         typeValue = types[0];
         if (type !== true) {
           alert(`Invalid type: ${type}`);
@@ -89,7 +96,7 @@ export default ({ platform, type, metric, onSubmit }) => {
     setSelectedType({ value: typeValue, label: typeValue });
 
     if (platform) {
-      if (platforms.includes(platform)) {
+      if (platforms.includes(platform as string)) {
         setSelectedPlatform({ value: platform, label: platform });
       } else {
         setSelectedPlatform({ value: platforms[0], label: platforms[0] });
@@ -104,7 +111,7 @@ export default ({ platform, type, metric, onSubmit }) => {
     const fetchRepoList = async () => {
       try {
         const response = await axios.get(`${customFields.ossBaseUrl}repo_list.csv`);
-        const data = response.data;
+        const data: string = response.data;
         const parsedRepoList = data.split('\n')
           .slice(1)
           .map(line => line.trim().split(','))
@@ -118,7 +125,7 @@ export default ({ platform, type, metric, onSubmit }) => {
     const fetchUserList = async () => {
       try {
         const response = await axios.get(`${customFields.ossBaseUrl}user_list.csv`);
-        const data = response.data;
+        const data: string = response.data;
         const parsedUserList = data.split('\n')
           .slice(1)
           .map(line => line.trim().split(','))
@@ -162,7 +169,7 @@ export default ({ platform, type, metric, onSubmit }) => {
 
   return (
     <div>
-      {!((platform && platforms.includes(platform)) || platform === true) && (
+      {!((platform && platforms.includes(platform as string)) || platform === true) && (
         <Select
           options={platforms.map(p => ({ value: p, label: p }))}
           value={selectedPlatform}
@@ -172,7 +179,7 @@ export default ({ platform, type, metric, onSubmit }) => {
           styles={selectStyles('120px')}
         />
       )}
-      {!((type && types.includes(type)) || type === true) && (
+      {!((type && types.includes(type as string)) || type === true) && (
         <Select
           options={types.map(p => ({ value: p, label: p }))}
           value={selectedType}

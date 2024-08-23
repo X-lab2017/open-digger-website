@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import axios from 'axios';
 import ReactECharts from 'echarts-for-react';
 import { translate } from '@docusaurus/Translate';
@@ -6,16 +6,16 @@ import SearchInput, { repoMetricOptionMap, userMetricOptionMap } from '../Search
 import styles from './styles.module.css';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
-export default () => {
+export default (): JSX.Element => {
 
   const echartsRef = useRef(null);
 
   const { siteConfig } = useDocusaurusContext();
   const { customFields } = siteConfig;
 
-  const defaultRepoName = 'X-lab2017/open-digger';
+  const defaultRepoName: string = 'X-lab2017/open-digger';
 
-  const optionGeneratorMap = new Map();
+  const optionGeneratorMap = new Map<string, (data: any) => object>();
   let repoName = '';
 
   ['OpenRank', 'Activity', 'Bus Factor'].forEach(m => optionGeneratorMap.set(m, data => ({
@@ -323,7 +323,7 @@ export default () => {
 
   const [options, setOptions] = useState({});
 
-  const fetchData = (platform, type, name, metric) => {
+  const fetchData = (platform: string, type: string, name: string, metric: string) => {
     if (!platform || !type || !name || !metric) {
       alert(translate({ id: 'metricCharts.invalidInput' }));
       return;
