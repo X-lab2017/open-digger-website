@@ -1,0 +1,126 @@
+---
+slug: ospp-2023-analysis
+title: OSPP 2023 深度洞察报告
+authors: [zsy, ww]
+---
+
+import SimpleECharts from '@site/src/components/SimpleECharts';
+import SimpleTable from '@site/src/components/SimpleTable';
+
+## 背景介绍
+
+[开源之夏 OSPP](https://summer-ospp.ac.cn/) 是中国科学院软件研究所发起的“开源软件供应链点亮计划”系列暑期活动，旨在鼓励高校学生积极参与开源软件的开发维护，促进优秀开源软件社区的蓬勃发展，至今已成功举办五届（2020 ~ 2024），X-lab 开放实验室从第一届就开始深度参与。
+
+OpenDigger 作为一直以来深入参与 OSPP 的开源数据研究项目，也在此就 OSPP 2023 年的数据做一次深度的分析，也算是对 OSPP 社区的一次回馈。
+
+## OSPP 2023 宏观数据
+
+根据 OSPP 社区的数据报告，2023 年度，OSPP 总共发布了项目 **593** 个，有学生中选项目共计 **495** 个，最终结项项目为 **421** 个，结项率高达 **71%**。
+
+最终结项项目大部分除了个别与操作系统内核相关的社区使用了自己的 git 仓库外，大部分社区均托管于 GitHub（298 个）、Gitee（112 个）等代码托管平台上，平台的总体分布如下：
+
+<SimpleECharts option={{
+  title: { text: '结项项目托管平台分布图' },
+  backgroundColor: '#f5f5f5',
+  legend: { top: '5%', left: 'center' },
+  series: [{
+    type: 'pie',
+    radius: ['40%', '70%'],
+    avoidLabelOverlap: false,
+    itemStyle: { borderRadius: 10, borderColor: '#fff', borderWidth: 2 },
+    label: { show: false, position: 'center' },
+    emphasis: { label: { show: true, fontSize: 20, fontWeight: 'bold' } },
+    data: [{value:298,name:'GitHub'},{value:112,name:'Gitee'},{value:3,name:'GitLab'},{value:8,name:'Others'}]
+  }]
+}}
+/>
+
+从结项项目的学生所属高校来看，结项的 **421** 个项目由分别来自 **144** 所高校的学生最终完成，其中北京邮电大学、浙江大学、华中科技大学以 **20** 个以上的学生数量领跑各高校，具体的分布如下所示：
+
+<SimpleECharts option={{
+  title: { text: '结项学生数量分布图' },
+  backgroundColor: '#f5f5f5',
+  legend: { left: '20%', left: 'center' },
+  series: [{
+    type: 'treemap',
+    label: { show: true, position: 'center' },
+    data: [{"name":"北京邮电大学: 27 人","value":27},{"name":"浙江大学: 23 人","value":23},{"name":"华中科技大学: 21 人","value":21},{"name":"中国科学院大学: 18 人","value":18},{"name":"南京大学: 17 人","value":17},{"name":"电子科技大学: 14 人","value":14},{"name":"西安电子科技大学: 13 人","value":13},{"name":"华东师范大学: 13 人","value":13},{"name":"杭州电子科技大学: 11 人","value":11},{"name":"西安邮电大学: 10 人","value":10},{"name":"北京航空航天大学: 10 人","value":10},{"name":"北京大学: 9 人","value":9},{"name":"东南大学: 8 人","value":8},{"name":"南京航空航天大学: 6 人","value":6},{"name":"清华大学: 6 人","value":6},{"name":"中国科学技术大学: 6 人","value":6},{"name":"上海交通大学: 6 人","value":6},{"name":"同济大学: 6 人","value":6},{"name":"广东工业大学: 5 人","value":5},{"name":"重庆邮电大学: 5 人","value":5},{"name":"福州大学: 5 人","value":5},{"name":"中山大学: 4 人","value":4},{"name":"复旦大学: 4 人","value":4},{"name":"湖南大学: 4 人","value":4},{"name":"兰州大学: 4 人","value":4},{"name":"华中师范大学: 3 人","value":3},{"name":"北京工业大学: 3 人","value":3},{"name":"华南师范大学: 3 人","value":3},{"name":"西南大学: 3 人","value":3},{"name":"东北大学: 3 人","value":3},{"name":"Georgia Institute of Technology: 3 人","value":3},{"name":"武汉理工大学: 3 人","value":3},{"name":"吉林大学: 3 人","value":3},{"name":"西北工业大学: 3 人","value":3},{"name":"中国人民解放军国防科技大学: 3 人","value":3},{"name":"中南大学: 3 人","value":3},{"name":"中国地质大学（武汉）: 3 人","value":3},{"name":"北京师范大学: 2 人","value":2},{"name":"河南大学: 2 人","value":2},{"name":"山东大学: 2 人","value":2},{"name":"华东理工大学: 2 人","value":2},{"name":"深圳大学: 2 人","value":2},{"name":"Northeastern University: 2 人","value":2},{"name":"南京理工大学: 2 人","value":2},{"name":"东北林业大学: 2 人","value":2},{"name":"江西师范大学: 2 人","value":2},{"name":"重庆理工大学: 2 人","value":2},{"name":"Hong Kong University of Science and Technology: 2 人","value":2},{"name":"北京交通大学: 2 人","value":2},{"name":"河北工业大学: 2 人","value":2},{"name":"南京邮电大学: 2 人","value":2},{"name":"大连理工大学: 2 人","value":2},{"name":"郑州大学: 2 人","value":2},{"name":"燕山大学: 2 人","value":2},{"name":"中国石油大学（华东）: 2 人","value":2},{"name":"华南理工大学: 2 人","value":2},{"name":"暨南大学: 2 人","value":2},{"name":"哈尔滨工业大学: 2 人","value":2},{"name":"哈尔滨工程大学: 2 人","value":2},{"name":"中国地质大学（北京）: 2 人","value":2}]
+  }]
+}}
+/>
+
+## 年度贡献度分析
+
+除了上述一些统计数据外，我们也希望可以给出一些更加深入的洞察，例如每个高校中不同学生在社区中具体的贡献度等，这种精细化的分析也有助于我们进一步观察学生在整个过程中对于项目的协同参与程度，而不仅仅局限于学生是否仅是完成了一个特定的任务。
+
+> 注意：受限于 OpenDigger 目前的底层基础数据，下述分析将仅包含 GitHub、Gitee 平台上的数据。
+
+我们使用了 2023 全年的贡献度数据和社区 OpenRank 算法对参与到各社区学生的参与度进行了详细的分析，最终统计到各高校总体贡献度前 20 名如下表所示：
+
+<SimpleTable title={'OSPP 2023 年度高校贡献度排行榜'} data={
+  [{"__index__":1,"name":"北京邮电大学","openrank":60.208,"openrankAvgergae":2.23,"totalCount":27},{"__index__":2,"name":"华中科技大学","openrank":59.554,"openrankAvgergae":2.836,"totalCount":21},{"__index__":3,"name":"浙江大学","openrank":59.348,"openrankAvgergae":2.58,"totalCount":23},{"__index__":4,"name":"复旦大学","openrank":54.477,"openrankAvgergae":13.619,"totalCount":4},{"__index__":5,"name":"华东师范大学","openrank":54.188,"openrankAvgergae":4.168,"totalCount":13},{"__index__":6,"name":"西安邮电大学","openrank":53.172,"openrankAvgergae":5.317,"totalCount":10},{"__index__":7,"name":"上海交通大学","openrank":53.091,"openrankAvgergae":8.849,"totalCount":6},{"__index__":8,"name":"西安电子科技大学","openrank":51.291,"openrankAvgergae":3.945,"totalCount":13},{"__index__":9,"name":"重庆邮电大学","openrank":50.346,"openrankAvgergae":10.069,"totalCount":5},{"__index__":10,"name":"电子科技大学","openrank":49.896,"openrankAvgergae":3.564,"totalCount":14},{"__index__":11,"name":"杭州电子科技大学","openrank":41.904,"openrankAvgergae":3.809,"totalCount":11},{"__index__":12,"name":"陇东学院","openrank":37.244,"openrankAvgergae":37.244,"totalCount":1},{"__index__":13,"name":"南京大学","openrank":34.645,"openrankAvgergae":2.038,"totalCount":17},{"__index__":14,"name":"中国科学院大学","openrank":30.022,"openrankAvgergae":1.668,"totalCount":18},{"__index__":15,"name":"北京工业大学","openrank":19.995,"openrankAvgergae":6.665,"totalCount":3},{"__index__":16,"name":"武汉大学","openrank":19.484,"openrankAvgergae":19.484,"totalCount":1},{"__index__":17,"name":"同济大学","openrank":19.243,"openrankAvgergae":3.207,"totalCount":6},{"__index__":18,"name":"华东理工大学","openrank":19.004,"openrankAvgergae":9.502,"totalCount":2},{"__index__":19,"name":"成都信息工程大学","openrank":18.892,"openrankAvgergae":18.892,"totalCount":1},{"__index__":20,"name":"东南大学","openrank":17.462,"openrankAvgergae":2.183,"totalCount":8}]
+} options={
+  [
+    {name: '高校名称', type: 'String', fields: ['name'], width: 250 },
+    {name: 'OpenRank', type: 'String', fields: ['openrank'], width: 130 },
+    {name: '参数学生数', type: 'String', fields: ['totalCount'], width: 130 },
+    {name: '人均 OpenRank', type: 'String', fields: ['openrankAvgergae'], width: 130 }
+  ]
+}
+/>
+
+<br />
+
+我们在给出了高校总体贡献度的同时也给出了校人均 OpenRank 贡献度，可以看到北京邮电大学、华中科技大学、浙江大学依凭学生数量优势依然排在贡献榜前三位，但也有些高校因为很高的人均 OpenRank 贡献度而上榜，如复旦大学、重庆邮电大学、陇东学院、武汉大学、成都信息工程大学等，他们在学生数量上并不占优，但因为个别学生的贡献度较高而使得最终的排名较高。
+
+为了进一步观察学生的贡献情况，我们也对学生贡献者进行了 OpenRank 贡献度的排名，OpenRank 前 20 的学生如下：
+
+<SimpleTable title={'OSPP 2023 年度学生贡献度排行榜'} data={
+  [{"__index__":1,"platform":"github","login":"heni02","name":"潘**","univ":"上海交通大学","openrank":49.852,"community":"MatrixOne","activeMonth":18},{"__index__":2,"platform":"github","login":"Radeity","name":"王**","univ":"复旦大学","openrank":46.373,"community":"Apache HugeGraph","activeMonth":15},{"__index__":3,"platform":"github","login":"yuluo-yx","name":"姬**","univ":"陇东学院","openrank":37.244,"community":"Spring Cloud Alibaba","activeMonth":18},{"__index__":4,"platform":"github","login":"liangyepianzhou","name":"孟**","univ":"重庆邮电大学","openrank":36.239,"community":"Apache SkyWalking","activeMonth":17},{"__index__":5,"platform":"github","login":"Wanglongzhi2001","name":"王**","univ":"电子科技大学","openrank":27.035,"community":"MegEngine（旷视天元）","activeMonth":12},{"__index__":6,"platform":"github","login":"Ziy1-Tan","name":"谭**","univ":"华中科技大学","openrank":24.179,"community":"GraphScope","activeMonth":11},{"__index__":7,"platform":"github","login":"TheR1sing3un","name":"刘**","univ":"西安电子科技大学","openrank":21.937,"community":"OpenMessaging","activeMonth":9},{"__index__":8,"platform":"github","login":"joeCarf","name":"乔*","univ":"武汉大学","openrank":19.484,"community":"Apache RocketMQ社区","activeMonth":13},{"__index__":9,"platform":"github","login":"NaturalSelect","name":"黄**","univ":"成都信息工程大学","openrank":18.892,"community":"CubeFS","activeMonth":15},{"__index__":10,"platform":"github","login":"jiayouxujin","name":"徐*","univ":"华东理工大学","openrank":18.038,"community":"Apache Kvrocks (Incubating)","activeMonth":8},{"__index__":11,"platform":"github","login":"Zzzzzhuzhiwei","name":"朱**","univ":"华东师范大学","openrank":18.034,"community":"OpenDigger","activeMonth":13},{"__index__":12,"platform":"github","login":"xiao-jay","name":"应**","univ":"杭州电子科技大学","openrank":15.973,"community":"Volcano社区","activeMonth":9},{"__index__":13,"platform":"gitee","login":"YJMSTR","name":"张**","univ":"西安电子科技大学","openrank":13.862,"community":"泰晓科技","activeMonth":8},{"__index__":14,"platform":"github","login":"conghuhu","name":"丛**","univ":"山东大学","openrank":13.692,"community":"Apache HugeGraph","activeMonth":11},{"__index__":15,"platform":"github","login":"Xinlong-Chen","name":"陈**","univ":"浙江大学","openrank":13.504,"community":"Curve","activeMonth":6},{"__index__":16,"platform":"github","login":"lhbvvvvv","name":"李**","univ":"华东师范大学","openrank":13.326,"community":"OpenDigger","activeMonth":13},{"__index__":17,"platform":"github","login":"liuxiaocs7","name":"刘*","univ":"华中科技大学","openrank":13.172,"community":"Apache HugeGraph","activeMonth":15},{"__index__":18,"platform":"gitee","login":"Kepontry","name":"周**","univ":"中国科学院大学","openrank":11.975,"community":"openEuler 社区","activeMonth":8},{"__index__":19,"platform":"github","login":"zuobiao-zhou","name":"张**","univ":"北京工业大学","openrank":11.071,"community":"Apache Pulsar","activeMonth":10},{"__index__":20,"platform":"github","login":"Antlera","name":"兰**","univ":"四川大学","openrank":10.942,"community":"DLRover","activeMonth":7}]
+} options={
+  [
+    {name: '学生姓名', type: 'String', fields: ['name'], width: 100 },
+    {name: 'OpenRank', type: 'String', fields: ['openrank'], width: 100 },
+    {name: '学校', type: 'String', fields: ['univ'], width: 200 },
+    {name: '参与社区', type: 'String', fields: ['community'], width: 220 },
+    {name: '活跃月数', type: 'String', fields: ['activeMonth'], width: 70 }
+  ]
+}
+/>
+
+<br />
+
+通过对于学生个体的分析，一些贡献度极高的学生就可以清晰的看到，例如来自陇东学院的姬同学在 Spring Cloud Alibaba 社区、来自重庆邮电大学的孟同学在 Apache Skywalking 社区、来自成都信息工程大学的黄同学在 CubeFS 社区、来自武汉大学的乔同学在 Apache RocketMQ 社区的参与，他们都仅凭一己之力将自己学校的总体贡献度拉入到高校前 20。
+
+同时上表也给出了这些同学从 2023 年 1 月到 2024 年 7 月中在参与项目中的活跃月数，可以看到前 20 位的同学的活跃月数均达到了 6 个月以上，而上述提到的几位同学贡献时长都达到了 12 个月以上，这里也体现出了 OpenRank 鼓励长期贡献的价值取向。
+
+## 后续持续贡献分析
+
+我们可以看到，OSPP 拉动了大量高校的优秀学生在校期间就深入参与到开源社区的贡献之中，那么这些学生后续的活跃情况如何呢？为此我们也进行了更长期的跟踪分析，看一下在 OSPP 结束之后，还有多少的同学继续留在社区中持续的参与贡献。
+
+<SimpleECharts option={{
+  tooltip: { trigger: 'axis', axisPointer: { type: 'cross', label: { backgroundColor: '#6a7985' } } },
+  backgroundColor: '#f5f5f5',
+  grid: { left: '3%', right: '4%', bottom: '3%', containLabel: true },
+  xAxis: [{ type: 'category', boundaryGap: false, data: [202301, 202302, 202303, 202304, 202305, 202306, 202307, 202308, 202309, 202310, 202311, 202312, 202401, 202402, 202403, 202404, 202405, 202406, 202407] }],
+  yAxis: [{ type: 'value', min: 0 }],
+  series: [{"name":"北京邮电大学","type":"line","stack":"Total","areaStyle":{},"data":[1.26,2.59,0,3.35,2.31,2.42,7.48,8.1,13.26,9.69,5.05,4.71,4.04,1.46,1.65,1.42,1.07,1.44,0.82]},{"name":"华中科技大学","type":"line","stack":"Total","areaStyle":{},"data":[1.22,1.94,0,3.27,7.22,4.62,4.17,6.9,16.36,6.14,4.5,3.2,2.35,2.67,1.78,1.39,2.23,0.94,0.74]},{"name":"浙江大学","type":"line","stack":"Total","areaStyle":{},"data":[1.16,1.05,0,6.87,7.9,5.16,6.39,5.36,12.63,8.61,1.16,3.06,2.71,1.31,1.18,2.08,1.25,0.51,0]},{"name":"复旦大学","type":"line","stack":"Total","areaStyle":{},"data":[4.14,4.65,0,7.76,6.66,6.12,4.71,5.79,5.08,3.73,3.83,2,1.76,0,0,0.69,1.74,1.41,1.6]},{"name":"华东师范大学","type":"line","stack":"Total","areaStyle":{},"data":[0.21,0.81,0,1.33,4.02,5.33,5.82,6.8,10.37,8.4,7.39,3.7,2.09,1.88,1.18,1.62,0.81,0,0.68]},{"name":"西安邮电大学","type":"line","stack":"Total","areaStyle":{},"data":[1.74,1.05,0,1.66,5.98,0.36,4.32,7.93,11.37,8.16,3.3,7.3,5.28,5.26,3.7,3.15,3.43,2.98,0]},{"name":"上海交通大学","type":"line","stack":"Total","areaStyle":{},"data":[5.36,5.84,0,2.63,4.59,5.81,4.12,5.34,5.38,5.67,3.66,4.7,3.31,6.32,5.01,4.03,3.51,3.71,4.17]},{"name":"西安电子科技大学","type":"line","stack":"Total","areaStyle":{},"data":[3.47,3.68,0,5.71,5.59,3.99,5.58,8.41,6.67,2.26,4.14,1.78,1.19,0.72,0.98,0,0,0,0]},{"name":"重庆邮电大学","type":"line","stack":"Total","areaStyle":{},"data":[1.98,3.5,0,2.94,3.54,3.43,5.12,5.26,9.52,7.09,5.41,2.55,1.58,3.92,4.36,1.89,0,1.1,4.01]},{"name":"电子科技大学","type":"line","stack":"Total","areaStyle":{},"data":[0,0.69,0,2.62,1.25,4.04,6.54,7.14,8.93,6.91,9.01,2.77,2.05,1.98,0.27,0.78,0,0,0]},{"name":"杭州电子科技大学","type":"line","stack":"Total","areaStyle":{},"data":[1.78,1.92,0,3.94,4.68,4.58,3.81,3.57,7.63,5.38,1.32,3.28,3.78,3.32,1.04,0,0,0,0]},{"name":"陇东学院","type":"line","stack":"Total","areaStyle":{},"data":[4.55,3.58,0,4.37,2.82,4.28,1.97,1.35,3.79,2.16,2.24,6.12,3.93,2.9,7.94,5.71,8.14,5.3,14.62]},{"name":"南京大学","type":"line","stack":"Total","areaStyle":{},"data":[0,0.09,0,0.83,1.48,1.57,4.76,7.15,8.68,6.4,2.13,1.56,1.55,0.57,0,0,0.89,0.38,1.48]},{"name":"中国科学院大学","type":"line","stack":"Total","areaStyle":{},"data":[1.14,1.84,0,1.89,3.13,1.87,4.28,3.98,6.84,3.32,0.77,0.96,0.41,0,0,0,0.39,0,0]},{"name":"北京工业大学","type":"line","stack":"Total","areaStyle":{},"data":[0,0,0,2.2,0.9,2.03,3.77,3.87,4.63,1.1,0,1.51,1.17,1.49,0.98,1.3,2.17,1.97,2.41]},{"name":"武汉大学","type":"line","stack":"Total","areaStyle":{},"data":[1.35,0.59,0,1.64,0.87,1.27,1.77,2.84,2.8,4.27,1.57,0.52,0.45,0,0.27,0,0,0,0]},{"name":"同济大学","type":"line","stack":"Total","areaStyle":{},"data":[1.99,1.86,0,0.95,1.61,0.55,1.8,3.62,4.49,1.54,0.84,0,0,0,0,0,0,0,0]},{"name":"华东理工大学","type":"line","stack":"Total","areaStyle":{},"data":[0,0,0,0.52,1.68,2.82,1.69,4.27,2.41,3.04,2.57,0,0,0,0,0,0,0,0]},{"name":"成都信息工程大学","type":"line","stack":"Total","areaStyle":{},"data":[0,0,0,0.25,1.27,2.13,2.73,1.82,2.28,2.97,3.12,2.34,2.49,3.12,6.87,3.88,2.12,1.84,0]},{"name":"东南大学","type":"line","stack":"Total","areaStyle":{},"data":[0,0,0,0.38,0.92,1.16,1.63,2.49,3.24,4.09,1.81,1.75,1.49,0,0,0,0,0,0]}]
+}} />
+
+上面的折线图是 2023 年 1 月到 2024 年 7 月各高校的贡献度堆叠图，我们可以看到 2023 年 3 月开学季同学们均没有参与到社区中，除此之外，2023 年 4 月以来同学们开始逐渐参与贡献，到 9 月份达到一个顶峰，之后逐渐回落，到 2024 年 1 月后趋于平缓稳定。
+
+<SimpleTable title={'2024.7 学生贡献度排行榜'} data={
+  [{"__index__":1,"platform":"github","login":"yuluo-yx","name":"姬**","univ":"陇东学院","openrank":14.622,"community":"Spring Cloud Alibaba"},{"__index__":2,"platform":"gitee","login":"herunhong","name":"何**","univ":"中国海洋大学","openrank":3.64,"community":"昇思MindSpore"},{"__index__":3,"platform":"github","login":"liangyepianzhou","name":"孟**","univ":"重庆邮电大学","openrank":3.504,"community":"Apache SkyWalking"},{"__index__":4,"platform":"github","login":"heni02","name":"潘**","univ":"上海交通大学","openrank":3.168,"community":"MatrixOne"},{"__index__":5,"platform":"github","login":"lishensuo","name":"李**","univ":"上海中医药大学","openrank":2.778,"community":"Openbiox"},{"__index__":6,"platform":"gitee","login":"li-ruoyu11037","name":"李**","univ":"华南师范大学","openrank":1.933,"community":"泰晓科技"},{"__index__":7,"platform":"github","login":"PokIsemaine","name":"周**","univ":"东北林业大学","openrank":1.747,"community":"Casbin"},{"__index__":8,"platform":"github","login":"hsj576","name":"胡**","univ":"复旦大学","openrank":1.595,"community":"KubeEdge"},{"__index__":9,"platform":"github","login":"ggbocoder","name":"蒋**","univ":"南京大学","openrank":1.481,"community":"Seata"},{"__index__":10,"platform":"github","login":"zuobiao-zhou","name":"张**","univ":"北京工业大学","openrank":1.279,"community":"Apache Pulsar"}]
+} options={
+  [
+    {name: '学生姓名', type: 'String', fields: ['name'], width: 100 },
+    {name: 'OpenRank', type: 'String', fields: ['openrank'], width: 100 },
+    {name: '学校', type: 'String', fields: ['univ'], width: 200 },
+    {name: '参与社区', type: 'String', fields: ['community'], width: 220 }
+  ]
+}
+/>
+
+<br />
+
+从这些同学在 2024.7 月的贡献情况来看，当月还有 **32** 位同学在自己曾经贡献的社区中继续活跃，而陇东学院的姬同学依然在非常活跃的深度参与到社区的开发活动之中，甚至贡献度相较 2023 年更高，这虽然与他今年再次中选 OSPP 项目有关，但也可以看到他已经深度融入到了 Spring Cloud Alibaba 社区，成为了一名长期贡献者。
