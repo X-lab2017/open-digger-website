@@ -7,9 +7,6 @@ import { COLUMN_TYPE_RULES } from '../Leaderboard';
 const helper = createColumnHelper<{ __index__: number }>();
 
 export default (props: { title: string; data: any[]; options: any[] }): JSX.Element => {
-
-  console.log(props);
-
   const tableColumns = [helper.accessor(row => row, {
     id: `__index__`,
     header: () => '#',
