@@ -83,6 +83,10 @@
   border-top: 1px solid rgba(175, 206, 232, 0.2)
 }
 
+table tr:nth-child(even) {
+  background-color: rgba(175, 206, 232, 0.1);
+}
+
 .thr {
   border-top: none;
 }
