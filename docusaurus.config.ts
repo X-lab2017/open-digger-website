@@ -56,7 +56,7 @@ const config: Config = {
           showReadingTime: true,
           blogSidebarTitle: 'Recent Posts',
           editUrl: ({ blogDirPath, blogPath, locale }) =>
-            `https://github.com/X-lab2017/open-digger-website/tree/master/${locale === defaultLocale ? `${blogDirPath}/${blogPath}` : `i18n/${locale}/docusaurus-plugin-content-blog/${blogPath}`}`,
+            `https://raw.githubusercontent.com/X-lab2017/open-digger-website/master/${locale === defaultLocale ? `${blogDirPath}/${blogPath}` : `i18n/${locale}/docusaurus-plugin-content-blog/${blogPath}`}`,
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
         },
