@@ -11,7 +11,7 @@ const config: Config = {
   tagline: 'Open Source Analysis Platform',
   favicon: 'img/favicon.ico',
   url: 'https://open-digger.cn',
-  baseUrl: process.env.BASE_URL || '/',
+  baseUrl: process.env.PULL_NUM ? `/pull_${process.env.PULL_NUM}/` : '/',
 
   scripts: [
     {
@@ -39,6 +39,7 @@ const config: Config = {
 
   customFields: {
     ossBaseUrl: 'https://oss.x-lab.info/open_digger/',
+    pullNumber: process.env.PULL_NUM,
   },
 
   presets: [
@@ -75,6 +76,7 @@ const config: Config = {
         'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
       crossorigin: 'anonymous',
     },
+    'src/css/custom.css',
   ],
 
   plugins: [
