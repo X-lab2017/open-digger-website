@@ -16,7 +16,7 @@ export const COLUMN_TYPE_RULES: {
     {
       name: 'String',
       fieldsNeeded: 1,
-      renderer: (text) => <span>{text}</span>,
+      renderer: (text) => <div dangerouslySetInnerHTML={{ __html: text }}></div>,
     },
     {
       name: 'StringWithIcon',

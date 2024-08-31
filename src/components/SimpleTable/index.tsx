@@ -7,12 +7,15 @@ import { COLUMN_TYPE_RULES } from '../Leaderboard';
 const helper = createColumnHelper<{ __index__: number }>();
 
 export default (props: { title: string; data: any[]; options: any[] }): JSX.Element => {
-  const tableColumns = [helper.accessor(row => row, {
-    id: `__index__`,
-    header: () => '#',
-    cell: info => <span>{info.getValue().__index__}</span>,
-    size: 30,
-  })];
+  const tableColumns: any[] = [];
+  if (props.data.length > 0 && props.data[0].__index__ !== undefined) {
+    tableColumns.push(helper.accessor(row => row, {
+      id: `__index__`,
+      header: () => '#',
+      cell: info => <span>{info.getValue().__index__}</span>,
+      size: 30,
+    }));
+  }
   tableColumns.push(...props.options.map((option, index) => {
     const { name, width, type, fields } = option;
     const column = helper.accessor(row => row, {
