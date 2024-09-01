@@ -26,6 +26,7 @@
     "echarts": "^5.5.1",
     "echarts-for-react": "^3.0.2",
     "katex": "^0.16.11",
+    "lodash": "^4.17.21",
     "prism-react-renderer": "^2.3.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -39,6 +40,7 @@
     "@docusaurus/tsconfig": "^3.5.2",
     "@docusaurus/types": "^3.4.0",
     "@simbathesailor/use-what-changed": "^2.0.0",
+    "@types/lodash": "^4.17.7",
     "typescript": "^5.5.4"
   },
   "browserslist": {
