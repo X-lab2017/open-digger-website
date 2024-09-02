@@ -18,7 +18,7 @@ const selectStyles = width => ({
   }),
   option: (provided, state) => ({
     ...provided,
-    backgroundColor: state.isSelected ? '#4CAF50' : state.isFocused ? '#f0f0f0' : null,
+    backgroundColor: state.isSelected ? '#3366FF' : state.isFocused ? '#f0f0f0' : null,
     color: state.isSelected ? 'white' : 'black',
   }),
   singleValue: (provided) => ({
@@ -30,7 +30,7 @@ const selectStyles = width => ({
 const submitStyles = {
   padding: '0px 15px 0px 15px',
   borderRadius: '5px',
-  background: 'blue',
+  background: '#3366FF',
   color: 'white',
   border: 'none',
   height: '50px',
