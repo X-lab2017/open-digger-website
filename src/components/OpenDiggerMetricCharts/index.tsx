@@ -1,14 +1,13 @@
 import React, { useState, useRef, useEffect } from 'react';
 import axios from 'axios';
-import ReactECharts from 'echarts-for-react';
+// import ReactECharts from 'echarts-for-react';
 import { translate } from '@docusaurus/Translate';
 import SearchInput, { repoMetricOptionMap, userMetricOptionMap } from '../SearchInput';
 import styles from './styles.module.css';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import SimpleECharts from '../SimpleECharts';
 
 export default (): JSX.Element => {
-
-  const echartsRef = useRef(null);
 
   const { siteConfig } = useDocusaurusContext();
   const { customFields } = siteConfig;
@@ -19,6 +18,7 @@ export default (): JSX.Element => {
   let repoName = '';
 
   ['OpenRank', 'Activity', 'Bus Factor'].forEach(m => optionGeneratorMap.set(m, data => ({
+    legend: { show: false },
     xAxis: {
       type: "category",
       data: Object.keys(data[0]).filter(k => k.length === 7)
@@ -27,6 +27,7 @@ export default (): JSX.Element => {
     series: [
       {
         type: "bar",
+        name: m,
         data: Object.keys(data[0]).filter(k => k.length === 7).map(k => data[0][k])
       }
     ],
@@ -40,6 +41,7 @@ export default (): JSX.Element => {
       return p + c;
     });
     return {
+      legend: { show: false },
       xAxis: {
         type: 'category',
         data: Object.keys(data).filter(k => k.length === 7),
@@ -47,9 +49,11 @@ export default (): JSX.Element => {
       yAxis: [{ type: 'value' }, { type: 'value' }],
       series: [{
         type: 'bar',
+        name: m,
         data: Object.keys(data).filter(k => k.length === 7).map(k => data[k]),
       }, {
         type: 'line',
+        name: 'Totle',
         yAxisIndex: 1,
         data: accValue,
         smooth: true,
@@ -118,7 +122,7 @@ export default (): JSX.Element => {
           type: 'bar',
           stack: 'Total',
           itemStyle: {
-            color: 'green',
+            color: '#83D328',
           },
           data: issuesNew,
           markPoint: repoName === defaultRepoName ? {
@@ -140,7 +144,7 @@ export default (): JSX.Element => {
           name: 'Close',
           type: 'bar',
           itemStyle: {
-            color: 'red',
+            color: '#FF6159',
           },
           stack: 'CloseTotal',
           data: issuesClosed,
@@ -150,6 +154,9 @@ export default (): JSX.Element => {
           type: 'line',
           data: issueComment,
           yAxisIndex: 1,
+          itemStyle: {
+            color: '#3366FF',
+          },
           markPoint: repoName === defaultRepoName ? {
             data: [
               {
@@ -234,7 +241,7 @@ export default (): JSX.Element => {
           type: 'bar',
           stack: 'Total',
           itemStyle: {
-            color: 'green',
+            color: '#83D328',
           },
           data: crsNew,
         },
@@ -242,7 +249,7 @@ export default (): JSX.Element => {
           name: 'Accpeted',
           type: 'bar',
           itemStyle: {
-            color: 'red',
+            color: '#FF6159',
           },
           stack: 'CloseTotal',
           data: crsAccepted,
@@ -252,6 +259,10 @@ export default (): JSX.Element => {
           type: 'line',
           data: crReviews,
           yAxisIndex: 1,
+          itemStyle: {
+            color: '#3366FF',
+            areaStyle: { color: 'transparent' }
+          },
         }
       ]
     };
@@ -261,17 +272,20 @@ export default (): JSX.Element => {
     const [addLines, removeLines] = data;
     const monthes = Object.keys(addLines).filter(k => k.length === 7);
     return {
+      legend: { show: false },
       xAxis: {
         type: 'category',
         data: monthes,
       },
       yAxis: { type: 'value' },
       series: [{
+        name: 'additions',
         type: 'line',
         data: monthes.map(m => addLines[m]),
         symbol: 'none',
         areaStyle: { color: 'green' },
       }, {
+        name: 'deletions',
         type: 'line',
         data: monthes.map(m => removeLines[m]).map(v => -v),
         symbol: 'none',
@@ -302,13 +316,13 @@ export default (): JSX.Element => {
       series: [
         {
           type: 'candlestick',
-          name: 'quantiles box plot',
+          name: 'quantiles',
           data: quantileData,
           itemStyle: {
-            color: 'rgba(0, 0, 180, 0.4)',
-            color0: 'rgba(0, 0, 180, 0.4)',
-            borderColor: 'rgba(0, 0, 180, 0.4)',
-            borderColor0: 'rgba(0, 0, 180, 0.4)',
+            color: '#3366FF',
+            color0: '#3366FF',
+            borderColor: '#3366FF',
+            borderColor0: '#3366FF',
           }
         }, {
           type: 'line',
@@ -338,8 +352,6 @@ export default (): JSX.Element => {
         title: { text: translate({ id: 'metricCharts.title' }, { metric, name }), left: "center" },
         ...optionGeneratorMap.get(metric)(data),
       };
-      // clear data first to avoid old data left in the charts
-      echartsRef.current.getEchartsInstance().clear();
       setOptions(options);
     }).catch(error => {
       console.error('Error fetching data', error);
@@ -358,7 +370,7 @@ export default (): JSX.Element => {
       <div className={styles.inputDiv}>
         <SearchInput onSubmit={v => fetchData(v.platform, v.type, v.name, v.metricDisplayName)} />
       </div>
-      <ReactECharts className={styles.chart} ref={echartsRef} option={options} />
+      <SimpleECharts divStyle={{ height: '600px', width: '100%' }} option={options} />
     </>
   );
 };
