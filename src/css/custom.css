@@ -102,3 +102,15 @@ iframe {
   border: none;
   border-radius: 10px;
 }
+
+article {
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 90%;
+  }
+}
