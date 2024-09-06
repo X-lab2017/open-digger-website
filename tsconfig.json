@@ -7,8 +7,22 @@
     "node_modules",
   ],
   "compilerOptions": {
-    "baseUrl": ".",
-    "target": "ES2015",
-    "downlevelIteration": true
-  }
+    "target": "ES6", // 或 "ESNext"，取决于你需要的 JavaScript 版本
+    "lib": ["dom", "dom.iterable", "esnext"], // 用于支持 DOM 和最新的 ES 特性
+    "allowJs": true, // 如果你也有 .js 文件
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true, // 启用 TypeScript 的严格模式
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx", // 对于 React 17+ 或 React 18，使用 "react-jsx"。对于旧版本，使用 "react"。
+    "noEmit": true, // 如果你不希望生成编译后的文件，可以设置为 true
+    "paths": {
+      "@/*": ["src/*"] // 如果你使用了路径别名
+    }
+  },
 }

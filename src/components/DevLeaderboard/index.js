@@ -6,6 +6,7 @@ import { Select, Input, Button, Space, Calendar } from "antd";
 import Leaderboard from "./Leaderboard";
 import Details from "./Details";
 import Graph from "./Graph";
+import CustomCalendar from "./CustomCalendar";
 import "./devLeaderboard.css";
 
 const DevLeaderboard = () => {
@@ -61,7 +62,7 @@ const DevLeaderboard = () => {
             </Space.Compact>
           </div>
 					
-          <Calendar fullscreen={false}/>
+          <CustomCalendar fullscreen={false}/>
 				</div>
 			</div>
 			<div id="main" className="bordered">
