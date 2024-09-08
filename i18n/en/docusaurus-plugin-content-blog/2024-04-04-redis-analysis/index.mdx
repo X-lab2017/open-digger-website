@@ -27,7 +27,7 @@ import SimpleECharts from '@site/src/components/SimpleECharts';
   grid: { left: '3%', right: '4%', bottom: '3%', containLabel: true },
   xAxis: [{ type: 'category', boundaryGap: false, data: [2020, 2021, 2022, 2023, 2024] }],
   yAxis: [{ type: 'value', min: 0, max: 100 }],
-  series: [{"name":"Redis","type":"line","stack":"Total","areaStyle":{},"data":[73.31,61.17,59.29,47.21,34.4]},{"name":"AWS","type":"line","stack":"Total","areaStyle":{},"data":[7.15,10.35,13.28,19.58,14.56]},{"name":"Aliyun","type":"line","stack":"Total","areaStyle":{},"data":[3.88,2.09,3.46,6.11,9.86]},{"name":"Google","type":"line","stack":"Total","areaStyle":{},"data":[0,0,1.76,0.9,1.25]},{"name":"Tencent","type":"line","stack":"Total","areaStyle":{},"data":[0,1.52,0,13.76,24.68]},{"name":"Huawei","type":"line","stack":"Total","areaStyle":{},"data":[5.43,2.89,3.23,4.62,2.11]},{"name":"Ericsson","type":"line","stack":"Total","areaStyle":{},"data":[0,3.84,4.39,5.21,6.43]},{"name":"Others","type":"line","stack":"Total","areaStyle":{},"data":[10.25,18.13,14.58,2.61,6.71]}]
+  series: [{"name":"Redis","type":"line","stack":"Total","areaStyle":{},"data":[54.64,60.72,71.19,76.47,63.63,60.91,46.33,37.15]},{"name":"AWS","type":"line","stack":"Total","areaStyle":{},"data":[0,0,6.42,7.39,11.15,14.25,19.15,15.23]},{"name":"Aliyun","type":"line","stack":"Total","areaStyle":{},"data":[7.66,23.92,11.74,3.09,0,0,4.7,13.18]},{"name":"Google","type":"line","stack":"Total","areaStyle":{},"data":[0,0,0,0,0,0,0,0]},{"name":"Tencent","type":"line","stack":"Total","areaStyle":{},"data":[0,0,0,0,0,0,14.89,27.31]},{"name":"Huawei","type":"line","stack":"Total","areaStyle":{},"data":[0,0,0,5.69,3.2,4.04,5.81,0]},{"name":"Mozilla","type":"line","stack":"Total","areaStyle":{},"data":[28.1,0,0,0,0,0,0,0]},{"name":"Ericsson","type":"line","stack":"Total","areaStyle":{},"data":[0,0,0,0,4.43,5.33,6.1,7.12]},{"name":"Others","type":"line","stack":"Total","areaStyle":{},"data":[9.59,15.36,10.64,7.36,17.59,15.47,3.03,0]}]
 }} />
 
 At the end of June 2020, Salvatore Sanfilippo (@antirez), the original author of Redis, announced in a [blog post](http://antirez.com/news/133) that he was stepping down from maintenance work of the Redis community, handing over the community maintenance tasks to Yossi Gottlieb (@yossigo) and Oran Agra (@oranagra) from the then-called RedisLabs. At the same time, the aforementioned duo published an [article](https://redis.com/blog/new-governance-for-redis/) stating the initiation of a new community governance model, and together with Itamar Haber (@itamarhaber), formed the core development team of the Redis community. [The following month](https://redis.com/blog/redis-core-team-update/), Madelyn Olson (@madolson) from AWS and Zhao Zhao (@soloestoy) from Alibaba Cloud joined the core development team, which remained stable until the recent license change of Redis.
@@ -47,15 +47,17 @@ From the data, among the top 10 contributors to Redis in 2024, aside from two de
 <SimpleECharts divStyle={{ height: '350px' }} option={{
   tooltip: { trigger: 'axis', axisPointer: { type: 'cross', crossStyle: { color: '#999' } } },
   legend: { data: ['Redis-OpenRank', 'Valkey-OpenRank', 'Redis-Participant', 'Valkey-Participant'] },
-  xAxis: [{ type: 'category', data: ['2023.10', '2023.11', '2023.12', '2024.01', '2024.02', '2024.03'] }],
+  xAxis: [{ type: 'category', data: ['2023.10', '2023.11', '2023.12', '2024.01', '2024.02', '2024.03', '2024.04', '2024.05', '2024.06', '2024.07', '2024.08'] }],
   yAxis: [{ type: 'value', name: 'OpenRank' }, { type: 'value', name: 'Participant' }],
   series: [
-    { name: 'Redis-OpenRank', type: 'bar', data: [67.65,77.12,79.88,81.26,77.38,79.97] },
-    { name: 'Valkey-OpenRank', type: 'bar', data: [0,0,0,0,0,38.53] },
-    { name: 'Redis-Participant', type: 'bar', yAxisIndex: 1, data: [102,101,100,104,94,220] },
-    { name: 'Valkey-Participant', type: 'bar', yAxisIndex: 1, data: [0,0,0,0,0,146] },
+    { name: 'Redis-OpenRank', type: 'bar', data: [59.42,68.36,71.51,75.63,69.41,69.42,45.93,37.94,42.6,33.76,32.1] },
+    { name: 'Valkey-OpenRank', type: 'bar', data: [0,0,0,0,0,32.66,54.6,66.16,79.28,66.48,55.24], itemStyle: { color: 'red' } },
+    { name: 'Redis-Participant', type: 'bar', yAxisIndex: 1, data: [102,101,100,104,94,220,92,75,60,65,69], itemStyle: { color: 'yellow' } },
+    { name: 'Valkey-Participant', type: 'bar', yAxisIndex: 1, data: [0,0,0,0,0,146,120,92,62,57,54], itemStyle: { color: 'green' } },
   ]
 }} />
+
+> Data updated in 2024.9
 
 From a macro data perspective, the Redis community has maintained an OpenRank collaboration influence of around 80 in the past six months, while Valkey, just ten days after being open sourced in March, soared to an OpenRank of about 40, reaching half of the Redis project's level. In terms of the number of developers participating in the community, Redis has been maintaining a scale of around 100 people per month. In March, due to the license modification, a significant number of developers were involved in the discussion threads in the Redis community, leading to a doubling of participants to 220 people. Meanwhile, within ten days of Valkey being open sourced, the number of participants reached 146, surpassing the regular scale of Redis.
 
