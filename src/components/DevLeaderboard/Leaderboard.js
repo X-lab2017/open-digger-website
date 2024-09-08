@@ -22,10 +22,7 @@ const Leaderboard = ({ graph, month }) => {
   }, [graph, month]);
 
   return (
-    <div className="bordered" id="list">
-      <div id="title">
-        <h2>Leaderboard</h2>
-      </div>
+    <div className="bordered left-box" id="list">
       <div id="leaderboard_div" className="scrollit">
         <table id="leaderboard_table">
           <thead>

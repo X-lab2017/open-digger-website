@@ -5,6 +5,8 @@
  */
 
 /* You can override the default Infima variables here. */
+@import './tailwind.css';
+
 :root {
   --ifm-color-primary: #3366FF;
   --ifm-color-primary-dark: #144fff;
@@ -13,6 +15,10 @@
   --ifm-color-primary-light: #527dff;
   --ifm-color-primary-lighter: #6188ff;
   --ifm-color-primary-lightest: #89a6ff;
+  --ifm-table-border-width: 0;
+  --ifm-table-stripe-background: #fff;
+  --ifm-table-border-color: #fff;
+  --ifm-table-cell-padding: 0.5rem;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --banner-height: 40px;
@@ -113,4 +119,8 @@ article {
   .container {
     max-width: 90%;
   }
+}
+
+table tr:nth-child(even) {
+  background-color: #fff;
 }

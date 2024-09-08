@@ -55,12 +55,7 @@ const Graph = ({
       const categories = Array.from(typeMap.values());
 
       const option = {
-        title: {
-          text: `Community OpenRank for ${repoName} in ${month}`,
-          top: "bottom",
-          left: "right",
-        },
-        legend: [{ data: categories }],
+        legend: { data: categories, top: "500px", left: "30px" },
         tooltip: { trigger: "item" },
         series: [
           {
@@ -95,7 +90,7 @@ const Graph = ({
   return (
     <div
       id="graph"
-      className="bordered graph-container"
+      className="graph-container"
     />
   );
 };

@@ -1,33 +1,13 @@
-.banner-box {
-  z-index: 3;
-  position: fixed;
-  top: 80px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 600px;
-  height: 200px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border: 1px solid black;
-  border-radius: 1rem;
-  padding: 1rem;
-}
-
-.banner-title {
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.banner-content {
-  display: flex;
-}
-
 #main {
-  display: flex;
+
 }
 
 #graph {
-  height: 800px;
+  position: absolute;
+  left: 0;
+  top: 70px;
+  width: 100%;
+  height: calc(100vh - 100px);
 }
 
 .graph-container {
@@ -47,13 +27,8 @@
 
 #details {
   width: 300px;
-  height: 440px;
+  height: 300px;
   margin: 10px;
-}
-
-#title {
-  text-align: center;
-  font-size: 12px;
 }
 
 #leaderboard_table {
@@ -71,22 +46,60 @@
 }
 
 #leaderboard_div {
-  height: 240px;
+  height: 290px;
 }
 
 #details_div {
-  height: 380px;
+  height: 290px;
 }
 
 .scrollit {
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: scroll;
 }
 
-tr:nth-child(even) {
-  background-color: #D6EEEE;
+table tr:nth-child(even) {
+  background-color: #fff;
 }
 
-table, th, td {
+table th {
+  text-align: left;
+}
+
+.banner-box {
+  z-index: 3;
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 660px;
+  height: 120px;
+  background-color: rgba(255, 255, 255, 0.5);
   border: 1px solid black;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.banner-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.banner-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-box {
+  position: absolute;
+  top: 220px;
+  left: 0;
+  background-color: #fff;
+}
+
+.right-box {
+  position: absolute;
+  top: 220px;
+  right: 0;
+  background-color: #fff;
 }

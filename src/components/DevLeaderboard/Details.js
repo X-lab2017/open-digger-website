@@ -69,10 +69,7 @@ const Details = ({ graph, id, month, typeMap, platform }) => {
   }, [graph, id, month, typeMap, platform]);
 
   return (
-    <div className="bordered" id="details">
-      <div id="title">
-        <h2>Details</h2>
-      </div>
+    <div className="bordered right-box" id="details">
       <div id="details_div" className="scrollit">
         <table id="details_table">
           <thead>
