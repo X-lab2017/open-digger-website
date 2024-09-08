@@ -47,15 +47,17 @@ From the data, among the top 10 contributors to Redis in 2024, aside from two de
 <SimpleECharts divStyle={{ height: '350px' }} option={{
   tooltip: { trigger: 'axis', axisPointer: { type: 'cross', crossStyle: { color: '#999' } } },
   legend: { data: ['Redis-OpenRank', 'Valkey-OpenRank', 'Redis-Participant', 'Valkey-Participant'] },
-  xAxis: [{ type: 'category', data: ['2023.10', '2023.11', '2023.12', '2024.01', '2024.02', '2024.03'] }],
+  xAxis: [{ type: 'category', data: ['2023.10', '2023.11', '2023.12', '2024.01', '2024.02', '2024.03', '2024.04', '2024.05', '2024.06', '2024.07', '2024.08'] }],
   yAxis: [{ type: 'value', name: 'OpenRank' }, { type: 'value', name: 'Participant' }],
   series: [
-    { name: 'Redis-OpenRank', type: 'bar', data: [67.65,77.12,79.88,81.26,77.38,79.97] },
-    { name: 'Valkey-OpenRank', type: 'bar', data: [0,0,0,0,0,38.53] },
-    { name: 'Redis-Participant', type: 'bar', yAxisIndex: 1, data: [102,101,100,104,94,220] },
-    { name: 'Valkey-Participant', type: 'bar', yAxisIndex: 1, data: [0,0,0,0,0,146] },
+    { name: 'Redis-OpenRank', type: 'bar', data: [59.42,68.36,71.51,75.63,69.41,69.42,45.93,37.94,42.6,33.76,32.1] },
+    { name: 'Valkey-OpenRank', type: 'bar', data: [0,0,0,0,0,32.66,54.6,66.16,79.28,66.48,55.24], itemStyle: { color: 'red' } },
+    { name: 'Redis-Participant', type: 'bar', yAxisIndex: 1, data: [102,101,100,104,94,220,92,75,60,65,69], itemStyle: { color: 'yellow' } },
+    { name: 'Valkey-Participant', type: 'bar', yAxisIndex: 1, data: [0,0,0,0,0,146,120,92,62,57,54], itemStyle: { color: 'green' } },
   ]
 }} />
+
+> Data updated in 2024.9
 
 From a macro data perspective, the Redis community has maintained an OpenRank collaboration influence of around 80 in the past six months, while Valkey, just ten days after being open sourced in March, soared to an OpenRank of about 40, reaching half of the Redis project's level. In terms of the number of developers participating in the community, Redis has been maintaining a scale of around 100 people per month. In March, due to the license modification, a significant number of developers were involved in the discussion threads in the Redis community, leading to a doubling of participants to 220 people. Meanwhile, within ten days of Valkey being open sourced, the number of participants reached 146, surpassing the regular scale of Redis.
 
