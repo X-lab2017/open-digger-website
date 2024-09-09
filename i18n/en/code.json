@@ -286,6 +286,9 @@
     "message": "This page is unlisted. Search engines will not index it, and only users having a direct link can access it.",
     "description": "The unlisted content banner message"
   },
+  "homepage.pullPreviewWarning": {
+    "message": "Warning: This is a preview deploy of OpenDigger website for <a href='https://github.com/X-lab2017/open-digger-website/pull/{pullNumber}'>PR#{pullNumber}</a>, please do not share! To visit OpenDigger official website please go to <a href='https://open-digger.cn/'>https://open-digger.cn</a>。"
+  },
   "homepage.tagLine": {
     "message": "Open Source Analysis Platform"
   },
@@ -325,11 +328,14 @@
   "metricCharts.dataNotFound": {
     "message": "Data not found"
   },
-  "metricCharts.input.placeholder": {
-    "message": "Repo name or user login"
+  "metricCharts.invalidInput": {
+    "message": "Invalid input, please check your input."
   },
-  "metricCharts.submit": {
+  "searchInput.submit": {
     "message": "Submit"
+  },
+  "searchInput.placeholder": {
+    "message": "Search for a name..."
   },
   "leaderboard.dataInputPlaceHolder": {
     "message": "Data input, JSON format with each item as a row in the table"

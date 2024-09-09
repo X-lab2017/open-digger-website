@@ -71,4 +71,5 @@ export function leaderboardConfigReducer(config, action) {
   }
 }
 
-export const LeaderboardContext = createContext({});
+export const LeaderboardContext: React.Context<{ leaderboardConfig, dispatch }> =
+  createContext({ leaderboardConfig: intialLeaderboardConfig, dispatch: leaderboardConfigReducer });

@@ -286,6 +286,9 @@
     "message": "此页面未列出。搜索引擎不会对其索引，只有拥有直接链接的用户才能访问。",
     "description": "The unlisted content banner message"
   },
+  "homepage.pullPreviewWarning": {
+    "message": "注意：该网站为 OpenDigger 官网仓库 <a href='https://github.com/X-lab2017/open-digger-website/pull/{pullNumber}'>PR#{pullNumber}</a> 的预览版本，请勿分享，谢谢！OpenDigger 官网请移步 <a href='https://open-digger.cn/'>https://open-digger.cn</a>。"
+  },
   "homepage.tagLine": {
     "message": "开源数据分析平台"
   },
@@ -325,11 +328,14 @@
   "metricCharts.dataNotFound": {
     "message": "数据未找到"
   },
-  "metricCharts.input.placeholder": {
-    "message": "请输入要查询的项目或开发者名称"
+  "metricCharts.invalidInput": {
+    "message": "请检查输入参数"
   },
-  "metricCharts.submit": {
+  "searchInput.submit": {
     "message": "提交"
+  },
+  "searchInput.placeholder": {
+    "message": "键入搜索名称..."
   },
   "leaderboard.dataInputPlaceHolder": {
     "message": "数据输入，内容为 JSON 数据，每项为表格一行内容"

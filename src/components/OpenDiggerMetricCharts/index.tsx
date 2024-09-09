@@ -1,36 +1,22 @@
-import { useEffect, useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import axios from 'axios';
 import ReactECharts from 'echarts-for-react';
 import { translate } from '@docusaurus/Translate';
+import SearchInput, { repoMetricOptionMap, userMetricOptionMap } from '../SearchInput';
 import styles from './styles.module.css';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
-export default () => {
+export default (): JSX.Element => {
 
   const echartsRef = useRef(null);
 
-  const platformOptionMap = new Map([
-    ['GitHub', 'github'],
-    ['Gitee', 'gitee'],
-  ]);
-  const metricOptionMap = new Map([
-    ['OpenRank', 'openrank'],
-    ['Activity', 'activity'],
-    ['Stars', 'stars'],
-    ['Forks', 'technical_fork'],
-    ['Attention', 'attention'],
-    ['Bus Factor', 'bus_factor'],
-    ['Contributors', 'new_contributors'],
-    ['Issues', ['issues_new', 'issues_closed', 'issue_comments']],
-    ['Issue Response Time', 'issue_response_time'],
-    ['Issue Resolution Duration', 'issue_resolution_duration'],
-    ['Change Requests', ['change_requests', 'change_requests_accepted', 'change_requests_reviews']],
-    ['Change Request Response Time', 'change_request_response_time'],
-    ['Change Request Resolution Duration', 'change_request_resolution_duration'],
-    ['Code Change Lines', ['code_change_lines_add', 'code_change_lines_remove']],
-  ]);
-  const defaultRepoName = 'X-lab2017/open-digger';
+  const { siteConfig } = useDocusaurusContext();
+  const { customFields } = siteConfig;
 
-  const optionGeneratorMap = new Map();
+  const defaultRepoName: string = 'X-lab2017/open-digger';
+
+  const optionGeneratorMap = new Map<string, (data: any) => object>();
+  let repoName = '';
 
   ['OpenRank', 'Activity', 'Bus Factor'].forEach(m => optionGeneratorMap.set(m, data => ({
     xAxis: {
@@ -135,16 +121,16 @@ export default () => {
             color: 'green',
           },
           data: issuesNew,
-          markPoint: name === defaultRepoName ? {
+          markPoint: repoName === defaultRepoName ? {
             data: [
               {
                 value: 'Start CHAOSS impl',
-                coord: ['2021-07', issuesNewData['2021-07'] + 30],
+                coord: ['2021-07', issuesNewData['2021-07'] + 55],
                 symbol: 'rect', symbolSize: [120, 20]
               },
               {
                 value: 'Add label data',
-                coord: ['2022-03', issuesNewData['2022-03'] + 70],
+                coord: ['2022-03', issuesNewData['2022-03'] + 10],
                 symbol: 'rect', symbolSize: [90, 20]
               }
             ]
@@ -164,7 +150,7 @@ export default () => {
           type: 'line',
           data: issueComment,
           yAxisIndex: 1,
-          markPoint: name === defaultRepoName ? {
+          markPoint: repoName === defaultRepoName ? {
             data: [
               {
                 value: 'Disscussion for COSAR2020',
@@ -173,7 +159,7 @@ export default () => {
               },
               {
                 value: 'Tricky CHAOSS metrics',
-                coord: ['2022-09', issueCommentData['2022-12'] + 40],
+                coord: ['2022-12', issueCommentData['2022-12'] + 40],
                 symbol: 'rect', symbolSize: [140, 20]
               }
             ]
@@ -336,15 +322,17 @@ export default () => {
   }));
 
   const [options, setOptions] = useState({});
-  const [platform, setPlatform] = useState('GitHub');
-  const [name, setName] = useState('X-lab2017/open-digger');
-  const [metric, setMetric] = useState('OpenRank');
 
-  const fetchData = () => {
-    const p = platformOptionMap.get(platform);
-    let m = metricOptionMap.get(metric);
+  const fetchData = (platform: string, type: string, name: string, metric: string) => {
+    if (!platform || !type || !name || !metric) {
+      alert(translate({ id: 'metricCharts.invalidInput' }));
+      return;
+    }
+    platform = platform.toLowerCase();
+    repoName = name;
+    let m = type === 'Repo' ? repoMetricOptionMap.get(metric) : userMetricOptionMap.get(metric);
     if (typeof m === 'string') m = [m];
-    Promise.all(m.map(m => axios.get(`https://oss.x-lab.info/open_digger/${p}/${name}/${m}.json`))).then(res => {
+    Promise.all(m.map(m => axios.get(`${customFields.ossBaseUrl}${platform}/${name}/${m}.json`))).then(res => {
       const data = res.map(r => r.data);
       const options = {
         title: { text: translate({ id: 'metricCharts.title' }, { metric, name }), left: "center" },
@@ -362,24 +350,13 @@ export default () => {
   };
 
   useEffect(() => {
-    fetchData();
-  }, []);
+    fetchData('GitHub', 'Repo', defaultRepoName, 'Issues');
+  }, [])
 
   return (
     <>
       <div className={styles.inputDiv}>
-        <select className={styles.platformSelect} value={platform} onChange={e => setPlatform(e.target.value)}>
-          {[...platformOptionMap.keys()].map(p => (
-            <option>{p}</option>
-          ))}
-        </select>
-        <input className={styles.nameInput} type="text" placeholder={translate({ id: 'metricCharts.input.placeholder' })} value={name} onChange={e => setName(e.target.value)} />
-        <select className={styles.metricSelect} value={metric} onChange={e => setMetric(e.target.value)}>
-          {[...metricOptionMap.keys()].map(k => (
-            <option>{k}</option>
-          ))}
-        </select>
-        <button className={styles.submitButton} onClick={fetchData}>{translate({ id: 'metricCharts.submit' })}</button>
+        <SearchInput onSubmit={v => fetchData(v.platform, v.type, v.name, v.metricDisplayName)} />
       </div>
       <ReactECharts className={styles.chart} ref={echartsRef} option={options} />
     </>

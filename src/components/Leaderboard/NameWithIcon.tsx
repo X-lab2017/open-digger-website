@@ -1,6 +1,12 @@
 import styles from './styles.module.css';
 
-export const NameWithIcon = ({ icon, name, rounded }) => {
+interface NameWithIconProps {
+  icon: string;
+  name: string;
+  rounded?: boolean;
+}
+
+export const NameWithIcon = ({ icon, name, rounded }: NameWithIconProps) => {
   return (
     <div className={styles.nameContainer}>
       <img src={icon} alt="" className={`${styles.icon} ${rounded ? styles.iconRounded : ''}`} />

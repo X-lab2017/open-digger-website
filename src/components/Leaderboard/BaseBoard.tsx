@@ -1,7 +1,7 @@
 import { flexRender } from '@tanstack/react-table';
 import styles from './styles.module.css';
 
-export function BaseBoard({ table }) {
+export function BaseBoard({ table }): JSX.Element {
   return (
     <div>
       <table className={styles.table}>
@@ -20,7 +20,7 @@ export function BaseBoard({ table }) {
         {/* <div className={styles.divider} style={{ width: table.width }} /> */}
         <tbody>
           {table.getRowModel().rows.map(row => (
-            <tr key={row.id} className={styles.tr}>
+            <tr key={row.id} className={row.index % 2 === 0 ? styles.tr_even : styles.tr_odd}>
               {row.getVisibleCells().map(cell => {
                 return <td key={cell.id} className={styles.td} style={{ width: cell.column.getSize() }}>
                   {flexRender(cell.column.columnDef.cell, cell.getContext())}

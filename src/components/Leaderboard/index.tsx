@@ -8,27 +8,31 @@ import { NameWithIcon } from './NameWithIcon';
 import { useReducer } from 'react';
 import { useReactTable, createColumnHelper, getCoreRowModel } from '@tanstack/react-table';
 
-export const COLUMN_TYPE_RULES = [
-  {
-    name: 'String',
-    fieldsNeeded: 1,
-    renderer: (text) => <span>{text}</span>,
-  },
-  {
-    name: 'StringWithIcon',
-    fieldsNeeded: 2,
-    renderer: (text, icon) => <NameWithIcon size={20} icon={icon} name={text} />,
-  },
-  {
-    name: 'NumberWithDelta',
-    fieldsNeeded: 2,
-    renderer: (num, delta) => <NumberWithDelta number={num} delta={delta} />,
-  },
-]
+export const COLUMN_TYPE_RULES: {
+  name: string;
+  fieldsNeeded: number;
+  renderer: (...args: any[]) => JSX.Element;
+}[] = [
+    {
+      name: 'String',
+      fieldsNeeded: 1,
+      renderer: (text) => <span>{text}</span>,
+    },
+    {
+      name: 'StringWithIcon',
+      fieldsNeeded: 2,
+      renderer: (text, icon) => <NameWithIcon icon={icon} name={text} />,
+    },
+    {
+      name: 'NumberWithDelta',
+      fieldsNeeded: 2,
+      renderer: (num, delta) => <NumberWithDelta number={num} delta={delta} />,
+    },
+  ];
 
-const helper = createColumnHelper();
+const helper = createColumnHelper<{ __index__: number }>();
 
-export default () => {
+export default (): JSX.Element => {
   const [leaderboardConfig, dispatch] = useReducer(leaderboardConfigReducer, intialLeaderboardConfig);
   const { inputData, title, columnOptions } = leaderboardConfig;
 

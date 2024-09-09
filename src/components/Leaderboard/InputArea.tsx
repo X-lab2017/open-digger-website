@@ -4,7 +4,7 @@ import { translate } from '@docusaurus/Translate';
 import { InputColHeaderItem } from './InputColHeaderItem';
 import styles from './styles.module.css';
 
-export function InputArea() {
+export function InputArea(): JSX.Element {
   const { leaderboardConfig, dispatch } = useContext(LeaderboardContext);
   const colCount = leaderboardConfig.columnOptions.length;
 

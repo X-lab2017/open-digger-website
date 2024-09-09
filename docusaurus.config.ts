@@ -1,22 +1,17 @@
-// @ts-check
-// `@type` JSDoc annotations allow editor autocompletion and type checking
-// (when paired with `@ts-check`).
-// There are various equivalent ways to declare your Docusaurus config.
-// See: https://docusaurus.io/docs/api/docusaurus-config
-
+import type { Config } from '@docusaurus/types';
+import type * as Preset from '@docusaurus/preset-classic';
 import { themes as prismThemes } from 'prism-react-renderer';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 
 const defaultLocale = 'zh';
 
-/** @type {import('@docusaurus/types').Config} */
-const config = {
+const config: Config = {
   title: 'OpenDigger',
   tagline: 'Open Source Analysis Platform',
   favicon: 'img/favicon.ico',
   url: 'https://open-digger.cn',
-  baseUrl: process.env.BASE_URL || '/',
+  baseUrl: process.env.PULL_NUM ? `/pull_${process.env.PULL_NUM}/` : '/',
 
   scripts: [
     {
@@ -42,10 +37,14 @@ const config = {
     },
   },
 
+  customFields: {
+    ossBaseUrl: 'https://oss.x-lab.info/open_digger/',
+    pullNumber: process.env.PULL_NUM,
+  },
+
   presets: [
     [
       'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
           sidebarPath: './sidebars.js',
@@ -58,14 +57,14 @@ const config = {
           showReadingTime: true,
           blogSidebarTitle: 'Recent Posts',
           editUrl: ({ blogDirPath, blogPath, locale }) =>
-            `https://github.com/X-lab2017/open-digger-website/tree/master/${locale === defaultLocale ? `${blogDirPath}/${blogPath}` : `i18n/${locale}/docusaurus-plugin-content-blog/${blogPath}`}`,
+            `https://raw.githubusercontent.com/X-lab2017/open-digger-website/master/${locale === defaultLocale ? `${blogDirPath}/${blogPath}` : `i18n/${locale}/docusaurus-plugin-content-blog/${blogPath}`}`,
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-      }),
+      }) satisfies Preset.Options,
     ],
   ],
 
@@ -77,6 +76,7 @@ const config = {
         'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
       crossorigin: 'anonymous',
     },
+    'src/css/custom.css',
   ],
 
   plugins: [
@@ -95,7 +95,6 @@ const config = {
   },
 
   themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       image: 'img/logo/logo-black-blue-combination-vertical.png',
       navbar: {
@@ -152,7 +151,7 @@ const config = {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
-    }),
+    }) satisfies Preset.ThemeConfig,
 };
 
 export default config;
