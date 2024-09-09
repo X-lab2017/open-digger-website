@@ -19,16 +19,15 @@ tags: [redis]
 
 import SimpleECharts from '@site/src/components/SimpleECharts';
 
-<SimpleECharts option={{
+<SimpleECharts divStyle={{ height: '450px' }} option={{
   tooltip: { trigger: 'axis', axisPointer: { type: 'cross', label: { backgroundColor: '#6a7985' } } },
   legend: {
-    data: ['Redis', 'AWS', 'Aliyun', 'Google', 'Tencent', 'Huawei', 'Ericsson', 'Netease', 'Mozilla', 'Meituan', 'Others']
+    data: ['antirez', 'Redis', 'AWS', 'Aliyun', 'Tencent', 'Huawei', 'Ericsson', 'Netease', 'Meituan', 'Others']
   },
-  backgroundColor: '#f5f5f5',
   grid: { left: '3%', right: '4%', bottom: '3%', containLabel: true },
-  xAxis: [{ type: 'category', boundaryGap: false, data: [2020, 2021, 2022, 2023, 2024] }],
+  xAxis: [{ type: 'category', boundaryGap: false, data: [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024] }],
   yAxis: [{ type: 'value', min: 0, max: 100 }],
-  series: [{"name":"Redis","type":"line","stack":"Total","areaStyle":{},"data":[73.31,61.17,59.29,47.21,34.4]},{"name":"AWS","type":"line","stack":"Total","areaStyle":{},"data":[7.15,10.35,13.28,19.58,14.56]},{"name":"Aliyun","type":"line","stack":"Total","areaStyle":{},"data":[3.88,2.09,3.46,6.11,9.86]},{"name":"Google","type":"line","stack":"Total","areaStyle":{},"data":[0,0,1.76,0.9,1.25]},{"name":"Tencent","type":"line","stack":"Total","areaStyle":{},"data":[0,1.52,0,13.76,24.68]},{"name":"Huawei","type":"line","stack":"Total","areaStyle":{},"data":[5.43,2.89,3.23,4.62,2.11]},{"name":"Ericsson","type":"line","stack":"Total","areaStyle":{},"data":[0,3.84,4.39,5.21,6.43]},{"name":"Others","type":"line","stack":"Total","areaStyle":{},"data":[10.25,18.13,14.58,2.61,6.71]}]
+  series: [{"name":"antirez","type":"line","stack":"Total","areaStyle":{color:"#83D328"},"data":[36.31,41.55,39.29,13.96,0,0,0,0]},{"name":"Redis","type":"line","stack":"Total","areaStyle":{},"data":[18.34,19.17,31.91,62.51,63.63,60.91,46.33,37.15]},{"name":"AWS","type":"line","stack":"Total","areaStyle":{},"data":[0,0,6.42,7.39,11.15,14.25,19.15,15.23]},{"name":"Aliyun","type":"line","stack":"Total","areaStyle":{},"data":[7.66,23.92,11.74,3.09,0,0,4.7,13.18]},{"name":"Google","type":"line","stack":"Total","areaStyle":{},"data":[0,0,0,0,0,0,0,0]},{"name":"Tencent","type":"line","stack":"Total","areaStyle":{},"data":[0,0,0,0,0,0,14.89,27.31]},{"name":"Huawei","type":"line","stack":"Total","areaStyle":{},"data":[0,0,0,5.69,3.2,4.04,5.81,0]},{"name":"Mozilla","type":"line","stack":"Total","areaStyle":{},"data":[0,0,0,0,0,0,0,0]},{"name":"Ericsson","type":"line","stack":"Total","areaStyle":{},"data":[0,0,0,0,4.43,5.33,6.1,7.12]},{"name":"Others","type":"line","stack":"Total","areaStyle":{},"data":[37.69,15.36,10.64,7.36,17.59,15.47,3.03,0]}]
 }} />
 
 2020 年 6 月底，Redis 的最初作者 Salvatore Sanfilippo（[@antirez](https://github.com/antirez)）发表[博客](http://antirez.com/news/133)退出了 Redis 社区的日常维护工作，将社区维护任务交由当时还名为 RedisLabs 的 Yossi Gottlieb（[@yossigo](https://github.com/yossigo)）和 Oran Agra（[@oranagra](https://github.com/oranagra)），同一时间上述两人[发文](https://redis.com/blog/new-governance-for-redis/)表示将开启新的社区治理模式，并与 Itamar Haber（[@itamarhaber](https://github.com/itamarhaber)）率先组成 Redis 社区的核心开发小组，[次月](https://redis.com/blog/redis-core-team-update/) AWS 的 Madelyn Olson（[@madolson](https://github.com/madolson)）和阿里云的赵钊（[@soloestoy](https://github.com/soloestoy)）加入核心开发小组，而这个五人小组也是直到这次 Redis 修改许可证之前一直稳定的 Redis 社区的核心小组。
@@ -45,19 +44,20 @@ import SimpleECharts from '@site/src/components/SimpleECharts';
 
 从数据上来看，在 2024 年 Redis 贡献前十位的开发者中，除了 Redis 公司的两位研发人员外，剩下有七位都已经参与到了 Valkey 项目的研发当中，这意味着事实上 Valkey 项目已经成为新的社区进入了正常的运作，而 Redis 公司的研发人员后续将独立开发维护 Redis 项目。
 
-<SimpleECharts option={{
-  backgroundColor: '#f5f5f5',
+<SimpleECharts divStyle={{ height: '350px' }} option={{
   tooltip: { trigger: 'axis', axisPointer: { type: 'cross', crossStyle: { color: '#999' } } },
   legend: { data: ['Redis-OpenRank', 'Valkey-OpenRank', 'Redis-Participant', 'Valkey-Participant'] },
-  xAxis: [{ type: 'category', data: ['2023.10', '2023.11', '2023.12', '2024.01', '2024.02', '2024.03'] }],
+  xAxis: [{ type: 'category', data: ['2023.10', '2023.11', '2023.12', '2024.01', '2024.02', '2024.03', '2024.04', '2024.05', '2024.06', '2024.07', '2024.08'] }],
   yAxis: [{ type: 'value', name: 'OpenRank' }, { type: 'value', name: 'Participant' }],
   series: [
-    { name: 'Redis-OpenRank', type: 'bar', data: [67.65,77.12,79.88,81.26,77.38,79.97] },
-    { name: 'Valkey-OpenRank', type: 'bar', data: [0,0,0,0,0,38.53] },
-    { name: 'Redis-Participant', type: 'bar', yAxisIndex: 1, data: [102,101,100,104,94,220] },
-    { name: 'Valkey-Participant', type: 'bar', yAxisIndex: 1, data: [0,0,0,0,0,146] },
+    { name: 'Redis-OpenRank', type: 'bar', data: [59.42,68.36,71.51,75.63,69.41,69.42,45.93,37.94,42.6,33.76,32.1] },
+    { name: 'Valkey-OpenRank', type: 'bar', data: [0,0,0,0,0,32.66,54.6,66.16,79.28,66.48,55.24], itemStyle: { color: 'red' } },
+    { name: 'Redis-Participant', type: 'bar', yAxisIndex: 1, data: [102,101,100,104,94,220,92,75,60,65,69], itemStyle: { color: 'yellow' } },
+    { name: 'Valkey-Participant', type: 'bar', yAxisIndex: 1, data: [0,0,0,0,0,146,120,92,62,57,54], itemStyle: { color: 'green' } },
   ]
 }} />
+
+> 上图数据更新于 2024.9
 
 从宏观数据来看，Redis 社区近半年的 OpenRank 协作影响力维持在 80 左右，而 Valkey 在三月仅开源十天，OpenRank 已飙升至 40 左右，达到了 Redis 项目的一半。从社区参与开发者人数来看，Redis 基本维持在每月 100 人左右的规模，在三月因为许可证修改有不少开发者在 Redis 社区进行讨论，导致参与人数翻倍，达到了 220 人，而 Valkey 开源十天，参与人数达到了 146 人，已超过了 Redis 的日常规模。
 
@@ -69,8 +69,7 @@ import SimpleECharts from '@site/src/components/SimpleECharts';
 
 而 Redis 的协议变更除了带来了一个新的分叉社区 Valkey 以外，也有很多对键值数据库有需求的开发者开始关注到与 Redis 相关的其他开源项目。Apache 软件基金会的 kvrocks 就是其中之一。与 Redis 是内存型键值数据库不同，kvrocks 是一款磁盘型键值数据库。从下图可以看到，三月份 kvrocks 的各项指标数据都有一波明显的增长，可能也是因为它是基金会项目，在这个开源项目背后的企业可以跳过设定的社区规则单方面随时更改许可证的时代，托管在基金会的项目会让开发者更有安全感一些。
 
-<SimpleECharts option={{
-  backgroundColor: '#f5f5f5',
+<SimpleECharts divStyle={{ height: '350px' }} option={{
   legend: { data: ['stars', 'participants'] },
   xAxis: { type: 'category', data: ['2023-10', '2023-11', '2023-12', '2024-01', '2024-02', '2024-03'] },
   yAxis: [{ type: 'value' }, { type: 'value' }],

@@ -1,10 +1,17 @@
 import styles from './styles.module.css';
 
 const formatNumber = (num: number) => {
-  return Math.round(num);
+  return +num.toFixed(2);
 }
 
 export const NumberWithDelta = ({ number, delta }): JSX.Element => {
+  if (delta === 0 || delta === undefined || delta === null) {
+    return (
+      <div className={styles.numberContainer}>
+        <span className={styles.number}>{formatNumber(number)}</span>
+      </div>
+    );
+  }
   if (delta === '-') {
     return (
       <div className={styles.numberContainer}>
