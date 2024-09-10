@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./devLeaderboard.css";
+import SimpleTable from "../SimpleTable";
 
 const Details = ({ graph, id, month, typeMap, platform }) => {
   const [details, setDetails] = useState([]);
@@ -69,28 +70,15 @@ const Details = ({ graph, id, month, typeMap, platform }) => {
   }, [graph, id, month, typeMap, platform]);
 
   return (
-    <div className="bordered right-box" id="details">
-      <div id="details_div" className="scrollit">
-        <table id="details_table">
-          <thead>
-            <tr>
-              <th>From</th>
-              <th>Ratio</th>
-              <th>Value</th>
-              <th>OpenRank</th>
-            </tr>
-          </thead>
-          <tbody>
-            {details.map((detail, index) => (
-              <tr key={index}>
-                {detail.map((d, i) => (
-                  <td key={i}>{d}</td>
-                ))}
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+    <div className="right-box" id="details">
+      <SimpleTable title={"Details"} data={details.slice(0, 6)} options={
+        [
+          { name: "From", type: "String", fields: [0], width: 180 },
+          { name: "Ratio", type: "String", fields: [1], width: 100 },
+          { name: "Value", type: "String", fields: [2], width: 100 },
+          { name: "OpenRank", type: "String", fields: [3], width: 100 }
+        ]
+      } />
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import * as echarts from "echarts";
 import $ from "jquery";
 import { message } from "antd";
@@ -14,7 +14,7 @@ const DevLeaderboard = () => {
   const [selectedNodeId, setSelectedNodeId] = useState(null);
 
   const [platform, setPlatform] = useState<string>("github");
-  const [repoName, setRepoName] = useState<string>("X-lab2017/open-digger");
+  const [repoName, setRepoName] = useState<string>("umijs/umi");
   const [date, setDate] = useState<Date|null>(null);
 
   const baseUrl = "https://oss.x-lab.info/open_digger/";

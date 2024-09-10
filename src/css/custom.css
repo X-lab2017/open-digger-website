@@ -121,7 +121,3 @@ article {
   }
 }
 
-table tr:nth-child(even) {
-  background-color: #fff;
-}
-

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import * as echarts from "echarts";
 import $ from "jquery";
 import "./devLeaderboard.css";
+import SimpleTable from "../SimpleTable";
 
 const Leaderboard = ({ graph, month }) => {
   const [users, setUsers] = useState([]);
@@ -22,25 +23,16 @@ const Leaderboard = ({ graph, month }) => {
   }, [graph, month]);
 
   return (
-    <div className="bordered left-box" id="list">
-      <div id="leaderboard_div" className="scrollit">
-        <table id="leaderboard_table">
-          <thead>
-            <tr>
-              <th>Login</th>
-              <th>OpenRank</th>
-            </tr>
-          </thead>
-          <tbody>
-            {users.map((user, index) => (
-              <tr key={index}>
-                <td>{user.login}</td>
-                <td>{user.value}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+    <div className="left-box" id="list">
+      <SimpleTable
+        className="leaderboard-box scrollit"
+        title={"Leaderboard"}
+        data={users.slice(0, 6)}
+        options={[
+          { name: "Login", type: "String", fields: ["login"], width: 180 },
+          { name: "OpenRank", type: "String", fields: ["value"], width: 100 },
+        ]}
+      />
     </div>
   );
 };

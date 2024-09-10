@@ -85,7 +85,7 @@ const Graph = ({
         chart.dispose();
       };
     }
-  }, [graph, month, repoName, platform, typeMap, onNodeDblClick]);
+  }, [graph, month, platform]);
 
   return (
     <div
