@@ -44,6 +44,12 @@
   z-index: 1000;
 }
 
+@media (max-width: 768px) {
+  .fixed-banner {
+    height: calc(var(--banner-height) * 3);
+  }
+}
+
 .fixed-banner a {
   color: white;
   text-decoration: underline;
@@ -51,6 +57,12 @@
 
 .banner-placeholder {
   height: var(--banner-height);
+}
+
+@media (max-width: 768px) {
+  .banner-placeholder {
+    height: calc(var(--banner-height) * 3);
+  }
 }
 
 .header--github-link {
