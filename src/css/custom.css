@@ -44,6 +44,12 @@
   z-index: 1000;
 }
 
+@media (max-width: 768px) {
+  .fixed-banner {
+    height: calc(var(--banner-height) * 3);
+  }
+}
+
 .fixed-banner a {
   color: white;
   text-decoration: underline;
@@ -51,6 +57,12 @@
 
 .banner-placeholder {
   height: var(--banner-height);
+}
+
+@media (max-width: 768px) {
+  .banner-placeholder {
+    height: calc(var(--banner-height) * 3);
+  }
 }
 
 .header--github-link {
@@ -135,10 +147,6 @@ summary::after {
 details[open] summary::after {
   transform: translateY(-50%) rotate(90deg);
 }
-/* 
-details:hover {
-  background-color: #053e5b74;
-} */
 
 details:not([open]):hover {
   background-color: #362ecc74;
@@ -170,6 +178,16 @@ table a:hover {
 }
 
 #elevatedbtn {
+  font-family: Archivo Black;
+  border: 4px solid #050137;
+  border-radius: 12px;
+  box-shadow: 4px 4px 0 #050137;
+  box-sizing: border-box;
+}
+
+/* Redundant since #ID is unique and is mounted for CN (default) and NOT for EN on mount */ 
+
+#elevatedbtnEN {
   font-family: Archivo Black;
   border: 4px solid #050137;
   border-radius: 12px;

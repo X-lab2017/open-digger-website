@@ -14,7 +14,6 @@ OpenDigger 实现的所有指标对所有人开放使用, 您可以通过以下�
 
 ### 仓库指标
 
-
 <!-- OPENRANK -->
 <details id="elevatedbtn">
   <summary>OpenRank</summary>
@@ -131,7 +130,7 @@ OpenDigger 实现的所有指标对所有人开放使用, 您可以通过以下�
     </thead>
     <tbody>
       <tr>
-        <td class="centered-cell" rowspan="2">度量</td> <!-- rowspan added here -->
+        <td class="centered-cell" rowspan="2">度量</td>
         <td class="centered-cell">Stars</td>
         <td class="centered-cell">X-lab</td>
         <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/stars.json">stars.json</a></td>
