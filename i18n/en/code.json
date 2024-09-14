@@ -287,7 +287,7 @@
     "description": "The unlisted content banner message"
   },
   "homepage.pullPreviewWarning": {
-    "message": "Warning: This is a preview deploy of OpenDigger website for <a href='https://github.com/X-lab2017/open-digger-website/pull/{pullNumber}'>PR#{pullNumber}</a>, please do not share! To visit OpenDigger official website please go to <a href='https://open-digger.cn/'>https://open-digger.cn</a>。"
+    "message": "⚠ Warning: This is a preview deploy of OpenDigger website for <a href='https://github.com/X-lab2017/open-digger-website/pull/{pullNumber}'>PR#{pullNumber}</a>, please do not share! To visit OpenDigger official website please go to <a href='https://open-digger.cn/'>https://open-digger.cn</a>。"
   },
   "homepage.tagLine": {
     "message": "Open Source Analysis Platform"
