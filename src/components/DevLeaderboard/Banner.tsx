@@ -107,7 +107,7 @@ const Banner = ({ setPlatform, setRepoName, setDate, datePlaceholder, disabledDa
 
   const handleRepoSelect = (value: string) => {
     setSearchInputValue(value);
-    setRepoName(searchInputValue);
+    setRepoName(value);
   }
 
   const handleSubmit = () => {
