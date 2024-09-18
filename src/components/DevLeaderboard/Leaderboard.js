@@ -9,6 +9,10 @@ const Leaderboard = ({ graph, month }) => {
 
   useEffect(() => {
     if (graph) {
+      const keys = Object.keys(graph.data);
+      if (!keys.includes(month)) {
+        return;
+      }
       const sortedUsers = graph.data[month].nodes
         .map((node) => ({
           id: graph.meta.nodes[node[0]][0],

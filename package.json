@@ -44,6 +44,7 @@
     "@simbathesailor/use-what-changed": "^2.0.0",
     "@types/lodash": "^4.17.7",
     "antd": "^5.20.5",
+    "moment": "^2.30.1",
     "typescript": "^5.5.4"
   },
   "browserslist": {

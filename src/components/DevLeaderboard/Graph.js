@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import * as echarts from "echarts";
+import { message } from "antd";
 import "./devLeaderboard.css";
 
 const Graph = ({
@@ -12,6 +13,10 @@ const Graph = ({
 }) => {
   useEffect(() => {
     if (graph) {
+      const keys = Object.keys(graph.data);
+      if (!keys.includes(month)) {
+        return;
+      }
       const container = document.getElementById("graph");
       const chart = echarts.init(container);
 
@@ -74,6 +79,8 @@ const Graph = ({
               layoutAnimation: false,
               repulsion: 300,
             },
+            progressive: 100,
+            progressiveThreshold: 50,
           },
         ],
       };

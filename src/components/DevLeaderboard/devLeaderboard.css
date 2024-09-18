@@ -25,7 +25,7 @@
 }
 
 #details {
-  width: 300px;
+  width: 360px;
   height: 300px;
   margin: 10px;
   overflow-y: scroll;
@@ -90,7 +90,6 @@ table th {
   position: absolute;
   top: 220px;
   left: 0;
-  background-color: #fff;
 }
 
 .leaderboard-box {
@@ -101,6 +100,5 @@ table th {
   position: absolute;
   top: 220px;
   right: 0;
-  background-color: #fff;
 }
 

@@ -7,6 +7,10 @@ const Details = ({ graph, id, month, typeMap, platform }) => {
 
   useEffect(() => {
     if (graph && id) {
+      const keys = Object.keys(graph.data);
+      if (!keys.includes(month)) {
+        return;
+      }
       const data = graph.data[month];
       const selfNode = data.nodes.find(
         (node) => graph.meta.nodes[node[0]][0] === id
@@ -73,10 +77,10 @@ const Details = ({ graph, id, month, typeMap, platform }) => {
     <div className="right-box" id="details">
       <SimpleTable title={"Details"} data={details.slice(0, 6)} options={
         [
-          { name: "From", type: "String", fields: [0], width: 180 },
-          { name: "Ratio", type: "String", fields: [1], width: 100 },
-          { name: "Value", type: "String", fields: [2], width: 100 },
-          { name: "OpenRank", type: "String", fields: [3], width: 100 }
+          { name: "From", type: "String", fields: [0], width: 120 },
+          { name: "Ratio", type: "String", fields: [1], width: 60 },
+          { name: "Value", type: "String", fields: [2], width: 60 },
+          { name: "OpenRank", type: "String", fields: [3], width: 60 }
         ]
       } />
     </div>
