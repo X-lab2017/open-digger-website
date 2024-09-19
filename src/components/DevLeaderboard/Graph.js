@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import * as echarts from "echarts";
-import { message } from "antd";
+import { message, Spin } from "antd";
 import "./devLeaderboard.css";
+import { set } from "lodash";
 
 const Graph = ({
   graph,
@@ -13,6 +14,8 @@ const Graph = ({
 }) => {
   useEffect(() => {
     if (graph) {
+      const hideLoadingMessage = message.loading("Loading chart...", 5); // 显示加载提示
+      hideLoadingMessage(); // 隐藏加载提示
       const keys = Object.keys(graph.data);
       if (!keys.includes(month)) {
         return;
@@ -20,32 +23,42 @@ const Graph = ({
       const container = document.getElementById("graph");
       const chart = echarts.init(container);
 
-      const nodes = graph.data[month].nodes.map((node) => {
-        const id = graph.meta.nodes[node[0]][0];
-        const type = typeMap.get(id[0]);
-        let name = graph.meta.nodes[node[0]][1];
-        if (type === "pull") name = "#" + id.slice(1);
-        else if (type === "issue")
-          name =
-            "#" +
-            (platform === "gitee"
-              ? parseInt(id.slice(1)).toString(36).toUpperCase()
-              : id.slice(1));
-        return {
-          id,
-          initialValue: node[1],
-          value: node[2],
-          name,
-          symbolSize: Math.log(node[2] + 1) * 10,
-          category: type,
-        };
-      });
+      const nodes = graph.data[month].nodes
+        .map((node) => {
+          const id = graph.meta.nodes[node[0]][0];
+          const type = typeMap.get(id[0]);
+          let name = graph.meta.nodes[node[0]][1];
+          if (type === "pull") name = "#" + id.slice(1);
+          else if (type === "issue")
+            name =
+              "#" +
+              (platform === "gitee"
+                ? parseInt(id.slice(1)).toString(36).toUpperCase()
+                : id.slice(1));
+          return {
+            id,
+            initialValue: node[1],
+            value: node[2],
+            name,
+            symbolSize: Math.log(node[2] + 1) * 10,
+            category: type,
+          };
+        })
+        .sort((a, b) => b.value - a.value)
+        .slice(0, 300);
 
-      const links = graph.data[month].links.map((link) => ({
-        source: graph.meta.nodes[link[0]][0],
-        target: graph.meta.nodes[link[1]][0],
-        value: link[2],
-      }));
+      const topNodeIds = new Set(nodes.map((node) => node.id));
+      const links = graph.data[month].links
+        .filter(
+          (link) =>
+            topNodeIds.has(graph.meta.nodes[link[0]][0]) &&
+            topNodeIds.has(graph.meta.nodes[link[1]][0])
+        )
+        .map((link) => ({
+          source: graph.meta.nodes[link[0]][0],
+          target: graph.meta.nodes[link[1]][0],
+          value: link[2],
+        }));
 
       nodes.forEach((node) => {
         if (node.category === "issue" || node.category === "pull") {
@@ -79,15 +92,15 @@ const Graph = ({
               layoutAnimation: false,
               repulsion: 300,
             },
-            progressive: 100,
-            progressiveThreshold: 50,
+            progressive: 400,
+            progressiveThreshold: 2000,
           },
         ],
       };
 
       chart.setOption(option);
       chart.on("dblclick", (params) => onNodeDblClick(params.data.id));
-
+      // message.destroy();
       return () => {
         chart.dispose();
       };
@@ -95,10 +108,16 @@ const Graph = ({
   }, [graph, month, platform]);
 
   return (
-    <div
-      id="graph"
-      className="graph-container"
-    />
+    <>
+      <div
+        id="graph"
+        className="graph-container"
+      />
+    </>
+    
+      
+    
+    
   );
 };
 
