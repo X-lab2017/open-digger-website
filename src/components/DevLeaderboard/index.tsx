@@ -30,7 +30,9 @@ const DevLeaderboard = () => {
 
   useEffect(() => {
     const loadData = async () => {
+      const hide = message.loading("正在获取数据...", 0);
       try {
+        console.time('fetchData')
         const data = await $.getJSON(
           `${baseUrl}${platform}/${repoName}/community_openrank.json`
         );
@@ -45,8 +47,11 @@ const DevLeaderboard = () => {
           setDatePlaceholder(formattedLastKey);
           setDateKeys(keys);
         }
+        console.timeEnd('fetchData')
+        hide();
       } catch (error) {
-        message.error("加载数据时出错");
+        message.error("获取数据时出错");
+        hide();
       }
     };
 

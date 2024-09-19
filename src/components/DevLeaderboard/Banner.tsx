@@ -110,6 +110,10 @@ const Banner = ({ setPlatform, setRepoName, setDate, datePlaceholder, disabledDa
     setRepoName(value);
   }
 
+  const handleRepoClear = () => {
+    setSearchInputValue('');
+  }
+
   const handleSubmit = () => {
     console.log('111', searchInputValue)
     setRepoName(searchInputValue);
@@ -146,6 +150,7 @@ const Banner = ({ setPlatform, setRepoName, setDate, datePlaceholder, disabledDa
               onSelect={handleRepoSelect}
 							placeholder="umijs/umi"
 							allowClear
+              onClear={handleRepoClear}
 							style={{ width: 260 }}
 						/>
 						<Button type="primary" onClick={handleSubmit}>
