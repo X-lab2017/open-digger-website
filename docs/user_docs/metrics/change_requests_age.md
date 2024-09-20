@@ -4,7 +4,7 @@
 
 ## 定义
 
-变更请求年龄 是由 [CHAOSS](https://chaoss.community) 定义的一个指标，有关该指标的详细定义，请参阅 [CHAOSS Metrics - Issue Age](https://chaoss.community/kb/metric-issue-age/)。
+变更请求年龄（Change Request Age）是由 [CHAOSS](https://chaoss.community) 定义的一个指标，有关该指标的详细定义，请参阅 [CHAOSS Metrics - 问题年龄](https://chaoss.community/kb/metric-issue-age/)。
 
 该指标衡量变更请求被保持开放的时间长度，提供了对审查和集成过程及时性的洞察。该指标对于理解开发团队的效率和响应能力至关重要。
 

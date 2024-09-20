@@ -267,40 +267,40 @@ Feel free to use the data to construct your own data application and you can ref
     </thead>
     <tbody>
       <tr>
-        <td class="centered-cell">Change Requests</td>
+        <td class="centered-cell"><a href="metrics/change_requests"><b>Change Requests</b></a></td>
         <td class="centered-cell"><a href="链接https://chaoss.community/metric-change-requests/">CHAOSS</a></td>
         <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/change_requests.json">change_requests.json</a></td>
         <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L697">Link</a></td>
         <td class="centered-cell" rowSpan="3"><a href="https://codepen.io/frank-zsy/pen/bGjPGxw">Demo</a></td>
       </tr>
       <tr>
-        <td class="centered-cell">Change Requests Accepted</td>
+        <td class="centered-cell"><a href="metrics/change_requests_accepted"><b>Change Requests Accepted</b></a></td>
         <td class="centered-cell"><a href="https://chaoss.community/metric-change-requests-accepted/">CHAOSS</a></td>
         <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/change_requests_accepted.json">change_requests_accepted.json</a></td>
         <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L497">Link</a></td>
       </tr>
       <tr>
-        <td class="centered-cell">Change Requests Reviews</td>
+        <td class="centered-cell"><a href="metrics/change_requests_reviews"><b>Change Requests Reviews</b></a></td>
         <td class="centered-cell"><a href="https://chaoss.community/metric-change-request-reviews/">CHAOSS</a></td>
         <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/change_requests_reviews.json">change_requests_reviews.json</a></td>
         <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L734">Link</a></td>
       </tr>
       <tr>
-        <td class="centered-cell">Change Request Response Time</td>
+        <td class="centered-cell"><a href="metrics/change_requests_response_time"><b>Change Request Response Time</b></a></td>
         <td class="centered-cell"><a href="https://chaoss.community/metric-issue-response-time/">CHAOSS</a></td>
         <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/change_request_response_time.json">change_request_response_time.json</a></td>
         <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L415">Link</a></td>
         <td class="centered-cell"><a href="https://codepen.io/frank-zsy/pen/VwBqwaP?type=change_request_response_time">Demo</a></td>
       </tr>
       <tr>
-        <td class="centered-cell">Change Request Resolution Duration</td>
+        <td class="centered-cell"><a href="metrics/change_requests_resolution_duration"><b>Change Request Resolution Duration</b></a></td>
         <td class="centered-cell"><a href="https://chaoss.community/metric-issue-resolution-duration/">CHAOSS</a></td>
         <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/change_request_resolution_duration.json">change_request_resolution_duration.json</a></td>
         <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L341">Link</a></td>
         <td class="centered-cell"><a href="https://codepen.io/frank-zsy/pen/VwBqwaP?type=change_request_resolution_duration">Demo</a></td>
       </tr>
       <tr>
-        <td class="centered-cell">Change Request Age</td>
+        <td class="centered-cell"><a href="metrics/change_requests_age"><b>Change Request Age</b></a></td>
         <td class="centered-cell"><a href="https://chaoss.community/metric-issue-age/">CHAOSS</a></td>
         <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/change_request_age.json">change_request_age.json</a></td>
         <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L494">Link</a></td>

@@ -1,10 +1,10 @@
-# 已接受的变更请求（合并的 PR）
+# 接受的变更请求
 
 ![From](https://img.shields.io/badge/来自-CHAOSS-blue) ![For](https://img.shields.io/badge/用于-仓库-blue)
 
 ## 定义
 
-已接受的变更请求 是由 [CHAOSS](https://chaoss.community) 定义的一个指标，有关该指标的详细定义，请参阅 [CHAOSS Metrics - Change Requests Accepted](https://chaoss.community/kb/metric-change-requests-accepted/)。
+接受的变更请求（Change Request Accepted）是由 [CHAOSS](https://chaoss.community) 定义的一个指标，有关该指标的详细定义，请参阅 [CHAOSS Metrics - 接受的变更请求](https://chaoss.community/kb/metric-change-requests-accepted/)。
 
 该指标是项目中编码活动量的一个有价值的指示器。通过跟踪已接受的变更请求数量，我们可以获得对开发团队整体生产力和参与度的洞察。该指标作为导致项目实际变化的活动水平的代理。
 

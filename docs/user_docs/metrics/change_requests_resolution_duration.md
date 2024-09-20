@@ -1,10 +1,10 @@
-# 变更请求解决时长
+# 变更请求解决持续时间
 
 ![From](https://img.shields.io/badge/来自-CHAOSS-blue) ![For](https://img.shields.io/badge/用于-仓库-blue)
 
 ## 定义
 
-变更请求解决时长 是由 [CHAOSS](https://chaoss.community)定义的一个指标，有关该指标的详细定义，请参阅 [CHAOSS Metrics - Change Requests Resolution Duration](https://chaoss.community/metric-issue-resolution-duration/)。
+变更请求解决持续时间（Change Request Resolution Duration）是由 [CHAOSS](https://chaoss.community)定义的一个指标，有关该指标的详细定义，请参阅 [CHAOSS Metrics - 变更请求解决持续时间](https://chaoss.community/metric-issue-resolution-duration/)。
 
 该指标衡量变更请求被关闭所需的平均时间，提供了对审查和集成过程效率和及时性的洞察。该指标对于理解开发团队的整体响应能力和效率至关重要。
 

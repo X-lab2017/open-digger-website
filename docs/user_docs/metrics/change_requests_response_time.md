@@ -4,7 +4,7 @@
 
 ## 定义
 
-变更请求响应时间 是由 [CHAOSS](https://chaoss.community) 定义的一个指标，有关该指标的详细定义，请参阅 [CHAOSS Metrics - Change Request Response Time](https://chaoss.community/kb/metric-issue-response-time/)。
+变更请求响应时间（Change Request Response Time）是由 [CHAOSS](https://chaoss.community) 定义的一个指标，有关该指标的详细定义，请参阅 [CHAOSS Metrics - 变更请求响应时间](https://chaoss.community/kb/metric-issue-response-time/)。
 
 该指标衡量从提交变更请求到收到其他贡献者的首次响应之间的时间。这对于理解开发社区的响应能力和审查过程的效率至关重要。
 
