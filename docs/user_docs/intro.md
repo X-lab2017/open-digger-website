@@ -102,7 +102,7 @@ OpenDigger 实现的所有指标对所有人开放使用, 您可以通过以下�
         <td class="centered-cell"><a href="https://codepen.io/frank-zsy/pen/MWBdpNg?type=stars">Demo</a></td>
       </tr>
       <tr>
-        <td class="centered-cell"><a href="/docs/user_docs/metrics/technical_fork"><b>技术分叉</b></a></td>
+        <td class="centered-cell"><a href="metrics/technical_fork"><b>技术分叉</b></a></td>
         <td class="centered-cell"><a href="https://chaoss.community/zh-CN/metric-technical-fork/">CHAOSS</a></td>
         <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/technical_fork.json">technical_fork.json</a></td>
         <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L12">链接</a></td>
@@ -116,7 +116,7 @@ OpenDigger 实现的所有指标对所有人开放使用, 您可以通过以下�
         <td class="centered-cell"><a href="https://codepen.io/frank-zsy/pen/MWBdpNg?type=attention">Demo</a></td>
       </tr>
       <tr>
-        <td class="centered-cell"><a href="/docs/user_docs/metrics/activity_dates_and_times"><b>活跃日期和时间</b></a></td>
+        <td class="centered-cell"><a href="metrics/activity_dates_and_times"><b>活跃日期和时间</b></a></td>
         <td class="centered-cell"><a href="https://chaoss.community/zh-CN/metric-activity-dates-and-times/">CHAOSS</a></td>
         <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/active_dates_and_times.json">active_dates_and_times.json</a></td>
         <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L960">链接</a></td>
@@ -141,7 +141,7 @@ OpenDigger 实现的所有指标对所有人开放使用, 您可以通过以下�
     </thead>
     <tbody>
       <tr>
-        <td class="centered-cell" rowSpan="2"><a href="/docs/user_docs/metrics/new_contributors"><b>新贡献者</b></a></td>
+        <td class="centered-cell" rowSpan="2"><a href="metrics/new_contributors"><b>新贡献者</b></a></td>
         <td class="centered-cell" rowSpan="2"><a href="https://chaoss.community/zh-CN/metric-new-contributors/">CHAOSS</a></td>
         <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/new_contributors.json">new_contributors.json</a></td>
         <td class="centered-cell" rowSpan="2"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L747">链接</a></td>
@@ -151,7 +151,7 @@ OpenDigger 实现的所有指标对所有人开放使用, 您可以通过以下�
         <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/new_contributors_detail.json">new_contributors_detail.json</a></td>
       </tr>
       <tr>
-        <td class="centered-cell" rowSpan="2"><a href="/docs/user_docs/metrics/new_contributors"><b>贡献者</b></a></td>
+        <td class="centered-cell" rowSpan="2"><a href="metrics/new_contributors"><b>贡献者</b></a></td>
         <td class="centered-cell" rowSpan="2"><a href="https://chaoss.community/zh-CN/metric-contributors/">CHAOSS</a></td>
         <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/contributors.json">contributors.json</a></td>
         <td class="centered-cell" rowSpan="2"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L835">链接</a></td>
@@ -161,7 +161,7 @@ OpenDigger 实现的所有指标对所有人开放使用, 您可以通过以下�
         <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/contributors_detail.json">contributors_detail.json</a></td>
       </tr>
       <tr>
-        <td class="centered-cell"><a href="/docs/user_docs/metrics/inactive_contributors"><b>不活跃的贡献者</b></a></td>
+        <td class="centered-cell"><a href="metrics/inactive_contributors"><b>不活跃的贡献者</b></a></td>
         <td class="centered-cell"><a href="https://chaoss.community/zh-CN/metric-inactive-contributors/">CHAOSS</a></td>
         <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/inactive_contributors.json">inactive_contributors.json</a></td>
         <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L880">链接</a></td>
@@ -175,7 +175,7 @@ OpenDigger 实现的所有指标对所有人开放使用, 您可以通过以下�
         <td class="centered-cell"><a href="https://codepen.io/frank-zsy/pen/RwBmpYZ">Demo</a></td>
       </tr>
       <tr>
-        <td class="centered-cell" rowSpan="2"><a href="/docs/user_docs/metrics/bus_factor"><b>贡献者缺席因素</b></a></td>
+        <td class="centered-cell" rowSpan="2"><a href="metrics/bus_factor"><b>贡献者缺席因素</b></a></td>
         <td class="centered-cell" rowSpan="2"><a href="https://chaoss.community/kb/metric-contributor-absence-factor/">CHAOSS</a></td>
         <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/bus_factor.json">bus_factor.json</a></td>
         <td class="centered-cell" rowSpan="2"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L672">链接</a></td>
@@ -222,14 +222,14 @@ OpenDigger 实现的所有指标对所有人开放使用, 您可以通过以下�
         <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/metrics.ts#L49">链接</a></td>
       </tr>
       <tr>
-        <td class="centered-cell"><a href="/docs/user_docs/metrics/issue_response_time"><b>问题响应时间</b></a></td>
+        <td class="centered-cell"><a href="metrics/issue_response_time"><b>问题响应时间</b></a></td>
         <td class="centered-cell"><a href="https://chaoss.community/zh-CN/metric-issue-response-time/">CHAOSS</a></td>
         <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/issue_response_time.json">issue_response_time.json</a></td>
         <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L357">链接</a></td>
         <td class="centered-cell"><a href="https://codepen.io/frank-zsy/pen/VwBqwaP?type=issue_response_time">Demo</a></td>
       </tr>
       <tr>
-        <td class="centered-cell"><a href="/docs/user_docs/metrics/issue_resolution_duration"><b>问题解决持续时间</b></a></td>
+        <td class="centered-cell"><a href="metrics/issue_resolution_duration"><b>问题解决持续时间</b></a></td>
         <td class="centered-cell"><a href="https://chaoss.community/zh-CN/metric-issue-resolution-duration/">CHAOSS</a></td>
         <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/issue_resolution_duration.json">issue_resolution_duration.json</a></td>
         <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L292">链接</a></td>
@@ -353,19 +353,19 @@ OpenDigger 社区也主办或参加社区间的合作活动，如竞赛或黑客
 
 ### GitHub 全域日志数据
 
-我们使用 [GHArchive](https://www.gharchive.org/) 作为 GitHub 日志数据源，数据服务由 X-lab 维护的 [ClickHouse](https://clickhouse.tech/) 云服务。关于数据的详细细节，请查看[数据](/docs/user_docs/intro)文档。
+我们使用 [GHArchive](https://www.gharchive.org/) 作为 GitHub 日志数据源，数据服务由 X-lab 维护的 [ClickHouse](https://clickhouse.tech/) 云服务。关于数据的详细细节，请查看[数据](intro)文档。
 
 ### 标签数据
 
-为了进行更深入的分析，我们正在收集打过标签的数据。您可以在 “labeled_data” 文件夹中查看相应的数据。关于数据的详细细节，请查看[标签数据](/docs/user_docs/intro) 文档。
+为了进行更深入的分析，我们正在收集打过标签的数据。您可以在 “labeled_data” 文件夹中查看相应的数据。关于数据的详细细节，请查看[标签数据](intro) 文档。
 
 ### 采样数据集
 
-OpenDigger 提供 ClickHouse 示例数据和 Jupyter notebook，从而可以在本地环境运行 OpenDigger，详情可参考 [示例数据文档](/docs/user_docs/intro)。
+OpenDigger 提供 ClickHouse 示例数据和 Jupyter notebook，从而可以在本地环境运行 OpenDigger，详情可参考 [示例数据文档](intro)。
 
 ## 贡献指南
 
-在对项目贡献之前，请务必查阅我们的[贡献指南](/docs/user_docs/intro)。
+在对项目贡献之前，请务必查阅我们的[贡献指南](intro)。
 
 ## 沟通
 

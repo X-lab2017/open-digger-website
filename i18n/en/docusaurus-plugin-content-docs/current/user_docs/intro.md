@@ -107,7 +107,7 @@ Feel free to use the data to construct your own data application and you can ref
         <td class="centered-cell"><a href="https://codepen.io/frank-zsy/pen/MWBdpNg?type=stars">Demo</a></td>
       </tr>
       <tr>
-        <td class="centered-cell"><a href="/docs/user_docs/metrics/technical_fork"><b>Technical Fork</b></a></td>
+        <td class="centered-cell"><a href="metrics/technical_fork"><b>Technical Fork</b></a></td>
         <td class="centered-cell"><a href="https://chaoss.community/metric-technical-fork/">CHAOSS</a></td>
         <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/technical_fork.json">technical_fork.json</a></td>
         <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L12">Link</a></td>
@@ -121,7 +121,7 @@ Feel free to use the data to construct your own data application and you can ref
         <td class="centered-cell"><a href="https://codepen.io/frank-zsy/pen/MWBdpNg?type=attention">Demo</a></td>
       </tr>
       <tr>
-        <td class="centered-cell"><a href="/docs/user_docs/metrics/activity_dates_and_times"><b>Activity Dates and Times</b></a></td>
+        <td class="centered-cell"><a href="metrics/activity_dates_and_times"><b>Activity Dates and Times</b></a></td>
         <td class="centered-cell"><a href="https://chaoss.community/metric-activity-dates-and-times/">CHAOSS</a></td>
         <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/active_dates_and_times.json">active_dates_and_times.json</a></td>
         <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L960">Link</a></td>
@@ -146,7 +146,7 @@ Feel free to use the data to construct your own data application and you can ref
     </thead>
     <tbody>
       <tr>
-        <td class="centered-cell" rowSpan="2"><a href="/docs/user_docs/metrics/new_contributors"><b>New Contributors</b></a></td>
+        <td class="centered-cell" rowSpan="2"><a href="metrics/new_contributors"><b>New Contributors</b></a></td>
         <td class="centered-cell" rowSpan="2"><a href="https://chaoss.community/metric-new-contributors/">CHAOSS</a></td>
         <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/new_contributors.json">new_contributors.json</a></td>
         <td class="centered-cell" rowSpan="2"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L747">Link</a></td>
@@ -156,7 +156,7 @@ Feel free to use the data to construct your own data application and you can ref
         <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/new_contributors_detail.json">new_contributors_detail.json</a></td>
       </tr>
       <tr>
-        <td class="centered-cell" rowSpan="2"><a href="/docs/user_docs/metrics/new_contributors"><b>Contributors</b></a></td>
+        <td class="centered-cell" rowSpan="2"><a href="metrics/new_contributors"><b>Contributors</b></a></td>
         <td class="centered-cell" rowSpan="2"><a href="https://chaoss.community/metric-contributors/">CHAOSS</a></td>
         <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/contributors.json">contributors.json</a></td>
         <td class="centered-cell" rowSpan="2"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L835">Link</a></td>
@@ -166,7 +166,7 @@ Feel free to use the data to construct your own data application and you can ref
         <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/contributors_detail.json">contributors_detail.json</a></td>
       </tr>
       <tr>
-        <td class="centered-cell"><a href="/docs/user_docs/metrics/inactive_contributors"><b>Inactive Contributors</b></a></td>
+        <td class="centered-cell"><a href="metrics/inactive_contributors"><b>Inactive Contributors</b></a></td>
         <td class="centered-cell"><a href="https://chaoss.community/metric-inactive-contributors/">CHAOSS</a></td>
         <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/inactive_contributors.json">inactive_contributors.json</a></td>
         <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L880">Link</a></td>
@@ -180,7 +180,7 @@ Feel free to use the data to construct your own data application and you can ref
         <td class="centered-cell"><a href="https://codepen.io/frank-zsy/pen/RwBmpYZ">Demo</a></td>
       </tr>
       <tr>
-        <td class="centered-cell" rowSpan="2"><a href="/docs/user_docs/metrics/bus_factor"><b>Contributor Absence Factor</b></a></td>
+        <td class="centered-cell" rowSpan="2"><a href="metrics/bus_factor"><b>Contributor Absence Factor</b></a></td>
         <td class="centered-cell" rowSpan="2"><a href="https://chaoss.community/kb/metric-contributor-absence-factor/">CHAOSS</a></td>
         <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/bus_factor.json">bus_factor.json</a></td>
         <td class="centered-cell" rowSpan="2"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L672">Link</a></td>
@@ -227,14 +227,14 @@ Feel free to use the data to construct your own data application and you can ref
         <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/metrics.ts#L49">Link</a></td>
       </tr>
       <tr>
-        <td class="centered-cell"><a href="/docs/user_docs/metrics/issue_response_time"><b>Issue Response Time</b></a></td>
+        <td class="centered-cell"><a href="metrics/issue_response_time"><b>Issue Response Time</b></a></td>
         <td class="centered-cell"><a href="https://chaoss.community/metric-issue-response-time/">CHAOSS</a></td>
         <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/issue_response_time.json">issue_response_time.json</a></td>
         <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L357">Link</a></td>
         <td class="centered-cell"><a href="https://codepen.io/frank-zsy/pen/VwBqwaP?type=issue_response_time">Demo</a></td>
       </tr>
       <tr>
-        <td class="centered-cell"><a href="/docs/user_docs/metrics/issue_resolution_duration"><b>Issue Resolution Duration</b></a></td>
+        <td class="centered-cell"><a href="metrics/issue_resolution_duration"><b>Issue Resolution Duration</b></a></td>
         <td class="centered-cell"><a href="https://chaoss.community/metric-issue-resolution-duration/">CHAOSS</a></td>
         <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/issue_resolution_duration.json">issue_resolution_duration.json</a></td>
         <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L292">Link</a></td>
@@ -358,15 +358,15 @@ OpenDigger community also open to inter-community cooperation events, like conte
 
 ### GitHub Event Log
 
-We use [GHArchive](https://www.gharchive.org/) as our data source for GitHub event logs and the data service is provided by [clickhouse](https://clickhouse.tech/) cluster cloud service. For data details, please check the [data](/docs/user_docs/intro) docs.
+We use [GHArchive](https://www.gharchive.org/) as our data source for GitHub event logs and the data service is provided by [clickhouse](https://clickhouse.tech/) cluster cloud service. For data details, please check the [data](intro) docs.
 
 ### Labeled Data
 
-We are collecting labeled data for more deeper analysis. You can view the corresponding data in the `labeled_data` folder. For more details, please check [labeled_data](/docs/user_docs/intro) docs.
+We are collecting labeled data for more deeper analysis. You can view the corresponding data in the `labeled_data` folder. For more details, please check [labeled_data](intro) docs.
 
 ### Sample Data Usage
 
-OpenDigger provides ClickHouse sample data and Jupyter notebook image to run OpenDigger in local environment, please refer to [sample data doc](/docs/user_docs/intro).
+OpenDigger provides ClickHouse sample data and Jupyter notebook image to run OpenDigger in local environment, please refer to [sample data doc](intro).
 
 ## Communication
 
