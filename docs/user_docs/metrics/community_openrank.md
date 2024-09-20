@@ -4,7 +4,7 @@
 
 ## 定义
 
-项目 OpenRank 是一个由 X-lab 开放实验室提出的开源指标，该指标由赵生宇博士提出，关于项目 OpenRank 的算法细节可以参考[这篇博客](https://blog.frankzhao.cn/openrank_in_project/)。
+社区 OpenRank 是一个由 X-lab 开放实验室提出的开源指标，该指标由赵生宇博士提出，关于项目 OpenRank 的算法细节可以参考[这篇博客](https://blog.frankzhao.cn/openrank_in_project/)。
 
 与全域 OpenRank 指标的计算方法类似，该算法使用项目内的 Issue、PR 等协作数据来构建网络，其网络模型为：
 
@@ -24,18 +24,12 @@ graph TD
     issue -->|属于| repo
     pull_request -->|属于| repo
 ```
-<!-- <br/> -->
-
-<!-- <details>
-<summary>Tap on **this** to view the high-res image of the UML diagram ▼</summary>
-<center><img src="https://www.plantuml.com/plantuml/png/SoWkIImgAStDuU8gpixCAqWiIinLI4bDIopDAN7BpolnIynDLN0CKWZmKGZrJinKSFRZuifDB51ukgVXQV_45msj2jLS2Wh-1QbvGObvsGgsTWhFfcvush27gnQYxidkoKztJIQWABEuk3ILW9g2qfoS-ABKmjBKuX8yIX7kij7LjOEQRANmRClk5zkRqMHHp4Ge0ki1Au2w7YZrTEEy9xlwk90rO5VXa9gN0WnD0000" alt="PlantUML" /></center>
-</details>
-
-<br/> -->
 
 ## 代码
 
-项目 OpenRank 算法实现尚未开源到 OpenDigger 中，但其底层使用的用于计算通用 OpenRank 的 Neo4j [插件项目](https://github.com/X-lab2017/openrank-neo4j-gds)已经开源，欢迎大家使用。
+这里是 [**实现代码**](https://github.com/X-lab2017/open-digger/blob/master/src/cron/tasks/community_openrank.ts)。
+
+其底层使用的用于计算通用 OpenRank 的 Neo4j [插件项目](https://github.com/X-lab2017/openrank-neo4j-gds)已经开源，欢迎大家使用。
 
 ## 参数
 

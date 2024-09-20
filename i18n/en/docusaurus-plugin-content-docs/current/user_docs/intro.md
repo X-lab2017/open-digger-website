@@ -333,25 +333,26 @@ For above data, there are some users or partners of OpenDigger right now.
 - [HyperCRX](https://github.com/hypertrons/hypertrons-crx): An open source browser extension helps to look into GitHub users and repos, corresponding [paper](https://dl.acm.org/doi/10.1145/3643916.3644440).
 - [OpenGalaxy](https://open-galaxy.x-lab.info/): An open source galaxy application, corresponding [paper](https://dl.acm.org/doi/10.1145/3643916.3644441).
 - [Hacking Force China](https://opensource.win/): A ranking list of Chinese developers on GitHub cooperate with [SegmentFault](https://segmentfault.com/).
+- [PolarDB Open Source Data Dashboard](https://polardbx.com/dataPanorama): Community dashboard cooperate with PolarDB.
 - [OSGraph](https://osgraph.com/): An open source graph application collaborate with [TuGraph](https://www.tugraph.tech/).
 
 ### Open source reports
 
 - China Open Source Report by [kaiyuanshe](https://kaiyuanshe.cn/).
-  - [China Open Source Report 2021](https://kaiyuanshe.cn/document/china-os-report-2021/)
-  - [China Open Source Report 2022](https://kaiyuanshe.cn/article/2022-China-Open-Source-Annual-Report)
-  - [China Open Source Report 2023](https://kaiyuanshe.cn/article/Year-of-the-Dragon-Ceremony-2023-China-Open-Source-Annual-Report)
+  - [China Open Source Report 2021](https://kaiyuanshe.cn/document/china-os-report-2021/).
+  - [China Open Source Report 2022](https://kaiyuanshe.cn/article/2022-China-Open-Source-Annual-Report).
+  - [China Open Source Report 2023](https://kaiyuanshe.cn/article/Year-of-the-Dragon-Ceremony-2023-China-Open-Source-Annual-Report).
 - China Open Source Blue Paper by [COPU](http://www.copu.org.cn/).
-  - [China Open Source Blue Paper 2021](http://www.cosspu.org.cn/download/showdownload.php?id=26)
-  - [China Open Source Blue Paper 2022](http://www.cosspu.org.cn/download/showdownload.php?id=27)
-  - [China Open Source Blue Paper 2023](http://www.cosspu.org.cn/download/showdownload.php?id=25)
+  - [China Open Source Blue Paper 2021](http://www.cosspu.org.cn/download/showdownload.php?id=26).
+  - [China Open Source Blue Paper 2022](http://www.cosspu.org.cn/download/showdownload.php?id=27).
+  - [China Open Source Blue Paper 2023](http://www.cosspu.org.cn/download/showdownload.php?id=25).
 - [Big Data Open Source Heat Report](https://github.com/X-lab2017/open-digger/blob/master/cooperations/big_data_open_source_heat_report/开源大数据热力报告2022.pdf): A heat report of open source projects in big data area.
 
 ## Events
 
 OpenDigger community also open to inter-community cooperation events, like contests or hackathons.
 
-- [OpenSODA 2023](https://competition.atomgit.com/competitionInfo?id=bc6603e0b8bf11ed804e6b78b4426d45)。
+- [OpenSODA 2023](https://competition.atomgit.com/competitionInfo?id=bc6603e0b8bf11ed804e6b78b4426d45).
 - [PaddlePaddle Hackathon 3rd](https://www.paddlepaddle.org.cn/PaddlePaddleHackathon-2022-6), the hackathon final reports are [here](https://github.com/X-lab2017/open-digger/tree/master/cooperations/paddle_hackathon_3rd).
 
 ## Data

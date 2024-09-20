@@ -328,6 +328,7 @@ OpenDigger 实现的所有指标对所有人开放使用, 您可以通过以下�
 - [HyperCRX](https://github.com/hypertrons/hypertrons-crx)：对查看 GitHub 用户和仓库有帮助的浏览器插件，对应[论文](https://dl.acm.org/doi/10.1145/3643916.3644440)
 - [OpenGalaxy](https://open-galaxy.x-lab.info/)：开源全景星系项目，对应[论文](https://dl.acm.org/doi/10.1145/3643916.3644441)
 - [中国开源码力榜](https://opensource.win/)：与[思否](https://segmentfault.com/)合作发布的 GitHub 中国开发者排行榜
+- [PolarDB 开源社区洞察大屏](https://polardbx.com/dataPanorama)：与 PolarDB 社区合作的开源洞察大屏
 - [OSGraph](https://osgraph.com/)：与 [TuGraph](https://www.tugraph.tech/) 合作发布的开源行为图谱项目
 
 ### 开源报告
