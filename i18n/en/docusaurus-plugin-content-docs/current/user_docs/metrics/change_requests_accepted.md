@@ -1,4 +1,4 @@
-# Change Requests Accepted (Merged PR)
+# Change Requests Accepted
 
 ![From](https://img.shields.io/badge/From-CHAOSS-blue) ![For](https://img.shields.io/badge/For-Repo-blue)
 

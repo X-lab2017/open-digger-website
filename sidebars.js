@@ -108,7 +108,7 @@ const sidebars = {
         {
           type: 'link',
           label: 'PolarDBDashboard',
-          href: 'https://dataease.x-lab.info/link/RyaY6hry',
+          href: 'https://polardbx.com/dataPanorama',
         },
       ]
     },

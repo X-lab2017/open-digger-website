@@ -1,4 +1,4 @@
-# Change Requests (Open PR)
+# Change Requests
 
 ![From](https://img.shields.io/badge/From-CHAOSS-blue) ![For](https://img.shields.io/badge/For-Repo-blue)
 
