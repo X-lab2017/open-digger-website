@@ -22,7 +22,7 @@ const sidebars = {
       collapsed: true,
       items: [
         'user_docs/data_sources/github',
-        'user_docs/data_sources/gitee'
+        'user_docs/data_sources/gitee',
       ],
     },
     'user_docs/label_data',
@@ -37,17 +37,52 @@ const sidebars = {
           label: 'openrank',
           collapsed: false,
           items: [
-            'user_docs/metrics/openrank/global_openrank',
-            'user_docs/metrics/openrank/community_openrank'
+            'user_docs/metrics/global_openrank',
+            'user_docs/metrics/community_openrank',
           ],
         },
-        'user_docs/metrics/activity',
-        'user_docs/metrics/activity_dates_and_times',
-        'user_docs/metrics/technical_fork',
-        'user_docs/metrics/inactive_contributors',
-        'user_docs/metrics/bus_factor',
-        'user_docs/metrics/issue_resolution_duration',
-        'user_docs/metrics/issue_response_time',
+        {
+          type: 'category',
+          label: 'statistics',
+          collapsed: true,
+          items: [
+            'user_docs/metrics/activity',
+            'user_docs/metrics/technical_fork',
+            'user_docs/metrics/activity_dates_and_times',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'developers',
+          collapsed: true,
+          items: [
+            'user_docs/metrics/new_contributors',
+            'user_docs/metrics/inactive_contributors',
+            'user_docs/metrics/contributor_absence_factor',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'issues',
+          collapsed: true,
+          items: [
+            'user_docs/metrics/issue_response_time',
+            'user_docs/metrics/issue_resolution_duration',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'change_requests',
+          collapsed: true,
+          items: [
+            'user_docs/metrics/change_requests',
+            'user_docs/metrics/change_requests_accepted',
+            'user_docs/metrics/change_request_reviews',
+            'user_docs/metrics/change_requests_response_time',
+            'user_docs/metrics/change_requests_resolution_duration',
+            'user_docs/metrics/change_requests_age',
+          ],
+        },
       ],
     },
     {
@@ -73,7 +108,7 @@ const sidebars = {
         {
           type: 'link',
           label: 'PolarDBDashboard',
-          href: 'https://dataease.x-lab.info/link/RyaY6hry',
+          href: 'https://polardbx.com/dataPanorama',
         },
       ]
     },

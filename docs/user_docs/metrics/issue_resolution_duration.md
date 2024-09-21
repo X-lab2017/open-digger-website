@@ -1,14 +1,14 @@
-# Issue 解决时长
+# 问题解决持续时间
 
-![From](https://img.shields.io/badge/From-CHAOSS-blue) ![For](https://img.shields.io/badge/For-Repo-blue)
+![From](https://img.shields.io/badge/来自-CHAOSS-blue) ![For](https://img.shields.io/badge/用于-仓库-blue)
 
 ## 定义
 
-Issue 解决时长 (Issue Resolution Duration)，也称为 Issue 解决时间 (Time to Issue Resolution)，是一个由 [CHAOSS](https://chaoss.community) 定义的指标，有关该指标的详细定义，请参阅 [CHAOSS Metrics - Time to Issue Resolution](https://chaoss.community/kb/metric-issue-resolution-duration/)。
+问题解决持续时间 (Issue Resolution Duration)，也称为 Issue 解决时间 (Time to Issue Resolution)，是一个由 [CHAOSS](https://chaoss.community) 定义的指标，有关该指标的详细定义，请参阅 [CHAOSS Metrics - Time to Issue Resolution](https://chaoss.community/kb/metric-issue-resolution-duration/)。
 
 该指标有助于表明解决问题所需的时间，从问题开启到关闭的平均时间。这个指标可用于确定社区如何快速响应问题以及解决问题所需的时间。
 
-> 对于那些被重新打开并再次关闭的问题，仅最后一个关闭日期对此指标有关联。
+> 对于那些被重新打开并再次关闭的问题，仅最后一个关闭事件与此指标有关联。
 
 ## 数据
 

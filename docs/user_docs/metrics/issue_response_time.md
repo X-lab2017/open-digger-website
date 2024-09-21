@@ -1,10 +1,10 @@
-# Issue 响应时间
+# 问题响应时间
 
 ![From](https://img.shields.io/badge/来自-CHAOSS-blue) ![For](https://img.shields.io/badge/用于-仓库-blue)
 
 ## 定义
 
-Issue 响应时间（Issue Response Time）是由 [CHAOSS](https://chaoss.community) 定义的一个指标，有关该指标的详细定义，请参阅 [CHAOSS Metrics - Issue Response Time](https://chaoss.community/metric-issue-response-time/)。
+问题响应时间（Issue Response Time）是由 [CHAOSS](https://chaoss.community) 定义的一个指标，有关该指标的详细定义，请参阅 [CHAOSS Metrics - Issue Response Time](https://chaoss.community/metric-issue-response-time/)。
 
 Issue 响应时间是一个指标，显示从 Issue 开启到来自其他贡献者在该 Issue 上的响应之间经过的时间。
 
