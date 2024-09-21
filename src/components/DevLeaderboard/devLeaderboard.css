@@ -87,9 +87,12 @@ table th {
 }
 
 .banner-title {
+  margin-bottom: 0.5rem;
   text-align: center;
   font-size: 1.5rem;
   font-weight: bold;
+  color: black;
+  text-shadow: 0 0 10px white;
 }
 
 .banner-content {
