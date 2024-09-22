@@ -27,8 +27,8 @@
     "message": "开发者文档",
     "description": "Navbar item with label devDocs"
   },
-  "item.label.leaderboard": {
-    "message": "排行榜",
+  "item.label.community_openrank_leaderboard": {
+    "message": "OpenRank 贡献度排行榜",
     "description": "Navbar item with label leaderboard"
   }
 }

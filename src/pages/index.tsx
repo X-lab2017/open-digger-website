@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import HomepageFeatures from '../components/HomepageFeatures';
 import Layout from '@theme/Layout';
 import Translate, { translate } from '@docusaurus/Translate';
 
@@ -25,12 +25,12 @@ function HomepageHeader() {
   );
 }
 
-export default function Home() {
+export default (): JSX.Element => {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      description="OpenDigger, OpenRank, Open source">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

@@ -123,8 +123,8 @@ const config: Config = {
             position: 'left'
           },
           {
-            to: '/leaderboard',
-            label: 'leaderboard',
+            to: '/community_openrank_leaderboard',
+            label: 'community_openrank_leaderboard',
             position: 'left'
           },
           {

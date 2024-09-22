@@ -121,3 +121,6 @@ article {
   }
 }
 
+.no-footer footer {
+  display: none;
+}

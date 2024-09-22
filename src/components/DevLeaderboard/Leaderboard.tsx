@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
-import * as echarts from "echarts";
-import $ from "jquery";
-import "./devLeaderboard.css";
-import SimpleTable from "../SimpleTable";
+import React, { useEffect, useState } from 'react';
+import { translate } from '@docusaurus/Translate';
+import SimpleTable from '../SimpleTable';
+import styles from './styles.module.css';
 
 const Leaderboard = ({ graph, month }) => {
   const [users, setUsers] = useState([]);
@@ -27,14 +26,13 @@ const Leaderboard = ({ graph, month }) => {
   }, [graph, month]);
 
   return (
-    <div className="left-box" id="list">
+    <div className={styles.leftBox}>
       <SimpleTable
-        className="leaderboard-box scrollit"
-        title={"Leaderboard"}
-        data={users.slice(0, 6)}
+        title={translate({ id: 'communityLeaderboard.leaderboard.title' })}
+        data={users}
         options={[
-          { name: "Login", type: "String", fields: ["login"], width: 180 },
-          { name: "OpenRank", type: "String", fields: ["value"], width: 100 },
+          { name: translate({ id: 'communityLeaderboard.leaderboard.login' }), type: 'String', fields: ['login'], width: 200 },
+          { name: 'OpenRank', type: 'String', fields: ['value'], width: 100 },
         ]}
       />
     </div>

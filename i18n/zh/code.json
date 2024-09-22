@@ -363,5 +363,26 @@
   },
   "leaderboard.invalidDataAlert": {
     "message": "数据输入不是合法的 JSON 字符串，请检查输入"
+  },
+  "communityLeaderboard.leaderboard.title": {
+    "message": "OpenRank 贡献度排行榜"
+  },
+  "communityLeaderboard.leaderboard.login": {
+    "message": "账号"
+  },
+  "communityLeaderboard.details.title": {
+    "message": "贡献度详情表"
+  },
+  "communityLeaderboard.details.from": {
+    "message": "来源"
+  },
+  "communityLeaderboard.details.ratio": {
+    "message": "比例"
+  },
+  "communityLeaderboard.details.value": {
+    "message": "值"
+  },
+  "communityLeaderboard.banner.title": {
+    "message": "OpenRank 贡献度排行榜"
   }
 }

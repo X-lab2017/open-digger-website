@@ -1,0 +1,51 @@
+.graphContainer {
+  position: absolute;
+  left: 0;
+  top: 70px;
+  width: 100%;
+  height: calc(100vh - 100px);
+}
+
+.bannerBox {
+  z-index: 3;
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 660px;
+  height: 120px;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border-radius: 1rem;
+  padding: 1rem;
+  border: 1px solid grey;
+}
+
+.bannerTitle {
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+  text-shadow: 0 0 10px white;
+}
+
+.bannerContent {
+  display: flex;
+  justify-content: space-between;
+}
+
+.leftBox {
+  position: absolute;
+  top: 20%;
+  left: 20px;
+  height: 60%;
+}
+
+.rightBox {
+  position: absolute;
+  right: 20px;
+  top: 20%;
+  height: 60%;
+}

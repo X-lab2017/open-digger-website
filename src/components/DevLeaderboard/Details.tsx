@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
-import "./devLeaderboard.css";
-import SimpleTable from "../SimpleTable";
+import { useEffect, useState } from 'react';
+import { translate } from '@docusaurus/Translate';
+import SimpleTable from '../SimpleTable';
+import styles from './styles.module.css';
 
 const Details = ({ graph, id, month, typeMap, platform }) => {
   const [details, setDetails] = useState([]);
@@ -46,16 +47,10 @@ const Details = ({ graph, id, month, typeMap, platform }) => {
                 " " +
                 sourceNode[1];
             return [
-              name,
-              parseFloat((1 - graph.meta.retentionFactor) * link[2]).toFixed(3),
+              name.substring(0, 20),
+              parseFloat(((1 - graph.meta.retentionFactor) * link[2]).toFixed(3)),
               sourceValue[2],
-              parseFloat(
-                (
-                  (1 - graph.meta.retentionFactor) *
-                  link[2] *
-                  sourceValue[2]
-                ).toFixed(3)
-              ),
+              parseFloat(((1 - graph.meta.retentionFactor) * link[2] * sourceValue[2]).toFixed(3)),
             ];
           })
           .sort((a, b) => b[3] - a[3]);
@@ -63,9 +58,9 @@ const Details = ({ graph, id, month, typeMap, platform }) => {
         const repoNode = data.nodes.find((node) => node[0] === 0);
         otherDetails.push([
           graph.meta.repoName,
-          (1 / (data.nodes.length - 1)).toFixed(3),
+          parseFloat((1 / (data.nodes.length - 1)).toFixed(3)),
           repoNode[2],
-          ((1 / (data.nodes.length - 1)) * repoNode[2]).toFixed(3),
+          parseFloat(((1 / (data.nodes.length - 1)) * repoNode[2]).toFixed(3)),
         ]);
 
         setDetails([...detailsData, ...otherDetails]);
@@ -74,13 +69,13 @@ const Details = ({ graph, id, month, typeMap, platform }) => {
   }, [graph, id, month, typeMap, platform]);
 
   return (
-    <div className="right-box" id="details">
-      <SimpleTable title={"Details"} data={details.slice(0, 6)} options={
+    <div className={styles.rightBox}>
+      <SimpleTable title={translate({ id: 'communityLeaderboard.details.title' })} data={details} options={
         [
-          { name: "From", type: "String", fields: [0], width: 120 },
-          { name: "Ratio", type: "String", fields: [1], width: 60 },
-          { name: "Value", type: "String", fields: [2], width: 60 },
-          { name: "OpenRank", type: "String", fields: [3], width: 60 }
+          { name: translate({ id: 'communityLeaderboard.details.from' }), type: 'String', fields: [0], width: 120 },
+          { name: translate({ id: 'communityLeaderboard.details.ratio' }), type: 'String', fields: [1], width: 60 },
+          { name: translate({ id: 'communityLeaderboard.details.value' }), type: 'String', fields: [2], width: 60 },
+          { name: 'OpenRank', type: 'String', fields: [3], width: 80 }
         ]
       } />
     </div>

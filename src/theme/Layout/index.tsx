@@ -9,7 +9,7 @@ export default function LayoutWrapper(props: any): JSX.Element {
 
   return (
     <>
-      {customFields.pullNumber &&
+      {customFields?.pullNumber &&
         (
           <div>
             <div className="fixed-banner"

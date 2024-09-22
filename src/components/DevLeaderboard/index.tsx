@@ -1,14 +1,10 @@
-import React, { useEffect, useState, useRef } from "react";
-import * as echarts from "echarts";
-import $ from "jquery";
-import { message } from "antd";
-import moment from "moment";
-
-import Leaderboard from "./Leaderboard";
-import Details from "./Details";
-import Graph from "./Graph";
-import Banner from "./Banner";
-import "./devLeaderboard.css";
+import React, { useEffect, useState } from 'react';
+import $ from 'jquery';
+import { message } from 'antd';
+import Leaderboard from './Leaderboard';
+import Details from './Details';
+import Graph from './Graph';
+import Banner from './Banner';
 
 const DevLeaderboard = () => {
   const [graph, setGraph] = useState(null);
@@ -80,8 +76,8 @@ const DevLeaderboard = () => {
   return (
     <>
       <Banner
-        setPlatform={setPlatform} 
-        setRepoName={setRepoName} 
+        setPlatform={setPlatform}
+        setRepoName={setRepoName}
         setDate={setDate}
         datePlaceholder={datePlaceholder}
         disabledDate={disabledDate}
