@@ -287,7 +287,7 @@
     "description": "The unlisted content banner message"
   },
   "homepage.pullPreviewWarning": {
-    "message": "注意：该网站为 OpenDigger 官网仓库 <a href='https://github.com/X-lab2017/open-digger-website/pull/{pullNumber}'>PR#{pullNumber}</a> 的预览版本，请勿分享，谢谢！OpenDigger 官网请移步 <a href='https://open-digger.cn/'>https://open-digger.cn</a>。"
+    "message": "⚠ 注意：该网站为 OpenDigger 官网仓库 <a href='https://github.com/X-lab2017/open-digger-website/pull/{pullNumber}'>PR#{pullNumber}</a> 的预览版本，请勿分享，谢谢！OpenDigger 官网请移步 <a href='https://open-digger.cn/'>https://open-digger.cn</a>。"
   },
   "homepage.tagLine": {
     "message": "开源数据分析平台"

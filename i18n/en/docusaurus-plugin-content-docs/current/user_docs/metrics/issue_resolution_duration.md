@@ -8,7 +8,7 @@ Issue Resolution Duration, also known as Time to Issue Resolution, is a metric d
 
 The metric helps indicate the time it takes to resolve an issue, on average, from the time it was opened to the time it was closed. This metric can be used to determine how quickly the community responds to issues and how long it takes to resolve them.
 
-> For issues that were reopened and closed again, only the last close date is relevant for this metric.
+> For issues that were reopened and closed again, only the last close event is relevant for this metric.
 
 
 ## Data

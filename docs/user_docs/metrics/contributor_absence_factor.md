@@ -1,12 +1,12 @@
-# 巴士系数
+# 贡献者缺席因素
 
 ![From](https://img.shields.io/badge/来自-CHAOSS-blue) ![For](https://img.shields.io/badge/用于-仓库-blue)
 
 ## 定义
 
-巴士系数（Bus Factor），或称为 Contributor Absence Factor，是由 [CHAOSS 社区](https://chaoss.community) 定义的一个指标。有关该指标的详细定义，请参阅 [CHAOSS Metrics - Bus Factor](https://chaoss.community/metric-bus-factor/)。
+贡献者缺席因素（Contributor Absence Factor），是由 [CHAOSS 社区](https://chaoss.community) 定义的一个指标。有关该指标的详细定义，请参阅 [CHAOSS Metrics - Bus Factor](https://chaoss.community/zh-CN/kb/metric-contributor-absence-factor/)。
 
-巴士系数是一个引人注目的指标，因为它形象的表达了一个问题，即：“在项目停滞之前，我们可以失去多少贡献者？”。巴士系数的计算是项目贡献量 50% 的最少人数，并表明了项目失去关键贡献者（包括维护者）后的韧性程度。
+贡献者缺席因素是一个引人注目的指标，因为它形象的表达了一个问题，即：“在项目停滞之前，我们可以失去多少贡献者？”。贡献者缺席因素的计算是项目贡献量 50% 的最少人数，并表明了项目失去关键贡献者（包括维护者）后的韧性程度。
 
 > 它有助于识别项目中的工作如何分布在贡献者之间，以及项目中做了大部分工作的关键人物。
 

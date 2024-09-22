@@ -1,34 +1,38 @@
 {
   "version.label": {
-    "message": "Next",
-    "description": "The label for version current"
+    "message": "Next"
   },
   "sidebar.docSidebar.category.data_sources": {
-    "message": "Data Sources",
-    "description": "The label for category metrics in sidebar docSidebar"
+    "message": "Data Sources"
   },
   "sidebar.docSidebar.category.metrics": {
-    "message": "Metrics",
-    "description": "The label for category metrics in sidebar docSidebar"
+    "message": "Metrics"
   },
   "sidebar.docSidebar.category.openrank": {
-    "message": "OpenRank",
-    "description": "The label for category openrank in sidebar docSidebar"
+    "message": "OpenRank"
+  },
+  "sidebar.userDocSidebar.category.statistics": {
+    "message": "Statistics"
+  },
+  "sidebar.userDocSidebar.category.developers": {
+    "message": "Developers"
+  },
+  "sidebar.userDocSidebar.category.issues": {
+    "message": "Issues"
+  },
+  "sidebar.userDocSidebar.category.change_requests": {
+    "message": "Change requests"
   },
   "sidebar.userDocSidebar.category.downstream": {
-    "message": "Downstream Apps",
-    "description": "The label for category downstream in sidebar userDocSidebar"
+    "message": "Downstream Apps"
   },
   "sidebar.userDocSidebar.link.PolarDBDashboard": {
-    "message": "PolarDB Dashboard",
-    "description": "The label for link PolarDBDashboard in sidebar userDocSidebar"
+    "message": "PolarDB Dashboard"
   },
   "sidebar.userDocSidebar.link.OpenAtomDashboard": {
-    "message": "OpenAtom Dashboard",
-    "description": "The label for link OpenAtomDashboard in sidebar userDocSidebar"
+    "message": "OpenAtom Dashboard"
   },
   "sidebar.developerDocSidebar.category.jupyter_notebook": {
-    "message": "Jupyter Notebook",
-    "description": "The label for category jupyter_notebook in sidebar developerDocSidebar"
+    "message": "Jupyter Notebook"
   }
 }

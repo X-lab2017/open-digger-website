@@ -12,311 +12,361 @@ OpenDigger 实现的所有指标对所有人开放使用, 您可以通过以下�
 
 [![](https://img.shields.io/badge/Data-OpenDigger-2097FF)](https://github.com/X-lab2017/open-digger)
 
-### 仓库指标
+<!-- OPENRANK -->
+<details id="elevatedbtn" open>
+  <summary>OpenRank</summary>
+  <table>
+    <thead>
+      <tr>
+        <th width="30%">名称</th>
+        <th width="10%">来源</th>
+        <th width="40%">示例</th>
+        <th width="10%">代码</th>
+        <th>CodePen</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="centered-cell"><a href="metrics/openrank/global_openrank" ><b>仓库全域 OpenRank</b></a></td>
+        <td class="centered-cell"><a href="https://blog.frankzhao.cn/how_to_measure_open_source_2/">X-lab</a></td>
+        <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/openrank.json">openrank.json</a></td>
+        <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/indices.ts#L25">链接</a></td>
+        <td class="centered-cell"><a href="https://codepen.io/frank-zsy/pen/bGjyqQj?type=openrank">Demo</a></td>
+      </tr>
+      <tr>
+        <td class="centered-cell"><a href="metrics/openrank/global_openrank" ><b>开发者全域 OpenRank</b></a></td>
+        <td class="centered-cell"><a href="https://blog.frankzhao.cn/how_to_measure_open_source_2/">X-lab</a></td>
+        <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/frank-zsy/openrank.json">openrank.json</a></td>
+        <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/indices.ts#L57">链接</a></td>
+        <td class="centered-cell"><a href="https://codepen.io/frank-zsy/pen/bGjyqQj?type=openrank">Demo</a></td>
+      </tr>
+      <tr>
+        <td class="centered-cell"><a href="metrics/openrank/community_openrank" ><b>仓库社区 OpenRank</b></a></td>
+        <td class="centered-cell"><a href="https://blog.frankzhao.cn/how_to_measure_open_source_3/">X-lab</a></td>
+        <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/community_openrank.json">community_openrank.json</a></td>
+        <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/indices.ts#L94">链接</a></td>
+        <td class="centered-cell"><a href="https://codepen.io/frank-zsy/pen/abjMXBV">Demo</a></td>
+      </tr>
+      <tr>
+        <td class="centered-cell"><a href="metrics/openrank/community_openrank" ><b>开发者社区 OpenRank</b></a></td>
+        <td class="centered-cell"><a href="https://blog.frankzhao.cn/how_to_measure_open_source_3/">X-lab</a></td>
+        <td class="centered-cell">-</td>
+        <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/indices.ts#L176">链接</a></td>
+        <td class="centered-cell">-</td>
+      </tr>
+    </tbody>
+  </table>
+</details>
 
-<table>
-  <thead>
-    <tr>
-      <th>类型</th><th>名称</th><th>来源</th><th>例子</th><th>代码</th><th>CodePen</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td rowSpan="3">指标</td>
-      <td>OpenRank</td>
-      <td><a href="https://blog.frankzhao.cn/how_to_measure_open_source_2/">X-lab</a></td>
-      <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/openrank.json">openrank.json</a></td>
-      <td><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/indices.ts#L21">Link</a></td>
-      <td><a href="https://codepen.io/frank-zsy/pen/bGjyqQj?type=openrank">Demo</a></td>
-    </tr>
-    <tr>
-      <td>Activity</td>
-      <td><a href="https://blog.frankzhao.cn/how_to_measure_open_source_1/">X-lab</a></td>
-      <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/activity.json">activity.json</a></td>
-      <td><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/indices.ts#L109">Link</a></td>
-      <td><a href="https://codepen.io/frank-zsy/pen/bGjyqQj?type=activity">Demo</a></td>
-    </tr>
-    <tr>
-      <td>Attention</td>
-      <td>X-lab</td>
-      <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/attention.json">attention.json</a></td>
-      <td><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/indices.ts#L235">Link</a></td>
-      <td><a href="https://codepen.io/frank-zsy/pen/MWBdpNg?type=attention">Demo</a></td>
-    </tr>
-    <tr>
-      <td rowSpan="25">度量</td>
-      <td>Activity dates and times</td>
-      <td><a href="https://chaoss.community/metric-activity-dates-and-times/">CHAOSS</a></td>
-      <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/active_dates_and_times.json">active_dates_and_times.json</a></td>
-      <td><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L1050">Link</a></td>
-      <td><a href="https://codepen.io/frank-zsy/pen/jOpQdZZ">Demo</a></td>
-    </tr>
-    <tr>
-      <td>Stars</td>
-      <td>X-lab</td>
-      <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/stars.json">stars.json</a></td>
-      <td><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/metrics.ts#L15">Link</a></td>
-      <td><a href="https://codepen.io/frank-zsy/pen/MWBdpNg?type=stars">Demo</a></td>
-    </tr>
-    <tr>
-      <td>Technical fork</td>
-      <td><a href="https://chaoss.community/metric-technical-fork/">CHAOSS</a></td>
-      <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/technical_fork.json">technical_fork.json</a></td>
-      <td><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L12">Link</a></td>
-      <td><a href="https://codepen.io/frank-zsy/pen/MWBdpNg?type=technical_fork">Demo</a></td>
-    </tr>
-    <tr>
-      <td>Participants</td>
-      <td>X-lab</td>
-      <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/participants.json">participants.json</a></td>
-      <td><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/metrics.ts#L89">Link</a></td>
-      <td><a href="https://codepen.io/frank-zsy/pen/RwBmpYZ">Demo</a></td>
-    </tr>
-    <tr>
-      <td rowSpan="2">New contributors</td>
-      <td rowSpan="2"><a href="https://chaoss.community/metric-new-contributors/">CHAOSS</a></td>
-      <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/new_contributors.json">new_contributors.json</a></td>
-      <td rowSpan="2"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L862">Link</a></td>
-      <td rowSpan="2"><a href="https://codepen.io/frank-zsy/pen/RwBmpYZ">Demo</a></td>
-    </tr>
-    <tr>
-      <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/new_contributors_detail.json">new_contributors_detail.json</a></td>
-    </tr>
-    <tr>
-      <td>Inactive contributors</td>
-      <td><a href="https://chaoss.community/metric-inactive-contributors/">CHAOSS</a></td>
-      <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/inactive_contributors.json">inactive_contributors.json</a></td>
-      <td><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L965">Link</a></td>
-      <td><a href="https://codepen.io/frank-zsy/pen/RwBmpYZ">Demo</a></td>
-    </tr>
-    <tr>
-      <td rowSpan="2">Bus factor</td>
-      <td rowSpan="2"><a href="https://chaoss.community/metric-bus-factor/">CHAOSS</a></td>
-      <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/bus_factor.json">bus_factor.json</a></td>
-      <td rowSpan="2"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L780">Link</a></td>
-      <td rowSpan="2"><a href="https://codepen.io/frank-zsy/pen/bGjyqQj?type=bus_factor">Demo</a></td>
-    </tr>
-    <tr>
-      <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/bus_factor_detail.json">bus_factor_detail.json</a></td>
-    </tr>
-    <tr>
-      <td>Issues new</td>
-      <td><a href="https://chaoss.community/metric-issues-new/">CHAOSS</a></td>
-      <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/issues_new.json">issues_new.json</a></td>
-      <td><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L146">Link</a></td>
-      <td rowSpan="3"><a href="https://codepen.io/frank-zsy/pen/mdjaZMw">Demo</a></td>
-    </tr>
-    <tr>
-      <td>Issues closed</td>
-      <td><a href="https://chaoss.community/metric-issues-closed/">CHAOSS</a></td>
-      <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/issues_closed.json">issues_closed.json</a></td>
-      <td><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L223">Link</a></td>
-    </tr>
-    <tr>
-      <td>Issue comments</td>
-      <td>X-lab</td>
-      <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/issue_comments.json">issue_comments.json</a></td>
-      <td><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/metrics.ts#L52">Link</a></td>
-    </tr>
-    <tr>
-      <td>Issue response time</td>
-      <td><a href="https://chaoss.community/metric-issue-response-time/">CHAOSS</a></td>
-      <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/issue_response_time.json">issue_response_time.json</a></td>
-      <td><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L413">Link</a></td>
-      <td><a href="https://codepen.io/frank-zsy/pen/VwBqwaP?type=issue_response_time">Demo</a></td>
-    </tr>
-    <tr>
-      <td>Issue resolution duration</td>
-      <td><a href="https://chaoss.community/metric-issue-resolution-duration/">CHAOSS</a></td>
-      <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/issue_resolution_duration.json">issue_resolution_duration.json</a></td>
-      <td><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L338">Link</a></td>
-      <td><a href="https://codepen.io/frank-zsy/pen/VwBqwaP?type=issue_resolution_duration">Demo</a></td>
-    </tr>
-    <tr>
-      <td>Issue age</td>
-      <td><a href="https://chaoss.community/metric-issue-age/">CHAOSS</a></td>
-      <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/issue_age.json">issue_age.json</a></td>
-      <td><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L492">Link</a></td>
-      <td><a href="https://codepen.io/frank-zsy/pen/VwBqwaP?type=issue_age">Demo</a></td>
-    </tr>
-    <tr>
-      <td>Code change lines</td>
-      <td><a href="https://chaoss.community/metric-code-changes-lines/">CHAOSS</a></td>
-      <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/code_change_lines_add.json">code_change_lines_add.json</a></td>
-      <td><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L94">Link</a></td>
-      <td><a href="https://codepen.io/frank-zsy/pen/dyjByKL">Demo</a></td>
-    </tr>
-    <tr>
-      <td>Code change lines</td>
-      <td><a href="https://chaoss.community/metric-code-changes-lines/">CHAOSS</a></td>
-      <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/code_change_lines_remove.json">code_change_lines_remove.json</a></td>
-      <td><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L94">Link</a></td>
-      <td><a href="https://codepen.io/frank-zsy/pen/dyjByKL">Demo</a></td>
-    </tr>
-    <tr>
-      <td>Code change lines</td>
-      <td><a href="https://chaoss.community/metric-code-changes-lines/">CHAOSS</a></td>
-      <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/code_change_lines_sum.json">code_change_lines_sum.json</a></td>
-      <td><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L94">Link</a></td>
-      <td><a href="https://codepen.io/frank-zsy/pen/dyjByKL">Demo</a></td>
-    </tr>
-    <tr>
-      <td>Change requests<br />(Open PR)</td>
-      <td><a href="https://chaoss.community/metric-change-requests/">CHAOSS</a></td>
-      <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/change_requests.json">change_requests.json</a></td>
-      <td><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L697">Link</a></td>
-      <td><a href="https://codepen.io/frank-zsy/pen/bGjPGxw">Demo</a></td>
-    </tr>
-    <tr>
-      <td>Change requests accepted<br />(Merged PR)</td>
-      <td><a href="https://chaoss.community/metric-change-requests-accepted/">CHAOSS</a></td>
-      <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/change_requests_accepted.json">change_requests_accepted.json</a></td>
-      <td><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L497">Link</a></td>
-      <td><a href="https://codepen.io/frank-zsy/pen/bGjPGxw">Demo</a></td>
-    </tr>
-    <tr>
-      <td>Change requests reviews</td>
-      <td><a href="https://chaoss.community/metric-change-request-reviews/">CHAOSS</a></td>
-      <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/change_requests_reviews.json">change_requests_reviews.json</a></td>
-      <td><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L734">Link</a></td>
-      <td><a href="https://codepen.io/frank-zsy/pen/bGjPGxw">Demo</a></td>
-    </tr>
-    <tr>
-      <td>Change request response time</td>
-      <td><a href="https://chaoss.community/metric-issue-response-time/">CHAOSS</a></td>
-      <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/change_request_response_time.json">change_request_response_time.json</a></td>
-      <td><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L415">Link</a></td>
-      <td><a href="https://codepen.io/frank-zsy/pen/VwBqwaP?type=change_request_response_time">Demo</a></td>
-    </tr>
-    <tr>
-      <td>Change request resolution duration</td>
-      <td><a href="https://chaoss.community/metric-issue-resolution-duration/">CHAOSS</a></td>
-      <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/change_request_resolution_duration.json">change_request_resolution_duration.json</a></td>
-      <td><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L341">Link</a></td>
-      <td><a href="https://codepen.io/frank-zsy/pen/VwBqwaP?type=change_request_resolution_duration">Demo</a></td>
-    </tr>
-    <tr>
-      <td>Change request age</td>
-      <td><a href="https://chaoss.community/metric-issue-age/">CHAOSS</a></td>
-      <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/change_request_age.json">change_request_age.json</a></td>
-      <td><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L494">Link</a></td>
-      <td><a href="https://codepen.io/frank-zsy/pen/VwBqwaP?type=change_request_age">Demo</a></td>
-    </tr>
-    <tr>
-      <td>Activity Details</td>
-      <td><a href="https://github.com/X-lab2017/open-digger/issues/1186">X-lab</a></td>
-      <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/activity_details.json">activity_details.json</a></td>
-      <td><a href="https://github.com/X-lab2017/open-digger/blob/0432ecbd9b9d75d36b249fb5eb2b101d16a414be/src/metrics/indices.ts#L112">Link</a></td>
-      <td><a href="https://codepen.io/tyn1998/pen/KKGxVrm">Demo</a></td>
-    </tr>
-    <tr>
-      <td rowSpan="3">网络</td>
-      <td>Developer network</td>
-      <td><a href="https://blog.frankzhao.cn/github_activity_with_wpr/">X-lab</a></td>
-      <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/developer_network.json">developer_network.json</a></td>
-      <td><a href="https://github.com/X-lab2017/open-digger/blob/master/src/cron/tasks/network_export.ts#L126">Link</a></td>
-      <td><a href="https://codepen.io/frank-zsy/pen/NWBVjpV?type=developer_network">Demo</a></td>
-    </tr>
-    <tr>
-      <td>Repo network</td>
-      <td><a href="https://blog.frankzhao.cn/github_activity_with_wpr/">X-lab</a></td>
-      <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/repo_network.json">repo_network.json</a></td>
-      <td><a href="https://github.com/X-lab2017/open-digger/blob/master/src/cron/tasks/network_export.ts#L126">Link</a></td>
-      <td><a href="https://codepen.io/frank-zsy/pen/NWBVjpV?type=repo_network">Demo</a></td>
-    </tr>
-    <tr>
-      <td>Project OpenRank</td>
-      <td><a href="https://blog.frankzhao.cn/how_to_measure_open_source_3/">X-lab</a></td>
-      <td><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/project_openrank_detail/2022-12.json">project_openrank_detail/2022-12.json</a></td>
-      <td></td>
-      <td><a href="https://codepen.io/frank-zsy/pen/abjMXBV">Demo</a></td>
-    </tr>
-  </tbody>
-</table>
+<!-- STATISTICS -->
+<details id="elevatedbtn">
+  <summary>统计指标</summary>
+  <table>
+    <thead>
+      <tr>
+        <th width="30%">名称</th>
+        <th width="10%">来源</th>
+        <th width="40%">示例</th>
+        <th width="10%">代码</th>
+        <th>CodePen</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="centered-cell" rowspan="2"><a href="metrics/activity"><b>仓库活跃度</b></a></td>
+        <td class="centered-cell" rowspan="2"><a href="https://blog.frankzhao.cn/how_to_measure_open_source_1/">X-lab</a></td>
+        <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/activity.json">activity.json</a></td>
+        <td class="centered-cell" rowspan="2"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/indices.ts#L277">链接</a></td>
+        <td class="centered-cell"><a href="https://codepen.io/frank-zsy/pen/bGjyqQj?type=activity">Demo</a></td>
+      </tr>
+      <tr>
+        <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/activity_details.json">activity_details.json</a></td>
+        <td class="centered-cell"><a href="https://codepen.io/tyn1998/pen/KKGxVrm">Demo</a></td>
+      </tr>
+      <tr>
+        <td class="centered-cell" rowspan="2"><a href="metrics/activity"><b>开发者活跃度</b></a></td>
+        <td class="centered-cell" rowspan="2"><a href="https://blog.frankzhao.cn/how_to_measure_open_source_1/">X-lab</a></td>
+        <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/frank-zsy/activity.json">activity.json</a></td>
+        <td class="centered-cell" rowspan="2"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/indices.ts#L338">链接</a></td>
+        <td class="centered-cell"><a href="https://codepen.io/frank-zsy/pen/bGjyqQj?type=activity">Demo</a></td>
+      </tr>
+      <tr>
+        <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/frank-zsy/activity_details.json">activity_details.json</a></td>
+        <td class="centered-cell">-</td>
+      </tr>
+      <tr>
+        <td class="centered-cell">星标数</td>
+        <td class="centered-cell">X-lab</td>
+        <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/stars.json">stars.json</a></td>
+        <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/metrics.ts#L18">链接</a></td>
+        <td class="centered-cell"><a href="https://codepen.io/frank-zsy/pen/MWBdpNg?type=stars">Demo</a></td>
+      </tr>
+      <tr>
+        <td class="centered-cell"><a href="metrics/technical_fork"><b>技术分叉</b></a></td>
+        <td class="centered-cell"><a href="https://chaoss.community/zh-CN/metric-technical-fork/">CHAOSS</a></td>
+        <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/technical_fork.json">technical_fork.json</a></td>
+        <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L12">链接</a></td>
+        <td class="centered-cell"><a href="https://codepen.io/frank-zsy/pen/MWBdpNg?type=technical_fork">Demo</a></td>
+      </tr>
+      <tr>
+        <td class="centered-cell">关注度</td>
+        <td class="centered-cell">X-lab</td>
+        <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/attention.json">attention.json</a></td>
+        <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/indices.ts#L394">链接</a></td>
+        <td class="centered-cell"><a href="https://codepen.io/frank-zsy/pen/MWBdpNg?type=attention">Demo</a></td>
+      </tr>
+      <tr>
+        <td class="centered-cell"><a href="metrics/activity_dates_and_times"><b>活跃日期和时间</b></a></td>
+        <td class="centered-cell"><a href="https://chaoss.community/zh-CN/metric-activity-dates-and-times/">CHAOSS</a></td>
+        <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/active_dates_and_times.json">active_dates_and_times.json</a></td>
+        <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L960">链接</a></td>
+        <td class="centered-cell"><a href="https://codepen.io/frank-zsy/pen/jOpQdZZ">Demo</a></td>
+      </tr>
+    </tbody>
+  </table>
+</details>
 
-### 开发者指标
+<!-- DEVELOPERS -->
+<details id="elevatedbtn">
+  <summary>开发者</summary>
+  <table>
+    <thead>
+      <tr>
+        <th width="30%">名称</th>
+        <th width="10%">来源</th>
+        <th width="40%">示例</th>
+        <th width="10%">代码</th>
+        <th>CodePen</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="centered-cell" rowSpan="2"><a href="metrics/new_contributors"><b>新贡献者</b></a></td>
+        <td class="centered-cell" rowSpan="2"><a href="https://chaoss.community/zh-CN/metric-new-contributors/">CHAOSS</a></td>
+        <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/new_contributors.json">new_contributors.json</a></td>
+        <td class="centered-cell" rowSpan="2"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L747">链接</a></td>
+        <td class="centered-cell" rowSpan="2"><a href="https://codepen.io/frank-zsy/pen/RwBmpYZ">Demo</a></td>
+      </tr>
+      <tr>
+        <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/new_contributors_detail.json">new_contributors_detail.json</a></td>
+      </tr>
+      <tr>
+        <td class="centered-cell" rowSpan="2"><a href="metrics/new_contributors"><b>贡献者</b></a></td>
+        <td class="centered-cell" rowSpan="2"><a href="https://chaoss.community/zh-CN/metric-contributors/">CHAOSS</a></td>
+        <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/contributors.json">contributors.json</a></td>
+        <td class="centered-cell" rowSpan="2"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L835">链接</a></td>
+        <td class="centered-cell" rowSpan="2"><a href="https://codepen.io/frank-zsy/pen/RwBmpYZ">Demo</a></td>
+      </tr>
+      <tr>
+        <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/contributors_detail.json">contributors_detail.json</a></td>
+      </tr>
+      <tr>
+        <td class="centered-cell"><a href="metrics/inactive_contributors"><b>不活跃的贡献者</b></a></td>
+        <td class="centered-cell"><a href="https://chaoss.community/zh-CN/metric-inactive-contributors/">CHAOSS</a></td>
+        <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/inactive_contributors.json">inactive_contributors.json</a></td>
+        <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L880">链接</a></td>
+        <td class="centered-cell"><a href="https://codepen.io/frank-zsy/pen/RwBmpYZ">Demo</a></td>
+      </tr>
+      <tr>
+        <td class="centered-cell">参与者</td>
+        <td class="centered-cell">X-lab</td>
+        <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/participants.json">participants.json</a></td>
+        <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/metrics.ts#L80">链接</a></td>
+        <td class="centered-cell"><a href="https://codepen.io/frank-zsy/pen/RwBmpYZ">Demo</a></td>
+      </tr>
+      <tr>
+        <td class="centered-cell" rowSpan="2"><a href="metrics/bus_factor"><b>贡献者缺席因素</b></a></td>
+        <td class="centered-cell" rowSpan="2"><a href="https://chaoss.community/kb/metric-contributor-absence-factor/">CHAOSS</a></td>
+        <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/bus_factor.json">bus_factor.json</a></td>
+        <td class="centered-cell" rowSpan="2"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L672">链接</a></td>
+        <td class="centered-cell" rowSpan="2"><a href="https://codepen.io/frank-zsy/pen/bGjyqQj?type=bus_factor">Demo</a></td>
+      </tr>
+      <tr>
+        <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/bus_factor_detail.json">bus_factor_detail.json</a></td>
+      </tr>
+    </tbody>
+  </table>
+</details>
 
-<table>
-  <thead>
-    <tr>
-      <th>类型</th><th>名称</th><th>来源</th><th>例子</th><th>代码</th><th>CodePen</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td rowSpan="2">指标</td>
-      <td>OpenRank</td>
-      <td><a href="https://blog.frankzhao.cn/how_to_measure_open_source_3">X-lab</a ></td>
-      <td><a href="https://oss.x-lab.info/open_digger/github/frank-zsy/openrank.json">openrank.json</a></td>
-      <td><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/indices.ts#L59">Link</a></td>
-      <td><a href="https://codepen.io/frank-zsy/pen/bGjyqQj?type=openrank&name=frank-zsy">Demo</a></td>
-    </tr>
-    <tr>
-      <td>Activity</td>
-      <td><a href="https://blog.frankzhao.cn/how_to_measure_open_source_1">X-lab</a></td>
-      <td><a href="https://oss.x-lab.info/open_digger/github/frank-zsy/activity.json">activity.json</a></td>
-      <td><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/indices.ts#L174">Link</a ></td>
-      <td><a href="https://codepen.io/frank-zsy/pen/bGjyqQj?type=activity&name=frank-zsy">Demo</a></td>
-    </tr>
-    <tr>
-      <td rowSpan="2">网络</td>
-      <td>Developer network</td>
-      <td><a href="https://blog.frankzhao.cn/github_activity_with_wpr/">X-lab</a></td>
-      <td><a href="https://oss.x-lab.info/open_digger/github/frank-zsy/developer_network.json">developer_network.json</a></td>
-      <td><a href="https://github.com/X-lab2017/open-digger/blob/master/src/cron/tasks/network_export.ts#L63">Link</a></td>
-      <td><a href="https://codepen.io/frank-zsy/pen/NWBVjpV?type=developer_network&name=frank-zsy">Demo</a></td>
-    </tr>
-    <tr>
-      <td>Repo network</td>
-      <td><a href="https://blog.frankzhao.cn/github_activity_with_wpr/">X-lab</a></td>
-      <td><a href="https://oss.x-lab.info/open_digger/github/frank-zsy/repo_network.json">repo_network.json</a></td>
-      <td><a href="https://github.com/X-lab2017/open-digger/blob/master/src/cron/tasks/network_export.ts#L63">Link</a></td>
-      <td><a href="https://codepen.io/frank-zsy/pen/NWBVjpV?type=repo_network&name=frank-zsy">Demo</a></td>
-    </tr>
-  </tbody>
-</table>
+<!-- ISSUES -->
+<details id="elevatedbtn">
+  <summary>问题</summary>
+  <table>
+    <thead>
+      <tr>
+        <th width="30%">名称</th>
+        <th width="10%">来源</th>
+        <th width="40%">示例</th>
+        <th width="10%">代码</th>
+        <th>CodePen</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="centered-cell">新问题</td>
+        <td class="centered-cell"><a href="https://chaoss.community/zh-CN/metric-issues-new/">CHAOSS</a></td>
+        <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/issues_new.json">issues_new.json</a></td>
+        <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L128">链接</a></td>
+        <td class="centered-cell" rowSpan="3"><a href="https://codepen.io/frank-zsy/pen/mdjaZMw">Demo</a></td>
+      </tr>
+      <tr>
+        <td class="centered-cell">已关闭的问题</td>
+        <td class="centered-cell"><a href="https://chaoss.community/zh-CN/metric-issues-closed/">CHAOSS</a></td>
+        <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/issues_closed.json">issues_closed.json</a></td>
+        <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L193">链接</a></td>
+      </tr>
+      <tr>
+        <td class="centered-cell">问题评论</td>
+        <td class="centered-cell">X-lab</td>
+        <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/issue_comments.json">issue_comments.json</a></td>
+        <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/metrics.ts#L49">链接</a></td>
+      </tr>
+      <tr>
+        <td class="centered-cell"><a href="metrics/issue_response_time"><b>问题响应时间</b></a></td>
+        <td class="centered-cell"><a href="https://chaoss.community/zh-CN/metric-issue-response-time/">CHAOSS</a></td>
+        <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/issue_response_time.json">issue_response_time.json</a></td>
+        <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L357">链接</a></td>
+        <td class="centered-cell"><a href="https://codepen.io/frank-zsy/pen/VwBqwaP?type=issue_response_time">Demo</a></td>
+      </tr>
+      <tr>
+        <td class="centered-cell"><a href="metrics/issue_resolution_duration"><b>问题解决持续时间</b></a></td>
+        <td class="centered-cell"><a href="https://chaoss.community/zh-CN/metric-issue-resolution-duration/">CHAOSS</a></td>
+        <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/issue_resolution_duration.json">issue_resolution_duration.json</a></td>
+        <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L292">链接</a></td>
+        <td class="centered-cell"><a href="https://codepen.io/frank-zsy/pen/VwBqwaP?type=issue_resolution_duration">Demo</a></td>
+      </tr>
+      <tr>
+        <td class="centered-cell">问题年龄</td>
+        <td class="centered-cell"><a href="https://chaoss.community/zh-CN/metric-issue-age/">CHAOSS</a></td>
+        <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/issue_age.json">issue_age.json</a></td>
+        <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L426">链接</a></td>
+        <td class="centered-cell"><a href="https://codepen.io/frank-zsy/pen/VwBqwaP?type=issue_age">Demo</a></td>
+      </tr>
+    </tbody>
+  </table>
+</details>
+
+<!-- CHANGE REQUESTS -->
+<details id="elevatedbtn">
+  <summary>变更请求</summary>
+  <table>
+    <thead>
+      <tr>
+        <th width="30%">名称</th>
+        <th width="10%">来源</th>
+        <th width="40%">示例</th>
+        <th width="10%">代码</th>
+        <th>CodePen</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="centered-cell"><a href="metrics/change_requests"><b>变更请求</b></a></td>
+        <td class="centered-cell"><a href="https://chaoss.community/zh-CN/metric-change-requests/">CHAOSS</a></td>
+        <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/change_requests.json">change_requests.json</a></td>
+        <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L697">链接</a></td>
+        <td class="centered-cell" rowSpan="3"><a href="https://codepen.io/frank-zsy/pen/bGjPGxw">Demo</a></td>
+      </tr>
+      <tr>
+        <td class="centered-cell"><a href="metrics/change_requests_accepted"><b>接受的变更请求</b></a></td>
+        <td class="centered-cell"><a href="https://chaoss.community/zh-CN/metric-change-requests-accepted/">CHAOSS</a></td>
+        <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/change_requests_accepted.json">change_requests_accepted.json</a></td>
+        <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L497">链接</a></td>
+      </tr>
+      <tr>
+        <td class="centered-cell"><a href="metrics/change_requests_reviews"><b>变更请求审查</b></a></td>
+        <td class="centered-cell"><a href="https://chaoss.community/zh-CN/metric-change-request-reviews/">CHAOSS</a></td>
+        <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/change_requests_reviews.json">change_requests_reviews.json</a></td>
+        <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L734">链接</a></td>
+      </tr>
+      <tr>
+        <td class="centered-cell"><a href="metrics/change_requests_response_time"><b>变更请求响应时间</b></a></td>
+        <td class="centered-cell"><a href="https://chaoss.community/zh-CN/metric-issue-response-time/">CHAOSS</a></td>
+        <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/change_request_response_time.json">change_request_response_time.json</a></td>
+        <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L415">链接</a></td>
+        <td class="centered-cell"><a href="https://codepen.io/frank-zsy/pen/VwBqwaP?type=change_request_response_time">Demo</a></td>
+      </tr>
+      <tr>
+        <td class="centered-cell"><a href="metrics/change_requests_resolution_duration"><b>变更请求解决持续时间</b></a></td>
+        <td class="centered-cell"><a href="https://chaoss.community/zh-CN/metric-issue-resolution-duration/">CHAOSS</a></td>
+        <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/change_request_resolution_duration.json">change_request_resolution_duration.json</a></td>
+        <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L341">链接</a></td>
+        <td class="centered-cell"><a href="https://codepen.io/frank-zsy/pen/VwBqwaP?type=change_request_resolution_duration">Demo</a></td>
+      </tr>
+      <tr>
+        <td class="centered-cell"><a href="metrics/change_requests_age"><b>变更请求年龄</b></a></td>
+        <td class="centered-cell"><a href="https://chaoss.community/zh-CN/metric-issue-age/">CHAOSS</a></td>
+        <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/change_request_age.json">change_request_age.json</a></td>
+        <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L494">链接</a></td>
+        <td class="centered-cell"><a href="https://codepen.io/frank-zsy/pen/VwBqwaP?type=change_request_age">Demo</a></td>
+      </tr>
+      <tr>
+        <td class="centered-cell" rowSpan="3">代码更改行</td>
+        <td class="centered-cell" rowspan="3"><a href="https://chaoss.community/zh-CN/metric-code-changes-lines/">CHAOSS</a></td>
+        <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/code_change_lines_add.json">code_change_lines_add.json</a></td>
+        <td class="centered-cell" rowspan="3"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L94">链接</a></td>
+        <td class="centered-cell" rowspan="3"><a href="https://codepen.io/frank-zsy/pen/dyjByKL">Demo</a></td>
+      </tr>
+      <tr>
+        <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/code_change_lines_remove.json">code_change_lines_remove.json</a></td>
+      </tr>
+      <tr>
+        <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/code_change_lines_sum.json">code_change_lines_sum.json</a></td>
+      </tr>
+    </tbody>
+  </table>
+</details>
+
 
 ## 用户案例
 
-对于以上数据，OpenDigger 目前有一些用户。
+对于以上数据，OpenDigger 目前有一些用户与合作伙伴。
 
 ### 应用
 
-- [OpenLeaderboard](https://open-leaderboard.x-lab.info/): 带有标签数据的 Github 排行榜
-- [HyperCRX](https://github.com/hypertrons/hypertrons-crx): 对查看 Github 用户和仓库有帮助的浏览器插件
-- [Mulan Dashboard](http://dataease.nzcer.cn/link/1VxPsUCX): 用于 [木兰社区](https://portal.mulanos.cn/) 的仪表板.
-- [Hacking Force China](https://opensource.win/): 与 [思否](https://segmentfault.com/) 合作发布的 Github 中国开发者排行榜
+- [OpenLeaderboard](https://open-leaderboard.x-lab.info/)：带有标签数据的开源项目、开发者、企业等排行榜
+- [HyperCRX](https://github.com/hypertrons/hypertrons-crx)：对查看 GitHub 用户和仓库有帮助的浏览器插件，对应[论文](https://dl.acm.org/doi/10.1145/3643916.3644440)
+- [OpenGalaxy](https://open-galaxy.x-lab.info/)：开源全景星系项目，对应[论文](https://dl.acm.org/doi/10.1145/3643916.3644441)
+- [中国开源码力榜](https://opensource.win/)：与[思否](https://segmentfault.com/)合作发布的 GitHub 中国开发者排行榜
+- [PolarDB 开源社区洞察大屏](https://polardbx.com/dataPanorama)：与 PolarDB 社区合作的开源洞察大屏
+- [OSGraph](https://osgraph.com/)：与 [TuGraph](https://www.tugraph.tech/) 合作发布的开源行为图谱项目
 
 ### 开源报告
 
-- [2021中国开源报告](https://kaiyuanshe.cn/document/china-os-report-2021/): 中国最全面的开源报告 [开源社](https://kaiyuanshe.cn/).
-- [2022中国开源蓝皮书](http://www.copu.org.cn/new/308): 中国开源开发蓝皮书 [COPU](http://www.copu.org.cn/).
-- [开源大数据热力报告](https://github.com/X-lab2017/open-digger/blob/master/cooperations/big_data_open_source_heat_report/开源大数据热力报告2022.pdf): 大数据领域内开源项目热力报告
+- 中国开源年度报告：由[开源社](https://kaiyuanshe.cn/)发布的中国开源年度报告
+  - [2021 中国开源年度报告](https://kaiyuanshe.cn/document/china-os-report-2021/)
+  - [2022 中国开源年度报告](https://kaiyuanshe.cn/article/2022-China-Open-Source-Annual-Report)
+  - [2023 中国开源年度报告](https://kaiyuanshe.cn/article/Year-of-the-Dragon-Ceremony-2023-China-Open-Source-Annual-Report)
+- 中国开源发展蓝皮书：由 [COPU](http://www.copu.org.cn/) 发布的中国开源年度报告
+  - [2021 中国开源发展蓝皮书](http://www.cosspu.org.cn/download/showdownload.php?id=26)
+  - [2022 中国开源发展蓝皮书](http://www.cosspu.org.cn/download/showdownload.php?id=27)
+  - [2023 中国开源发展蓝皮书](http://www.cosspu.org.cn/download/showdownload.php?id=25)
+- [开源大数据热力报告](https://github.com/X-lab2017/open-digger/blob/master/cooperations/big_data_open_source_heat_report/开源大数据热力报告2022.pdf)：大数据领域内开源项目热力报告
 
 ## 活动
 
 OpenDigger 社区也主办或参加社区间的合作活动，如竞赛或黑客松。
 
 - [开放原子开源大赛 OpenDigger 开源软件生态数据分析挖掘平台挑战赛](https://competition.atomgit.com/competitionInfo?id=bc6603e0b8bf11ed804e6b78b4426d45)。
-- [第三届 PaddlePaddle 黑客松](https://www.paddlepaddle.org.cn/PaddlePaddleHackathon-2022-6)，黑客马拉松的最终报告在 [这里](https://github.com/X-lab2017/open-digger/tree/master/cooperations/paddle_hackathon_3rd)。
+- [第三届 PaddlePaddle 黑客松](https://www.paddlepaddle.org.cn/PaddlePaddleHackathon-2022-6)，黑客马拉松的最终报告在[这里](https://github.com/X-lab2017/open-digger/tree/master/cooperations/paddle_hackathon_3rd)。
 
 ## 数据
 
 ### GitHub 全域日志数据
 
-我们使用 [GHArchive](https://www.gharchive.org/) 作为 GitHub 日志数据源，数据服务由 X-lab 维护的 [ClickHouse](https://clickhouse.tech/) 云服务。关于数据的详细细节，请查看[数据](/docs/user_docs/intro)文档。
+我们使用 [GHArchive](https://www.gharchive.org/) 作为 GitHub 日志数据源，数据服务由 X-lab 维护的 [ClickHouse](https://clickhouse.tech/) 云服务。关于数据的详细细节，请查看[数据](intro)文档。
 
 ### 标签数据
 
-为了进行更深入的分析，我们正在收集打过标签的数据。您可以在 “labeled_data” 文件夹中查看相应的数据。关于数据的详细细节，请查看[标签数据](/docs/user_docs/intro) 文档。
+为了进行更深入的分析，我们正在收集打过标签的数据。您可以在 “labeled_data” 文件夹中查看相应的数据。关于数据的详细细节，请查看[标签数据](intro) 文档。
 
 ### 采样数据集
 
-OpenDigger 提供 ClickHouse 示例数据和 Jupyter notebook，从而可以在本地环境运行 OpenDigger，详情可参考 [示例数据文档](/docs/user_docs/intro)。
+OpenDigger 提供 ClickHouse 示例数据和 Jupyter notebook，从而可以在本地环境运行 OpenDigger，详情可参考 [示例数据文档](intro)。
 
 ## 贡献指南
 
-在对项目贡献之前，请务必查阅我们的[贡献指南](/docs/user_docs/intro)。
+在对项目贡献之前，请务必查阅我们的[贡献指南](intro)。
 
 ## 沟通
 
