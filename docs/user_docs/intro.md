@@ -59,7 +59,7 @@ OpenDigger 实现的所有指标对所有人开放使用, 您可以通过以下�
 </details>
 
 <!-- STATISTICS -->
-<details id="elevatedbtn" open>
+<details id="elevatedbtn">
   <summary>统计指标</summary>
   <table>
     <thead>
@@ -127,7 +127,7 @@ OpenDigger 实现的所有指标对所有人开放使用, 您可以通过以下�
 </details>
 
 <!-- DEVELOPERS -->
-<details id="elevatedbtn" open>
+<details id="elevatedbtn">
   <summary>开发者</summary>
   <table>
     <thead>
@@ -189,7 +189,7 @@ OpenDigger 实现的所有指标对所有人开放使用, 您可以通过以下�
 </details>
 
 <!-- ISSUES -->
-<details id="elevatedbtn" open>
+<details id="elevatedbtn">
   <summary>问题</summary>
   <table>
     <thead>
@@ -203,14 +203,14 @@ OpenDigger 实现的所有指标对所有人开放使用, 您可以通过以下�
     </thead>
     <tbody>
       <tr>
-        <td class="centered-cell">新问题</td>
+        <td class="centered-cell"><a href="metrics/issue_new"><b>新问题</b></a></td>
         <td class="centered-cell"><a href="https://chaoss.community/zh-CN/metric-issues-new/">CHAOSS</a></td>
         <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/issues_new.json">issues_new.json</a></td>
         <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L128">链接</a></td>
         <td class="centered-cell" rowSpan="3"><a href="https://codepen.io/frank-zsy/pen/mdjaZMw">Demo</a></td>
       </tr>
       <tr>
-        <td class="centered-cell">已关闭的问题</td>
+        <td class="centered-cell"><a href="metrics/issue_closed"><b>已关闭的问题</b></a></td>
         <td class="centered-cell"><a href="https://chaoss.community/zh-CN/metric-issues-closed/">CHAOSS</a></td>
         <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/issues_closed.json">issues_closed.json</a></td>
         <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L193">链接</a></td>
@@ -236,7 +236,7 @@ OpenDigger 实现的所有指标对所有人开放使用, 您可以通过以下�
         <td class="centered-cell"><a href="https://codepen.io/frank-zsy/pen/VwBqwaP?type=issue_resolution_duration">Demo</a></td>
       </tr>
       <tr>
-        <td class="centered-cell">问题年龄</td>
+        <td class="centered-cell"><a href="metrics/issue_age"><b>问题年龄</b></a></td>
         <td class="centered-cell"><a href="https://chaoss.community/zh-CN/metric-issue-age/">CHAOSS</a></td>
         <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/issue_age.json">issue_age.json</a></td>
         <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L426">链接</a></td>
@@ -247,7 +247,7 @@ OpenDigger 实现的所有指标对所有人开放使用, 您可以通过以下�
 </details>
 
 <!-- CHANGE REQUESTS -->
-<details id="elevatedbtn" open>
+<details id="elevatedbtn">
   <summary>变更请求</summary>
   <table>
     <thead>

@@ -67,8 +67,11 @@ const sidebars = {
           label: 'issues',
           collapsed: true,
           items: [
+            'user_docs/metrics/issue_new',
+            'user_docs/metrics/issue_closed',
             'user_docs/metrics/issue_response_time',
             'user_docs/metrics/issue_resolution_duration',
+            'user_docs/metrics/issue_age',
           ],
         },
         {
