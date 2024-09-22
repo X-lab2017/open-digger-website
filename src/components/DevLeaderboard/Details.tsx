@@ -12,6 +12,10 @@ const Details = ({ graph, id, month, typeMap, platform }) => {
       if (!keys.includes(month)) {
         return;
       }
+      if (id === -1) {
+        setDetails([]);
+        return;
+      }
       const data = graph.data[month];
       const selfNode = data.nodes.find(
         (node) => graph.meta.nodes[node[0]][0] === id

@@ -34,8 +34,7 @@
     "react-select": "^5.8.0",
     "rehype-katex": "^7.0.0",
     "remark-math": "^6.0.0",
-    "stackedit-js": "^1.0.7",
-    "tailwindcss": "^3.4.10"
+    "stackedit-js": "^1.0.7"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^3.4.0",

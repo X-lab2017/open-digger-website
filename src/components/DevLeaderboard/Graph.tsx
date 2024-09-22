@@ -6,7 +6,6 @@ import styles from './styles.module.css';
 export default ({
   graph,
   month,
-  repoName,
   platform,
   typeMap,
   onNodeDblClick,
