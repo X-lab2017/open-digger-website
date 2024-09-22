@@ -4,7 +4,7 @@
 
 ## 定义
 
-变更请求（Change Requests）是由 [CHAOSS](https://chaoss.community) 定义的一个指标，有关该指标的详细定义，请参阅 [CHAOSS Metrics - 变更请求](https://chaoss.community/kb/metric-change-requests/)。
+变更请求（Change Requests）是由 [CHAOSS](https://chaoss.community) 定义的一个指标，有关该指标的详细定义，请参阅 [CHAOSS Metrics - 变更请求](https://chaoss.community/zh-CN/kb/metric-change-requests/)。
 
 该指标是指提出的变更作为“对源代码的变更建议”进行讨论，而不是直接提交到代码库，每个变更请求都需要由其他开发人员（或维护人员）进行审查，他们可能会建议改进，从而产生新版本，直到审查为正面并接受代码，或者建议被拒绝。变更请求是项目活动的一个代理指标。但需要注意的是，这个指标不是唯一用于跟踪编码活动量的指标。
 

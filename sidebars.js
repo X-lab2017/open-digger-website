@@ -58,6 +58,7 @@ const sidebars = {
           items: [
             'user_docs/metrics/new_contributors',
             'user_docs/metrics/inactive_contributors',
+            'user_docs/metrics/contributors',
             'user_docs/metrics/contributor_absence_factor',
           ],
         },
@@ -81,6 +82,7 @@ const sidebars = {
             'user_docs/metrics/change_requests_response_time',
             'user_docs/metrics/change_requests_resolution_duration',
             'user_docs/metrics/change_requests_age',
+            'user_docs/metrics/code_changes_lines',
           ],
         },
       ],

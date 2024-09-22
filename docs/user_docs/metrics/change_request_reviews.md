@@ -4,7 +4,7 @@
 
 ## 定义
 
-变更请求审查（Change Request Reviews）是由 [CHAOSS](https://chaoss.community) 定义的一个指标，有关该指标的详细定义，请参阅 [CHAOSS Metrics - 变更请求审查](https://chaoss.community/kb/metric-change-request-reviews/)。
+变更请求审查（Change Request Reviews）是由 [CHAOSS](https://chaoss.community) 定义的一个指标，有关该指标的详细定义，请参阅 [CHAOSS Metrics - 变更请求审查](https://chaoss.community/zh-CN/kb/metric-change-request-reviews/)。
 
 该指标是软件开发过程中的一个关键组成部分，确保在集成之前对代码库的建议修改进行全面评估。这个过程包括评估变更的质量，并确保其符合项目指南。审查可以在合并之前建议改进或必要的更改，从而促进软件质量和最佳实践的遵循。
 

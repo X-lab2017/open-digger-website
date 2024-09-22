@@ -4,7 +4,7 @@
 
 ## 定义
 
-活动日期和时间 (Activity Dates and Times) 是一个由 [CHAOSS](https://chaoss.community) 定义的指标，有关该指标的详细定义，请参阅 [CHAOSS Metrics - Activity Dates and Times](https://chaoss.community/kb/metric-activity-dates-and-times/)。
+活动日期和时间 (Activity Dates and Times) 是一个由 [CHAOSS](https://chaoss.community) 定义的指标，有关该指标的详细定义，请参阅 [CHAOSS Metrics - Activity Dates and Times](https://chaoss.community/zh-CN/kb/metric-activity-dates-and-times/)。
 
 该指标有助于确定存储库中单个活动发生的日期和时间戳。它还有助于确定存储库的活动情况以及存储库最活跃的时间。
 
