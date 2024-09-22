@@ -27,28 +27,28 @@ OpenDigger 实现的所有指标对所有人开放使用, 您可以通过以下�
     </thead>
     <tbody>
       <tr>
-        <td class="centered-cell"><a href="metrics/openrank/global_openrank" ><b>仓库全域 OpenRank</b></a></td>
+        <td class="centered-cell"><a href="metrics/openrank/global_openrank"><b>仓库全域 OpenRank</b></a></td>
         <td class="centered-cell"><a href="https://blog.frankzhao.cn/how_to_measure_open_source_2/">X-lab</a></td>
         <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/openrank.json">openrank.json</a></td>
         <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/indices.ts#L25">链接</a></td>
         <td class="centered-cell"><a href="https://codepen.io/frank-zsy/pen/bGjyqQj?type=openrank">Demo</a></td>
       </tr>
       <tr>
-        <td class="centered-cell"><a href="metrics/openrank/global_openrank" ><b>开发者全域 OpenRank</b></a></td>
+        <td class="centered-cell"><a href="metrics/openrank/global_openrank"><b>开发者全域 OpenRank</b></a></td>
         <td class="centered-cell"><a href="https://blog.frankzhao.cn/how_to_measure_open_source_3/">X-lab</a></td>
         <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/frank-zsy/openrank.json">openrank.json</a></td>
         <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/indices.ts#L57">链接</a></td>
         <td class="centered-cell"><a href="https://codepen.io/frank-zsy/pen/bGjyqQj?type=openrank&name=frank-zsy">Demo</a></td>
       </tr>
       <tr>
-        <td class="centered-cell"><a href="metrics/openrank/community_openrank" ><b>仓库社区 OpenRank</b></a></td>
+        <td class="centered-cell"><a href="metrics/openrank/community_openrank"><b>仓库社区 OpenRank</b></a></td>
         <td class="centered-cell"><a href="https://blog.frankzhao.cn/how_to_measure_open_source_3/">X-lab</a></td>
         <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/community_openrank.json">community_openrank.json</a></td>
         <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/indices.ts#L94">链接</a></td>
         <td class="centered-cell"><a href="https://codepen.io/frank-zsy/pen/abjMXBV">Demo</a></td>
       </tr>
       <tr>
-        <td class="centered-cell"><a href="metrics/openrank/community_openrank" ><b>开发者社区 OpenRank</b></a></td>
+        <td class="centered-cell"><a href="metrics/openrank/community_openrank"><b>开发者社区 OpenRank</b></a></td>
         <td class="centered-cell"><a href="https://blog.frankzhao.cn/how_to_measure_open_source_3/">X-lab</a></td>
         <td class="centered-cell">-</td>
         <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/indices.ts#L176">链接</a></td>
