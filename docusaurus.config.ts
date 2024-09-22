@@ -123,6 +123,11 @@ const config: Config = {
             position: 'left'
           },
           {
+            to: '/community_openrank_leaderboard',
+            label: 'community_openrank_leaderboard',
+            position: 'left'
+          },
+          {
             type: 'localeDropdown',
             position: 'right',
           },

@@ -363,5 +363,35 @@
   },
   "leaderboard.invalidDataAlert": {
     "message": "Invalid JSON input, please check your input"
+  },
+  "communityLeaderboard.leaderboard.title": {
+    "message": "OpenRank leaderboard"
+  },
+  "communityLeaderboard.leaderboard.login": {
+    "message": "Login"
+  },
+  "communityLeaderboard.details.title": {
+    "message": "Details"
+  },
+  "communityLeaderboard.details.from": {
+    "message": "From"
+  },
+  "communityLeaderboard.details.ratio": {
+    "message": "Ratio"
+  },
+  "communityLeaderboard.details.value": {
+    "message": "Value"
+  },
+  "communityLeaderboard.banner.title": {
+    "message": "Community OpenRank Leaderboard"
+  },
+  "communityLeaderboard.fetchingData": {
+    "message": "Fetching data..."
+  },
+  "communityLeaderboard.fetchDataError": {
+    "message": "Error on fetching data"
+  },
+  "communityLeaderboard.noDataForMonth": {
+    "message": "No data found for this month"
   }
 }

@@ -5,6 +5,7 @@
  */
 
 /* You can override the default Infima variables here. */
+
 :root {
   --ifm-color-primary: #3366FF;
   --ifm-color-primary-dark: #144fff;
@@ -13,6 +14,10 @@
   --ifm-color-primary-light: #527dff;
   --ifm-color-primary-lighter: #6188ff;
   --ifm-color-primary-lightest: #89a6ff;
+  --ifm-table-border-width: 0;
+  --ifm-table-stripe-background: #fff;
+  --ifm-table-border-color: #fff;
+  --ifm-table-cell-padding: 0.5rem;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --banner-height: 40px;
@@ -157,7 +162,7 @@ details > *:not(summary) {
 }
 
 table {
-  width:100%;
+  width: 100%;
 }
 
 .centered-cell {
@@ -185,12 +190,27 @@ table a:hover {
   box-sizing: border-box;
 }
 
-/* Redundant since #ID is unique and is mounted for CN (default) and NOT for EN on mount */ 
-
+/* Redundant since #ID is unique and is mounted for CN (default) and NOT for EN on mount */
 #elevatedbtnEN {
   font-family: Archivo Black;
   border: 4px solid #050137;
   border-radius: 12px;
   box-shadow: 4px 4px 0 #050137;
   box-sizing: border-box;
+}
+
+article {
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 90%;
+  }
+}
+
+.no-footer footer {
+  display: none;
 }

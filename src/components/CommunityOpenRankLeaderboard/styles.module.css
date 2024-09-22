@@ -1,0 +1,52 @@
+.graphContainer {
+  position: absolute;
+  left: 0;
+  top: 70px;
+  width: 100%;
+  height: calc(100vh - 100px);
+}
+
+.bannerBox {
+  z-index: 3;
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  height: 140px;
+  background-color: rgba(241, 246, 250, 0.5);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+[data-theme='dark'] .bannerBox {
+  background-color: rgba(35, 43, 67, 0.5);
+}
+
+.bannerTitle {
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.bannerContent {
+  display: flex;
+  justify-content: space-between;
+}
+
+.leftBox {
+  position: absolute;
+  top: 30%;
+  left: 20px;
+  height: 50%;
+}
+
+.rightBox {
+  position: absolute;
+  right: 20px;
+  top: 30%;
+  height: 50%;
+}
