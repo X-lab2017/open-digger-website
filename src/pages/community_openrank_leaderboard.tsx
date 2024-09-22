@@ -1,11 +1,11 @@
 import Layout from '@theme/Layout';
-import DevLeaderboard from '../components/DevLeaderboard';
+import CommunityOpenRankLeaderboard from '../components/CommunityOpenRankLeaderboard';
 
 export default (): JSX.Element => {
   return (
     <div className='no-footer'>
       <Layout>
-        <DevLeaderboard />
+        <CommunityOpenRankLeaderboard />
       </Layout>
     </div>
   );

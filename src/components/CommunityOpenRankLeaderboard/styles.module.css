@@ -13,22 +13,23 @@
   left: 50%;
   transform: translateX(-50%);
   width: 700px;
-  height: 130px;
-  background-color: rgba(255, 255, 255, 0.5);
+  height: 140px;
+  background-color: rgba(241, 246, 250, 0.5);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
   border-radius: 1rem;
   padding: 1rem;
-  border: 1px solid grey;
+}
+
+[data-theme='dark'] .bannerBox {
+  background-color: rgba(35, 43, 67, 0.5);
 }
 
 .bannerTitle {
   margin-bottom: 0.5rem;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
-  color: black;
-  text-shadow: 0 0 10px white;
 }
 
 .bannerContent {
@@ -38,14 +39,14 @@
 
 .leftBox {
   position: absolute;
-  top: 20%;
+  top: 30%;
   left: 20px;
-  height: 60%;
+  height: 50%;
 }
 
 .rightBox {
   position: absolute;
   right: 20px;
-  top: 20%;
-  height: 60%;
+  top: 30%;
+  height: 50%;
 }

@@ -384,5 +384,14 @@
   },
   "communityLeaderboard.banner.title": {
     "message": "Community OpenRank Leaderboard"
+  },
+  "communityLeaderboard.fetchingData": {
+    "message": "Fetching data..."
+  },
+  "communityLeaderboard.fetchDataError": {
+    "message": "Error on fetching data"
+  },
+  "communityLeaderboard.noDataForMonth": {
+    "message": "No data found for this month"
   }
 }

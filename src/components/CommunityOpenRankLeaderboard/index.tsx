@@ -1,19 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import $ from 'jquery';
+import axios from 'axios';
 import { message } from 'antd';
 import Leaderboard from './Leaderboard';
 import Details from './Details';
 import Graph from './Graph';
 import Banner from './Banner';
+import { translate } from '@docusaurus/Translate';
 
 const DevLeaderboard = () => {
   const [graph, setGraph] = useState(null);
   const [selectedNodeId, setSelectedNodeId] = useState(null);
 
-  const [platform, setPlatform] = useState<string>("github");
-  const [date, setDate] = useState<string>("202407");
+  const [platform, setPlatform] = useState<string>('');
+  const [date, setDate] = useState<string>('');
   const [dateKeys, setDateKeys] = useState<string[]>([]);
-  const [datePlaceholder, setDatePlaceholder] = useState<string>("");
+  const [datePlaceholder, setDatePlaceholder] = useState<string>('');
 
   const baseUrl = "https://oss.x-lab.info/open_digger/";
   const typeMap = new Map([
@@ -24,29 +25,24 @@ const DevLeaderboard = () => {
   ]);
 
   const loadData = async (platform: string, repoName: string) => {
-    const hide = message.loading("正在获取数据...", 0);
+    const hide = message.loading(translate({ id: 'communityLeaderboard.fetchingData' }), 0);
     try {
-      console.time('fetchData')
-      const data = await $.getJSON(
-        `${baseUrl}${platform}/${repoName}/community_openrank.json`
-      );
+      const data = (await axios.get(`${baseUrl}${platform}/${repoName}/community_openrank.json`)).data;
       if (!data || Object.keys(data).length === 0) {
-        message.warning("未查询到相关信息");
-      } else {
-        const keys = Object.keys(data.data);
-        const lastKey = keys[keys.length - 1];
-        const formattedLastKey = `${lastKey.slice(0, 4)}-${lastKey.slice(4)}`;
-        setGraph(data);
-        setDate(lastKey);
-        setDatePlaceholder(formattedLastKey);
-        setDateKeys(keys);
-        setPlatform(platform);
+        throw ('No valid data found');
       }
-      console.timeEnd('fetchData')
-      hide();
+      const keys = Object.keys(data.data);
+      const lastKey = keys[keys.length - 1];
+      const formattedLastKey = `${lastKey.slice(0, 4)}-${lastKey.slice(4)}`;
+      setGraph(data);
+      setDate(lastKey);
+      setDatePlaceholder(formattedLastKey);
+      setDateKeys(keys);
+      setPlatform(platform);
     } catch (error) {
-      message.error("获取数据时出错");
+      message.error(translate({ id: 'communityLeaderboard.fetchDataError' }));
       console.error(error);
+    } finally {
       hide();
     }
   };
@@ -55,7 +51,7 @@ const DevLeaderboard = () => {
     if (graph) {
       const keys = Object.keys(graph.data);
       if (!keys.includes(date)) {
-        message.error("该月份无数据");
+        message.error(translate({ id: 'communityLeaderboard.noDataForMonth' }));
         return;
       }
       setSelectedNodeId(-1);
