@@ -133,8 +133,8 @@ summary {
   font-weight: bold;
   cursor: pointer;
   position: relative;
-  padding-right: 20px; 
-  list-style: none; 
+  padding-right: 20px;
+  list-style: none;
 }
 
 summary::-webkit-details-marker {
@@ -142,7 +142,7 @@ summary::-webkit-details-marker {
 }
 
 summary::after {
-  content: '❯'; 
+  content: '❯';
   position: absolute;
   right: 0;
   top: 50%;
@@ -158,12 +158,12 @@ details:not([open]):hover {
   background-color: #362ecc74;
 }
 
-details > *:not(summary) {
+details>*:not(summary) {
   margin-top: 0.5em;
 }
 
 table {
-  width:100%;
+  width: 100%;
 }
 
 .centered-cell {
@@ -195,7 +195,7 @@ table a:hover {
   transform: scale(1.01);
 } */
 
-/* Redundant since #ID is unique and is mounted for CN (default) and NOT for EN on mount */ 
+/* Redundant since #ID is unique and is mounted for CN (default) and NOT for EN on mount */
 
 #elevatedbtnEN {
   font-family: Archivo Black;
@@ -203,4 +203,20 @@ table a:hover {
   border-radius: 12px;
   box-shadow: 4px 4px 0 #050137;
   box-sizing: border-box;
+}
+
+article {
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 90%;
+  }
+}
+
+.no-footer footer {
+  display: none;
 }
