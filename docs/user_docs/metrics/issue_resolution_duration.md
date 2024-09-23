@@ -4,7 +4,7 @@
 
 ## 定义
 
-问题解决持续时间 (Issue Resolution Duration)，也称为 Issue 解决时间 (Time to Issue Resolution)，是一个由 [CHAOSS](https://chaoss.community) 定义的指标，有关该指标的详细定义，请参阅 [CHAOSS Metrics - Time to Issue Resolution](https://chaoss.community/kb/metric-issue-resolution-duration/)。
+问题解决持续时间 (Issue Resolution Duration)，也称为 Issue 解决时间 (Time to Issue Resolution)，是一个由 [CHAOSS](https://chaoss.community) 定义的指标，有关该指标的详细定义，请参阅 [CHAOSS 指标 - 问题解决持续时间](https://chaoss.community/zh-CN/kb/metric-issue-resolution-duration/)。
 
 该指标有助于表明解决问题所需的时间，从问题开启到关闭的平均时间。这个指标可用于确定社区如何快速响应问题以及解决问题所需的时间。
 

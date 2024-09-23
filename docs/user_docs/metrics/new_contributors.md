@@ -4,11 +4,11 @@
 
 ## 定义
 
-新贡献者 (New Contributors) 是由 [CHAOSS社区](https://chaoss.community) 定义的一个指标。有关该指标的详细定义，请参阅 [CHAOSS指标 - 新贡献者](https://chaoss.community/kb/metric-new-contributors/)。
+新贡献者 (New Contributors) 是由 [CHAOSS社区](https://chaoss.community) 定义的一个指标。有关该指标的详细定义，请参阅 [CHAOSS指标 - 新贡献者](https://chaoss.community/zh-CN/kb/metric-new-contributors/)。
 
 该指标有助于识别有多少贡献者首次为给定项目做出贡献以及有关他们的信息。
 
-> 新贡献者的增加或下降可能是项目健康状况的早期指示器。了解新社区成员的行为和障碍需要知道他们是谁，健康的项目应该有一个稳定的新贡献者流。
+> 新贡献者的增加或下降可能是项目健康状况的指示器。了解新社区成员的行为和障碍需要知道他们是谁，健康的项目应该有一个稳定的新贡献者流。
 
 ## 数据
 

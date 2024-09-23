@@ -5,7 +5,6 @@
  */
 
 /* You can override the default Infima variables here. */
-
 :root {
   --ifm-color-primary: #3366FF;
   --ifm-color-primary-dark: #144fff;
@@ -14,10 +13,6 @@
   --ifm-color-primary-light: #527dff;
   --ifm-color-primary-lighter: #6188ff;
   --ifm-color-primary-lightest: #89a6ff;
-  --ifm-table-border-width: 0;
-  --ifm-table-stripe-background: #fff;
-  --ifm-table-border-color: #fff;
-  --ifm-table-cell-padding: 0.5rem;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --banner-height: 40px;
@@ -124,16 +119,22 @@ iframe {
 details {
   border: 1px solid #ccc;
   border-radius: 4px;
-  transition: all 0.3s ease;
+  transition: all 1.3s ease;
   padding: 0.5em;
+  transform: scale(1);
+}
+
+details:not([open]):hover {
+  transform: scale(1.02);
+  background-color: #362ecc74;
 }
 
 summary {
   font-weight: bold;
   cursor: pointer;
   position: relative;
-  padding-right: 20px; 
-  list-style: none; 
+  padding-right: 20px;
+  list-style: none;
 }
 
 summary::-webkit-details-marker {
@@ -141,23 +142,23 @@ summary::-webkit-details-marker {
 }
 
 summary::after {
-  content: '❯'; 
+  content: '❯';
   position: absolute;
   right: 0;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%) rotate(90deg);
   transition: transform 0.3s ease;
 }
 
 details[open] summary::after {
-  transform: translateY(-50%) rotate(90deg);
+  transform: translateY(-50%) rotate(270deg);
 }
 
 details:not([open]):hover {
   background-color: #362ecc74;
 }
 
-details > *:not(summary) {
+details>*:not(summary) {
   margin-top: 0.5em;
 }
 
@@ -170,11 +171,10 @@ table {
   vertical-align: middle;
 }
 
-
 table a {
   color: #0477eb;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.25s ease;
 }
 
 table a:hover {
@@ -188,9 +188,15 @@ table a:hover {
   border-radius: 12px;
   box-shadow: 4px 4px 0 #050137;
   box-sizing: border-box;
+  transition: transform 0.1s ease;
 }
 
+/* #elevatedbtn:hover {
+  transform: scale(1.01);
+} */
+
 /* Redundant since #ID is unique and is mounted for CN (default) and NOT for EN on mount */
+
 #elevatedbtnEN {
   font-family: Archivo Black;
   border: 4px solid #050137;

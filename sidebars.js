@@ -15,7 +15,6 @@
 const sidebars = {
   userDocSidebar: [
     'user_docs/intro',
-    'user_docs/playground',
     {
       type: 'category',
       label: 'data_sources',
@@ -32,6 +31,7 @@ const sidebars = {
       collapsed: false,
       items: [
         'user_docs/metrics/how_to_use',
+        'user_docs/metrics/playground',
         {
           type: 'category',
           label: 'openrank',
@@ -57,6 +57,7 @@ const sidebars = {
           collapsed: true,
           items: [
             'user_docs/metrics/new_contributors',
+            'user_docs/metrics/contributors',
             'user_docs/metrics/inactive_contributors',
             'user_docs/metrics/contributor_absence_factor',
           ],
@@ -66,8 +67,11 @@ const sidebars = {
           label: 'issues',
           collapsed: true,
           items: [
+            'user_docs/metrics/issue_new',
+            'user_docs/metrics/issue_closed',
             'user_docs/metrics/issue_response_time',
             'user_docs/metrics/issue_resolution_duration',
+            'user_docs/metrics/issue_age',
           ],
         },
         {
@@ -81,6 +85,7 @@ const sidebars = {
             'user_docs/metrics/change_requests_response_time',
             'user_docs/metrics/change_requests_resolution_duration',
             'user_docs/metrics/change_requests_age',
+            'user_docs/metrics/code_changes_lines',
           ],
         },
       ],

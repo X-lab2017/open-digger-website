@@ -32,28 +32,28 @@ Feel free to use the data to construct your own data application and you can ref
     </thead>
     <tbody>
       <tr>
-        <td class="centered-cell"><a href="metrics/openrank/global_openrank" ><b>Repo Global OpenRank</b></a></td>
+        <td class="centered-cell"><a href="metrics/openrank/global_openrank"><b>Repo Global OpenRank</b></a></td>
         <td class="centered-cell"><a href="https://blog.frankzhao.cn/how_to_measure_open_source_2/">X-lab</a></td>
         <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/openrank.json">openrank.json</a></td>
         <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/indices.ts#L25">Link</a></td>
         <td class="centered-cell"><a href="https://codepen.io/frank-zsy/pen/bGjyqQj?type=openrank">Demo</a></td>
       </tr>
       <tr>
-        <td class="centered-cell"><a href="metrics/openrank/global_openrank" ><b>Developer Global OpenRank</b></a></td>
-        <td class="centered-cell"><a href="https://blog.frankzhao.cn/how_to_measure_open_source_2/">X-lab</a></td>
+        <td class="centered-cell"><a href="metrics/openrank/global_openrank"><b>Developer Global OpenRank</b></a></td>
+        <td class="centered-cell"><a href="https://blog.frankzhao.cn/how_to_measure_open_source_3/">X-lab</a></td>
         <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/frank-zsy/openrank.json">openrank.json</a></td>
         <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/indices.ts#L57">Link</a></td>
-        <td class="centered-cell"><a href="https://codepen.io/frank-zsy/pen/bGjyqQj?type=openrank">Demo</a></td>
+        <td class="centered-cell"><a href="https://codepen.io/frank-zsy/pen/bGjyqQj?type=openrank&name=frank-zsy">Demo</a></td>
       </tr>
       <tr>
-        <td class="centered-cell"><a href="metrics/openrank/community_openrank" ><b>Repo Community OpenRank</b></a></td>
+        <td class="centered-cell"><a href="metrics/openrank/community_openrank"><b>Repo Community OpenRank</b></a></td>
         <td class="centered-cell"><a href="https://blog.frankzhao.cn/how_to_measure_open_source_3/">X-lab</a></td>
         <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/community_openrank.json">community_openrank.json</a></td>
         <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/indices.ts#L94">Link</a></td>
         <td class="centered-cell"><a href="https://codepen.io/frank-zsy/pen/abjMXBV">Demo</a></td>
       </tr>
       <tr>
-        <td class="centered-cell"><a href="metrics/openrank/community_openrank" ><b>Developer Community OpenRank</b></a></td>
+        <td class="centered-cell"><a href="metrics/openrank/community_openrank"><b>Developer Community OpenRank</b></a></td>
         <td class="centered-cell"><a href="https://blog.frankzhao.cn/how_to_measure_open_source_3/">X-lab</a></td>
         <td class="centered-cell">-</td>
         <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/indices.ts#L176">Link</a></td>
@@ -156,7 +156,7 @@ Feel free to use the data to construct your own data application and you can ref
         <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/new_contributors_detail.json">new_contributors_detail.json</a></td>
       </tr>
       <tr>
-        <td class="centered-cell" rowSpan="2"><a href="metrics/new_contributors"><b>Contributors</b></a></td>
+        <td class="centered-cell" rowSpan="2"><a href="metrics/contributors"><b>Contributors</b></a></td>
         <td class="centered-cell" rowSpan="2"><a href="https://chaoss.community/metric-contributors/">CHAOSS</a></td>
         <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/contributors.json">contributors.json</a></td>
         <td class="centered-cell" rowSpan="2"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L835">Link</a></td>
@@ -180,7 +180,7 @@ Feel free to use the data to construct your own data application and you can ref
         <td class="centered-cell"><a href="https://codepen.io/frank-zsy/pen/RwBmpYZ">Demo</a></td>
       </tr>
       <tr>
-        <td class="centered-cell" rowSpan="2"><a href="metrics/bus_factor"><b>Contributor Absence Factor</b></a></td>
+        <td class="centered-cell" rowSpan="2"><a href="metrics/contributor_absence_factor"><b>Contributor Absence Factor</b></a></td>
         <td class="centered-cell" rowSpan="2"><a href="https://chaoss.community/kb/metric-contributor-absence-factor/">CHAOSS</a></td>
         <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/bus_factor.json">bus_factor.json</a></td>
         <td class="centered-cell" rowSpan="2"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L672">Link</a></td>
@@ -208,14 +208,14 @@ Feel free to use the data to construct your own data application and you can ref
     </thead>
     <tbody>
       <tr>
-        <td class="centered-cell">Issues new</td>
+        <td class="centered-cell"><a href="metrics/issue_new"><b>Issues new</b></a></td>
         <td class="centered-cell"><a href="https://chaoss.community/metric-issues-new/">CHAOSS</a></td>
         <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/issues_new.json">issues_new.json</a></td>
         <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L128">Link</a></td>
         <td class="centered-cell" rowSpan="3"><a href="https://codepen.io/frank-zsy/pen/mdjaZMw">Demo</a></td>
       </tr>
       <tr>
-        <td class="centered-cell">Issues Closed</td>
+        <td class="centered-cell"><a href="metrics/issue_closed"><b>Issues Closed</b></a></td>
         <td class="centered-cell"><a href="https://chaoss.community/metric-issues-closed/">CHAOSS</a></td>
         <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/issues_closed.json">issues_closed.json</a></td>
         <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L193">Link</a></td>
@@ -241,7 +241,7 @@ Feel free to use the data to construct your own data application and you can ref
         <td class="centered-cell"><a href="https://codepen.io/frank-zsy/pen/VwBqwaP?type=issue_resolution_duration">Demo</a></td>
       </tr>
       <tr>
-        <td class="centered-cell">Issue Age</td>
+        <td class="centered-cell"><a href="metrics/issue_age"><b>Issue Age</b></a></td>
         <td class="centered-cell"><a href="https://chaoss.community/metric-issue-age/">CHAOSS</a></td>
         <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/issue_age.json">issue_age.json</a></td>
         <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L426">Link</a></td>
@@ -307,7 +307,7 @@ Feel free to use the data to construct your own data application and you can ref
         <td class="centered-cell"><a href="https://codepen.io/frank-zsy/pen/VwBqwaP?type=change_request_age">Demo</a></td>
       </tr>
       <tr>
-        <td class="centered-cell" rowSpan="3">Code Change Lines</td>
+        <td class="centered-cell" rowSpan="3"><a href="metrics/code_changes_lines"><b>Code Change Lines</b></a></td>
         <td class="centered-cell" rowspan="3"><a href="https://chaoss.community/metric-code-changes-lines/">CHAOSS</a></td>
         <td class="centered-cell"><a href="https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/code_change_lines_add.json">code_change_lines_add.json</a></td>
         <td class="centered-cell" rowspan="3"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/chaoss.ts#L94">Link</a></td>

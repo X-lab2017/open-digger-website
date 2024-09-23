@@ -4,7 +4,7 @@
 
 ## 定义
 
-技术分叉（Technical Fork）是由 [CHAOSS 社区](https://chaoss.community)定义的一个指标，有关该指标的详细定义，请参阅 [CHAOSS Metrics - Technical Fork](https://chaoss.community/kb/metric-technical-fork/)。
+技术分叉（Technical Fork）是由 [CHAOSS 社区](https://chaoss.community)定义的一个指标，有关该指标的详细定义，请参阅 [CHAOSS Metrics - Technical Fork](https://chaoss.community/zh-CN/kb/metric-technical-fork/)。
 
 技术分叉是仓库的分布式版本控制的副本。技术分叉的数量表示同一代码开发平台上仓库的副本数量。
 
