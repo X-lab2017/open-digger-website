@@ -4,7 +4,7 @@
 
 ## 定义
 
-贡献者缺席因素（Contributor Absence Factor）是由 [CHAOSS 社区](https://chaoss.community) 定义的一个指标。有关该指标的详细定义，请参阅 [CHAOSS Metrics - Bus Factor](https://chaoss.community/zh-CN/kb/metric-contributor-absence-factor/)。
+贡献者缺席因素（Contributor Absence Factor）是由 [CHAOSS 社区](https://chaoss.community) 定义的一个指标。有关该指标的详细定义，请参阅 [CHAOSS Metrics - 贡献者缺席因素](https://chaoss.community/zh-CN/kb/metric-contributor-absence-factor/)。
 
 贡献者缺席因素是一个引人注目的指标，因为它形象的表达了一个问题，即：“在项目停滞之前，我们可以失去多少贡献者？”。贡献者缺席因素的计算是项目贡献量 50% 的最少人数，并表明了项目失去关键贡献者（包括维护者）后的韧性程度。
 

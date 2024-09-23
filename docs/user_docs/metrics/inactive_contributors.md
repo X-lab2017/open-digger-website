@@ -4,7 +4,7 @@
 
 ## 定义
 
-不活跃的贡献者（Inactive Contributors）是由 [CHAOSS](https://chaoss.community) 定义的一个指标，有关该指标的详细定义，请参阅 [CHAOSS Metrics - Inactive Contributors](https://chaoss.community/zh-CN/kb/metric-inactive-contributors/)。
+不活跃的贡献者（Inactive Contributors）是由 [CHAOSS](https://chaoss.community) 定义的一个指标，有关该指标的详细定义，请参阅 [CHAOSS Metrics - 不活跃的贡献者](https://chaoss.community/zh-CN/kb/metric-inactive-contributors/)。
 
 非活跃贡献者是一个指标，显示在特定时间段内已经停止贡献的贡献者数量。决定贡献者被认为非活跃所需的时间段可以由变量决定（默认为 6 个月），并且该指标将显示在给定时间范围内被标记为非活跃的贡献者数量。
 
