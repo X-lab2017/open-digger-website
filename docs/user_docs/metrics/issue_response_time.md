@@ -4,11 +4,11 @@
 
 ## 定义
 
-问题响应时间（Issue Response Time）是由 [CHAOSS](https://chaoss.community) 定义的一个指标，有关该指标的详细定义，请参阅 [CHAOSS Metrics - Issue Response Time](https://chaoss.community/zh-CN/kb/metric-issue-response-time/)。
+问题响应时间（Issue Response Time）是由 [CHAOSS](https://chaoss.community) 定义的一个指标，有关该指标的详细定义，请参阅 [CHAOSS 指标 - 问题响应时间](https://chaoss.community/zh-CN/kb/metric-issue-response-time/)。
 
-Issue 响应时间是一个指标，显示从 Issue 开启到来自其他贡献者在该 Issue 上的响应之间经过的时间。
+问题响应时间是一个指标，显示从问题开启到来自其他贡献者在该问题上的响应之间经过的时间。
 
-> Issue 响应时间有助于确定社区如何快速响应 Issue。这对于社区经理确定社区是否对 Issue 做出响应和它们被解决的速度是很有用的。高 Issue 响应时间可能表明社区不响应 Issue，而低 Issue 响应时间可能表明社区会及时响应 Issue，这可用于衡量社区的整体活动水平。
+> Issue 响应时间有助于确定社区如何快速响应问题。这对于社区经理确定社区是否对问题做出响应和它们被解决的速度是很有用的。高问题响应时间可能表明社区不响应问题，而低问题响应时间可能表明社区会及时响应问题，这可用于衡量社区的整体活动水平。
 
 ## 数据
 
