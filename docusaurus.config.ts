@@ -111,12 +111,12 @@ const config: Config = {
             label: 'userDocs',
             position: 'left',
           },
-          {
-            type: 'docSidebar',
-            sidebarId: 'developerDocSidebar',
-            label: 'devDocs',
-            position: 'left',
-          },
+          // {
+          //   type: 'docSidebar',
+          //   sidebarId: 'developerDocSidebar',
+          //   label: 'devDocs',
+          //   position: 'left',
+          // },
           {
             to: '/blog',
             label: 'blog',
