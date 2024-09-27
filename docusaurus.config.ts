@@ -134,6 +134,7 @@ const config: Config = {
           {
             type: 'dropdown',
             label: 'GitHub',
+            className: 'header--github-dropdown',
             position: 'right',
             items: [
               {
@@ -141,7 +142,7 @@ const config: Config = {
                 href: 'https://github.com/X-lab2017/open-digger',
               },
               {
-                label: 'Website',
+                label: 'OpenDigger-Website',
                 href: 'https://github.com/X-lab2017/open-digger-website',
               },
             ],
