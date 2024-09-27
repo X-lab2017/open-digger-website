@@ -131,23 +131,18 @@ const config: Config = {
             type: 'localeDropdown',
             position: 'right',
           },
-          // {
-          //   href: 'https://github.com/X-lab2017/open-digger',
-          //   className: 'header--github-link',
-          //   position: 'right',
-          // },
           {
-            type: 'dropdown',  // 使用下拉菜单类型
-            label: 'Github',  // 下拉菜单的标签
+            type: 'dropdown',
+            label: 'GitHub',
             position: 'right',
             items: [
               {
-                label: 'GitHub OpenDigger',  // 显示给用户的标签
-                href: 'https://github.com/X-lab2017/open-digger',  // 跳转链接
+                label: 'OpenDigger',
+                href: 'https://github.com/X-lab2017/open-digger',
               },
               {
-                label: 'GitHub OpenDigger-Website',  // 显示给用户的标签
-                href: 'https://github.com/X-lab2017/open-digger-website',  // 跳转链接
+                label: 'Website',
+                href: 'https://github.com/X-lab2017/open-digger-website',
               },
             ],
           },
