@@ -132,9 +132,20 @@ const config: Config = {
             position: 'right',
           },
           {
-            href: 'https://github.com/X-lab2017/open-digger',
-            className: 'header--github-link',
+            type: 'dropdown',
+            label: 'GitHub',
+            className: 'header--github-dropdown',
             position: 'right',
+            items: [
+              {
+                label: 'OpenDigger',
+                href: 'https://github.com/X-lab2017/open-digger',
+              },
+              {
+                label: 'OpenDigger-Website',
+                href: 'https://github.com/X-lab2017/open-digger-website',
+              },
+            ],
           },
         ],
       },
