@@ -18,11 +18,11 @@
 
 ## 数据
 
-- **链接（基础）：** `https://oss.x-lab.info/open_digger/{platform}/{owner}/{repo}/activity.json`
+- **链接（基础）：** `https://oss.open-digger.cn/{platform}/{owner}/{repo}/activity.json`
 
-- **链接（详情）：** `https://oss.x-lab.info/open_digger/{platform}/{owner}/{repo}/activity_details.json`
+- **链接（详情）：** `https://oss.open-digger.cn/{platform}/{owner}/{repo}/activity_details.json`
 
-要获取特定仓库的数据，请将 `{platform}`，`{owner}` 和 `{repo}` 替换为实际名称。这里有一个[活跃度示例](https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/activity.json)以及[活跃度详情示例](https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/activity_details.json)。
+要获取特定仓库的数据，请将 `{platform}`，`{owner}` 和 `{repo}` 替换为实际名称。这里有一个[活跃度示例](https://oss.open-digger.cn/github/X-lab2017/open-digger/activity.json)以及[活跃度详情示例](https://oss.open-digger.cn/github/X-lab2017/open-digger/activity_details.json)。
 
 其中活跃度数据包含该仓库历史的活跃度统计情况，而活跃度详情数据则包含该仓库活跃度的组成情况，即每个开发者在仓库中的活跃度细节。
 

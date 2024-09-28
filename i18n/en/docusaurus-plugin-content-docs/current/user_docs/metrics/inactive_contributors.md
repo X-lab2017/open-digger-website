@@ -13,9 +13,9 @@ Inactive Contributors is a metric that shows how many contributors have stopped 
 
 ## Data
 
-**Link:** `https://oss.x-lab.info/open_digger/{platform}/{owner}/{repo}/inactive_contributors.json`
+**Link:** `https://oss.open-digger.cn/{platform}/{owner}/{repo}/inactive_contributors.json`
 
-To get the data for a certain repository, replace `{platform}`, `{owner}` and `{repo}` with the actual name. Here is an [example](https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/inactive_contributors.json).
+To get the data for a certain repository, replace `{platform}`, `{owner}` and `{repo}` with the actual name. Here is an [example](https://oss.open-digger.cn/github/X-lab2017/open-digger/inactive_contributors.json).
 
 ## Code
 

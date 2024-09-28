@@ -16,7 +16,7 @@ const DevLeaderboard = () => {
   const [dateKeys, setDateKeys] = useState<string[]>([]);
   const [datePlaceholder, setDatePlaceholder] = useState<string>('');
 
-  const baseUrl = "https://oss.x-lab.info/open_digger/";
+  const baseUrl = "https://oss.open-digger.cn/";
   const typeMap = new Map([
     ['r', 'repo'],
     ['i', 'issue'],

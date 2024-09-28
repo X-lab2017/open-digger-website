@@ -12,9 +12,9 @@
 
 ## 数据
 
-**链接：** `https://oss.x-lab.info/open_digger/{platform}/{owner}/{repo}/issues_closed.json`
+**链接：** `https://oss.open-digger.cn/{platform}/{owner}/{repo}/issues_closed.json`
 
-要获取某个仓库的数据，请将 `{platform}`、`{owner}` 和 `{repo}` 替换为实际名称。更多信息请参考此 [示例](https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/issues_closed.json)。
+要获取某个仓库的数据，请将 `{platform}`、`{owner}` 和 `{repo}` 替换为实际名称。更多信息请参考此 [示例](https://oss.open-digger.cn/github/X-lab2017/open-digger/issues_closed.json)。
 
 ## 代码
 

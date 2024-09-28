@@ -19,11 +19,11 @@ Where $c_i$ is the total number of a certain collaborative behavior, and $w_i$ i
 
 ## Data
 
-- **Link (Basic):** `https://oss.x-lab.info/open_digger/{platform}/{owner}/{repo}/activity.json`
+- **Link (Basic):** `https://oss.open-digger.cn/{platform}/{owner}/{repo}/activity.json`
 
-- **Link (Details):** `https://oss.x-lab.info/open_digger/{platform}/{owner}/{repo}/activity_details.json`
+- **Link (Details):** `https://oss.open-digger.cn/{platform}/{owner}/{repo}/activity_details.json`
 
-To obtain data for a specific repository, please replace `{platform}`, `{owner}`, and `{repo}` with the actual names. Here is an [activity example](https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/activity.json) and an [activity details example](https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/activity_details.json).
+To obtain data for a specific repository, please replace `{platform}`, `{owner}`, and `{repo}` with the actual names. Here is an [activity example](https://oss.open-digger.cn/github/X-lab2017/open-digger/activity.json) and an [activity details example](https://oss.open-digger.cn/github/X-lab2017/open-digger/activity_details.json).
 
 The activity data contains the historical activity statistics of the repository, while the activity details data contains the composition of the repository's activity, i.e., the activity details of each developer in the repository.
 

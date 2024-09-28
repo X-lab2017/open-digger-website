@@ -12,10 +12,10 @@
 
 ## 数据
 
-- **链接 (基础)：** `https://oss.x-lab.info/open_digger/{platform}/{owner}/{repo}/contributors.json`
-- **链接 (详情)：** `https://oss.x-lab.info/open_digger/{platform}/{owner}/{repo}/contributors_detail.json`
+- **链接 (基础)：** `https://oss.open-digger.cn/{platform}/{owner}/{repo}/contributors.json`
+- **链接 (详情)：** `https://oss.open-digger.cn/{platform}/{owner}/{repo}/contributors_detail.json`
 
-要获取某个仓库的数据，请将 `{platform}`、`{owner}` 和 `{repo}` 替换为实际名称。对于基础变体，请参考此 [示例](https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/contributors.json)，对于详情数据，请参考此 [示例](https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/contributors_detail.json)。
+要获取某个仓库的数据，请将 `{platform}`、`{owner}` 和 `{repo}` 替换为实际名称。对于基础变体，请参考此 [示例](https://oss.open-digger.cn/github/X-lab2017/open-digger/contributors.json)，对于详情数据，请参考此 [示例](https://oss.open-digger.cn/github/X-lab2017/open-digger/contributors_detail.json)。
 
 ## 代码
 

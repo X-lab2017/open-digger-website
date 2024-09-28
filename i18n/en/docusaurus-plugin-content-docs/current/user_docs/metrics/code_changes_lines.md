@@ -13,12 +13,12 @@ The Code Changes Lines metric considers the aggregated number of lines touched b
 
 ## Data
 
-- **Link (add):** `https://oss.x-lab.info/open_digger/{platform}/{owner}/{repo}/code_change_lines_add.json`
-- **Link (remove):** `https://oss.x-lab.info/open_digger/{platform}/{owner}/{repo}/code_change_lines_remove.json`
-- **Link (sum):** `https://oss.x-lab.info/open_digger/{platform}/{owner}/{repo}/code_change_lines_sum.json`
+- **Link (add):** `https://oss.open-digger.cn/{platform}/{owner}/{repo}/code_change_lines_add.json`
+- **Link (remove):** `https://oss.open-digger.cn/{platform}/{owner}/{repo}/code_change_lines_remove.json`
+- **Link (sum):** `https://oss.open-digger.cn/{platform}/{owner}/{repo}/code_change_lines_sum.json`
 
 
-To get the data for a certain repository, replace `{platform}`, `{owner}` and `{repo}` with the actual name. For the *add* variant, here is an [example](https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/code_change_lines_add.json). Similarly, for the *remove* variant, refer to this [example](https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/code_change_lines_remove.json) & for the *sum* variant, refer to this [example](https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/code_change_lines_sum.json).
+To get the data for a certain repository, replace `{platform}`, `{owner}` and `{repo}` with the actual name. For the *add* variant, here is an [example](https://oss.open-digger.cn/github/X-lab2017/open-digger/code_change_lines_add.json). Similarly, for the *remove* variant, refer to this [example](https://oss.open-digger.cn/github/X-lab2017/open-digger/code_change_lines_remove.json) & for the *sum* variant, refer to this [example](https://oss.open-digger.cn/github/X-lab2017/open-digger/code_change_lines_sum.json).
 
 ## Code
 

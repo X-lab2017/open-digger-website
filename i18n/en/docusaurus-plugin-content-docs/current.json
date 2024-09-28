@@ -2,13 +2,13 @@
   "version.label": {
     "message": "Next"
   },
-  "sidebar.docSidebar.category.data_sources": {
+  "sidebar.userDocSidebar.category.data_sources": {
     "message": "Data Sources"
   },
-  "sidebar.docSidebar.category.metrics": {
+  "sidebar.userDocSidebar.category.metrics": {
     "message": "Metrics"
   },
-  "sidebar.docSidebar.category.openrank": {
+  "sidebar.userDocSidebar.category.openrank": {
     "message": "OpenRank"
   },
   "sidebar.userDocSidebar.category.statistics": {

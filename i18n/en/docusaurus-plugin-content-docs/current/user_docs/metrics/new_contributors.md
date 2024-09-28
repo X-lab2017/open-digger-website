@@ -13,11 +13,11 @@ This metric helps identify how many contributors are making their first contribu
 
 ## Data
 
-- **Link (base):** `https://oss.x-lab.info/open_digger/{platform}/{owner}/{repo}/new_contributors.json`
-- **Link (detail):** `https://oss.x-lab.info/open_digger/{platform}/{owner}/{repo}/new_contributors_detail.json`
+- **Link (base):** `https://oss.open-digger.cn/{platform}/{owner}/{repo}/new_contributors.json`
+- **Link (detail):** `https://oss.open-digger.cn/{platform}/{owner}/{repo}/new_contributors_detail.json`
 
 
-To get the data for a certain repository, replace `{platform}`, `{owner}` and `{repo}` with the actual name. For the base variant, here is an [example](https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/new_contributors.json), and for the detailed variant, refer to this [example](https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/new_contributors_detail.json).
+To get the data for a certain repository, replace `{platform}`, `{owner}` and `{repo}` with the actual name. For the base variant, here is an [example](https://oss.open-digger.cn/github/X-lab2017/open-digger/new_contributors.json), and for the detailed variant, refer to this [example](https://oss.open-digger.cn/github/X-lab2017/open-digger/new_contributors_detail.json).
 
 ## Code
 

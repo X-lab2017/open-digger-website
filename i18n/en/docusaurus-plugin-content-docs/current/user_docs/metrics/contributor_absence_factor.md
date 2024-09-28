@@ -13,11 +13,11 @@ The Bus Factor is a compelling metric because it visualizes the question "How ma
 
 ## Data
 
-- **Link (base):** `https://oss.x-lab.info/open_digger/{platform}/{owner}/{repo}/bus_factor.json`
-- **Link (detail):** `https://oss.x-lab.info/open_digger/{platform}/{owner}/{repo}/bus_factor_detail.json`
+- **Link (base):** `https://oss.open-digger.cn/{platform}/{owner}/{repo}/bus_factor.json`
+- **Link (detail):** `https://oss.open-digger.cn/{platform}/{owner}/{repo}/bus_factor_detail.json`
 
 
-To get the data for a certain repository, replace `{platform}`, `{owner}` and `{repo}` with the actual name. Here is an [example](https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/bus_factor.json).
+To get the data for a certain repository, replace `{platform}`, `{owner}` and `{repo}` with the actual name. Here is an [example](https://oss.open-digger.cn/github/X-lab2017/open-digger/bus_factor.json).
 
 ## Code
 

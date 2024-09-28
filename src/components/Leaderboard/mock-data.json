@@ -30,7 +30,7 @@
       "openharmony/security_selinux_adapter",
       "mindspore/mindformers"
     ],
-    "logo": "https://oss.x-lab.info/open_digger/logos/companies/huawei.png"
+    "logo": "https://oss.open-digger.cn/logos/companies/huawei.png"
   },
   {
     "__index__": 2,
@@ -63,7 +63,7 @@
       "alibaba/easyexcel",
       "kubevela/kubevela"
     ],
-    "logo": "https://oss.x-lab.info/open_digger/logos/companies/alibaba.png"
+    "logo": "https://oss.open-digger.cn/logos/companies/alibaba.png"
   },
   {
     "__index__": 3,
@@ -96,7 +96,7 @@
       "PaddlePaddle/PaddleScience",
       "PaddlePaddle/CINN"
     ],
-    "logo": "https://oss.x-lab.info/open_digger/logos/companies/baidu.png"
+    "logo": "https://oss.open-digger.cn/logos/companies/baidu.png"
   },
   {
     "__index__": 4,
@@ -129,7 +129,7 @@
       "eosphoros-ai/DB-GPT",
       "occlum/occlum"
     ],
-    "logo": "https://oss.x-lab.info/open_digger/logos/companies/antgroup.png"
+    "logo": "https://oss.open-digger.cn/logos/companies/antgroup.png"
   },
   {
     "__index__": 5,
@@ -162,6 +162,6 @@
       "Tencent/APIJSON",
       "tencentyun/TUICallKit"
     ],
-    "logo": "https://oss.x-lab.info/open_digger/logos/companies/tencent.png"
+    "logo": "https://oss.open-digger.cn/logos/companies/tencent.png"
   }
 ]

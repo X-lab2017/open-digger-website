@@ -13,9 +13,9 @@ This metric measures the duration between the submission of a change request and
 
 ## Data
 
-**Link:** `https://oss.x-lab.info/open_digger/{platform}/{owner}/{repo}/change_request_response_time.json`
+**Link:** `https://oss.open-digger.cn/{platform}/{owner}/{repo}/change_request_response_time.json`
 
-To get the data for a certain repository, replace `{platform}`, `{owner}` and `{repo}` with the actual name. Here is an [example](https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/change_request_response_time.json).
+To get the data for a certain repository, replace `{platform}`, `{owner}` and `{repo}` with the actual name. Here is an [example](https://oss.open-digger.cn/github/X-lab2017/open-digger/change_request_response_time.json).
 
 
 ## Code
