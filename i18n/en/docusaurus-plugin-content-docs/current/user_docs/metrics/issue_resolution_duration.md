@@ -13,9 +13,9 @@ The metric helps indicate the time it takes to resolve an issue, on average, fro
 
 ## Data
 
-**Link:** `https://oss.x-lab.info/open_digger/{platform}/{owner}/{repo}/issue_resolution_duration.json`
+**Link:** `https://oss.open-digger.cn/{platform}/{owner}/{repo}/issue_resolution_duration.json`
 
-To get the data for a certain repository, replace `{platform}`, `{owner}` and `{repo}` with the actual name. Here is an [example](https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/issue_resolution_duration.json).
+To get the data for a certain repository, replace `{platform}`, `{owner}` and `{repo}` with the actual name. Here is an [example](https://oss.open-digger.cn/github/X-lab2017/open-digger/issue_resolution_duration.json).
 
 
 ## Code

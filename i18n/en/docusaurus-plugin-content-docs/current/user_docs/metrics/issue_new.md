@@ -13,9 +13,9 @@ The Issues New metric tracks the number of new issues created during a certain p
 
 ## Data
 
-**Link:** `https://oss.x-lab.info/open_digger/{platform}/{owner}/{repo}/issues_new.json`
+**Link:** `https://oss.open-digger.cn/{platform}/{owner}/{repo}/issues_new.json`
 
-To get the data for a certain repository, replace `{platform}`, `{owner}` and `{repo}` with the actual name. For more, refer to this [example](https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/issues_new.json).
+To get the data for a certain repository, replace `{platform}`, `{owner}` and `{repo}` with the actual name. For more, refer to this [example](https://oss.open-digger.cn/github/X-lab2017/open-digger/issues_new.json).
 
 
 ## Code

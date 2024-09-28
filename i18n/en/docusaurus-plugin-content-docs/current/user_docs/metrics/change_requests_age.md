@@ -13,9 +13,9 @@ This metric measures the duration for which change requests have been left open,
 
 ## Data
 
-**Link:** `https://oss.x-lab.info/open_digger/{platform}/{owner}/{repo}/change_request_age.json`
+**Link:** `https://oss.open-digger.cn/{platform}/{owner}/{repo}/change_request_age.json`
 
-To get the data for a certain repository, replace `{platform}`, `{owner}` and `{repo}` with the actual name. Here is an [example](https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/change_request_age.json).
+To get the data for a certain repository, replace `{platform}`, `{owner}` and `{repo}` with the actual name. Here is an [example](https://oss.open-digger.cn/github/X-lab2017/open-digger/change_request_age.json).
 
 
 ## Code

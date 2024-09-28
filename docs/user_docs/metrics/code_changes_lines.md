@@ -12,11 +12,11 @@
 
 ## 数据
 
-- **链接 (添加)：** `https://oss.x-lab.info/open_digger/{platform}/{owner}/{repo}/code_change_lines_add.json`
-- **链接 (删除)：** `https://oss.x-lab.info/open_digger/{platform}/{owner}/{repo}/code_change_lines_remove.json`
-- **链接 (总和)：** `https://oss.x-lab.info/open_digger/{platform}/{owner}/{repo}/code_change_lines_sum.json`
+- **链接 (添加)：** `https://oss.open-digger.cn/{platform}/{owner}/{repo}/code_change_lines_add.json`
+- **链接 (删除)：** `https://oss.open-digger.cn/{platform}/{owner}/{repo}/code_change_lines_remove.json`
+- **链接 (总和)：** `https://oss.open-digger.cn/{platform}/{owner}/{repo}/code_change_lines_sum.json`
 
-要获取某个仓库的数据，请将 `{platform}`、`{owner}` 和 `{repo}` 替换为实际名称。对于`代码添加`，请参考此 [示例](https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/code_change_lines_add.json)。类似地，对于`代码删除`，请参考此 [示例](https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/code_change_lines_remove.json)，对于`代码变更总和`，请参考此 [示例](https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/code_change_lines_sum.json)。
+要获取某个仓库的数据，请将 `{platform}`、`{owner}` 和 `{repo}` 替换为实际名称。对于`代码添加`，请参考此 [示例](https://oss.open-digger.cn/github/X-lab2017/open-digger/code_change_lines_add.json)。类似地，对于`代码删除`，请参考此 [示例](https://oss.open-digger.cn/github/X-lab2017/open-digger/code_change_lines_remove.json)，对于`代码变更总和`，请参考此 [示例](https://oss.open-digger.cn/github/X-lab2017/open-digger/code_change_lines_sum.json)。
 
 ## 代码
 

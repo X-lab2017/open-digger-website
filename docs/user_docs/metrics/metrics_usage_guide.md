@@ -1,16 +1,14 @@
-# OpenDigger 简介
+# 指标使用指南
 
-[![apache2](https://img.shields.io/badge/license-Apache%202-blue)](https://github.com/X-lab2017/open-digger/blob/master/LICENSE) [![](https://img.shields.io/badge/Data-OpenDigger-2097FF)](https://github.com/X-lab2017/open-digger) [![Node.js CI](https://github.com/X-lab2017/open-digger/actions/workflows/node_ci.yml/badge.svg?branch=master)](https://github.com/X-lab2017/open-digger/actions/workflows/node_ci.yml)
+## 基本使用
 
-[OpenDigger](https://github.com/X-lab2017/open-digger) 是由 X-lab 发起的一个开源数据分析与指标生产开源项目，这个项目旨在凝聚全球开发者的智慧共同对开源相关数据进行分析统计，以使开发者可以更好的理解和参与开源。
+OpenDigger 实现的所有指标对所有人开放使用，OpenDigger 的静态数据根链接为：
 
-## 指标使用
+`https://oss.open-digger.cn/{platform}/{org/login}/{repo}/`
 
-OpenDigger 实现的所有指标对所有人开放使用, OpenDigger 的静态数据根链接为 `https://oss.open-digger.cn/{platform}/{org/login}/{repo}/`，其中 `platform` 支持 `github` 和 `gitee`，只需要替换 `org/repo` 或用户 `login` 即可获取数据。
+其中 `platform` 目前支持 `github` 和 `gitee`，只需要替换 `org/repo` 或用户 `login` 即可获取数据。
 
-您可随意使用这些数据来构建自己的数据应用程序，您可以将 OpenDigger 作为您的数据源，并且欢迎在您的项目中使用以下徽章来展示数据源。
-
-[![](https://img.shields.io/badge/Data-OpenDigger-2097FF)](https://github.com/X-lab2017/open-digger)
+以下是一份完整的指标数据清单，您可以前往 [Playground](playground) 页面试用数据，或对于具体数据，前往相应文档页面查看详情。
 
 <!-- OPENRANK -->
 <details id="elevatedbtn" open>
@@ -317,49 +315,102 @@ OpenDigger 实现的所有指标对所有人开放使用, OpenDigger 的静态�
   </table>
 </details>
 
+## 数据结构
 
-## 用户案例
+对于所导出的指标文件，其基本数据结构为一个 JSON 对象，其键值为月度、季度、年度值，对应的数值为指标数据。
 
-对于以上数据，OpenDigger 目前有一些用户与合作伙伴。
+- 月度键值形式为 `YYYY-MM`。
+- 季度键值形式为 `YYYYQX`，`X` 取值范围为 1 至 4，`Q1` 为当年 1 至 3 月，`Q2` 为当年 4 至 6 月，以此类推。
+- 年度键值形式为 `YYYY`。
 
-### 应用
+所有键值均在顶层结构中，按照年度、月度、季度的顺序排列，每类中按时间先后顺序排列。
 
-- [OpenLeaderboard](https://open-leaderboard.x-lab.info/)：带有标签数据的开源项目、开发者、企业等排行榜
-- [HyperCRX](https://github.com/hypertrons/hypertrons-crx)：对查看 GitHub 用户和仓库有帮助的浏览器插件，对应[论文](https://dl.acm.org/doi/10.1145/3643916.3644440)
-- [OpenGalaxy](https://open-galaxy.x-lab.info/)：开源全景星系项目，对应[论文](https://dl.acm.org/doi/10.1145/3643916.3644441)
-- [中国开源码力榜](https://opensource.win/)：与[思否](https://segmentfault.com/)合作发布的 GitHub 中国开发者排行榜
-- [PolarDB 开源社区洞察大屏](https://polardbx.com/dataPanorama)：与 PolarDB 社区合作的开源洞察大屏
-- [OSGraph](https://osgraph.com/)：与 [TuGraph](https://www.tugraph.tech/) 合作发布的开源行为图谱项目
+例如，对于 [OpenDigger](https://github.com/X-lab2017/open-digger) 仓库，其全域 OpenRank 影响力数据为：
 
-### 开源报告
+```json
+{
+  "2020":34.81,"2021":55.59,"2022":92.97,...        // 年度数据
+  "2020-08":4.91,"2020-09":5.17,"2020-10":5.1,...   // 月度数据
+  "2020Q3":10.08,"2020Q4":24.73,"2021Q1":22.18,...  // 季度数据
+}
+```
 
-- 中国开源年度报告：由[开源社](https://kaiyuanshe.cn/)发布的中国开源年度报告
-  - [2021 中国开源年度报告](https://kaiyuanshe.cn/document/china-os-report-2021/)
-  - [2022 中国开源年度报告](https://kaiyuanshe.cn/article/2022-China-Open-Source-Annual-Report)
-  - [2023 中国开源年度报告](https://kaiyuanshe.cn/article/Year-of-the-Dragon-Ceremony-2023-China-Open-Source-Annual-Report)
-- 中国开源发展蓝皮书：由 [COPU](http://www.copu.org.cn/) 发布的中国开源年度报告
-  - [2021 中国开源发展蓝皮书](http://www.cosspu.org.cn/download/showdownload.php?id=26)
-  - [2022 中国开源发展蓝皮书](http://www.cosspu.org.cn/download/showdownload.php?id=27)
-  - [2023 中国开源发展蓝皮书](http://www.cosspu.org.cn/download/showdownload.php?id=25)
-- [开源大数据热力报告](https://github.com/X-lab2017/open-digger/blob/master/cooperations/big_data_open_source_heat_report/开源大数据热力报告2022.pdf)：大数据领域内开源项目热力报告
+## 导出范围
 
-## 活动
+OpenDigger 并未为全域所有仓库和用户均导出指标数据，具体导出的仓库和开发者列表可分别在 [`repo_list.csv`](https://oss.open-digger.cn/repo_list.csv) 和 [`user_list.csv`](https://oss.open-digger.cn/user_list.csv) 文件中查询，其中：
 
-OpenDigger 社区也主办或参加社区间的合作活动，如竞赛或黑客松。
+- `repo_list.csv` 的行结构为 `id,platform,repo_name`，即使用`,`分隔的仓库数据库 ID、平台名称和仓库全称。
+- `user_list.csv` 的行结构为 `id,platform,login`，即使用`,`分隔的用户数据库 ID、平台名称和用户登录名。
 
-- [开放原子开源大赛 OpenDigger 开源软件生态数据分析挖掘平台挑战赛](https://competition.atomgit.com/competitionInfo?id=bc6603e0b8bf11ed804e6b78b4426d45)。
-- [第三届 PaddlePaddle 黑客松](https://www.paddlepaddle.org.cn/PaddlePaddleHackathon-2022-6)，黑客马拉松的最终报告在[这里](https://github.com/X-lab2017/open-digger/tree/master/cooperations/paddle_hackathon_3rd)。
+其中数据库 ID 为对应平台中的唯一 ID，与各平台的数据一致，***平台名与数据库 ID 共同唯一标识一个仓库或开发者***。
 
-## 贡献指南
+关于 OpenDigger 的导出策略，请参考开发者文档中导出表的部分。
 
-在对项目贡献之前，请务必查阅我们的[贡献指南](intro)。
+> OpenDigger 官网页面中各类仓库和开发者搜索组件使用这两个文件实现浏览器本地搜索。
 
-## 沟通
+## 元数据
 
-如果想和我们取得联系，欢迎在 GitHub 提交 Issue 或 Discussion，也欢迎通过下面的微信群二维码加入微信群交流。
+对于导出的仓库和开发者，OpenDigger 会同时导出一份元数据，其地址为：
 
-![qrcode](@site/static/img/wechat-qrcode.jpeg)
+仓库：`https://oss.open-digger.cn/{platform}/{org/login}/meta.json`（[示例](https://oss.open-digger.cn/github/X-lab2017/open-digger/meta.json)）
 
-## 许可证
+开发者：`https://oss.open-digger.cn/{platform}/{org/login}/{repo}/meta.json`（[示例](https://oss.open-digger.cn/github/frank-zsy/meta.json)）
 
-对于代码部分，我们使用了 [Apache-2.0 许可证](https://github.com/X-lab2017/open-digger/blob/master/LICENSE)。在使用项目输出内容前请确保使用符合许可证要求。
+元数据中包含如下字段：
+
+- `updatedAt`：数据更新时间。
+- `type`：仓库或开发者类型，值是 `repo` 或 `user`。
+- `id`：仓库或开发者在平台数据库中的 ID。
+- `labels`：仓库或开发者在 OpenDigger 中所属标签。关于该字段，请参考标签数据相关文档。
+
+例如，对于 [OpenDigger](https://github.com/X-lab2017/open-digger) 仓库，其元数据为：
+
+```json
+{
+  "updatedAt": 1725221391661,     // 更新时间时间戳
+  "type": "repo",                 // 元数据类型
+  "id": 288431943,                // 仓库在 GitHub 中的唯一 ID
+  "labels": [                     // 仓库所属标签
+    {
+      "id": ":communities/mulan", // 木兰社区
+      "name": "Mulan",
+      "type": "Community"
+    },
+    {
+      "id": ":communities/xlab",  // X-lab 社区
+      "name": "X-lab",
+      "type": "Community"
+    },
+    {
+      "id": ":communities/xlab/open_digger",  // OpenDigger 项目
+      "name": "OpenDigger",
+      "type": "Project"
+    },
+    {
+      "id": ":regions/CN",        // 中国项目
+      "name": "China",
+      "type": "Region"
+    }
+  ]
+}
+```
+
+## FAQ
+
+#### 问：OpenDigger 指标数据是否支持在其他应用中集成？
+
+答：是的，OpenDigger 指标数据非常欢迎下游应用集成。OpenDigger 对于导出的静态数据，在响应头中加入了 `Access-Control-Allow-Origin: *`，从而保证数据可以被跨域使用。如果您的网站对于响应头中的域名有强要求，可能需要自己实现服务以进行数据转发。事实上 OpenDigger 数据已有大量下游应用，例如 HyperCRX、OpenLeaderboard、OSGraph 等。
+
+#### 问：应用使用指标数据是否需要自己做缓存策略？
+
+答：浏览器应用可以直接使用数据而不做缓存。OpenDigger 对于指标数据，在响应头中加入了 `Expires` 字段，每月更新后直到次月 2 日之前，浏览器可以通过该字段判断直接从浏览器磁盘缓存中获取数据，而无需重复获取远程数据。
+
+#### 问：在访问某指标文件时不存在可能是什么问题导致的？
+
+答：如果在访问某个数据指标文件不存在，可能是如下原因导致的：
+- 该仓库或开发者不在导出范围内，可以通过访问元数据确定仓库或开发者是否在导出范围内，若元数据存在则数据已导出。
+- 该仓库没有对应的事件类型。例如 Apache 某些项目不使用 GitHub Issues 功能（如 [Flink](https://github.com/apache/flink)），因此将不存在问题类相关的指标文件。
+
+#### 问：指标文件中的键值为什么可能缺失某些特定的月份或季度？
+
+答：若某仓库或开发者在某时段内不存在某类事件，则对应指标数据中的时段键值将不存在，而指标数据中不会出现 `0` 值，因此在指标数据中键值可能出现不连续的情况。

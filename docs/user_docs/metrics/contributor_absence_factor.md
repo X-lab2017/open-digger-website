@@ -12,11 +12,11 @@
 
 ## 数据
 
-**链接（基础）：** `https://oss.x-lab.info/open_digger/{platform}/{owner}/{repo}/bus_factor.json`
+**链接（基础）：** `https://oss.open-digger.cn/{platform}/{owner}/{repo}/bus_factor.json`
 
-**链接（详细）：** `https://oss.x-lab.info/open_digger/{platform}/{owner}/{repo}/bus_factor_detail.json`
+**链接（详细）：** `https://oss.open-digger.cn/{platform}/{owner}/{repo}/bus_factor_detail.json`
 
-要获取特定仓库的数据，请将`{platform}`、`{owner}` 和 `{repo}` 替换为实际名称。这里有一个[示例](https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/bus_factor.json)。
+要获取特定仓库的数据，请将`{platform}`、`{owner}` 和 `{repo}` 替换为实际名称。这里有一个[示例](https://oss.open-digger.cn/github/X-lab2017/open-digger/bus_factor.json)。
 
 ## 代码
 

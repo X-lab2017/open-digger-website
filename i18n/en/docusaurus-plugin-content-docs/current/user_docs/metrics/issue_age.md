@@ -13,9 +13,9 @@ This metric is an indication of how long issues have been left open in the consi
 
 ## Data
 
-**Link:** `https://oss.x-lab.info/open_digger/{platform}/{owner}/{repo}/issue_age.json`
+**Link:** `https://oss.open-digger.cn/{platform}/{owner}/{repo}/issue_age.json`
 
-To get the data for a certain repository, replace `{platform}`, `{owner}` and `{repo}` with the actual name. For more, refer to this [example](https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/issue_age.json).
+To get the data for a certain repository, replace `{platform}`, `{owner}` and `{repo}` with the actual name. For more, refer to this [example](https://oss.open-digger.cn/github/X-lab2017/open-digger/issue_age.json).
 
 
 ## Code

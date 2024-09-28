@@ -15,9 +15,9 @@ In some cases, some of these are also issues themselves. Reopening an issue migh
 
 ## Data
 
-**Link:** `https://oss.x-lab.info/open_digger/{platform}/{owner}/{repo}/issues_closed.json`
+**Link:** `https://oss.open-digger.cn/{platform}/{owner}/{repo}/issues_closed.json`
 
-To get the data for a certain repository, replace `{platform}`, `{owner}` and `{repo}` with the actual name. For more, refer to this [example](https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/issues_closed.json).
+To get the data for a certain repository, replace `{platform}`, `{owner}` and `{repo}` with the actual name. For more, refer to this [example](https://oss.open-digger.cn/github/X-lab2017/open-digger/issues_closed.json).
 
 
 ## Code

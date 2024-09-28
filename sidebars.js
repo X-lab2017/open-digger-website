@@ -30,7 +30,7 @@ const sidebars = {
       label: 'metrics',
       collapsed: false,
       items: [
-        'user_docs/metrics/how_to_use',
+        'user_docs/metrics/metrics_usage_guide',
         'user_docs/metrics/playground',
         {
           type: 'category',

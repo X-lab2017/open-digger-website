@@ -13,9 +13,9 @@ This is a metric where changes are proposed for discussion as "*proposals for ch
 
 ## Data
 
-**Link:** `https://oss.x-lab.info/open_digger/{platform}/{owner}/{repo}/change_requests.json`
+**Link:** `https://oss.open-digger.cn/{platform}/{owner}/{repo}/change_requests.json`
 
-To get the data for a certain repository, replace `{platform}`, `{owner}` and `{repo}` with the actual name. Here is an [example](https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/change_requests.json).
+To get the data for a certain repository, replace `{platform}`, `{owner}` and `{repo}` with the actual name. Here is an [example](https://oss.open-digger.cn/github/X-lab2017/open-digger/change_requests.json).
 
 
 ## Code

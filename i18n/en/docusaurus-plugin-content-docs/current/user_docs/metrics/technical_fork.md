@@ -13,9 +13,9 @@ A technical fork is a distributed version control copy of a project. The number 
 
 ## Data
 
-**Link:** `https://oss.x-lab.info/open_digger/{platform}/{owner}/{repo}/technical_fork.json`
+**Link:** `https://oss.open-digger.cn/{platform}/{owner}/{repo}/technical_fork.json`
 
-To get the data for a certain repository, replace `{platform}`, `{owner}` and `{repo}` with the actual name. Here is an [example](https://oss.x-lab.info/open_digger/github/X-lab2017/open-digger/technical_fork.json).
+To get the data for a certain repository, replace `{platform}`, `{owner}` and `{repo}` with the actual name. Here is an [example](https://oss.open-digger.cn/github/X-lab2017/open-digger/technical_fork.json).
 
 ## Code
 

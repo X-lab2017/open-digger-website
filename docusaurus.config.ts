@@ -38,7 +38,7 @@ const config: Config = {
   },
 
   customFields: {
-    ossBaseUrl: 'https://oss.x-lab.info/open_digger/',
+    ossBaseUrl: 'https://oss.open-digger.cn/',
     pullNumber: process.env.PULL_NUM,
   },
 

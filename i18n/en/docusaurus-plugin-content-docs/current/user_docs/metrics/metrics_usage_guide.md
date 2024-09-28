@@ -1,21 +1,14 @@
----
-sidebar_position: 1
-title: Introduction
----
+# Metrics Usage Guide
 
-# OpenDigger
+## Basic Usage
 
-[![apache2](https://img.shields.io/badge/license-Apache%202-blue)](https://github.com/X-lab2017/open-digger/blob/master/LICENSE) [![](https://img.shields.io/badge/Data-OpenDigger-2097FF)](https://github.com/X-lab2017/open-digger) [![Node.js CI](https://github.com/X-lab2017/open-digger/actions/workflows/node_ci.yml/badge.svg?branch=master)](https://github.com/X-lab2017/open-digger/actions/workflows/node_ci.yml)
+All implemented metrics are open for anyone to use, the root URL of OpenDigger static data is
 
-OpenDigger is an open source analysis platform for all open source data initiated by [X-lab](https://x-lab.info), this project aims to combine the wisdom of global developers to jointly analyze and insight into open source related data to help everyone better understand and participate in open source.
+`https://oss.open-digger.cn/{platform}/{org/login}/{repo}`
 
-## Metrics Usage
+You can use `github` or `gitee` for platform, then just replace the `org/repo` or user `login` to get your data.
 
-All implemented metrics are open for anyone to use, the root URL of OpenDigger static data is `https://oss.open-digger.cn/{platform}/{org/login}/{repo}`, you can use `github` or `gitee` for platform, then just replace the `org/repo` or user `login` to get your data.
-
-Feel free to use the data to construct your own data application and you can refer OpenDigger as your data source and welcome to use the following badge in your project to show the data source.
-
-[![](https://img.shields.io/badge/Data-OpenDigger-2097FF)](https://github.com/X-lab2017/open-digger)
+Below is a complete list of metric data, and you can try the data on the [Playground](playground) page, or refer to the corresponding documentation page for specific data.
 
 <!-- OPENRANK -->
 <details id="elevatedbtn" open>
@@ -251,7 +244,6 @@ Feel free to use the data to construct your own data application and you can ref
   </table>
 </details>
 
-
 <!-- CHANGE REQUESTS -->
 <details id="elevatedbtn">
   <summary>Change Requests</summary>
@@ -323,44 +315,102 @@ Feel free to use the data to construct your own data application and you can ref
   </table>
 </details>
 
-## Use cases
+## Data Structure
 
-For above data, there are some users or partners of OpenDigger right now.
+The exported metrics file has a basic data structure as a JSON object, with keys representing monthly, quarterly, and yearly values corresponding to the metric data.
 
-### Applications
+- Monthly keys are in the format `YYYY-MM`.
+- Quarterly keys are in the format `YYYYQX`, where `X` ranges from 1 to 4, with `Q1` covering January to March of that year, `Q2` April to June, and so on.
+- Yearly keys are in the format `YYYY`.
 
-- [OpenLeaderboard](https://open-leaderboard.x-lab.info/): An open source leaderboard of open source world with labeled data.
-- [HyperCRX](https://github.com/hypertrons/hypertrons-crx): An open source browser extension helps to look into GitHub users and repos, corresponding [paper](https://dl.acm.org/doi/10.1145/3643916.3644440).
-- [OpenGalaxy](https://open-galaxy.x-lab.info/): An open source galaxy application, corresponding [paper](https://dl.acm.org/doi/10.1145/3643916.3644441).
-- [Hacking Force China](https://opensource.win/): A ranking list of Chinese developers on GitHub cooperate with [SegmentFault](https://segmentfault.com/).
-- [PolarDB Open Source Data Dashboard](https://polardbx.com/dataPanorama): Community dashboard cooperate with PolarDB.
-- [OSGraph](https://osgraph.com/): An open source graph application collaborate with [TuGraph](https://www.tugraph.tech/).
+All keys are at the top-level structure, arranged in the order of year, month, and quarter, with each type sorted chronologically.
 
-### Open source reports
+For example, for the [OpenDigger](https://github.com/X-lab2017/open-digger) repository, its global OpenRank data is:
 
-- China Open Source Report by [kaiyuanshe](https://kaiyuanshe.cn/).
-  - [China Open Source Report 2021](https://kaiyuanshe.cn/document/china-os-report-2021/).
-  - [China Open Source Report 2022](https://kaiyuanshe.cn/article/2022-China-Open-Source-Annual-Report).
-  - [China Open Source Report 2023](https://kaiyuanshe.cn/article/Year-of-the-Dragon-Ceremony-2023-China-Open-Source-Annual-Report).
-- China Open Source Blue Paper by [COPU](http://www.copu.org.cn/).
-  - [China Open Source Blue Paper 2021](http://www.cosspu.org.cn/download/showdownload.php?id=26).
-  - [China Open Source Blue Paper 2022](http://www.cosspu.org.cn/download/showdownload.php?id=27).
-  - [China Open Source Blue Paper 2023](http://www.cosspu.org.cn/download/showdownload.php?id=25).
-- [Big Data Open Source Heat Report](https://github.com/X-lab2017/open-digger/blob/master/cooperations/big_data_open_source_heat_report/开源大数据热力报告2022.pdf): A heat report of open source projects in big data area.
+```json
+{
+  "2020":34.81,"2021":55.59,"2022":92.97,...        // Yearly data
+  "2020-08":4.91,"2020-09":5.17,"2020-10":5.1,...   // Monthly data
+  "2020Q3":10.08,"2020Q4":24.73,"2021Q1":22.18,...  // Quarterly data
+}
+```
 
-## Events
+## Export Range
 
-OpenDigger community also open to inter-community cooperation events, like contests or hackathons.
+OpenDigger does not export metrics data for all repositories and users. The specific exported repositories and user lists can be found in [`repo_list.csv`](https://oss.open-digger.cn/repo_list.csv) and [`user_list.csv`](https://oss.open-digger.cn/user_list.csv), where:
 
-- [OpenSODA 2023](https://competition.atomgit.com/competitionInfo?id=bc6603e0b8bf11ed804e6b78b4426d45).
-- [PaddlePaddle Hackathon 3rd](https://www.paddlepaddle.org.cn/PaddlePaddleHackathon-2022-6), the hackathon final reports are [here](https://github.com/X-lab2017/open-digger/tree/master/cooperations/paddle_hackathon_3rd).
+- The structure of `repo_list.csv` rows is `id,platform,repo_name`, meaning database ID, platform name, and full repository name separated by a comma.
+- The structure of `user_list.csv` rows is `id,platform,login`, meaning database ID, platform name, and user login name separated by a comma.
 
-## Communication
+The database ID is a unique ID on the corresponding platform, consistent with the data of each platform; ***the platform name and database ID uniquely identify a repository or user***.
 
-Welcome to join the WeChat group by scanning the QRCode and I will invite you into our WeChat group.
+For OpenDigger's export strategy, please refer to the export table section in the developer documentation.
 
-![qrcode](@site/static/img/wechat-qrcode.jpeg)
+> The search components for various repositories and users on the OpenDigger official webpage use these two files for local browsing.
 
-## License
+## Metadata
 
-We use [Apache-2.0 license](https://github.com/X-lab2017/open-digger/blob/master/LICENSE) for code part, please make sure abide by the licenses when using the project.
+For the exported repositories and users, OpenDigger also exports a metadata file available at:
+
+Repository: `https://oss.open-digger.cn/{platform}/{org/login}/meta.json` (example: [OpenDigger metadata](https://oss.open-digger.cn/github/X-lab2017/open-digger/meta.json))
+
+User: `https://oss.open-digger.cn/{platform}/{org/login}/{repo}/meta.json` (example: [User metadata](https://oss.open-digger.cn/github/frank-zsy/meta.json))
+
+The metadata includes the following fields:
+
+- `updatedAt`: Data update timestamp.
+- `type`: Repository or user type, values are `repo` or `user`.
+- `id`: Unique ID of the repository or user in the platform's database.
+- `labels`: Tags associated with the repository or user in OpenDigger. For details, please refer to the relevant documentation on tag data.
+
+For example, for the [OpenDigger](https://github.com/X-lab2017/open-digger) repository, its metadata is:
+
+```json
+{
+  "updatedAt": 1725221391661,     // Update timestamp
+  "type": "repo",                 // Metadata type
+  "id": 288431943,                // Unique ID of the repository on GitHub
+  "labels": [                     // Tags associated with the repository
+    {
+      "id": ":communities/mulan", // Mulan Community
+      "name": "Mulan",
+      "type": "Community"
+    },
+    {
+      "id": ":communities/xlab",  // X-lab Community
+      "name": "X-lab",
+      "type": "Community"
+    },
+    {
+      "id": ":communities/xlab/open_digger",  // OpenDigger Project
+      "name": "OpenDigger",
+      "type": "Project"
+    },
+    {
+      "id": ":regions/CN",        // China Project
+      "name": "China",
+      "type": "Region"
+    }
+  ]
+}
+```
+
+## FAQ
+
+#### Q: Does OpenDigger's metric data support integration into other applications?
+
+A: Yes, OpenDigger's metric data is open for downstream application integration. OpenDigger adds `Access-Control-Allow-Origin: *` to the response header of exported static data, ensuring cross-origin usage. If your website has strict domain requirements for response headers, you may need to implement a service for data forwarding. In fact, OpenDigger data is already used in many downstream applications such as HyperCRX, OpenLeaderboard, OSGraph, etc.
+
+#### Q: Do applications need to implement their own caching strategy for metric data?
+
+A: Browser applications can directly use the data without caching. OpenDigger includes the `Expires` field in the response header for metric data, allowing browsers to determine that they can retrieve data directly from disk cache until the 2nd of the next month after a monthly update, avoiding redundant remote data requests.
+
+#### Q: What might cause a metric file to be unavailable when accessed?
+
+A: If a metric file is unavailable, it may be due to the following reasons:
+- The repository or user is not within the export range. You can check metadata to determine if they are included in the export range; if metadata exists, then the data has been exported.
+- The repository does not have corresponding events. For example, some Apache projects do not use GitHub Issues (e.g., [Flink](https://github.com/apache/flink)), and thus relevant metric files may not exist.
+
+#### Q: Why might some specific months or quarters be missing keys in the metric file?
+
+A: If a repository or user does not have certain types of events during a specific period, the corresponding keys in the metrics data will be absent. The metrics data will not contain `0` values, leading to potential discontinuities in the keys.
