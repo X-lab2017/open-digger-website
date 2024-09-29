@@ -335,6 +335,8 @@ For example, for the [OpenDigger](https://github.com/X-lab2017/open-digger) repo
 }
 ```
 
+> Due to the existence of [missing data](../data_sources/github#missing-data) in OpenDigger's GitHub data source, if the key `2021-10-raw` exists, it represents the raw value of the metric data. To ensure temporal continuity in the metric data, the corresponding `2021-10` metric value is calculated as an interpolation result based on the values from two months before and after. For specific code, please refer to [here](https://github.com/X-lab2017/open-digger/blob/master/src/cron/tasks/monthly_export.ts#L176).
+
 ## Export Range
 
 OpenDigger does not export metrics data for all repositories and users. The specific exported repositories and user lists can be found in [`repo_list.csv`](https://oss.open-digger.cn/repo_list.csv) and [`user_list.csv`](https://oss.open-digger.cn/user_list.csv), where:
