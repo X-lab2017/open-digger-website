@@ -1,41 +1,47 @@
-# Global OpenRank
+# Global OpenRank Influence
 
-![From](https://img.shields.io/badge/来自-X--lab-blue) ![For](https://img.shields.io/badge/用于-项目/开发者-blue)
+![From](https://img.shields.io/badge/From-X--lab-blue) ![For](https://img.shields.io/badge/For-Projects/Developers-blue)
 
-## 定义
+## Definition
 
-全域 OpenRank 是一个由 X-lab 开放实验室提出的开源指标，该指标由赵生宇博士提出，关于全域  OpenRank 的算法细节可以参考[这篇博客](https://blog.frankzhao.cn/how_to_measure_open_source_3)。
+Global OpenRank Influence is an open-source metric proposed by Dr. Frank Zhao from X-lab. For detailed information on the Global OpenRank Influence algorithm, you can refer to [this blog post](https://blog.frankzhao.cn/how_to_measure_open_source_3).
 
-全域 OpenRank 是`活跃度`指标的一个下游指标，借鉴了`活跃度`来构建 GitHub 全域项目与开发者之间的一个协作网络，其网络模型是：
+Global OpenRank Influence is a downstream metric of the [`activity`](./activity) metric, which is used to build a collaboration network between global open source repositories and developers. Its network model is:
 
+<div style={{'text-align':'center'}}>
+  <embed src="/en/img/global_openrank.svg?bg_color=lightblue&lang=en" width="80%" />
+</div>
 
-```mermaid
-graph TD
-    classDef rounded rx:5,ry:5;
-    
-    Developer["开发者\n---------------------\nOpenRank | 数值"]:::rounded
-    repo["仓库\n---------------------\nOpenRank | 数值"]:::rounded
+## Value Proposition
 
-    Developer --> |活跃| repo
-```
-<br/>
+Global OpenRank Influence constructs a collaboration network using the relationships between all global developers and repositories and evaluates them using the OpenRank algorithm. Its core value propositions are:
 
-在全域 OpenRank 指标的实现中，使用`活跃度`指标作为开发者与仓库之间的边的权重，从而构建出全域协作网络来计算网络中每个节点在每个月的全域 OpenRank 值。但与`活跃度`不同的地方在于，我们并没有对开发者的加权活跃值进行开方运算，这是由于`活跃度`指标中的开方运算是为了将社区参与人数（社区规模）的因素引入到指标计算中，但对于协作网络而言，社区参与人数这个变量已经隐含在了网络结构中。
+- Projects with greater influence are more likely to attract more influential developers to deeply participate.
+- More deep participation in highly influential projects will make developers more influential.
+- The calculation of Global OpenRank partially inherits historical data, reflecting an emphasis on long-termism.
 
-与传统 PageRank 不同之处在于，计算中每个节点的全域 OpenRank 值将不仅仅依赖于当月的协作网络结构，并且也部分依赖于该节点在上个月的全域 OpenRank 值。即对于全域协作网络中的每个开发者和仓库节点，会部分的继承其历史的 OpenRank 值，这里也是体现了开源中珍视长期价值的价值观。
+## Metric Features
 
-## 代码
+- Since OpenRank is a network metric built based on collaboration relationships, it is more robust compared to statistical metrics. Even without additional processing, OpenRank remains smooth and reliable even in the case of significant data loss.
+- Through network relationships, it effectively identifies and filters out highly active nodes caused by automated behavior, preventing them from achieving high rankings due to high activity (e.g., [pddemo](https://github.com/pddemo/demo)).
+- Due to its emphasis on long-term value, repositories that serve as learning platforms for many junior developers do not receive very high rankings, as the developers participating in these projects are mostly new to the open source world, while senior developers typically do not engage deeply (e.g., [first-contributions](https://github.com/firstcontributions/first-contributions)).
 
-由于全域 OpenRank 是基于 Neo4j 数据库的图指标实现，我们并没有在 OpenDigger 中完全开源全域 OpenRank 的计算代码。但我们将每月的结算结果导入到了 ClickHouse 数据库中，因此依然可以通过 OpenDigger 的[代码](https://github.com/X-lab2017/open-digger/blob/master/src/metrics/indices.ts#L21)来访问各项目与开发者的全域 OpenRank 值。
+## Code
 
-## 参数
+Here is the [**implementation code**](https://github.com/X-lab2017/open-digger/blob/master/src/cron/tasks/global_openrank.ts).
 
-全域 OpenRank 的计算中包含的参数如下：
+The underlying Neo4j [plugin project](https://github.com/X-lab2017/openrank-neo4j-gds) used for calculating general OpenRank has been open-sourced. Feel free to use it.
 
-| 参数名 | 值 | 参数描述 | 注 |
-| :------------- | :---- | :---------- | :--- |
-| OpenRank 默认值 | 1.0 | 协作网中新节点的默认值，例如新加入网络的开发者节点与新仓库 | |
-| 开发者继承比例 | 0.5 | 开发者节点对于上个月 OpenRank 的依赖比例 | 该算法认为相较于仓库，开发者的价值更应体现出开源中的长期价值，因此开发者对于历史价值的依赖度较高 |
-| 仓库继承比例 | 0.3 | 仓库节点对于上个月 OpenRank 的依赖比例 | |
-| OpenRank 衰减系数 | 0.85 | 对于当月不活跃的开发者和仓库节点的 OpenRank 衰减比例 | OpenRank 价值并不会因为开发者或仓库仅在某月不活跃就直接清零 |
-| OpenRank 最小值 | 0.1 | 当节点 OpenRank 衰减值该值以下时清空节点 OpenRank | |
+## Parameters
+
+The parameters included in the calculation of Global OpenRank are as follows:
+
+| Parameter Name             | Value                      | Description                                                       | Notes                                                                |
+| :------------------------- | :------------------------- | :----------------------------------------------------------------- | :------------------------------------------------------------------- |
+| Repository OpenRank Default Value | $0$                        | Default value for new repository nodes in the collaboration network | The algorithm assumes that the value in the collaboration network should come from developer activity, so repository nodes do not provide initial value by default. |
+| Developer OpenRank Default Value  | $0$                        | Default value for new developer nodes in the collaboration network  | The algorithm assumes that the value in the collaboration network comes from developer activity, so developers do not provide initial value by default.  |
+| Developer OpenRank Increment     | $min(1,a/88.17)$           | Developer node OpenRank increment in each calculation               | All value in the network comes from the OpenRank increment generated by developer activity during the month. 88.17 is the 75th percentile of global developer monthly activity distribution; values greater than this are capped at 1, while lower values decay linearly. |
+| Developer Inheritance Ratio      | $0.5$                      | Developer node dependency ratio on the previous month's OpenRank    | The algorithm assumes that, compared to repositories, the value of developers should better reflect long-term value in open source, so developers have a higher dependency on historical value. |
+| Repository Inheritance Ratio     | $0.3$                      | Repository node dependency ratio on the previous month's OpenRank   |                                                                      |
+| OpenRank Decay Coefficient       | $0.85$                     | OpenRank decay ratio for inactive developers and repository nodes   | All nodes, whether active or not, will experience some decay each month, requiring additional developer activity to maintain the network's value. |
+| OpenRank Minimum Value           | $1$                        | When a node's OpenRank decays below this value, its OpenRank is cleared |                                                                      |

@@ -32,28 +32,28 @@ Feel free to use the data to construct your own data application and you can ref
     </thead>
     <tbody>
       <tr>
-        <td class="centered-cell"><a href="metrics/openrank/global_openrank"><b>Repo Global OpenRank</b></a></td>
+        <td class="centered-cell"><a href="metrics/global_openrank"><b>Repo Global OpenRank</b></a></td>
         <td class="centered-cell"><a href="https://blog.frankzhao.cn/how_to_measure_open_source_2/">X-lab</a></td>
         <td class="centered-cell"><a href="https://oss.open-digger.cn/github/X-lab2017/open-digger/openrank.json">openrank.json</a></td>
         <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/indices.ts#L25">Link</a></td>
         <td class="centered-cell"><a href="https://codepen.io/frank-zsy/pen/bGjyqQj?type=openrank">Demo</a></td>
       </tr>
       <tr>
-        <td class="centered-cell"><a href="metrics/openrank/global_openrank"><b>Developer Global OpenRank</b></a></td>
+        <td class="centered-cell"><a href="metrics/global_openrank"><b>Developer Global OpenRank</b></a></td>
         <td class="centered-cell"><a href="https://blog.frankzhao.cn/how_to_measure_open_source_3/">X-lab</a></td>
         <td class="centered-cell"><a href="https://oss.open-digger.cn/github/frank-zsy/openrank.json">openrank.json</a></td>
         <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/indices.ts#L57">Link</a></td>
         <td class="centered-cell"><a href="https://codepen.io/frank-zsy/pen/bGjyqQj?type=openrank&name=frank-zsy">Demo</a></td>
       </tr>
       <tr>
-        <td class="centered-cell"><a href="metrics/openrank/community_openrank"><b>Repo Community OpenRank</b></a></td>
+        <td class="centered-cell"><a href="metrics/community_openrank"><b>Repo Community OpenRank</b></a></td>
         <td class="centered-cell"><a href="https://blog.frankzhao.cn/how_to_measure_open_source_3/">X-lab</a></td>
         <td class="centered-cell"><a href="https://oss.open-digger.cn/github/X-lab2017/open-digger/community_openrank.json">community_openrank.json</a></td>
         <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/indices.ts#L94">Link</a></td>
         <td class="centered-cell"><a href="https://codepen.io/frank-zsy/pen/abjMXBV">Demo</a></td>
       </tr>
       <tr>
-        <td class="centered-cell"><a href="metrics/openrank/community_openrank"><b>Developer Community OpenRank</b></a></td>
+        <td class="centered-cell"><a href="metrics/community_openrank"><b>Developer Community OpenRank</b></a></td>
         <td class="centered-cell"><a href="https://blog.frankzhao.cn/how_to_measure_open_source_3/">X-lab</a></td>
         <td class="centered-cell">-</td>
         <td class="centered-cell"><a href="https://github.com/X-lab2017/open-digger/blob/master/src/metrics/indices.ts#L176">Link</a></td>

@@ -1,4 +1,4 @@
-# 社区 OpenRank
+# 社区 OpenRank 贡献度
 
 ![From](https://img.shields.io/badge/来自-X--lab-blue) ![For](https://img.shields.io/badge/用于-开发者-blue)
 
@@ -8,21 +8,24 @@
 
 与全域 OpenRank 指标的计算方法类似，该算法使用项目内的 Issue、PR 等协作数据来构建网络，其网络模型为：
 
-<br/>
-
 ```mermaid
-graph TD
-    classDef rounded rx:5,ry:5;
-    
-    Developer["开发者\n---------------------\nOpenRank | 数值"]:::rounded
-    issue["issue\n---------------------\nOpenRank | 数值"]:::rounded
-    pull_request["pull_request\n---------------------\nOpenRank | 数值"]:::rounded
-    repo["仓库\n---------------------\nOpenRank | 数值"]:::rounded
-
-    Developer -->|活跃| issue
-    Developer -->|活跃| pull_request
-    issue -->|属于| repo
-    pull_request -->|属于| repo
+erDiagram
+  Issue }|--|| Repo: belong
+  ChangeRequest }|--|| Repo: belong
+  Developer }|--|{ Issue: activity
+  Developer }|--|{ ChangeRequest: activity
+  Repo {
+    OpenRank number
+  }
+  ChangeRequest {
+    OpenRank number
+  }
+  Issue {
+    OpenRank number
+  }
+  Developer {
+    OpenRank number
+  }
 ```
 
 ## 代码
