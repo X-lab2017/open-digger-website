@@ -9,7 +9,7 @@ Global OpenRank Influence is an open-source metric proposed by Dr. Frank Zhao fr
 Global OpenRank Influence is a downstream metric of the [`activity`](./activity) metric, which is used to build a collaboration network between global open source repositories and developers. Its network model is:
 
 <div style={{'text-align':'center'}}>
-  <embed src="https://open-digger.cn/en/img/global_openrank.svg?bg_color=lightblue&lang=en" width="80%" />
+  <embed src="/img/global_openrank.svg?bg_color=lightblue&lang=en" width="80%" alt="Global OpenRank" />
 </div>
 
 ## Value Proposition

@@ -9,7 +9,7 @@
 全域 OpenRank 影响力是[`活跃度`](./activity)指标的一个下游指标，借鉴了`活跃度`来构建 GitHub 全域项目与开发者之间的一个协作网络，其网络模型是：
 
 <div style={{'text-align':'center'}}>
-  <embed src="https://open-digger.cn/img/global_openrank.svg?bg_color=lightblue&lang=zh" width="80%" />
+  <embed src="/img/global_openrank.svg?bg_color=lightblue&lang=zh" width="80%" alt="Global OpenRank" />
 </div>
 
 ## 价值主张

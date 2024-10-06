@@ -40,6 +40,7 @@ const config: Config = {
   customFields: {
     ossBaseUrl: 'https://oss.open-digger.cn/',
     pullNumber: process.env.PULL_NUM,
+    imagePath: process.env.PULL_NUM ? `/pull_${process.env.PULL_NUM}/img/` : '/img/',
   },
 
   presets: [
