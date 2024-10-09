@@ -30,7 +30,7 @@ The activity data contains the historical activity statistics of the repository,
 
 ## Code
 
-Here's the [**implementation code**](https://github.com/X-lab2017/open-digger/blob/master/src/metrics/indices.ts#L185).
+Here's the [**implementation code**](https://github.com/X-lab2017/open-digger/blob/master/src/metrics/indices.ts#L277).
 
 
 ## CodePen Demo

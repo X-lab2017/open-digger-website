@@ -28,7 +28,7 @@
 
 ## 代码
 
-这里是[**实现代码**](https://github.com/X-lab2017/open-digger/blob/master/src/metrics/indices.ts#L185)。
+这里是[**实现代码**](https://github.com/X-lab2017/open-digger/blob/master/src/metrics/indices.ts#L277)。
 
 ## CodePen 演示
 

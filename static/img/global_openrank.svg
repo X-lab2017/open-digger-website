@@ -36,7 +36,7 @@
       stroke-linecap: round;
     }
     .bg {
-      fill: transparent;
+      fill: #ececfe;
       rx: 0;
       ry: 0;
       stroke: none;
