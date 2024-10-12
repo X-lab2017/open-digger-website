@@ -221,7 +221,7 @@
 
   <text id="title_text" class="title" x="300" y="26"></text>
 
-  <rect x="5" y="50" width="250" height="250"/>
+  /* <rect x="5" y="50" width="250" height="250"/> */
   <text id="repo_text" x="60" y="110">Repo</text>
   <circle id="repo_circle" cx="60" cy="110" r="40" onmouseenter="show(evt)" onmouseleave="hide(evt)" />
   <text id="dev_text" x="195" y="110">Developer</text>
@@ -233,7 +233,7 @@
   <path id="bg_dev_line" d="M 195 152 L 172 240" onmouseenter="show(evt)" onmouseleave="hide(evt)" />
   <path id="bg_repo_line" d="M 60 152 L 88 240" onmouseenter="show(evt)" onmouseleave="hide(evt)" />
   
-  <rect x="260" y="50" width="330" height="250"/>
+  /* <rect x="260" y="50" width="330" height="250"/> */
   <g>
     <foreignObject x="265" y="45" width="320" height="250"
       requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
