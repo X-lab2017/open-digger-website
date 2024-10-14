@@ -79,11 +79,11 @@
         "dev_circle", {
           "中文": "每个开发者节点是 GitHub、Gitee 等平台中的一个账号。<br /><br />" + 
           "在全域 OpenRank 算法中，我们认为开发者的活跃度是开源世界的基础价值，因此新开发者节点的初值为 0，而开发者节点每月的价值是其初值加上当月活跃带来的新 OpenRank 增长。<br /><br />" +
-          "开发者活跃会为开发者节点在当月带来的增长计算方式为 min(1,a/88.17)，其中 88.17 为全域开发者每月活跃度分布的 75% 分位数，大于该值则均为 1，小于该值则线性衰减。这种设置尽可能少的引入活跃度高低对网络的影响，而只使用网络关系进行计算。但对于活跃很低的开发者，还是衰减了其增加值，从而避免短期现象级项目或短期活动吸引到大量低活跃开发者带来的影响。<br /><br />" +
+          "开发者活跃会为开发者节点在当月带来的增长计算方式为 1/(1+e^(0.1*(-x+44.08)))，其中 44.08 为全域开发者每月活跃度分布上四分位数的一半，大于该值则均为 1，小于该值则线性衰减。这种设置尽可能少的引入活跃度高低对网络的影响，而只使用网络关系进行计算。但对于活跃很低的开发者，还是衰减了其增加值，从而避免短期现象级项目或短期活动吸引到大量低活跃开发者带来的影响。<br /><br />" +
           "为防止 OpenRank 值的无限增长，所有开发者节点，无论当月是否活跃，其 OpenRank 值均有 85% 的衰减。",
           "EN": "Each developer node represents an account on platforms such as GitHub or Gitee.<br />" +
           "In the global OpenRank algorithm, we believe that developer activity is the fundamental value in the open source world. Therefore, the initial value of a new developer node is set to 0, and the value of a developer node each month is the sum of its initial value and the new OpenRank growth brought by activity during the month.<br />" +
-          "The growth brought by developer activity to a developer node during the month is calculated as min(1,a/88.17), where 88.17 is the 75th percentile of the monthly activity distribution of all global developers. If the value is greater than this threshold, it is set to 1; otherwise, it decays linearly. This setting minimizes the impact of high or low activity on the network and only uses network relationships for calculation.<br />" +
+          "The growth brought by developer activity to a developer node during the month is calculated as 1/(1+e^(0.1*(-x+44.08))), where 44.08 is half of the 75th percentile of the monthly activity distribution of all global developers. If the value is greater than this threshold, it is set to 1; otherwise, it decays linearly. This setting minimizes the impact of high or low activity on the network and only uses network relationships for calculation.<br />" +
           "To prevent the unlimited growth of OpenRank values, all developer nodes, regardless of their activity during the month, experience an 85% decay in their OpenRank value."
         }
       ], [
