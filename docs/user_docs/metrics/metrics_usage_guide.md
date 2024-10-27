@@ -1,7 +1,7 @@
 # 指标使用指南
 
 ## 基本使用
-
+test
 OpenDigger 实现的所有指标对所有人开放使用，OpenDigger 的静态数据根链接为：
 
 `https://oss.open-digger.cn/{platform}/{org/login}/{repo}/`
