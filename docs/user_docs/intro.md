@@ -352,7 +352,7 @@ OpenDigger 社区也主办或参加社区间的合作活动，如竞赛或黑客
 
 ## 贡献指南
 
-在对项目贡献之前，请务必查阅我们的[贡献指南](intro)。
+在对项目贡献之前，请务必查阅我们的[贡献指南](https://github.com/X-lab2017/open-digger/blob/master/docs/CONTRIBUTING.md)。
 
 ## 沟通
 
