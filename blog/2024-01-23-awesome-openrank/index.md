@@ -1,5 +1,4 @@
 ---
-slug: awesome-openrank
 title: OpenRank 资源清单
 authors: [ww]
 tags: [openrank]
