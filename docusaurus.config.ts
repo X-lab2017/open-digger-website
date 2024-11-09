@@ -97,7 +97,7 @@ const config: Config = {
 
   themeConfig:
     ({
-      image: 'img/logo/logo-black-blue-combination-vertical.png',
+      image: 'img/logo/logo-blue-round-corner.png',
       navbar: {
         title: 'OpenDigger',
         logo: {
