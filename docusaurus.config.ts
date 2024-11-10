@@ -49,16 +49,12 @@ const config: Config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          editUrl: ({ locale, docPath }) =>
-            `https://raw.githubusercontent.com/X-lab2017/open-digger-website/master/${locale === defaultLocale ? 'docs/' : `i18n/${locale}/docusaurus-plugin-content-docs/current/`}${docPath}`,
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
         },
         blog: {
           showReadingTime: true,
           blogSidebarTitle: 'Recent Posts',
-          editUrl: ({ blogDirPath, blogPath, locale }) =>
-            `https://raw.githubusercontent.com/X-lab2017/open-digger-website/master/${locale === defaultLocale ? `${blogDirPath}/${blogPath}` : `i18n/${locale}/docusaurus-plugin-content-blog/${blogPath}`}`,
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
         },
