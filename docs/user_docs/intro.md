@@ -2,6 +2,8 @@
 
 [![apache2](https://img.shields.io/badge/license-Apache%202-blue)](https://github.com/X-lab2017/open-digger/blob/master/LICENSE) [![](https://img.shields.io/badge/Data-OpenDigger-2097FF)](https://github.com/X-lab2017/open-digger) [![Node.js CI](https://github.com/X-lab2017/open-digger/actions/workflows/node_ci.yml/badge.svg?branch=master)](https://github.com/X-lab2017/open-digger/actions/workflows/node_ci.yml)
 
+Test
+
 [OpenDigger](https://github.com/X-lab2017/open-digger) 是由 X-lab 发起的一个开源数据分析与指标生产开源项目，这个项目旨在凝聚全球开发者的智慧共同对开源相关数据进行分析统计，以使开发者可以更好的理解和参与开源。
 
 ## 指标使用
