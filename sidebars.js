@@ -35,6 +35,10 @@ const sidebars = {
         {
           type: 'category',
           label: 'openrank',
+          link: {
+            type: 'doc',
+            id: 'user_docs/metrics/openrank',
+          },
           collapsed: false,
           items: [
             'user_docs/metrics/global_openrank',
