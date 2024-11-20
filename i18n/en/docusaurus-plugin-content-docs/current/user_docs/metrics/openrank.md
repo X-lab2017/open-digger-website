@@ -14,7 +14,7 @@ The PageRank algorithm was proposed in 1998 by Google founders Larry Page and Se
 
 Inspired by PageRank, OpenRank has been optimized and expanded upon, allowing the network algorithm to introduce initial values as inherent attributes for nodes and supporting the extension of nodes' centrality to higher-dimensional spaces.
 
-The introduction of initial values for nodes allows, in practical applications, for the centrality of nodes to inherit historical data, thus maintaining good temporal continuity, while
+The introduction of initial values for nodes allows, in practical applications, for the centrality of nodes to inherit historical data, thus maintaining good temporal continuity which has a great supports for the data insight.
 
 OpenRank in open source is composed of two sub-algorithms: [Global OpenRank Influence Algorithm](global_openrank) and [Community OpenRank Contribution Algorithm](community_openrank).
 
