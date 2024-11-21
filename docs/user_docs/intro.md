@@ -4,6 +4,8 @@
 
 [OpenDigger](https://github.com/X-lab2017/open-digger) 是由 X-lab 发起的一个开源数据分析与指标生产开源项目，这个项目旨在凝聚全球开发者的智慧共同对开源相关数据进行分析统计，以使开发者可以更好的理解和参与开源。
 
+Test
+
 ## 指标使用
 
 OpenDigger 实现的所有指标对所有人开放使用, OpenDigger 的静态数据根链接为 `https://oss.open-digger.cn/{platform}/{org/login}/{repo}/`，其中 `platform` 支持 `github` 和 `gitee`，只需要替换 `org/repo` 或用户 `login` 即可获取数据。
