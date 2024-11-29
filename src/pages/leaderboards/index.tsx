@@ -1,0 +1,52 @@
+import React, { useEffect, useState } from 'react';
+import Layout from '@theme/Layout';
+import SimpleTable from '../../components/SimpleTable';
+import { translate } from '@docusaurus/Translate';
+import axios from 'axios';
+import styles from './styles.module.css';
+
+function OpenLeaderboard() {
+
+  const [title, setTitle] = useState('Ranking List Title');
+  const [data, setData] = useState([]);
+  const [options, setOptions] = useState([]);
+
+  useEffect(() => {
+    const search = new URLSearchParams(window.location.search);
+    const type = search.get('type');
+    if (!type) {
+      alert('You need to set a leaderboard type first.');
+      return;
+    }
+    if (type === 'projects') {
+      axios.get(`https://oss.open-digger.cn/leaderboards/${type}.json`).then(resp => {
+        const data = resp.data;
+        setTitle(translate({ id: 'leaderboards.projects.title' }));
+        setData(data.data);
+        setOptions([
+          { name: '#', type: 'String', fields: ['rank'], width: 80 },
+          { name: translate({ id: 'leaderboards.projects.name' }), type: 'StringWithIcon', fields: ['name', 'logo'], width: 250 },
+          { name: 'OpenRank', type: 'String', fields: ['openrank'], width: 150 },
+          { name: translate({ id: 'leaderboards.projects.initiator' }), type: 'StringWithIcon', fields: ['initiator', 'initiatorLogo'], width: 250 },
+          { name: translate({ id: 'leaderboards.projects.country' }), type: 'String', fields: ['country'], width: 250 },
+        ]);
+      }).catch(e => {
+        console.log(e);
+      });
+    } else {
+      alert(`Leaderboard type ${type} is not supported.`);
+    }
+
+  }, []);
+
+  return (
+    <Layout>
+      <div className={styles.mainRankingList} >
+        <SimpleTable title={title} data={data} options={options}
+        />
+      </div>
+    </Layout>
+  );
+}
+
+export default OpenLeaderboard;

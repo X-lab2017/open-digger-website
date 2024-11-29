@@ -84,18 +84,6 @@ const config: Config = {
         indexDocs: true,
       },
     ],
-    [
-      path.resolve(__dirname, 'plugin-dynamic-routes/index.ts'),
-      {
-        routes: [
-          {
-            path: '/leaderboards',
-            exact: false,
-            component: '../src/pages/leaderboards_page/index.tsx',
-          }
-        ]
-      }
-    ],
   ],
 
   themes: ['@docusaurus/theme-mermaid'],
