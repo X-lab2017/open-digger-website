@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import Layout from '@theme/Layout';
 import { useLocation } from '@docusaurus/router';
 import SimpleTable from '../../components/SimpleTable';
-import styles from './styles.module.css';
-import axios from 'axios';
 import { translate } from '@docusaurus/Translate';
+import axios from 'axios';
+import styles from './styles.module.css';
 
 function OpenLeaderboard() {
   const location = useLocation();
@@ -17,7 +17,6 @@ function OpenLeaderboard() {
   useEffect(() => {
     axios.get(`https://oss.open-digger.cn/leaderboards/${leaderboardId}.json`).then(resp => {
       const data = resp.data;
-      console.table(data);
       setTitle(translate({ id: 'leaderboards.projects.title' }));
       setData(data.data);
       switch (leaderboardId) {
