@@ -393,5 +393,17 @@
   },
   "communityLeaderboard.noDataForMonth": {
     "message": "No data found for this month"
+  },
+  "leaderboards.projects.title": {
+    "message": "2024 Global Project OpenRank Leaderboard Top 100"
+  },
+  "leaderboards.projects.name": {
+    "message": "Project Name"
+  },
+  "leaderboards.projects.initiator": {
+    "message": "Initiator"
+  },
+  "leaderboards.projects.country": {
+    "message": "Initiator Country"
   }
 }

@@ -9,7 +9,7 @@ interface NameWithIconProps {
 export const NameWithIcon = ({ icon, name, rounded }: NameWithIconProps) => {
   return (
     <div className={styles.nameContainer}>
-      <img src={icon} alt="" className={`${styles.icon} ${rounded ? styles.iconRounded : ''}`} />
+      {icon && <img src={icon} alt="" className={`${styles.icon} ${rounded ? styles.iconRounded : ''}`} />}
       <span className={styles.ellipsis}>{name}</span>
     </div>
   )
