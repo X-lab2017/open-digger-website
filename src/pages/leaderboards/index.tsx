@@ -13,10 +13,9 @@ function OpenLeaderboard() {
 
   useEffect(() => {
     const search = new URLSearchParams(window.location.search);
-    const type = search.get('type');
+    let type = search.get('type');
     if (!type) {
-      alert('You need to set a leaderboard type first.');
-      return;
+      type = 'projects';
     }
     if (type === 'projects') {
       axios.get(`https://oss.open-digger.cn/leaderboards/${type}.json`).then(resp => {
