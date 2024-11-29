@@ -89,7 +89,7 @@ const config: Config = {
       {
         routes: [
           {
-            path: process.env.PULL_NUM ? `/pull_${process.env.PULL_NUM}/leaderboards` : '/leaderboards',
+            path: '/leaderboards',
             exact: false,
             component: '../src/pages/leaderboards/index.tsx',
           }
