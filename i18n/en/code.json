@@ -400,6 +400,9 @@
   "leaderboards.projects.name": {
     "message": "Project Name"
   },
+  "leaderboards.projects.developers": {
+    "message": "Developers"
+  },
   "leaderboards.projects.initiator": {
     "message": "Initiator"
   },

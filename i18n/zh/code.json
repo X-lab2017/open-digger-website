@@ -400,6 +400,9 @@
   "leaderboards.projects.name": {
     "message": "项目名"
   },
+  "leaderboards.projects.developers": {
+    "message": "社区规模"
+  },
   "leaderboards.projects.initiator": {
     "message": "发起组织"
   },

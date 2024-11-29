@@ -25,10 +25,11 @@ function OpenLeaderboard() {
         setData(data.data);
         setOptions([
           { name: '#', type: 'String', fields: ['rank'], width: 80 },
-          { name: translate({ id: 'leaderboards.projects.name' }), type: 'StringWithIcon', fields: ['name', 'logo'], width: 250 },
-          { name: 'OpenRank', type: 'String', fields: ['openrank'], width: 150 },
+          { name: translate({ id: 'leaderboards.projects.name' }), type: 'StringWithIcon', fields: ['name', 'logo'], width: 200 },
+          { name: 'OpenRank', type: 'String', fields: ['openrank'], width: 180 },
+          { name: translate({ id: 'leaderboards.projects.developers' }), type: 'String', fields: ['developerCount'], width: 180 },
           { name: translate({ id: 'leaderboards.projects.initiator' }), type: 'StringWithIcon', fields: ['initiator', 'initiatorLogo'], width: 250 },
-          { name: translate({ id: 'leaderboards.projects.country' }), type: 'String', fields: ['country'], width: 250 },
+          { name: translate({ id: 'leaderboards.projects.country' }), type: 'String', fields: ['country'], width: 150 },
         ]);
       }).catch(e => {
         console.log(e);
