@@ -160,6 +160,11 @@ const config: Config = {
         copyright: `Copyright © ${new Date().getFullYear()} X-lab<br>
           <a href="https://beian.miit.gov.cn/" target="_blank">浙ICP备18048778号-4</a>`,
       },
+      colorMode: {
+        defaultMode: 'light',
+        disableSwitch: true,
+        respectPrefersColorScheme: false,
+      },
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
