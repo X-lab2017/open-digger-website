@@ -3,6 +3,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 import { themes as prismThemes } from 'prism-react-renderer';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
+import path from 'path';
 
 const defaultLocale = 'zh';
 
@@ -83,7 +84,18 @@ const config: Config = {
         indexDocs: true,
       },
     ],
-    require.resolve("docusaurus-plugin-image-zoom"),
+    [
+      path.resolve(__dirname, 'plugin-dynamic-routes/index.ts'),
+      {
+        routes: [
+          {
+            path: '/leaderboards',
+            exact: false,
+            component: '../src/pages/leaderboards_page/index.tsx',
+          }
+        ]
+      }
+    ],
   ],
 
   themes: ['@docusaurus/theme-mermaid'],

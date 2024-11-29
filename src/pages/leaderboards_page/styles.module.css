@@ -1,0 +1,13 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow-y: hidden;
+}
+
+.mainRankingList {
+  width: 1200px;
+  height: 80vh;
+  margin: auto;
+  overflow: hidden;
+}

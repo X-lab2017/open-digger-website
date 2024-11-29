@@ -393,5 +393,17 @@
   },
   "communityLeaderboard.noDataForMonth": {
     "message": "当月数据未找到"
+  },
+  "leaderboards.projects.title": {
+    "message": "2024 全球项目 OpenRank 排行榜 Top 100"
+  },
+  "leaderboards.projects.name": {
+    "message": "项目名"
+  },
+  "leaderboards.projects.initiator": {
+    "message": "发起组织"
+  },
+  "leaderboards.projects.country": {
+    "message": "发起组织所在国家"
   }
 }
