@@ -86,10 +86,10 @@ const config: Config = {
     ],
     [
       path.resolve(__dirname, 'plugin-dynamic-routes/index.ts'),
-      { // this is the options object passed to the plugin
+      {
         routes: [
-          { // using Route schema from react-router
-            path: '/leaderboards',
+          {
+            path: process.env.PULL_NUM ? `/pull_${process.env.PULL_NUM}/leaderboards` : '/leaderboards',
             exact: false,
             component: '../src/pages/leaderboards/index.tsx',
           }
