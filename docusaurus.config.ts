@@ -89,7 +89,7 @@ const config: Config = {
       {
         routes: [
           {
-            path: '/leaderboards/',
+            path: '/leaderboards',
             exact: false,
             component: '../src/pages/leaderboards_page/index.tsx',
           }
