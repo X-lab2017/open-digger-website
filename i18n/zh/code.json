@@ -401,12 +401,27 @@
     "message": "项目名"
   },
   "leaderboards.projects.developers": {
-    "message": "社区规模"
+    "message": "开发者规模"
   },
   "leaderboards.projects.initiator": {
     "message": "发起组织"
   },
   "leaderboards.projects.country": {
     "message": "发起组织所在国家"
+  },
+  "leaderboards.companies.title": {
+    "message": "2024 全球企业 OpenRank 排行榜 Top 100"
+  },
+  "leaderboards.companies.name": {
+    "message": "企业"
+  },
+  "leaderboards.companies.repos": {
+    "message": "仓库数量"
+  },
+  "leaderboards.companies.developers": {
+    "message": "开发者规模"
+  },
+  "leaderboards.companies.country": {
+    "message": "所在国家"
   }
 }

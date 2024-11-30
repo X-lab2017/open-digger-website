@@ -408,5 +408,20 @@
   },
   "leaderboards.projects.country": {
     "message": "Initiator Country"
+  },
+  "leaderboards.companies.title": {
+    "message": "2024 Global Company OpenRank Leaderboard Top 100"
+  },
+  "leaderboards.companies.name": {
+    "message": "Company Name"
+  },
+  "leaderboards.companies.repos": {
+    "message": "Repos Count"
+  },
+  "leaderboards.companies.developers": {
+    "message": "Developers Count"
+  },
+  "leaderboards.companies.country": {
+    "message": "Country"
   }
 }

@@ -33,6 +33,22 @@ function OpenLeaderboard() {
       }).catch(e => {
         console.log(e);
       });
+    } else if (type === 'companies') {
+      axios.get(`https://oss.open-digger.cn/leaderboards/${type}.json`).then(resp => {
+        const data = resp.data;
+        setTitle(translate({ id: 'leaderboards.companies.title' }));
+        setData(data.data);
+        setOptions([
+          { name: '#', type: 'String', fields: ['rank'], width: 80 },
+          { name: translate({ id: 'leaderboards.companies.name' }), type: 'StringWithIcon', fields: ['name', 'logo'], width: 300 },
+          { name: 'OpenRank', type: 'String', fields: ['openrank'], width: 200 },
+          { name: translate({ id: 'leaderboards.companies.repos' }), type: 'String', fields: ['repoCount'], width: 200 },
+          { name: translate({ id: 'leaderboards.companies.developers' }), type: 'String', fields: ['developerCount'], width: 200 },
+          { name: translate({ id: 'leaderboards.companies.country' }), type: 'String', fields: ['country'], width: 200 },
+        ]);
+      }).catch(e => {
+        console.log(e);
+      });
     } else {
       alert(`Leaderboard type ${type} is not supported.`);
     }
