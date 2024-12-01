@@ -13,7 +13,7 @@
 
 .boardTitle {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   margin-bottom: 12px;
 }
@@ -47,6 +47,8 @@
   width: 18px;
   height: 18px;
   margin-right: 12px;
+  object-fit: contain;
+  object-position: center;
 }
 
 .iconRounded {
