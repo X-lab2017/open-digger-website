@@ -423,5 +423,17 @@
   },
   "leaderboards.companies.country": {
     "message": "所在国家"
+  },
+  "leaderboards.provinces.title": {
+    "message": "2024 全球各国行政区 OpenRank 排行榜 Top 100"
+  },
+  "leaderboards.provinces.name": {
+    "message": "行政区名称"
+  },
+  "leaderboards.provinces.developers": {
+    "message": "开发者规模(万)"
+  },
+  "leaderboards.provinces.country": {
+    "message": "所属国家"
   }
 }

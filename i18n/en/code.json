@@ -423,5 +423,17 @@
   },
   "leaderboards.companies.country": {
     "message": "Country"
+  },
+  "leaderboards.provinces.title": {
+    "message": "2024 Global Administrative Divisions OpenRank Top 100"
+  },
+  "leaderboards.provinces.name": {
+    "message": "Division Name"
+  },
+  "leaderboards.provinces.developers": {
+    "message": "Developers Count (10k)"
+  },
+  "leaderboards.provinces.country": {
+    "message": "Country"
   }
 }
