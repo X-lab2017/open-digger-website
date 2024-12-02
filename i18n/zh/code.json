@@ -416,7 +416,7 @@
     "message": "企业"
   },
   "leaderboards.companies.repos": {
-    "message": "仓库数量"
+    "message": "仓库规模"
   },
   "leaderboards.companies.developers": {
     "message": "开发者规模"
@@ -425,10 +425,10 @@
     "message": "所在国家"
   },
   "leaderboards.provinces.title": {
-    "message": "2024 全球各国行政区 OpenRank 排行榜 Top 100"
+    "message": "2024 全球各国行政区划开发者 OpenRank 排行榜 Top 100"
   },
   "leaderboards.provinces.name": {
-    "message": "行政区名称"
+    "message": "行政区划"
   },
   "leaderboards.provinces.developers": {
     "message": "开发者规模(万)"
