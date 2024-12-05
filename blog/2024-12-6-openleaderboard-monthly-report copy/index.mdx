@@ -1,0 +1,47 @@
+---
+title: OpenLeaderboard 开源生态数据洞察(2024.12)
+authors: [zsy, ww]
+slug: 2024-12-6-openleaderboard-monthly-report
+---
+
+> OpenRank 指标是对工信部电子标准院的“信息技术 开源治理”系列标准中评价指标的开源实现，能够有效反映开源项目在开发者中的协作影响力，从而帮助我们了解开源世界，发现开源趋势，洞察开源事件。
+
+# 本月 OpenRank 增长热点洞察
+
+## 热点事件1：BlueSky 爆火背后，美国大选与 AI 浪潮
+
+- 数据事实：根据 OpenDigger 数据，GitHub 上 BlueSky 的多个仓库出现了数据激增，包括其自研的去中心化社交媒体协议仓库 atproto 和客户端仓库 social-app。其组织下所有仓库 11 月的活跃开发者总数同比增长 173% 达到 1082 人，所有仓库星标数增长 5.8k，OpenRank 总值同比增长 67%，达到了 340 分。
+
+- 详情分析：BlueSky 是前 Twitter CEO 杰克·多尔西创建的一个独立项目，使用全新的自研 AT 社交网络协议开发，旨在实现一个去中心化的社交媒体。11 月 5 日美国大选以来，部分对大选结果不满的用户选择离开 Twitter 寻找新的社交平台，BlueSky 成为了他们的一个重要选项，而大选一周后，其客户端应用也登顶了苹果 App Store 美国区的免费榜应用榜榜首。另外 11 月 16 日，Twitter 平台更新其隐私权政策（Privacy Policy），允许三方平台利用其用户数据进行生成式 AI 训练，而随后 BlueSky 官方发文表示不会使用用户数据进行生成式 AI 的训练，该事件也导致大量高质量内容创作者开始迁移到 BlueSky 平台以保护自己生产的数字化内容。该平台截止 2024 年 9 月全平台注册用户约 1000 万，11 月以来多个事件导致其平台用户激增，截止 11 月 20 日，该平台注册用户数已突破 2000 万。
+
+- 作者点评：技术世界从不是独立存在的，现实中的事件会以不同的方式反映到开源社区中。而生成式 AI 的火爆也开始使其底层矛盾愈加凸显，开发者和用户会用自己的真实行动来投票。
+
+- 进阶阅读：
+  - Twitter 更新 Privacy Policy：https://privacy.x.com/en/blog/2024/updates-tos-privacy-policy
+  - BlueSky 对生成式 AI 的声明：https://bsky.app/profile/bsky.app/post/3layuzbto2c2x
+  - BlueSky 的 GitHub 主页：https://github.com/bluesky-social
+
+## 热点事件2：Redis 尝试控制周边项目，Valkey 社区持续增长
+
+- 数据事实：根据 OpenDigger 数据，Redis 的 Rust 客户端仓库 rust-rs 在 2024 年 11 月活跃开发者数量增长 54% 达到 40 人，其中大部分参与了关于 Redis 公司希望其作者转让项目而引发的讨论 Issue。而 2024 年 3 月分叉的 Valkey 社区则持续增长，在各项数据层面都已全面超越 Redis 主仓库。
+
+- 详情分析：2024 年 11 月 25 日，Redis 的 Rust 客户端项目 rust-rs 的作者 Armin Ronacher 在仓库上开启了一个 Issue 讨论关于该项目与 Reids 公司的关系，称 Redis 公司要求将其项目控制权进行转让，而 Redis 的 PHP 客户端 Pedis 的维护者表示也收到了同样的要求。事实上这已经不是 Redis 公司第一尝试控制周边社区项目了，在 2020 年至 2024 年间 Redis 公司分别将 Redis 的社区客户端 Jedis、Redis-py 和 Lettuce 转移至其 GitHub 组织中。而与此同时也有开发者担忧社区客户端被 Redis 公司控制后新版本是否会与 Valkey 不再兼容。Valkey 是 2024 年 3 月 Redis 公司宣布修改其项目许可证后分叉出的社区，由原 Redis 项目中来自 AWS、阿里云、Google、腾讯云等云厂商的核心开发者牵头成立，目前已托管在 Linux 基金会中。在 Redis 社区分裂后，Valkey 项目稳定发展，而 Redis 项目已逐渐不再活跃，根据 OpenDigger 数据，11 月 Valkey 主仓库的 OpenRank 已达 71 分，而 Redis 的主仓库则从 3 月份的 62 分将至 27 分。
+
+- 作者点评：软件所有权不仅仅是代码的归属问题，更涉及到项目的可持续发展和社区的信任。当一个开源项目的所有权转移到一家商业公司手中时，社区成员往往会担心项目的中立性和开放性会受到影响。Redis 和 Valkey 的未来会向哪个方向发展，还需要进一步的跟踪观察。
+
+- 进阶阅读：
+  - redis-rs 仓库讨论 Issue：https://github.com/redis-rs/redis-rs/issues/1419
+  - valkey 仓库地址：https://github.com/valkey-io/valkey
+  - OpenDigger 关于 Redis 与 Valkey 的数据分析报告：https://open-digger.cn/blog/2024-04-04-redis-analysis
+
+# 本月推荐项目
+
+## Julia
+
+- Julia 是 2009 年开始开发的一款面向高性能数值分析和计算科学的动态编程语言，并在 2018 年发布了 1.0 版本。后续一直稳定的持续发展，随着语言内核的持续完善，目前的开发重心也逐渐转向上层的标准库支持。2024 年 11 月，社区将线性代数相关的标准库从主仓库中抽离为一个独立仓库并转移了与其相关的上千个 Issue 到新仓库中。由于这种迁移在日志中会被记录为新建 Issue，因此该仓库也被数据洞察注意到。而 Julia 本身的发展也非常稳定，截止 2024 年 11 月，其所有仓库 OpenRank 值已达到 242 分。
+- 仓库地址：https://github.com/JuliaLang/julia
+
+## Zen Browser
+
+- Zen 浏览器是一个基于 Firefox 内核开发的开源浏览器，自 2024 年 4 月开源，8 月后突然火爆，11 月仓库参与开发者人数达 882 人。该项目以其优秀的用户体验深受用户的喜爱，所有试用体验贴都不乏溢美之词。如分屏显示功能作为受众多用户喜欢的一项功能，目前在 Chrome 浏览器中依然只能通过插件进行实现。根据 OpenDigger 数据，该仓库 11 月 OpenRank 值达 262 分，强势增长 48 位进入全球仓库 OpenRank 榜 63 名。
+- 仓库地址：https://github.com/zen-browser/desktop
