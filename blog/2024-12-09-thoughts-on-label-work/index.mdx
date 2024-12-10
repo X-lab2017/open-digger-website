@@ -48,7 +48,7 @@ OpenDigger 的标签体系早期是源于 OpenDigger 本身的数据需求而逐
 
 但在美国的法律体系中，并不包含一种名为基金会的法人实体，所有的非营利组织在美国都属于企业性质，只是分类会略有不同，主要都在 [501(c)](https://en.wikipedia.org/wiki/501(c)_organization) 分类下。常见的非营利组织类型包括慈善组织 501(c)(3)，如 Apache 基金会就是这类组织；还有商业联盟性质的 501(c)(6)，如 Linux 基金会就属于这类组织。它们在财务规定和监管层面有一定的差异，这也是为什么近年来 Linux 基金会可以通过企业捐赠快速扩张发展，而 Apache 基金会则更加佛系的根本原因之一。
 
-也正是由于这个区别，基金会这个名称在中美有了很大的差异，在中国是一类非常明确的法人实体类型，而在美国基金会是非营利组织可选的一种注册名称而已。如美国的[连接标准联盟](https://en.wikipedia.org/wiki/Connectivity_Standards_Alliance)与 Linux 基金会相同也是一个 501(c)(6) 组织，但其名称确为"联盟"。而正是由于这种命名的随意性，使得追踪海外基金会变得非常困难，例如一些自称为基金会的组织，我们甚至在网上无法查证其组织类型以及是否真的是非营利性的组织。
+也正是由于上述区别，基金会这个名称在中美有了很大的差异，在中国是一类非常明确的法人实体类型，而在美国基金会是非营利组织可选的一种注册名称而已。如美国的[连接标准联盟](https://en.wikipedia.org/wiki/Connectivity_Standards_Alliance)与 Linux 基金会相同也是一个 501(c)(6) 组织，但其名称确为"联盟"。而正是由于这种命名的随意性，使得追踪海外基金会变得非常困难，例如一些自称为基金会的组织，我们甚至在网上无法查证其组织类型以及是否真的是非营利性的组织。
 
 另外一个有趣的差别是，在美国，在一般性企业和非营利性组织之间，还存在一种叫做 PBC（Public Benefit Corporation） 的企业类型，即公益法团。如最近大火的社交平台 [Bluesky](https://en.wikipedia.org/wiki/Bluesky) 背后的公司即属于这类。该类型是一种具有公益性质的营利性组织。对应中文语境中的“社会企业”，但在中国，目前“社会企业”还并非一种具有法律认可的实体类型，主要是由中国慈展会定期进行公开评定，可给各类企业或非营利性组织进行非正式的社会企业认证。当然，在 OpenDigger 的标签体系中，这类还是统一被归为企业类型。
 
@@ -67,23 +67,23 @@ OpenDigger 的标签体系早期是源于 OpenDigger 本身的数据需求而逐
 ```shell
 label_data
 ├── division # 行政区划
-│   ├── cn # 中国
-│   │   ├── gd # 广东
-│   │   │   └── huawei # 华为
-│   │   │       └── openharmony
-│   │   └── zj # 浙江
-│   │       └── alipay # 蚂蚁集团
-│   │           └── tugraph
-│   └── us # 美国
-│       ├── ca # 加利福尼亚州
-│       │   └── linux_foundation # Linux 基金会
-│       │       └── valkey
-│       └── md # 马里兰州
-│           └── apache_software_foundation # Apache 软件基金会
+│   ├── cn # 中国
+│   │   ├── gd # 广东
+│   │   │   └── huawei # 华为
+│   │   │       └── openharmony
+│   │   └── zj # 浙江
+│   │       └── alipay # 蚂蚁集团
+│   │           └── tugraph
+│   └── us # 美国
+│       ├── ca # 加利福尼亚州
+│       │   └── linux_foundation # Linux 基金会
+│       │       └── valkey
+│       └── md # 马里兰州
+│           └── apache_software_foundation # Apache 软件基金会
 └── technology # 技术领域
     ├── cloud_native # 云原生
-    │   ├── platform # 平台
-    │   └── runtime # 运行时
+    │   ├── platform # 平台
+    │   └── runtime # 运行时
     └── database # 数据库
         ├── graph # 图数据库 -> 引用 :division/cn/zj/alipay/tugraph
         └── kv # 键值数据库 -> 引用 :division/us/ca/linux_foundation/valkey
