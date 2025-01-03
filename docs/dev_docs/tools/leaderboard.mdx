@@ -1,7 +1,12 @@
 # 排行榜
 
+import Leaderboard from '@site/src/components/Leaderboard';
+import SimpleLeaderboard from '@site/src/components/SimpleLeaderboard';
+
 在该页面中，您可以通过输入数据和配置表头的方式生成具有一定样式的排行榜供您分享。
 
-import Leaderboard from '@site/src/components/Leaderboard';
-
 <Leaderboard />
+
+下面为一个使用纯数据配置的排行榜，输入为一个 JSON 对象，包含 title、data 和 options 三个字段，分别对应表的标题、数据和表头配置。
+
+<SimpleLeaderboard />

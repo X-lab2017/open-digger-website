@@ -358,6 +358,9 @@
   "leaderboard.headerType.NumberWithDelta": {
     "message": "数字与变化"
   },
+  "leaderboard.headerType.PureImage": {
+    "message": "图片"
+  },
   "leaderboard.submit": {
     "message": "提交"
   },

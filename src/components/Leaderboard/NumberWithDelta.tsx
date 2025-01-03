@@ -1,6 +1,7 @@
 import styles from './styles.module.css';
 
-const formatNumber = (num: number) => {
+const formatNumber = (num: any) => {
+  if (Number.isNaN(+num)) return 0;
   return +num.toFixed(2);
 }
 

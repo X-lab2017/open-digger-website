@@ -358,6 +358,9 @@
   "leaderboard.headerType.NumberWithDelta": {
     "message": "Number with delta"
   },
+  "leaderboard.headerType.PureImage": {
+    "message": "Image"
+  },
   "leaderboard.submit": {
     "message": "Submit"
   },

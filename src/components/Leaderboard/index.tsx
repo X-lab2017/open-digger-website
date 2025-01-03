@@ -8,6 +8,7 @@ import { NameWithIcon } from './NameWithIcon';
 import { useReducer } from 'react';
 import { useReactTable, createColumnHelper, getCoreRowModel } from '@tanstack/react-table';
 import styles from './styles.module.css';
+import { PureImage } from './PureImage';
 
 export const COLUMN_TYPE_RULES: {
   name: string;
@@ -29,6 +30,11 @@ export const COLUMN_TYPE_RULES: {
       fieldsNeeded: 2,
       renderer: (num, delta) => <NumberWithDelta number={num} delta={delta} />,
     },
+    {
+      name: 'PureImage',
+      fieldsNeeded: 1,
+      renderer: (url) => <PureImage url={url} />,
+    }
   ];
 
 const helper = createColumnHelper<{ __index__: number }>();
