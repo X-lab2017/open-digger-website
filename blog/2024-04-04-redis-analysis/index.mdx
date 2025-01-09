@@ -50,14 +50,14 @@ import SimpleECharts from '@site/src/components/SimpleECharts';
   xAxis: [{ type: 'category', data: ['2023.10', '2023.11', '2023.12', '2024.01', '2024.02', '2024.03', '2024.04', '2024.05', '2024.06', '2024.07', '2024.08'] }],
   yAxis: [{ type: 'value', name: 'OpenRank' }, { type: 'value', name: 'Participant' }],
   series: [
-    { name: 'Redis-OpenRank', type: 'bar', data: [59.42,68.36,71.51,75.63,69.41,69.42,45.93,37.94,42.6,33.76,32.1] },
-    { name: 'Valkey-OpenRank', type: 'bar', data: [0,0,0,0,0,32.66,54.6,66.16,79.28,66.48,55.24], itemStyle: { color: 'red' } },
-    { name: 'Redis-Participant', type: 'bar', yAxisIndex: 1, data: [102,101,100,104,94,220,92,75,60,65,69], itemStyle: { color: 'yellow' } },
-    { name: 'Valkey-Participant', type: 'bar', yAxisIndex: 1, data: [0,0,0,0,0,146,120,92,62,57,54], itemStyle: { color: 'green' } },
+    { name: 'Redis-OpenRank', type: 'bar', data: [54.66,62.44,64.91,68.75,63.02,62.15,41.4,33.91,34.37,30.28,30.7,36.4,32.48,26.84,25.81] },
+    { name: 'Valkey-OpenRank', type: 'bar', data: [0,0,0,0,0,29.33,52.74,61.11,66.41,61.91,53.2,55.71,64.46,71.3,75.27], itemStyle: { color: 'red' } },
+    { name: 'Redis-Participant', type: 'bar', yAxisIndex: 1, data: [102,101,100,104,94,220,92,75,60,65,69,76,67,54,47], itemStyle: { color: 'yellow' } },
+    { name: 'Valkey-Participant', type: 'bar', yAxisIndex: 1, data: [0,0,0,0,0,146,120,92,62,57,54,68,73,79,78], itemStyle: { color: 'green' } },
   ]
 }} />
 
-> 上图数据更新于 2024.9
+> 上图数据更新于 2025.1
 
 从宏观数据来看，Redis 社区近半年的 OpenRank 协作影响力维持在 80 左右，而 Valkey 在三月仅开源十天，OpenRank 已飙升至 40 左右，达到了 Redis 项目的一半。从社区参与开发者人数来看，Redis 基本维持在每月 100 人左右的规模，在三月因为许可证修改有不少开发者在 Redis 社区进行讨论，导致参与人数翻倍，达到了 220 人，而 Valkey 开源十天，参与人数达到了 146 人，已超过了 Redis 的日常规模。
 
