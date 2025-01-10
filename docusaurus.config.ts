@@ -56,6 +56,7 @@ const config: Config = {
         blog: {
           showReadingTime: true,
           blogSidebarTitle: 'Recent Posts',
+          blogSidebarCount: 'ALL',
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
         },
