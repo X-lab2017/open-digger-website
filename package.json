@@ -19,6 +19,7 @@
     "@docusaurus/theme-mermaid": "^3.4.0",
     "@easyops-cn/docusaurus-search-local": "^0.44.3",
     "@mdx-js/react": "^3.0.1",
+    "@petercatai/assistant": "^2.0.23",
     "@tanstack/react-table": "^8.19.2",
     "axios": "^1.7.2",
     "clsx": "^2.1.1",
