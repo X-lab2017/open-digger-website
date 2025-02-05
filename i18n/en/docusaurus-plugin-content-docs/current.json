@@ -26,6 +26,9 @@
   "sidebar.userDocSidebar.category.downstream": {
     "message": "Downstream Apps"
   },
+  "sidebar.userDocSidebar.category.contribution_programs": {
+    "message": "Activities"
+  },
   "sidebar.userDocSidebar.link.PolarDBDashboard": {
     "message": "PolarDB Dashboard"
   },

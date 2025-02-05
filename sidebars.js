@@ -96,6 +96,15 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'contribution_programs',
+      collapsed: false,
+      items: [
+        'user_docs/contribution_programs/gsoc25',
+        // 'user_docs/contribution_programs/ospp24',
+      ],
+    },
+    {
+      type: 'category',
       label: 'downstream',
       collapsed: false,
       items: [
@@ -121,7 +130,6 @@ const sidebars = {
         },
       ]
     },
-    'user_docs/FAQ'
   ],
   developerDocSidebar: [
     'dev_docs/intro',
