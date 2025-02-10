@@ -27,6 +27,10 @@
     "message": "Developer Docs",
     "description": "Navbar item with label devDocs"
   },
+  "item.label.activityDocs": {
+    "message": "🔥GSoC'25",
+    "description": "Navbar item with label activityDocs"
+  },
   "item.label.community_openrank_leaderboard": {
     "message": "Community OpenRank Leaderboard",
     "description": "Navbar item with label leaderboard"
