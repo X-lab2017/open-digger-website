@@ -12,7 +12,7 @@
 
 几乎任何年满 18 岁且热爱编程、希望探索开源世界的人都可以加入我们，成为 GSoC 2025 贡献者。
 
-请仔细阅读由 Google Summer of Code 组织者编写的[贡献者指南](https://google.github.io/gsocguides/student/)。此外，感兴趣的贡献者还被鼓励直接在我们的 [Slack]((https://opendigger.slack.com)) #opendigger 频道与团队和社区互动。
+请仔细阅读由 Google Summer of Code 组织者编写的[贡献者指南](https://google.github.io/gsocguides/student/)。此外，感兴趣的贡献者还被鼓励直接在我们的 [Slack](https://opendigger.slack.com) #opendigger 频道与团队和社区互动。
 
 - 在开始填写提案前，务必与导师联系，详细讨论您的解决方案和技术方案。
 
