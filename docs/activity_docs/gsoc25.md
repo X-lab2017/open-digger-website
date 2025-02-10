@@ -1,4 +1,32 @@
-# GSoC 2025
+# Google Summer of Code 2025
+
+这是 OpenDigger 首次申请成为 Google Summer of Code (GSoC) 2025 的指导组织，旨在迎接新一代开源贡献者和爱好者。
+
+![gsoc-25](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Google_Summer_of_Code_logo_%282021%29.svg/2560px-Google_Summer_of_Code_logo_%282021%29.svg.png)
+
+有关 Google Summer of Code 2025 的详细规则，请访问 [GSoC 2025 官方网站](https://summerofcode.withgoogle.com/)。时间表详见[Google Summer of Code 2025 时间表](https://developers.google.com/open-source/gsoc/timeline)。
+
+---
+
+## 在您申请之前 👀
+
+几乎任何年满 18 岁且热爱编程、希望探索开源世界的人都可以加入我们，成为 GSoC 2025 贡献者。
+
+请仔细阅读由 Google Summer of Code 组织者编写的[贡献者指南](https://google.github.io/gsocguides/student/)。此外，感兴趣的贡献者还被鼓励直接在我们的 [Slack]((https://opendigger.slack.com)) #opendigger 频道与团队和社区互动。
+
+- 在开始填写提案前，务必与导师联系，详细讨论您的解决方案和技术方案。
+
+- 尽早分享您的提案初稿：
+  - 提案应包含对项目想法的清晰理解，并附有详细的每周计划和明确的里程碑及可交付成果。
+  - 如果您计划提出自己的任务想法，请包括任务描述和目标（如“任务列表”中所述）以及详细的每周计划和明确的里程碑及可交付成果。
+
+- 以文本、Markdown、Google Docs 或其他无需下载的易于共享格式分享提案链接。欢迎包含相关插图或图片进行说明。
+
+- 最终提案应在截止日期前提交到 Google Summer of Code 网站，并在完成所有审查后提交。
+
+---
+
+## 任务列表 📂
 
 这是 OpenDigger 第一年参与 GSoC 项目，如下是 OpenDigger 提供的任务列表，开发者可以在这些任务列表中选择自己感兴趣的任务进行申请。
 
@@ -9,7 +37,7 @@
 - **预期开发时长**：**350 小时**
 - **难度**：**困难**
 - **相关 Issue**: https://github.com/X-lab2017/open-digger-website/issues/23
-- **任务描述**：OpenDigger 最早的排行榜数据使用 OpenLeaderboard 做简单展示，该项目于 2022 OSPOCon 在北美与阿里巴巴和蚂蚁集团 OSPO 共同发布，过去两年多中是 OpenDigger 数据的重要展示渠道之一。但目前 OpenLeaderboard 只能做较简单的数据展示，包括全球与中国开源仓库、企业与开发者排行榜，并且不具备跨时段（如指定多个月）统计、多维聚合（如某技术领域中不同国家的贡献）、数据细节展示（项目内具体各项 CHAOSS 指标）等，因此使用场景有限。**该任务希望开发者**可以和 OpenDigger 团队紧密合作，设计和开发一个全新的排行榜榜单，并上线至 OpenDigger 官网。该榜单系统应支持如下功能：
+- **任务描述**：OpenDigger 最早的排行榜数据使用 [OpenLeaderboard](https://open-leaderboard.x-lab.info/) 做简单展示，该项目于 2022 OSPOCon 在北美与阿里巴巴和蚂蚁集团 OSPO 共同发布，过去两年多中是 OpenDigger 数据的重要展示渠道之一。但目前 OpenLeaderboard 只能做较简单的数据展示，包括全球与中国开源仓库、企业与开发者排行榜，并且不具备跨时段（如指定多个月）统计、多维聚合（如某技术领域中不同国家的贡献）、数据细节展示（项目内具体各项 [CHAOSS 指标](https://chaoss.community/kb-metrics-and-metrics-models/)）等，因此使用场景有限。**该任务希望开发者**可以和 OpenDigger 团队紧密合作，设计和开发一个全新的排行榜榜单，并上线至 OpenDigger 官网。该榜单系统应支持如下功能：
   - **排行范围**：新版排行榜应支持多样的标签种类作为排行榜范围选择，例如行政区划、技术领域、企业、高校等各类别，在排行时可按照需求选择特定的标签数据进行洞察。
   - **指标数据**：新版排行榜应支持更多类别的指标数据，在 OpenRank 排行榜基础之上提供各类 CHAOSS 指标的洞察能力。
   - **聚合方式**：新版排行榜在给定的排行数据范围内，应支持不同的聚合方式进行查询，例如数据库领域中不同企业的贡献。
@@ -49,4 +77,9 @@
 - **预期开发时长**：**350 小时**
 - **难度**：**困难**
 - **相关 Issue**: https://github.com/X-lab2017/open-digger-website/issues/104
-- **任务描述**：OpenDigger 已经生成了海量的开源项目指标数据，并具有一些技术领域的多级标签体系，在此基础之上我们可以进一步通过可视化聚合的方式来生成不同技术领域的 Landscape 并帮助开发者进行基于技术领域的深度洞察。**该任务希望开发者**可以深入学习已有的 Landscape 开发技术（如 CNCF Landscape），并将其与 OpenDigger 数据进行深度融合，配合 OpenDigger 数据进行可视化的定制与增强，最终形成可交互、具有洞察能力的开源项目 Landscape 并集成至 OpenDigger 官网。
+- **任务描述**：OpenDigger 已经生成了海量的开源项目指标数据，并具有一些技术领域的多级标签体系，在此基础之上我们可以进一步通过可视化聚合的方式来生成不同技术领域的 Landscape 并帮助开发者进行基于技术领域的深度洞察。**该任务希望开发者**可以深入学习已有的 Landscape 开发技术（如 [CNCF Landscape](https://landscape.cncf.io/)），并将其与 OpenDigger 数据进行深度融合，配合 OpenDigger 数据进行可视化的定制与增强，最终形成可交互、具有洞察能力的开源项目 Landscape 并集成至 OpenDigger 官网。
+
+
+🔔 **注意**: “推荐”是“高优先级”的同义词。
+
+如果您有不在我们任务列表中的想法和提案，或者无法触达到导师，请发送邮件[这里](mailto:syzhao1988@126.com)。否则，请在 GitHub 仓库中[提交 Issue](https://github.com/X-lab2017/open-digger-website/issues/new?template=Blank+issue)，并提醒 [@Frank](https://github.com/frank-zsy) 或 [@Neilblaze](https://github.com/Neilblaze)。
