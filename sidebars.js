@@ -121,7 +121,6 @@ const sidebars = {
         },
       ]
     },
-    'user_docs/FAQ'
   ],
   developerDocSidebar: [
     'dev_docs/intro',
@@ -145,6 +144,9 @@ const sidebars = {
         'dev_docs/tools/leaderboard',
       ]
     }
+  ],
+  activityDocSidebar: [
+    'activity_docs/gsoc25',
   ]
 };
 

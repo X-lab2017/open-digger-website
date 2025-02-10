@@ -20,6 +20,9 @@
   "sidebar.userDocSidebar.link.OpenAtomDashboard": {
     "message": "开放原子全球协作大屏"
   },
+  "sidebar.userDocSidebar.category.contribution_programs": {
+    "message": "贡献活动"
+  },
   "sidebar.userDocSidebar.category.openrank": {
     "message": "OpenRank"
   },
