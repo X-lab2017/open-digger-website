@@ -2,15 +2,12 @@ import React, { useEffect, useState } from 'react';
 import ReactECharts from 'echarts-for-react';
 import { merge } from 'lodash';
 import { useColorMode } from '@docusaurus/theme-common';
-import echarts from 'echarts';
+import 'echarts/map/js/world';
 
 export default (props: any): JSX.Element => {
   const { option, divStyle } = props;
   const [usedOption, setUsedOptions] = useState<any>({});
   const { colorMode } = useColorMode();
-
-  const barColors = ['#3366FF'];
-  const lineColors = ['#83D328'];
 
   useEffect(() => {
     const updateOptions = () => {
@@ -20,7 +17,7 @@ export default (props: any): JSX.Element => {
       const defaultOption: any = {
         title: {
           left: 'center',
-          textStyle: { color: fontColor },
+          textStyle: { color: fontColor, fontSize: 12 },
         },
         tooltip: {
           trigger: 'axis', axisPointer: { type: 'cross' }, formatter: function (params) {
@@ -51,7 +48,6 @@ export default (props: any): JSX.Element => {
               radius: ['40%', '60%'],
               center: ['50%', '60%'],
               avoidLabelOverlap: true,
-              itemStyle: { borderRadius: 10, borderColor: fontColor, borderWidth: 1 },
               label: { position: 'outside', fontSize: 14, color: fontColor, formatter: '{b}: {c}' },
               labelLine: { length: 10, length2: 10 },
               emphasis: { label: { fontSize: 20, fontWeight: 'bold' } },
@@ -62,13 +58,7 @@ export default (props: any): JSX.Element => {
               label: { show: true, position: 'inside', formatter: '{b}: {c}' }
             });
           } else if (s.type === 'bar') {
-            if (count < barColors.length) {
-              defaultOption.series.push({
-                itemStyle: { color: barColors[count] },
-              });
-            } else {
-              defaultOption.series.push({});
-            }
+            defaultOption.series.push({});
 
             if (Array.isArray(option.xAxis)) {
               defaultOption.xAxis = Array.from({ length: option.xAxis.length }, axisStyle);
@@ -81,23 +71,7 @@ export default (props: any): JSX.Element => {
               defaultOption.yAxis = axisStyle();
             }
           } else if (s.type === 'line') {
-            if (count < lineColors.length && !s.itemStyle?.color) {
-              defaultOption.series.push({
-                itemStyle: { color: lineColors[count] },
-                areaStyle: {
-                  color: {
-                    type: 'linear',
-                    x: 0, y: 0, x2: 0, y2: 1,
-                    colorStops: [
-                      { offset: 0, color: lineColors[count] },
-                      { offset: 1, color: 'rgba(255, 255, 255, 0)' }
-                    ]
-                  }
-                },
-              });
-            } else {
-              defaultOption.series.push({});
-            }
+            defaultOption.series.push({});
 
             if (Array.isArray(option.xAxis)) {
               defaultOption.xAxis = Array.from({ length: option.xAxis.length }, axisStyle);
