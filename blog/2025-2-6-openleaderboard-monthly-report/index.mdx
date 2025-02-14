@@ -5,6 +5,7 @@ slug: 2025-2-6-openleaderboard-monthly-report
 ---
 
 import SimpleECharts from '@site/src/components/SimpleECharts';
+import SimpleTable from '@site/src/components/SimpleTable';
 
 > OpenRank 指标是对工信部电子标准院的“信息技术 开源治理”系列标准中评价指标的开源实现，能够有效反映开源项目在开发者中的协作影响力，从而帮助我们了解开源世界，发现开源趋势，洞察开源事件。
 
@@ -12,20 +13,27 @@ import SimpleECharts from '@site/src/components/SimpleECharts';
 
 2025 年 1 月 20 日，中国人工智能公司 DeepSeek 发布的 R1 系列大模型引发全球 AI 行业震动。该模型以低成本、高性能和开源特性为核心，该事件不仅在短期内对美国金融市场造成了巨大冲击，同时对大模型发展的技术路线、行业格局及地缘政治将产生深远影响。因此本期洞察报告将从 DeepSeek 的全系列模型切入，进行一次较完整的专栏式数据解析。
 
-### 数据事实
+### 总体数据
 
 2025 年 1 月 20 日 DeepSeek 发布 R1 推理模型，同日 GitHub 仓库开源，后续 1 月 28 日发布 Janus Pro 多模态大模型，这两个模型以其低成本高性能引爆全球。自 R1 模型发布以来，截止到 2 月 6 日，DeepSeek 官方 GitHub 组织获得新增 Star 数总计超 15 万，活跃开发者数量 1679 人。DeepSeek 组织有 5 个仓库在 2025 年 1 月进入中国 OpenRank 仓库榜 Top 300，DeepSeek-R1 仅开源 10 天强势空降至中国第 62 位。DeepSeek 在 OpenRank 企业榜单中在 2025 年 1 月达到 207 分，快速上升至全球第 86 位以及中国第 13 位。
 
-### 详情分析
+<SimpleTable title={'2025.1 中国企业 OpenRank 排行榜 Top 15'} data={
+  [{"rank":1,"id":":companies/huawei","name":"Huawei","logo":"https://oss.open-digger.cn/logos/companies/huawei.png","openrank":10416.91,"delta":-441.38,"repo_count":3005,"repo_count_delta":-93,"participants":4782,"participants_delta":-1103},{"rank":2,"id":":companies/alibaba","name":"Alibaba","logo":"https://oss.open-digger.cn/logos/companies/alibaba.png","openrank":1822.95,"delta":-142.79,"repo_count":1410,"repo_count_delta":-306,"participants":2026,"participants_delta":-524},{"rank":3,"id":":companies/antgroup","name":"Ant group","logo":"https://oss.open-digger.cn/logos/companies/antgroup.png","openrank":1329.97,"delta":-97.46,"repo_count":542,"repo_count_delta":-10,"participants":1671,"participants_delta":-336},{"rank":4,"id":":companies/baidu","name":"Baidu","logo":"https://oss.open-digger.cn/logos/companies/baidu.png","openrank":1119.37,"delta":-83.37,"repo_count":192,"repo_count_delta":-19,"participants":978,"participants_delta":-249},{"rank":5,"id":":companies/bytedance","name":"ByteDance","logo":"https://oss.open-digger.cn/logos/companies/bytedance.png","openrank":684.21,"delta":-0.5,"repo_count":371,"repo_count_delta":-2,"participants":1112,"participants_delta":185},{"rank":6,"id":":companies/espressif","name":"ESPRESSIF","logo":"https://oss.open-digger.cn/logos/companies/espressif.png","openrank":529.56,"delta":23.4,"repo_count":168,"repo_count_delta":15,"participants":868,"participants_delta":69},{"rank":7,"id":":companies/tencent","name":"Tencent","logo":"https://oss.open-digger.cn/logos/companies/tencent.png","openrank":476.51,"delta":-56.4,"repo_count":237,"repo_count_delta":-55,"participants":687,"participants_delta":-285},{"rank":8,"id":":companies/daocloud","name":"DaoCloud","logo":"https://oss.open-digger.cn/logos/companies/daocloud.png","openrank":424.47,"delta":-89.53,"repo_count":49,"repo_count_delta":-6,"participants":555,"participants_delta":-186},{"rank":9,"id":":companies/pingcap","name":"PingCAP","logo":"https://oss.open-digger.cn/logos/companies/pingcap.png","openrank":423.89,"delta":-14.15,"repo_count":76,"repo_count_delta":-11,"participants":252,"participants_delta":-36},{"rank":10,"id":":companies/fit2cloud","name":"Fit2Cloud","logo":"https://oss.open-digger.cn/logos/companies/fit2cloud.png","openrank":419.89,"delta":-54.12,"repo_count":57,"repo_count_delta":1,"participants":348,"participants_delta":-145},{"rank":11,"id":":companies/zilliz","name":"Zilliz","logo":"https://oss.open-digger.cn/logos/companies/zilliz.png","openrank":294.02,"delta":-6.32,"repo_count":44,"repo_count_delta":-3,"participants":241,"participants_delta":-34},{"rank":12,"id":":companies/starrocks","name":"StarRocks","logo":"https://oss.open-digger.cn/logos/companies/starrocks.png","openrank":215.46,"delta":-10.95,"repo_count":11,"repo_count_delta":0,"participants":160,"participants_delta":-33},{"rank":13,"id":":companies/deepseek","name":"DeepSeek","logo":"https://oss.open-digger.cn/logos/companies/deepseek.png","openrank":207.45,"delta":172.47,"repo_count":16,"repo_count_delta":1,"participants":1386,"participants_delta":1207},{"rank":14,"id":":companies/openkylin","name":"openKylin","logo":"https://oss.open-digger.cn/logos/companies/openkylin.png","openrank":204.37,"delta":-59.26,"repo_count":117,"repo_count_delta":-100,"participants":118,"participants_delta":-96},{"rank":15,"id":":companies/deepin","name":"Deepin","logo":"https://oss.open-digger.cn/logos/companies/deepin.png","openrank":162.04,"delta":-9.12,"repo_count":122,"repo_count_delta":10,"participants":83,"participants_delta":-3}]
+} options={
+  [{"name":"#","type":"String","fields":["rank"],"width":40},{"name":"企业","type":"StringWithIcon","fields":["name","logo"],"width":250},{"name":"OpenRank","type":"NumberWithDelta","fields":["openrank","delta"],"width":250},{"name":"活跃仓库数","type":"NumberWithDelta","fields":["repo_count","repo_count_delta"],"width":230},{"name":"活跃开发者数","type":"NumberWithDelta","fields":["participants","participants_delta"],"width":230}]
+}
+/>
 
-下图给出了 DeepSeek 的 GitHub 账号下 Star 增长最快的 5 个仓库的 Star 每日变化情况。可以看到，在 20 日 DeepSeek-R1 发布后，开发者有了迅速的响应，其仓库在 20 日当天就有 2k+ 增长，而直至 26 日间每日均有 2k - 4k 的 Star 增长，此时其他仓库，如基座模型 V3 等尚无明显变化。后续真正的爆发点来自于 27 日美股因 DeepSeek-R1 的发布与后续数日的验证和口碑出现了暴跌，NVIDIA 当日收盘跌幅达 17%，金融市场的冲击导致 DeepSeek-R1 彻底出圈，并同时带火了其基座模型 V3 以及在 28 日发布的多模态模型 Janus Pro。1 月 28 日当日 V3、R1 的 Star 增长均超过 10k，而 Janus 仓库也有 4k+ 的增长。之后增长逐渐趋缓，而 2 月 5 日春节复工后又迎来了一波小幅的增长。
+### Star 增长情况
+
+下图给出了截止 2 月 6 日 DeepSeek 的 GitHub 账号下 Star 增长最快的 5 个仓库的 Star 每日变化情况。可以看到，在 20 日 DeepSeek-R1 发布后，开发者有了迅速的响应，其仓库在 20 日当天就有 2k+ 增长，而直至 26 日间每日均有 2k - 4k 的 Star 增长，此时其他仓库，如基座模型 V3 等尚无明显变化。后续真正的爆发点来自于 27 日美股因 DeepSeek-R1 的发布及后续数日的学界业界的验证和极佳的口碑出现了暴跌，NVIDIA 当日收盘跌幅达 17%，金融市场的冲击导致 DeepSeek-R1 彻底出圈，并同时带火了其基座模型 V3 以及在 28 日发布的多模态模型 Janus Pro。1 月 28 日当天 V3、R1 的 Star 增长均超过 10k，而 Janus 仓库也有 4k+ 的增长。之后增长逐渐趋缓，而 2 月 5 日春节复工后又迎来了一波小幅的增长。
 
 <SimpleECharts divStyle={{ height: '400px' }} option={
   {"title":{"text":"DeepSeek 仓库 Star 日增情况","left":"center","top":"bottom"},"xAxis":{"type":"category","data":["20250120","20250121","20250122","20250123","20250124","20250125","20250126","20250127","20250128","20250129","20250130","20250131","20250201","20250202","20250203","20250204","20250205","20250206"]},"yAxis":{"type":"value"},"legend":{},"series":[{"name":"deepseek-ai/DeepSeek-R1","data":[2435,4224,4457,3067,2259,2142,3075,6701,10603,5787,2648,1989,1780,1380,1268,1211,3181,2390],"type":"line","smooth":true},{"name":"deepseek-ai/DeepSeek-V3","data":[344,742,954,807,1129,1344,3138,8552,12281,8492,4119,1911,1517,1214,1136,1103,3096,2115],"type":"line","smooth":true},{"name":"deepseek-ai/Janus","data":[2,4,11,4,4,4,5,2366,4161,2354,1512,431,346,307,230,198,353,275],"type":"line","smooth":true},{"name":"deepseek-ai/DeepSeek-Coder","data":[32,61,133,213,282,180,431,1105,1507,836,527,367,264,230,238,231,429,344],"type":"line","smooth":true},{"name":"deepseek-ai/awesome-deepseek-integration","data":[34,92,113,167,235,353,500,757,952,467,272,179,165,243,167,150,407,718],"type":"line","smooth":true}]}
 }
 />
 
-下图给出了这段时间内 Star 增长的来源国家与地区的分布比例情况，据 OpenDigger 数据显示，这段时间内增长的 15 万 Star 来自全球 185 个国家和地区，几乎覆盖所有主要国家和地区。从数据上来看，1 月 20 日 R1 模型发布后，当日 Star 增长来自 82 个国家，其中来源最多的国家为美国，占比 28%，远超中国的 17.4%，可见其敏锐的科技嗅觉。后续全球各地区的开发者快速响应，在 28 日前，如印度、德国等的开发者响应速度明显较快，28 日当天其全球影响力达到巅峰，当日增长来源于全球 149 个国家，而后巴西、韩国等国的大量开发者也迅速加入。而 2 月 5 日的增长则八成以上来自中国，也证明当日增长应该主要因春节复工导致。
+下图给出了这段时间内 Star 增长的来源国家与地区的分布比例情况，据 OpenDigger 数据显示，这段时间内增长的 15 万 Star 来自全球 185 个国家和地区，几乎覆盖全球所有主要国家和地区。从数据上来看，1 月 20 日 DeepSeek-R1 模型发布后，当日 Star 增长来自 82 个国家，其中来源最多的国家为美国，占比 28%，远超中国的 17.4%，虽部分受到时区影响，但依然可见其敏锐的科技嗅觉。后续随着全球各地开发者和用户的验证与使用，各地区的开发者快速响应，在 28 日前，如印度、德国等的开发者响应速度明显较快，28 日当天其全球影响力达到巅峰，当日增长来源于全球 149 个国家，而后巴西、韩国等国的大量开发者也迅速加入。而 2 月 5 日的增长则八成以上来自中国，也证明当日增长应该主要因春节复工导致。
 
 <SimpleECharts divStyle={{ height: '400px' }} option={
   {"title":{"text":"DeepSeek 每日 Star 新增国家分布","left":"center","top":"bottom"},"xAxis":{"type":"category","data":["20250120","20250121","20250122","20250123","20250124","20250125","20250126","20250127","20250128","20250129","20250130","20250131","20250201","20250202","20250203","20250204","20250205","20250206"]},"yAxis":[{"type":"value"},{"type":"value","position":"right"}],"legend":{},"series":[{"name":"China","type":"bar","stack":"total","barWidth":"60%","yAxisIndex":0,"data":[17.4,33.2,17.1,28.1,22.6,19,24.8,18.6,16.1,13.9,19,25,39.7,39.8,39.8,39.9,80.3,71.8]},{"name":"United States","type":"bar","stack":"total","barWidth":"60%","yAxisIndex":0,"data":[28,16.2,16.8,12.4,18.7,18.1,17.2,21.4,14.1,13.9,13.5,17.7,16.7,13.1,9.4,14.7,0,6.1]},{"name":"India","type":"bar","stack":"total","barWidth":"60%","yAxisIndex":0,"data":[0,0,6.2,6,5.7,6.4,5.8,0,6.9,8.7,6.5,5.5,0,0,0,0,0,0]},{"name":"Germany","type":"bar","stack":"total","barWidth":"60%","yAxisIndex":0,"data":[0,0,5.8,0,0,6.2,5.5,0,0,0,0,0,0,0,0,0,0,0]},{"name":"Brazil","type":"bar","stack":"total","barWidth":"60%","yAxisIndex":0,"data":[0,0,0,0,0,0,0,0,8.3,8.1,6.2,5.7,0,0,0,0,0,0]},{"name":"South Korea","type":"bar","stack":"total","barWidth":"60%","yAxisIndex":0,"data":[0,0,0,0,0,0,0,0,0,0,0,5.5,0,0,0,6.3,0,0]},{"name":"Others","type":"bar","stack":"total","barWidth":"60%","yAxisIndex":0,"data":[54.6,50.6,54.1,53.5,53,50.3,46.7,60,54.6,55.4,54.8,40.6,43.6,47.1,50.8,39.1,19.7,22.1]},{"name":"Count","type":"line","data":[82,92,113,101,95,99,108,143,149,137,120,94,83,78,82,74,76,63],"yAxisIndex":1}]}
@@ -107,9 +115,11 @@ import SimpleECharts from '@site/src/components/SimpleECharts';
 }}
 />
 
-虽然作为大模型，DeepSeek 系列模型的主要使用与下载发生在 HuggingFace、魔搭等模型托管平台，但 GitHub 依然承担了一大部分论坛的作用，有大量开发者在 GitHub 进行讨论与问答，数量远高于 HuggingFace 社区中的讨论量。我们也从这段时间在 DeepSeek-R1 和 V3 仓库中活跃的开发者在过去半年的全域活跃情况进一步分析一下 DeepSeek 吸引了哪些领域的开发者参与到了讨论之中。
+### 参与开发者分布
 
-下图给出了 DeepSeek 组织中 OpenRank 贡献度的全球分布情况，从参与者的贡献度情况而言，可以看到中美处于第一梯队，后续印度、英国、巴西、德国处于第二梯队，澳大利亚、巴基斯坦、新加坡等则处于第三梯队。值得注意的是，虽然新加坡的开发者数量并不占优，在开发者来源的数量分布中相对靠后，但在贡献度层面却很靠前，而以色列近年来科技产业的崛起在这个数据中也得到了显现。
+虽然作为大模型，DeepSeek 系列模型的主要使用与下载发生在 HuggingFace、魔搭等模型托管平台，但 GitHub 依然承担了一大部分论坛的作用，有大量开发者在 GitHub 进行讨论与问答，数量远高于 HuggingFace 社区中的讨论量。我们也从这段时间在 DeepSeek-R1 和 V3 仓库中活跃的开发者在过去半年的全域活跃情况进一步分析一下 DeepSeek 吸引了哪些地区的开发者参与到了讨论之中。
+
+下图给出了 DeepSeek 组织中 OpenRank 贡献度的全球分布情况，从参与者的贡献度情况而言，可以看到中美印处于第一梯队，后续英国、巴西、德国处于第二梯队，澳大利亚、巴基斯坦、新加坡等则处于第三梯队。值得注意的是，虽然新加坡的开发者数量并不占优，在开发者来源的数量分布中相对靠后，但在贡献度层面却很靠前，而以色列近年来科技产业的崛起在这个数据中也得到了显现。
 
 <SimpleECharts divStyle={{ height: '480px', width: '960px' }} option={
   {
@@ -190,14 +200,19 @@ import SimpleECharts from '@site/src/components/SimpleECharts';
 
 通过上述清单也可以看到，中国和印度确实在这波大语言模型的浪潮中开始崭露头角并深度交流协同，而北美的开发者可能更多在使用 DeepSeek 却没有太多加入到真正的讨论之中，即便是一些美国企业也是在美华人参与的更多一些，我们也希望未来可以看到更多北美开发者可以深入参与到讨论协作之中。
 
-### 作者点评
+### 关键发现
 
 DeepSeek 系列大模型的发布，无疑是2025年初全球人工智能领域的一颗重磅炸弹。从 OpenDigger 数据来看，DeepSeek 的多个 GitHub 仓库在 R1 发布后的两周内就获得了超过 15 万 Star，活跃开发者近 1700 人，显示了全球开发者对这一创新成果的高度认可，也使得 DeepSeek 的 OpenRank 值产生了阶跃式的增长。
 
 尽管 HuggingFace 和魔搭等平台承担了大部分模型托管功能，GitHub 依然成为了 DeepSeek 开发者讨论和交流的重要阵地，对 GitHub 数据的分析我们可以看到：
 
-- 从日增 Star 的来源来看，美国开发者依然具有极强的科技敏感度，在 DeepSeek-R1 模型发布初期其响应速度甚至快于中国开发者。
-- OpenRank 贡献度分布数据显示，印度开发者在此次 AI 浪潮中不仅扮演着重要角色，而且他们也更愿意和中国的开发者建立连接，不少的印度 AI 初创企业的创始人或合伙人深度参与到了 DeepSeek 的模型讨论之中。
-- 更详细的数据可以看到，虽然北美开发者关注数量较多，但从参与讨论贡献的情况来看，更多的美国开发者可能主要还是以使用和观望为主，参与深入讨论协同的开发者也多以学生或华人为主。
+- 从 Star 整体增长的国家分布来看，DeepSeek-R1 模型展现出**强大的全球影响力**，其在 GitHub 的开发者**覆盖度几乎遍及全球所有国家和地区**。
+- 从 Star 的日增地域来源来看，**美国开发者依然具有极强的科技敏感度**，在 DeepSeek-R1 模型发布初期其响应速度甚至**快于中国开发者**。
+- OpenRank 贡献度地域分布数据显示，**印度开发者在此次 AI 浪潮中不仅扮演着重要角色**，而且他们也更愿意和中国的开发者建立连接，不少的印度 AI 初创企业的创始人或合伙人深度参与到了 DeepSeek 的模型讨论之中。
+- 更详细的数据可以看到，虽然北美开发者关注数量较多，但从参与讨论贡献的情况来看，更多的美国开发者可能主要还是**以使用和观望为主**，参与深入讨论协同的开发者也多**以学生或华人群体为主**。
 
-通过上述分析，我们可以看到 DeepSeek 不仅在技术上取得了巨大成功，更在行业和社会层面产生了深远影响，吸引着全球开发者深度参与到人工智能的开发进步之中。期待 DeepSeek 在未来继续引领全球 AI 技术的发展，为人类社会带来更多可能性。
+### 结语
+
+多年以来，中国在开源世界里多以消费者的形象出现，也曾因只使用不贡献而遭到诟病。而现在中国开源项目如 DeepSeek 已经开始引领全球，这不仅体现在技术上的突破，更在于吸引了全球开发者的广泛参与和贡献，我们也希望今后看到更多欧美的开发者深度参与到中国顶级项目的共建之中。
+
+总体而言，DeepSeek 不仅在技术上取得了巨大成功，更在行业和社会层面产生了深远影响，吸引着全球开发者深度参与到人工智能的开发进步之中。期待 DeepSeek 在未来继续引领全球 AI 技术的发展，为人类社会带来更多可能性。
