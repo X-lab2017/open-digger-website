@@ -19,16 +19,6 @@ export default (props: any): JSX.Element => {
           left: 'center',
           textStyle: { color: fontColor, fontSize: 12 },
         },
-        tooltip: {
-          trigger: 'axis', axisPointer: { type: 'cross' }, formatter: function (params) {
-            const filteredParams = params.filter(param => param.color !== 'transparent');
-            let tooltipText = '';
-            filteredParams.forEach(param => {
-              tooltipText += `${param.marker} ${param.seriesName}: ${param.value}<br/>`;
-            });
-            return tooltipText;
-          },
-        },
         legend: {
           left: 'center',
           textStyle: { color: fontColor },
@@ -40,6 +30,18 @@ export default (props: any): JSX.Element => {
 
       if (option && option.series) {
         const typeCountMap = new Map<string, number>();
+        if (option.series.some(s => ['pie', 'bar', 'line'].includes(s.type))) {
+          defaultOption.tooltip = {
+            trigger: 'axis', axisPointer: { type: 'cross' }, formatter: function (params) {
+              const filteredParams = params.filter(param => param.color !== 'transparent');
+              let tooltipText = '';
+              filteredParams.forEach(param => {
+                tooltipText += `${param.marker} ${param.seriesName}: ${param.value}<br/>`;
+              });
+              return tooltipText;
+            }
+          };
+        }
         for (let i = 0; i < option.series.length; i++) {
           const s = option.series[i];
           const count = typeCountMap.get(s.type) || 0;

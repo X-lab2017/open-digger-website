@@ -35,20 +35,158 @@ import SimpleECharts from '@site/src/components/SimpleECharts';
 下图给出了整体增长中各国的开发者的占比情况，中国依然以 24.4% 排名第一，美国 15.7% 紧随其后，之后的开发者最多的十个国家为：印度、巴西、德国、英国、加拿大、韩国、法国、日本、印度尼西亚和澳大利亚。而非洲开发者关注数量最多的几个国家也为互联网化程度最高的几个国家，如尼日利亚、埃及、南非、肯尼亚及阿尔及利亚等。
 
 <SimpleECharts divStyle={{ height: '480px', width: '960px' }} option={
-  {"title":{"text":"DeepSeek 总体 Star 新增国家分布","left":"center","top":"bottom"},"legend":null,"visualMap":{"min":0,"max":17,"show":false,"calculable":true,"inRange":{"color":["#ffffff","#ffffcc","#ffeda0","#fed976","#feb24c","#fd8d3c","#fc4e2a","#e31a1c","#b10026"]}},"geo":{"map":"world","roam":false,"itemStyle":{"areaColor":"#eee","borderColor":"#333"},"left":"center","top":"center","width":"90%","height":"90%"},"series":[{"type":"map","geoIndex":0,"map":"world","data":[{"name":"China","value":17},{"name":"United States","value":16},{"name":"India","value":15},{"name":"Brazil","value":15},{"name":"Germany","value":14},{"name":"United Kingdom","value":14},{"name":"Canada","value":14},{"name":"Korea","value":14},{"name":"France","value":14},{"name":"Japan","value":13},{"name":"Indonesia","value":13},{"name":"Australia","value":13},{"name":"Türkiye","value":13},{"name":"Spain","value":13},{"name":"Poland","value":13},{"name":"Netherlands","value":13},{"name":"Italy","value":13},{"name":"Vietnam","value":12},{"name":"Russia","value":12},{"name":"Switzerland","value":12},{"name":"Singapore","value":12},{"name":"Bangladesh","value":12},{"name":"Portugal","value":12},{"name":"Sweden","value":12},{"name":"Iran","value":12},{"name":"Mexico","value":11},{"name":"Norway","value":11},{"name":"Egypt","value":11},{"name":"Austria","value":11},{"name":"Thailand","value":11},{"name":"Pakistan","value":11},{"name":"Czechia","value":11},{"name":"Nigeria","value":11},{"name":"Colombia","value":11},{"name":"Argentina","value":11},{"name":"Malaysia","value":11},{"name":"Philippines","value":11},{"name":"Nepal","value":11},{"name":"Belgium","value":11},{"name":"Ukraine","value":11},{"name":"Denmark","value":11},{"name":"Morocco","value":11},{"name":"Kenya","value":11},{"name":"Greece","value":11},{"name":"Romania","value":11},{"name":"United Arab Emirates","value":10},{"name":"Sri Lanka","value":10},{"name":"New Zealand","value":10},{"name":"South Africa","value":10},{"name":"Finland","value":10},{"name":"Chile","value":10},{"name":"Israel","value":10},{"name":"Ireland","value":10},{"name":"Ghana","value":10},{"name":"Tunisia","value":10},{"name":"Hungary","value":10},{"name":"Peru","value":10},{"name":"Bulgaria","value":10},{"name":"Kazakhstan","value":10},{"name":"Saudi Arabia","value":10},{"name":"Serbia","value":9},{"name":"Georgia","value":9},{"name":"Algeria","value":9},{"name":"Azerbaijan","value":9},{"name":"Estonia","value":9},{"name":"Cameroon","value":9},{"name":"Venezuela","value":9},{"name":"Dominican Republic","value":9},{"name":"Cyprus","value":9},{"name":"Slovenia","value":9},{"name":"Uruguay","value":9},{"name":"Ethiopia","value":9},{"name":"Croatia","value":9},{"name":"Lithuania","value":9},{"name":"Slovakia","value":8},{"name":"Luxembourg","value":8},{"name":"Latvia","value":8},{"name":"Ecuador","value":8},{"name":"Belarus","value":8},{"name":"Rwanda","value":8},{"name":"Cambodia","value":8},{"name":"Uganda","value":8},{"name":"Yemen","value":8},{"name":"Uzbekistan","value":8},{"name":"Armenia","value":8},{"name":"Madagascar","value":8},{"name":"Tanzania","value":8},{"name":"Costa Rica","value":8},{"name":"Benin","value":8},{"name":"Angola","value":8},{"name":"Iraq","value":8},{"name":"Guatemala","value":8},{"name":"El Salvador","value":8},{"name":"Myanmar (Burma)","value":8},{"name":"Iceland","value":7},{"name":"Paraguay","value":7},{"name":"Moldova","value":7},{"name":"Mongolia","value":7},{"name":"Lebanon","value":7},{"name":"North Macedonia","value":7},{"name":"Bosnia and Herzegovina","value":7},{"name":"Mozambique","value":7},{"name":"Puerto Rico","value":7},{"name":"Honduras","value":7},{"name":"Kyrgyzstan","value":7},{"name":"Antarctica","value":7},{"name":"Jordan","value":7},{"name":"Zambia","value":7},{"name":"Eswatini","value":7},{"name":"Nicaragua","value":7},{"name":"Afghanistan","value":7},{"name":"Qatar","value":7},{"name":"Panama","value":7},{"name":"Mauritius","value":7},{"name":"Cuba","value":7},{"name":"Bolivia","value":7},{"name":"Democratic Republic of the Congo","value":6},{"name":"Malta","value":6},{"name":"Albania","value":6},{"name":"Malawi","value":6},{"name":"Côte d'Ivoire","value":6},{"name":"Senegal","value":6},{"name":"Jamaica","value":6},{"name":"Namibia","value":6},{"name":"Zimbabwe","value":6},{"name":"Cabo Verde","value":6},{"name":"The Bahamas","value":6},{"name":"Haiti","value":6},{"name":"Hong Kong SAR","value":6},{"name":"Burkina Faso","value":6},{"name":"Montenegro","value":6},{"name":"Oman","value":6},{"name":"Somalia","value":6},{"name":"Kuwait","value":5},{"name":"Libya","value":5},{"name":"Bahrain","value":5},{"name":"Turkmenistan","value":5},{"name":"Maldives","value":5},{"name":"Bouvet Island","value":5},{"name":"Kosovo","value":5},{"name":"Cocos (Keeling) Islands","value":5},{"name":"Syria","value":5},{"name":"Sudan","value":5},{"name":"Niger","value":5},{"name":"Liberia","value":5},{"name":"Republic of the Congo","value":4},{"name":"Tajikistan","value":4},{"name":"Wallis and Futuna","value":4},{"name":"Palestine","value":4},{"name":"Gabon","value":4},{"name":"Cayman Islands","value":4},{"name":"Sierra Leone","value":4},{"name":"Saint Helena, Ascension and Tristan da Cunha","value":4},{"name":"Trinidad and Tobago","value":4},{"name":"Fiji","value":4},{"name":"Togo","value":3},{"name":"Martinique","value":3},{"name":"Liechtenstein","value":3},{"name":"Botswana","value":3},{"name":"North Korea","value":3},{"name":"San Marino","value":3},{"name":"Mali","value":3},{"name":"Antigua and Barbuda","value":3},{"name":"Laos","value":3},{"name":"Andorra","value":3},{"name":"Curaçao","value":3},{"name":"French Polynesia","value":3},{"name":"Lesotho","value":3},{"name":"Bhutan","value":3},{"name":"Seychelles","value":3},{"name":"Burundi","value":3},{"name":"Réunion","value":2},{"name":"Greenland","value":2},{"name":"Belize","value":2},{"name":"Chad","value":2},{"name":"Isle of Man","value":2},{"name":"The Gambia","value":2},{"name":"Grenada","value":2},{"name":"Aruba","value":2},{"name":"Jersey","value":1},{"name":"Myanmar","value":1},{"name":"Bermuda","value":1},{"name":"Gibraltar","value":1},{"name":"Guinea","value":1},{"name":"Dem. Rep. Korea","value":1}],"label":{"show":true},"animation":true,"animationDuration":3000,"animationEasing":"cubicInOut","blendMode":"lighter"}]}
-}
+  {
+  title: {
+    text: 'DeepSeek 总体 Star 新增国家分布',
+    left: 'center',
+    top: 'bottom'
+  },
+  legend: null,
+  tooltip: {
+    trigger: 'item',
+    formatter: function (params) {
+      if (params.data && params.data.ratio) {
+        return `${params.data.name}: ${params.data.ratio}%`;
+      }
+      return '';
+    }
+  },
+  visualMap: {
+    min: 0,
+    max: 17,
+    show: false,
+    calculable: true,
+    inRange: {
+      color: [
+        '#ffeda0',
+        '#fed976',
+        '#feb24c',
+        '#fd8d3c',
+        '#fc4e2a',
+        '#e31a1c',
+        '#b10026'
+      ]
+    }
+  },
+  geo: {
+    map: 'world',
+    roam: false,
+    itemStyle: { areaColor: '#eee', borderColor: '#333' },
+    label: {
+      show: true,
+      formatter: (params) => {
+        const data = new Map([
+          ['China', 24.45],
+          ['United States', 15.71],
+          ['India', 5.53],
+          ['United Kingdom', 3.1],
+          ['Brazil', 5.12],
+          ['Germany', 4.54],
+          ['Canada', 2.97],
+          ['Korea', 2.83],
+          ['France', 2.44]
+        ]);
+        return data.has(params.name)
+          ? `${params.name}\n${data.get(params.name)}%`
+          : '';
+      }
+    },
+    left: 'center',
+    top: 'center',
+    width: '90%',
+    height: '90%'
+  },
+  series: [
+    {
+      type: 'map',
+      geoIndex: 0,
+      map: 'world',
+      data: [{"name":"China","value":16.37,"ratio":"24.44"},{"name":"United States","value":15.73,"ratio":"15.71"},{"name":"India","value":14.23,"ratio":"5.53"},{"name":"Brazil","value":14.11,"ratio":"5.12"},{"name":"Germany","value":13.94,"ratio":"4.54"},{"name":"United Kingdom","value":13.39,"ratio":"3.10"},{"name":"Canada","value":13.33,"ratio":"2.97"},{"name":"Korea","value":13.26,"ratio":"2.83"},{"name":"France","value":13.05,"ratio":"2.44"},{"name":"Japan","value":12.85,"ratio":"2.13"},{"name":"Indonesia","value":12.68,"ratio":"1.89"},{"name":"Australia","value":12.34,"ratio":"1.50"},{"name":"Türkiye","value":12.28,"ratio":"1.44"},{"name":"Spain","value":12.13,"ratio":"1.30"},{"name":"Poland","value":12.13,"ratio":"1.29"},{"name":"Netherlands","value":12.12,"ratio":"1.29"},{"name":"Italy","value":12.05,"ratio":"1.22"},{"name":"Vietnam","value":11.93,"ratio":"1.12"},{"name":"Russia","value":11.83,"ratio":"1.05"},{"name":"Switzerland","value":11.72,"ratio":"0.97"},{"name":"Singapore","value":11.61,"ratio":"0.90"},{"name":"Bangladesh","value":11.39,"ratio":"0.78"},{"name":"Portugal","value":11.29,"ratio":"0.72"},{"name":"Sweden","value":11.25,"ratio":"0.70"},{"name":"Iran","value":11.06,"ratio":"0.62"},{"name":"Mexico","value":10.93,"ratio":"0.56"},{"name":"Norway","value":10.78,"ratio":"0.51"},{"name":"Egypt","value":10.58,"ratio":"0.44"},{"name":"Austria","value":10.57,"ratio":"0.44"},{"name":"Thailand","value":10.56,"ratio":"0.43"},{"name":"Pakistan","value":10.54,"ratio":"0.43"},{"name":"Nigeria","value":10.47,"ratio":"0.41"},{"name":"Czechia","value":10.46,"ratio":"0.41"},{"name":"Colombia","value":10.44,"ratio":"0.40"},{"name":"Argentina","value":10.39,"ratio":"0.39"},{"name":"Malaysia","value":10.3,"ratio":"0.36"},{"name":"Philippines","value":10.29,"ratio":"0.36"},{"name":"Nepal","value":10.25,"ratio":"0.35"},{"name":"Belgium","value":10.19,"ratio":"0.34"},{"name":"Ukraine","value":10.15,"ratio":"0.33"},{"name":"Denmark","value":10.1,"ratio":"0.32"},{"name":"Morocco","value":10.04,"ratio":"0.30"},{"name":"Kenya","value":10.03,"ratio":"0.30"},{"name":"Greece","value":10.01,"ratio":"0.30"},{"name":"Romania","value":10,"ratio":"0.30"},{"name":"United Arab Emirates","value":9.98,"ratio":"0.29"},{"name":"Sri Lanka","value":9.95,"ratio":"0.29"},{"name":"New Zealand","value":9.88,"ratio":"0.27"},{"name":"South Africa","value":9.82,"ratio":"0.26"},{"name":"Finland","value":9.82,"ratio":"0.26"},{"name":"Chile","value":9.6,"ratio":"0.22"},{"name":"Israel","value":9.6,"ratio":"0.22"},{"name":"Ireland","value":9.48,"ratio":"0.21"},{"name":"Ghana","value":9.45,"ratio":"0.20"},{"name":"Tunisia","value":9.44,"ratio":"0.20"},{"name":"Hungary","value":9.25,"ratio":"0.18"},{"name":"Peru","value":9.25,"ratio":"0.18"},{"name":"Bulgaria","value":9.22,"ratio":"0.17"},{"name":"Kazakhstan","value":9.08,"ratio":"0.16"},{"name":"Saudi Arabia","value":9.04,"ratio":"0.15"},{"name":"Serbia","value":8.98,"ratio":"0.15"},{"name":"Georgia","value":8.94,"ratio":"0.14"},{"name":"Algeria","value":8.6,"ratio":"0.11"},{"name":"Azerbaijan","value":8.5,"ratio":"0.10"},{"name":"Estonia","value":8.48,"ratio":"0.10"},{"name":"Cameroon","value":8.45,"ratio":"0.10"},{"name":"Venezuela","value":8.44,"ratio":"0.10"},{"name":"Dominican Republic","value":8.41,"ratio":"0.10"},{"name":"Cyprus","value":8.19,"ratio":"0.08"},{"name":"Slovenia","value":8.19,"ratio":"0.08"},{"name":"Uruguay","value":8.16,"ratio":"0.08"},{"name":"Ethiopia","value":8.16,"ratio":"0.08"},{"name":"Croatia","value":8.11,"ratio":"0.08"},{"name":"Lithuania","value":8.02,"ratio":"0.08"},{"name":"Slovakia","value":8,"ratio":"0.07"},{"name":"Luxembourg","value":7.93,"ratio":"0.07"},{"name":"Latvia","value":7.91,"ratio":"0.07"},{"name":"Ecuador","value":7.86,"ratio":"0.07"},{"name":"Belarus","value":7.86,"ratio":"0.07"},{"name":"Rwanda","value":7.85,"ratio":"0.07"},{"name":"Cambodia","value":7.74,"ratio":"0.06"},{"name":"Uganda","value":7.69,"ratio":"0.06"},{"name":"Yemen","value":7.69,"ratio":"0.06"},{"name":"Uzbekistan","value":7.64,"ratio":"0.06"},{"name":"Armenia","value":7.52,"ratio":"0.05"},{"name":"Madagascar","value":7.44,"ratio":"0.05"},{"name":"Tanzania","value":7.19,"ratio":"0.04"},{"name":"Costa Rica","value":7.17,"ratio":"0.04"},{"name":"Benin","value":7.17,"ratio":"0.04"},{"name":"Angola","value":7.17,"ratio":"0.04"},{"name":"Iraq","value":7.11,"ratio":"0.04"},{"name":"Guatemala","value":7.02,"ratio":"0.04"},{"name":"El Salvador","value":7.02,"ratio":"0.04"},{"name":"Myanmar (Burma)","value":7.02,"ratio":"0.04"},{"name":"Iceland","value":6.98,"ratio":"0.04"},{"name":"Paraguay","value":6.95,"ratio":"0.04"},{"name":"Moldova","value":6.88,"ratio":"0.03"},{"name":"Mongolia","value":6.86,"ratio":"0.03"},{"name":"Lebanon","value":6.83,"ratio":"0.03"},{"name":"North Macedonia","value":6.81,"ratio":"0.03"},{"name":"Bosnia and Herzegovina","value":6.58,"ratio":"0.03"},{"name":"Mozambique","value":6.52,"ratio":"0.03"},{"name":"Puerto Rico","value":6.52,"ratio":"0.03"},{"name":"Honduras","value":6.49,"ratio":"0.03"},{"name":"Kyrgyzstan","value":6.46,"ratio":"0.03"},{"name":"Antarctica","value":6.39,"ratio":"0.02"},{"name":"Jordan","value":6.39,"ratio":"0.02"},{"name":"Zambia","value":6.39,"ratio":"0.02"},{"name":"Eswatini","value":6.32,"ratio":"0.02"},{"name":"Nicaragua","value":6.29,"ratio":"0.02"},{"name":"Afghanistan","value":6.29,"ratio":"0.02"},{"name":"Qatar","value":6.21,"ratio":"0.02"},{"name":"Panama","value":6.17,"ratio":"0.02"},{"name":"Mauritius","value":6.17,"ratio":"0.02"},{"name":"Cuba","value":6.13,"ratio":"0.02"},{"name":"Bolivia","value":6.04,"ratio":"0.02"},{"name":"Malta","value":5.91,"ratio":"0.02"},{"name":"Democratic Republic of the Congo","value":5.91,"ratio":"0.02"},{"name":"Albania","value":5.91,"ratio":"0.02"},{"name":"Malawi","value":5.86,"ratio":"0.02"},{"name":"Côte d'Ivoire","value":5.81,"ratio":"0.02"},{"name":"Senegal","value":5.75,"ratio":"0.02"},{"name":"Jamaica","value":5.58,"ratio":"0.01"},{"name":"Namibia","value":5.52,"ratio":"0.01"},{"name":"Zimbabwe","value":5.52,"ratio":"0.01"},{"name":"Cabo Verde","value":5.46,"ratio":"0.01"},{"name":"The Bahamas","value":5.46,"ratio":"0.01"},{"name":"Haiti","value":5.39,"ratio":"0.01"},{"name":"Hong Kong SAR","value":5.32,"ratio":"0.01"},{"name":"Burkina Faso","value":5.25,"ratio":"0.01"},{"name":"Montenegro","value":5.17,"ratio":"0.01"},{"name":"Oman","value":5.17,"ratio":"0.01"},{"name":"Somalia","value":5.09,"ratio":"0.01"},{"name":"Kuwait","value":5,"ratio":"0.01"},{"name":"Libya","value":4.91,"ratio":"0.01"},{"name":"Bahrain","value":4.91,"ratio":"0.01"},{"name":"Turkmenistan","value":4.81,"ratio":"0.01"},{"name":"Maldives","value":4.81,"ratio":"0.01"},{"name":"Bouvet Island","value":4.58,"ratio":"0.01"},{"name":"Kosovo","value":4.46,"ratio":"0.01"},{"name":"Cocos (Keeling) Islands","value":4.46,"ratio":"0.01"},{"name":"Syria","value":4.32,"ratio":"0.01"},{"name":"Sudan","value":4.17,"ratio":"0.01"},{"name":"Niger","value":4.17,"ratio":"0.01"},{"name":"Liberia","value":4.17,"ratio":"0.01"},{"name":"Republic of the Congo","value":4,"ratio":"0.00"},{"name":"Tajikistan","value":4,"ratio":"0.00"},{"name":"Wallis and Futuna","value":3.81,"ratio":"0.00"},{"name":"Palestine","value":3.81,"ratio":"0.00"},{"name":"Gabon","value":3.58,"ratio":"0.00"},{"name":"Cayman Islands","value":3.58,"ratio":"0.00"},{"name":"Sierra Leone","value":3.58,"ratio":"0.00"},{"name":"Saint Helena, Ascension and Tristan da Cunha","value":3.32,"ratio":"0.00"},{"name":"Trinidad and Tobago","value":3.32,"ratio":"0.00"},{"name":"Fiji","value":3.32,"ratio":"0.00"},{"name":"Togo","value":3,"ratio":"0.00"},{"name":"Martinique","value":3,"ratio":"0.00"},{"name":"Liechtenstein","value":3,"ratio":"0.00"},{"name":"Botswana","value":3,"ratio":"0.00"},{"name":"North Korea","value":3,"ratio":"0.00"},{"name":"San Marino","value":3,"ratio":"0.00"},{"name":"Mali","value":3,"ratio":"0.00"},{"name":"Antigua and Barbuda","value":2.58,"ratio":"0.00"},{"name":"Laos","value":2.58,"ratio":"0.00"},{"name":"Andorra","value":2.58,"ratio":"0.00"},{"name":"Curaçao","value":2.58,"ratio":"0.00"},{"name":"Lesotho","value":2.58,"ratio":"0.00"},{"name":"French Polynesia","value":2.58,"ratio":"0.00"},{"name":"Burundi","value":2.58,"ratio":"0.00"},{"name":"Bhutan","value":2.58,"ratio":"0.00"},{"name":"Seychelles","value":2.58,"ratio":"0.00"},{"name":"Réunion","value":2,"ratio":"0.00"},{"name":"Greenland","value":2,"ratio":"0.00"},{"name":"Belize","value":2,"ratio":"0.00"},{"name":"Chad","value":2,"ratio":"0.00"},{"name":"Isle of Man","value":2,"ratio":"0.00"},{"name":"Grenada","value":2,"ratio":"0.00"},{"name":"The Gambia","value":2,"ratio":"0.00"},{"name":"Aruba","value":2,"ratio":"0.00"},{"name":"Myanmar","value":1,"ratio":"0.00"},{"name":"Jersey","value":1,"ratio":"0.00"},{"name":"Bermuda","value":1,"ratio":"0.00"},{"name":"Gibraltar","value":1,"ratio":"0.00"},{"name":"Guinea","value":1,"ratio":"0.00"},{"name":"Republic of Korea","value":1,"ratio":"0.00"}]
+    }
+  ]
+}}
 />
 
 虽然作为大模型，DeepSeek 系列模型的主要使用与下载发生在 HuggingFace、魔搭等模型托管平台，但 GitHub 依然承担了一大部分论坛的作用，有大量开发者在 GitHub 进行讨论与问答，数量远高于 HuggingFace 社区中的讨论量。我们也从这段时间在 DeepSeek-R1 和 V3 仓库中活跃的开发者在过去半年的全域活跃情况进一步分析一下 DeepSeek 吸引了哪些领域的开发者参与到了讨论之中。
 
-下图给出了 DeepSeek 组织中 OpenRank 贡献度的全球分布情况，从参与者的贡献度情况而言，可以看到中美处于第一梯队，后续新加坡、印度、德国、英国、巴西、波兰处于第二梯队，而法国、澳大利亚、以色列、意大利、加拿大处于第三梯队。值得注意的是，虽然新加坡的开发者数量并不占优，在开发者来源的数量分布中相对靠后，但在贡献度层面则紧随中美之后排在第三，而以色列近年来科技产业的崛起在这个数据中也得到了显现。
+下图给出了 DeepSeek 组织中 OpenRank 贡献度的全球分布情况，从参与者的贡献度情况而言，可以看到中美处于第一梯队，后续印度、英国、巴西、德国处于第二梯队，澳大利亚、巴基斯坦、新加坡等则处于第三梯队。值得注意的是，虽然新加坡的开发者数量并不占优，在开发者来源的数量分布中相对靠后，但在贡献度层面却很靠前，而以色列近年来科技产业的崛起在这个数据中也得到了显现。
 
 <SimpleECharts divStyle={{ height: '480px', width: '960px' }} option={
-  {"title":{"text":"DeepSeek 贡献度国家分布","left":"center","top":"bottom"},"legend":null,"visualMap":{"min":0,"max":6.86,"show":false,"calculable":true,"inRange":{"color":["#ffeda0","#fed976","#feb24c","#fd8d3c","#fc4e2a","#e31a1c","#b10026"]}},"geo":{"map":"world","roam":false,"itemStyle":{"areaColor":"#eee","borderColor":"#333"},"left":"center","top":"center","width":"90%","height":"90%"},"series":[{"type":"map","geoIndex":0,"map":"world","data":[{"name":"China","value":6.86},{"name":"United States","value":5.53},{"name":"Singapore","value":3.89},{"name":"India","value":3.83},{"name":"Germany","value":3.49},{"name":"United Kingdom","value":3.3},{"name":"Brazil","value":3.21},{"name":"Poland","value":3.03},{"name":"France","value":2.36},{"name":"Australia","value":2.34},{"name":"Israel","value":2.22},{"name":"Italy","value":2.06},{"name":"Canada","value":1.99},{"name":"Sri Lanka","value":1.94},{"name":"Uganda","value":1.92},{"name":"Netherlands","value":1.91},{"name":"Indonesia","value":1.74},{"name":"Greece","value":1.64},{"name":"Pakistan","value":1.59},{"name":"Sweden","value":1.52},{"name":"Switzerland","value":1.23},{"name":"Vietnam","value":1.2},{"name":"Thailand","value":1.14},{"name":"South Korea","value":1.13},{"name":"Morocco","value":1.05},{"name":"Türkiye","value":0.94},{"name":"New Zealand","value":0.94},{"name":"Bangladesh","value":0.9},{"name":"Denmark","value":0.85},{"name":"Argentina","value":0.81},{"name":"Russia","value":0.77},{"name":"Japan","value":0.72},{"name":"United Arab Emirates","value":0.66},{"name":"Tunisia","value":0.63},{"name":"Philippines","value":0.62},{"name":"Angola","value":0.59},{"name":"Austria","value":0.49},{"name":"Yemen","value":0.48},{"name":"Spain","value":0.46},{"name":"Czechia","value":0.45},{"name":"Algeria","value":0.45},{"name":"Malaysia","value":0.41},{"name":"Finland","value":0.38},{"name":"Ukraine","value":0.36},{"name":"Iran","value":0.34},{"name":"Nigeria","value":0.31},{"name":"Latvia","value":0.3},{"name":"Bolivia","value":0.29},{"name":"Ireland","value":0.28},{"name":"Kazakhstan","value":0.27},{"name":"Ethiopia","value":0.26},{"name":"Portugal","value":0.25},{"name":"South Africa","value":0.23},{"name":"Romania","value":0.22},{"name":"Georgia","value":0.21},{"name":"Colombia","value":0.21},{"name":"Ghana","value":0.18},{"name":"Afghanistan","value":0.17},{"name":"Uzbekistan","value":0.12},{"name":"Croatia","value":0.11},{"name":"Kenya","value":0.1},{"name":"Bosnia and Herzegovina","value":0.1},{"name":"Mexico","value":0.1},{"name":"Nepal","value":0.1},{"name":"Fiji","value":0.06}],"label":{"show":true},"animation":true,"animationDuration":3000,"animationEasing":"cubicInOut","blendMode":"lighter"}]}
-}
+  {
+  title: { text: 'DeepSeek 开发者贡献度国家分布', left: 'center', top: 'bottom' },
+  legend: null,
+  tooltip: {
+    trigger: 'item',
+    formatter: function (params) {
+      console.log(params);
+      if (params.data) {
+        if (params.data.ratio) {
+          return `${params.data.name}: ${params.data.ratio}%`;
+        } else {
+          return params.data.name;
+        }
+      }
+      return '';
+    }
+  },
+  visualMap: {
+    min: 0,
+    max: 4.79,
+    show: false,
+    calculable: true,
+    inRange: {
+      color: [
+        '#ffeda0',
+        '#fed976',
+        '#feb24c',
+        '#fd8d3c',
+        '#fc4e2a',
+        '#e31a1c',
+        '#b10026'
+      ]
+    }
+  },
+  geo: {
+    map: 'world',
+    roam: false,
+    itemStyle: { areaColor: '#eee', borderColor: '#333' },
+    label: {
+      show: true,
+      formatter: (params) => {
+        const data = new Map([
+          ['China', 37.79],
+          ['United States', 14.03],
+          ['India', 9.46],
+          ['United Kingdom', 4.71],
+          ['Brazil', 2.84],
+          ['Germany', 2.65],
+          ['Australia', 1.68],
+          ['Pakistan', 1.44],
+          ['Singapore', 1.33]
+        ]);
+        return data.has(params.name)
+          ? `${params.name}\n${data.get(params.name)}%`
+          : '';
+      }
+    },
+    left: 'center',
+    top: 'center',
+    width: '90%',
+    height: '90%'
+  },
+  series: [
+    {
+      name: '国家贡献比例',
+      type: 'map',
+      geoIndex: 0,
+      map: 'world',
+      data: [{"name":"China","value":4.79,"ratio":"37.86"},{"name":"United States","value":3.46,"ratio":"14.22"},{"name":"India","value":2.94,"ratio":"9.46"},{"name":"United Kingdom","value":2.11,"ratio":"4.71"},{"name":"Brazil","value":1.59,"ratio":"2.84"},{"name":"Germany","value":1.52,"ratio":"2.65"},{"name":"Australia","value":1.13,"ratio":"1.68"},{"name":"Pakistan","value":1.01,"ratio":"1.44"},{"name":"Singapore","value":0.96,"ratio":"1.33"},{"name":"Uganda","value":0.94,"ratio":"1.30"},{"name":"France","value":0.92,"ratio":"1.27"},{"name":"Canada","value":0.9,"ratio":"1.22"},{"name":"Poland","value":0.88,"ratio":"1.19"},{"name":"Sweden","value":0.74,"ratio":"0.95"},{"name":"Türkiye","value":0.71,"ratio":"0.90"},{"name":"Switzerland","value":0.7,"ratio":"0.88"},{"name":"Korea","value":0.7,"ratio":"0.88"},{"name":"Greece","value":0.7,"ratio":"0.88"},{"name":"Israel","value":0.69,"ratio":"0.87"},{"name":"Vietnam","value":0.62,"ratio":"0.75"},{"name":"Argentina","value":0.61,"ratio":"0.75"},{"name":"Russia","value":0.57,"ratio":"0.68"},{"name":"Japan","value":0.57,"ratio":"0.68"},{"name":"New Zealand","value":0.5,"ratio":"0.58"},{"name":"Italy","value":0.48,"ratio":"0.56"},{"name":"Indonesia","value":0.48,"ratio":"0.55"},{"name":"Tunisia","value":0.44,"ratio":"0.50"},{"name":"Malaysia","value":0.41,"ratio":"0.46"},{"name":"Thailand","value":0.36,"ratio":"0.40"},{"name":"Morocco","value":0.36,"ratio":"0.39"},{"name":"Sri Lanka","value":0.36,"ratio":"0.40"},{"name":"Austria","value":0.34,"ratio":"0.38"},{"name":"Iran","value":0.34,"ratio":"0.38"},{"name":"Bangladesh","value":0.33,"ratio":"0.37"},{"name":"Czechia","value":0.29,"ratio":"0.32"},{"name":"United Arab Emirates","value":0.28,"ratio":"0.30"},{"name":"Denmark","value":0.27,"ratio":"0.29"},{"name":"Netherlands","value":0.26,"ratio":"0.27"},{"name":"Yemen","value":0.26,"ratio":"0.28"},{"name":"Ethiopia","value":0.26,"ratio":"0.27"},{"name":"Philippines","value":0.24,"ratio":"0.25"},{"name":"Angola","value":0.23,"ratio":"0.24"},{"name":"Ukraine","value":0.23,"ratio":"0.24"},{"name":"Romania","value":0.22,"ratio":"0.23"},{"name":"Nigeria","value":0.21,"ratio":"0.22"},{"name":"Finland","value":0.21,"ratio":"0.21"},{"name":"Algeria","value":0.2,"ratio":"0.20"},{"name":"Bolivia","value":0.2,"ratio":"0.21"},{"name":"Portugal","value":0.18,"ratio":"0.18"},{"name":"South Africa","value":0.17,"ratio":"0.17"},{"name":"Afghanistan","value":0.17,"ratio":"0.18"},{"name":"Spain","value":0.17,"ratio":"0.18"},{"name":"Ireland","value":0.15,"ratio":"0.15"},{"name":"Kazakhstan","value":0.14,"ratio":"0.14"},{"name":"Ghana","value":0.13,"ratio":"0.13"},{"name":"Uzbekistan","value":0.12,"ratio":"0.11"},{"name":"Colombia","value":0.11,"ratio":"0.11"},{"name":"Georgia","value":0.11,"ratio":"0.11"},{"name":"Croatia","value":0.11,"ratio":"0.11"},{"name":"Latvia","value":0.11,"ratio":"0.11"},{"name":"Bosnia and Herzegovina","value":0.1,"ratio":"0.10"},{"name":"Nepal","value":0.1,"ratio":"0.09"},{"name":"Kenya","value":0.1,"ratio":"0.10"},{"name":"Mexico","value":0.1,"ratio":"0.10"},{"name":"Fiji","value":0.06,"ratio":"0.06"}]
+    }
+  ]
+}}
 />
 
-更详细的数据显示，DeepSeek 吸引到了大量在过去半年中深耕大语言模型领域的开发者和爱好者。如 LiteLLM（OpenRank 193）的创始人和 CEO Krish Dholakia（[@krrishdholakia](https://github.com/krrishdholakia)）、SGLang（OpenRank 180）的核心维护者 Yineng Zhang（[@zhyncs](https://github.com/zhyncs)）、Promptfoo（OpenRank 46） 的核心维护者 Michael（[@mldangelo](https://github.com/mldangelo)）、avante.nvim（OpenRank 57）的作者 yetone（[@yetone](https://github.com/yetone)），Mem0 AI（OpenRank 31） 的联合创始人 Dev-Khant（[@Dev Khant](https://github.com/Dev-Khant)）、LangBot 的作者 Junyan Qin（[@RockChinQ](https://github.com/RockChinQ)）、ChatHub 的作者 wong2（[@wong2](https://github.com/wong2)）等等。当然也包含一些在企业中做 AI 相关业务的负责人，如来自微软的 PowerShell 团队 AIShell 项目的 Dongbo Wang（[@daxian-dbw](https://github.com/daxian-dbw)）、来自 Intel 的 AutoAround 团队的 Wenhua Cheng（[@wenhuach21](https://github.com/wenhuach21)）等。
+更详细的数据显示，DeepSeek 吸引到了大量在过去半年中深耕大语言模型领域的开发者和爱好者。如 LiteLLM（OpenRank 193）的创始人和 CEO Krish Dholakia（[@krrishdholakia](https://github.com/krrishdholakia)）、SGLang（OpenRank 180）的核心维护者 Yineng Zhang（[@zhyncs](https://github.com/zhyncs)）、Promptfoo（OpenRank 46） 的核心维护者 Michael（[@mldangelo](https://github.com/mldangelo)）、avante.nvim（OpenRank 57）的作者 yetone（[@yetone](https://github.com/yetone)），Mem0 AI（OpenRank 31） 的联合创始人 Dev Khant（[@Dev-Khant](https://github.com/Dev-Khant)）、LangBot 的作者 Junyan Qin（[@RockChinQ](https://github.com/RockChinQ)）、ChatHub 的作者 wong2（[@wong2](https://github.com/wong2)）等等。当然也包含一些在企业中做 AI 相关业务的负责人，如来自微软的 PowerShell 团队 AIShell 项目的 Dongbo Wang（[@daxian-dbw](https://github.com/daxian-dbw)）、来自 Intel 的 AutoAround 团队的 Wenhua Cheng（[@wenhuach21](https://github.com/wenhuach21)）等。
 
 通过上述清单也可以看到，中国和印度确实在这波大语言模型的浪潮中开始崭露头角并深度交流协同，而北美的开发者可能更多在使用 DeepSeek 却没有太多加入到真正的讨论之中，即便是一些美国企业也是在美华人参与的更多一些，我们也希望未来可以看到更多北美开发者可以深入参与到讨论协作之中。
 
@@ -59,7 +197,7 @@ DeepSeek 系列大模型的发布，无疑是2025年初全球人工智能领域�
 尽管 HuggingFace 和魔搭等平台承担了大部分模型托管功能，GitHub 依然成为了 DeepSeek 开发者讨论和交流的重要阵地，对 GitHub 数据的分析我们可以看到：
 
 - 从日增 Star 的来源来看，美国开发者依然具有极强的科技敏感度，在 DeepSeek-R1 模型发布初期其响应速度甚至快于中国开发者。
-- OpenRank 贡献度分布数据显示，新加坡、印度等开发者在此次 AI 浪潮中不仅扮演着重要角色，而且他们也更愿意和中国的开发者建立连接，不少的印度 AI 初创企业的创始人或合伙人深度参与到了 DeepSeek 的模型讨论之中。
-- 更详细的数据可以看到，虽然北美开发者关注数量较多，但从参与讨论贡献的情况来看，更多的美国开发者可能主要还是以使用和观望为主，参与深入讨论协同的开发者也多以华人为主。
+- OpenRank 贡献度分布数据显示，印度开发者在此次 AI 浪潮中不仅扮演着重要角色，而且他们也更愿意和中国的开发者建立连接，不少的印度 AI 初创企业的创始人或合伙人深度参与到了 DeepSeek 的模型讨论之中。
+- 更详细的数据可以看到，虽然北美开发者关注数量较多，但从参与讨论贡献的情况来看，更多的美国开发者可能主要还是以使用和观望为主，参与深入讨论协同的开发者也多以学生或华人为主。
 
 通过上述分析，我们可以看到 DeepSeek 不仅在技术上取得了巨大成功，更在行业和社会层面产生了深远影响，吸引着全球开发者深度参与到人工智能的开发进步之中。期待 DeepSeek 在未来继续引领全球 AI 技术的发展，为人类社会带来更多可能性。
