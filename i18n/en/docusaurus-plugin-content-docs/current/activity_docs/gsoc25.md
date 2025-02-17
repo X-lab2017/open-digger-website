@@ -50,7 +50,7 @@ Below, we’ve compiled a list of project ideas, offering developers the opportu
   - **Aggregation Periods**: Enable users to choose different time periods (e.g., months or years) for data analysis and insights.
 
 
-### Idea 2: Add Organization-Level Contributor Leaderboard to OpenDigger Website (Recommended)
+### Idea 2: Add Organization-Level Contributor Leaderboard to OpenDigger Website
 
 - 👥 **Mentors**: [@Neilblaze](https://github.com/Neilblaze), [@Xiaoya](https://github.com/xiaoya-yaya), [@Frank](https://github.com/frank-zsy)
 - 💪 **Languages & Skills**: [TypeScript](https://www.typescriptlang.org/), [React](https://react.dev/), [Docusaurus](https://docusaurus.io/), [Node.js](https://nodejs.org/en/)

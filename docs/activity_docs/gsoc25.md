@@ -44,7 +44,7 @@
   - **聚合方式**：新版排行榜在给定的排行数据范围内，应支持不同的聚合方式进行查询，例如数据库领域中不同企业的贡献。
   - **聚合时段**：新版排行榜应可以选择不同的时段进行洞察，如跨月或跨年。
 
-### 任务二：为 OpenDigger 官网添加组织级别的贡献者榜单（推荐）
+### 任务二：为 OpenDigger 官网添加组织级别的贡献者榜单
 
 - **导师**：[@Neilblaze](https://github.com/Neilblaze)、[@Xiaoya](https://github.com/xiaoya-yaya)、[@Frank](https://github.com/frank-zsy)
 - **语言与技能**：[TypeScript](https://www.typescriptlang.org/)、[React](https://react.dev/)、[Docusaurus](https://docusaurus.io/)
