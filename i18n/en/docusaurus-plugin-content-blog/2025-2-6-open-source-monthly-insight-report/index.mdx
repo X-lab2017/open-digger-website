@@ -1,0 +1,152 @@
+---
+title: 2025.1 Open Source Monthly Insight Report
+authors: [zsy, ww]
+slug: 2025-2-6-open-source-monthly-insight-report
+---
+
+import SimpleECharts from '@site/src/components/SimpleECharts';
+import SimpleTable from '@site/src/components/SimpleTable';
+
+> The OpenRank metrics are an open-source implementation of the evaluation criteria outlined in the "Information Technology - Open Source Governance" series of standards developed by the Electronics Standards Institute of the Ministry of Industry and Information Technology. These metrics effectively reflect the collaborative influence of open-source projects among developers, thereby aiding our understanding of the open-source ecosystem, identifying emerging trends, and uncovering significant events.
+
+## The Global Impact of DeepSeek: Pioneering a New Era of AI
+
+On January 20, 2025, the Chinese AI company DeepSeek unveiled its R1 series of large language models, causing a seismic shift in the global AI industry. Characterized by their low cost, high performance, and open-source nature, these models not only triggered a significant impact on the U.S. financial markets in the short term but also profoundly influenced the technological trajectory, industry landscape, and geopolitical dynamics of large language model development. This insight report will delve into DeepSeek's entire suite of models, providing a comprehensive data analysis.
+
+### Overview
+
+DeepSeek launched its R1 inference model on GitHub on January 20, 2025, followed by the release of the Janus Pro multimodal on January 28. These models quickly gained global attention due to their exceptional cost-effectiveness and performance. From the release of the R1 model until February 6, DeepSeek's official GitHub organization garnered over 150,000 new stars, with 1,679 active developers contributing. Five of DeepSeek's repositories entered the top 300 list of Chinese OpenRank repositories in January 2025, with DeepSeek-R1 ranking at 62nd after just 10 days of being open-sourced. In the OpenRank enterprise rankings, DeepSeek scored 207 points in January 2025, rapidly ascending to the 86th position globally and 13th in China.
+
+<SimpleTable title={'2025.1 OpenRank Leaderboard of Chinese Companies Top 15'} data={
+  [{"rank":1,"id":":companies/huawei","name":"Huawei","logo":"https://oss.open-digger.cn/logos/companies/huawei.png","openrank":10416.91,"delta":-441.38,"repo_count":3005,"repo_count_delta":-93,"participants":4782,"participants_delta":-1103},{"rank":2,"id":":companies/alibaba","name":"Alibaba","logo":"https://oss.open-digger.cn/logos/companies/alibaba.png","openrank":1822.95,"delta":-142.79,"repo_count":1410,"repo_count_delta":-306,"participants":2026,"participants_delta":-524},{"rank":3,"id":":companies/antgroup","name":"Ant group","logo":"https://oss.open-digger.cn/logos/companies/antgroup.png","openrank":1329.97,"delta":-97.46,"repo_count":542,"repo_count_delta":-10,"participants":1671,"participants_delta":-336},{"rank":4,"id":":companies/baidu","name":"Baidu","logo":"https://oss.open-digger.cn/logos/companies/baidu.png","openrank":1119.37,"delta":-83.37,"repo_count":192,"repo_count_delta":-19,"participants":978,"participants_delta":-249},{"rank":5,"id":":companies/bytedance","name":"ByteDance","logo":"https://oss.open-digger.cn/logos/companies/bytedance.png","openrank":684.21,"delta":-0.5,"repo_count":371,"repo_count_delta":-2,"participants":1112,"participants_delta":185},{"rank":6,"id":":companies/espressif","name":"ESPRESSIF","logo":"https://oss.open-digger.cn/logos/companies/espressif.png","openrank":529.56,"delta":23.4,"repo_count":168,"repo_count_delta":15,"participants":868,"participants_delta":69},{"rank":7,"id":":companies/tencent","name":"Tencent","logo":"https://oss.open-digger.cn/logos/companies/tencent.png","openrank":476.51,"delta":-56.4,"repo_count":237,"repo_count_delta":-55,"participants":687,"participants_delta":-285},{"rank":8,"id":":companies/daocloud","name":"DaoCloud","logo":"https://oss.open-digger.cn/logos/companies/daocloud.png","openrank":424.47,"delta":-89.53,"repo_count":49,"repo_count_delta":-6,"participants":555,"participants_delta":-186},{"rank":9,"id":":companies/pingcap","name":"PingCAP","logo":"https://oss.open-digger.cn/logos/companies/pingcap.png","openrank":423.89,"delta":-14.15,"repo_count":76,"repo_count_delta":-11,"participants":252,"participants_delta":-36},{"rank":10,"id":":companies/fit2cloud","name":"Fit2Cloud","logo":"https://oss.open-digger.cn/logos/companies/fit2cloud.png","openrank":419.89,"delta":-54.12,"repo_count":57,"repo_count_delta":1,"participants":348,"participants_delta":-145},{"rank":11,"id":":companies/zilliz","name":"Zilliz","logo":"https://oss.open-digger.cn/logos/companies/zilliz.png","openrank":294.02,"delta":-6.32,"repo_count":44,"repo_count_delta":-3,"participants":241,"participants_delta":-34},{"rank":12,"id":":companies/starrocks","name":"StarRocks","logo":"https://oss.open-digger.cn/logos/companies/starrocks.png","openrank":215.46,"delta":-10.95,"repo_count":11,"repo_count_delta":0,"participants":160,"participants_delta":-33},{"rank":13,"id":":companies/deepseek","name":"DeepSeek","logo":"https://oss.open-digger.cn/logos/companies/deepseek.png","openrank":207.45,"delta":172.47,"repo_count":16,"repo_count_delta":1,"participants":1386,"participants_delta":1207},{"rank":14,"id":":companies/openkylin","name":"openKylin","logo":"https://oss.open-digger.cn/logos/companies/openkylin.png","openrank":204.37,"delta":-59.26,"repo_count":117,"repo_count_delta":-100,"participants":118,"participants_delta":-96},{"rank":15,"id":":companies/deepin","name":"Deepin","logo":"https://oss.open-digger.cn/logos/companies/deepin.png","openrank":162.04,"delta":-9.12,"repo_count":122,"repo_count_delta":10,"participants":83,"participants_delta":-3}]
+} options={
+  [{"name":"#","type":"String","fields":["rank"],"width":40},{"name":"Company","type":"StringWithIcon","fields":["name","logo"],"width":250},{"name":"OpenRank","type":"NumberWithDelta","fields":["openrank","delta"],"width":250},{"name":"Active Repos Count","type":"NumberWithDelta","fields":["repo_count","repo_count_delta"],"width":230},{"name":"Active Developers Count","type":"NumberWithDelta","fields":["participants","participants_delta"],"width":230}]
+}
+/>
+
+### Star Growth Analysis
+
+The following chart illustrates the daily star growth for the five fastest-growing repositories under DeepSeek's GitHub account up to February 6. Notably, DeepSeek-R1's repository saw an immediate surge of over 2,000 stars on the day of its release, with daily increments ranging between 2,000 and 4,000 stars until January 26. The true explosion occurred on January 27 when the U.S. stock market experienced a sharp decline following the release of DeepSeek-R1. NVIDIA's stock plummeted by 17% on that day, leading to widespread recognition of DeepSeek-R1 and boosting the popularity of its base model V3 and the Janus Pro multimodal model released on January 28. On January 28, both V3 and R1 models saw star growth exceeding 10,000, while the Janus repository gained over 4,000 stars. Subsequently, the growth rate slowed down, with another spike observed on February 5 following the Lunar New Year holiday in China.
+
+<SimpleECharts divStyle={{ height: '400px' }} option={
+  {"title":{"text":"DeepSeek Repos' Star Daily Increasement","left":"center","top":"bottom"},"xAxis":{"type":"category","data":["20250120","20250121","20250122","20250123","20250124","20250125","20250126","20250127","20250128","20250129","20250130","20250131","20250201","20250202","20250203","20250204","20250205","20250206"]},"yAxis":{"type":"value"},"legend":{},"series":[{"name":"deepseek-ai/DeepSeek-R1","data":[2435,4224,4457,3067,2259,2142,3075,6701,10603,5787,2648,1989,1780,1380,1268,1211,3181,2390],"type":"line","smooth":true},{"name":"deepseek-ai/DeepSeek-V3","data":[344,742,954,807,1129,1344,3138,8552,12281,8492,4119,1911,1517,1214,1136,1103,3096,2115],"type":"line","smooth":true},{"name":"deepseek-ai/Janus","data":[2,4,11,4,4,4,5,2366,4161,2354,1512,431,346,307,230,198,353,275],"type":"line","smooth":true},{"name":"deepseek-ai/DeepSeek-Coder","data":[32,61,133,213,282,180,431,1105,1507,836,527,367,264,230,238,231,429,344],"type":"line","smooth":true},{"name":"deepseek-ai/awesome-deepseek-integration","data":[34,92,113,167,235,353,500,757,952,467,272,179,165,243,167,150,407,718],"type":"line","smooth":true}]}
+}
+/>
+
+The distribution of star growth by country and region is depicted in the chart below. According to OpenDigger data, the 150,000 stars accumulated during this period originated from 185 countries and regions worldwide. On the day of the R1 release, stars came from 82 countries, with the United States contributing the most (28%), significantly surpassing China's share of 17.4%. Despite time zone differences, this highlights the rapid response and keen interest from U.S. developers. By January 28, the global impact peaked, with contributions from 149 countries. Brazil and South Korea were notable late entrants, while post-holiday activity on February 5 was predominantly driven by Chinese developers returning to work.
+
+<SimpleECharts divStyle={{ height: '400px' }} option={
+  {"title":{"text":"DeepSeek Star Increasement Distribution","left":"center","top":"bottom"},"xAxis":{"type":"category","data":["20250120","20250121","20250122","20250123","20250124","20250125","20250126","20250127","20250128","20250129","20250130","20250131","20250201","20250202","20250203","20250204","20250205","20250206"]},"yAxis":[{"type":"value"},{"type":"value","position":"right"}],"legend":{},"series":[{"name":"China","type":"bar","stack":"total","barWidth":"60%","yAxisIndex":0,"data":[17.4,33.2,17.1,28.1,22.6,19,24.8,18.6,16.1,13.9,19,25,39.7,39.8,39.8,39.9,80.3,71.8]},{"name":"United States","type":"bar","stack":"total","barWidth":"60%","yAxisIndex":0,"data":[28,16.2,16.8,12.4,18.7,18.1,17.2,21.4,14.1,13.9,13.5,17.7,16.7,13.1,9.4,14.7,0,6.1]},{"name":"India","type":"bar","stack":"total","barWidth":"60%","yAxisIndex":0,"data":[0,0,6.2,6,5.7,6.4,5.8,0,6.9,8.7,6.5,5.5,0,0,0,0,0,0]},{"name":"Germany","type":"bar","stack":"total","barWidth":"60%","yAxisIndex":0,"data":[0,0,5.8,0,0,6.2,5.5,0,0,0,0,0,0,0,0,0,0,0]},{"name":"Brazil","type":"bar","stack":"total","barWidth":"60%","yAxisIndex":0,"data":[0,0,0,0,0,0,0,0,8.3,8.1,6.2,5.7,0,0,0,0,0,0]},{"name":"South Korea","type":"bar","stack":"total","barWidth":"60%","yAxisIndex":0,"data":[0,0,0,0,0,0,0,0,0,0,0,5.5,0,0,0,6.3,0,0]},{"name":"Others","type":"bar","stack":"total","barWidth":"60%","yAxisIndex":0,"data":[54.6,50.6,54.1,53.5,53,50.3,46.7,60,54.6,55.4,54.8,40.6,43.6,47.1,50.8,39.1,19.7,22.1]},{"name":"Count","type":"line","data":[82,92,113,101,95,99,108,143,149,137,120,94,83,78,82,74,76,63],"yAxisIndex":1}]}
+}
+/>
+
+### Participants Distribution
+
+Although DeepSeek's models are primarily hosted on platforms like HuggingFace and ModelScope, GitHub has played a crucial role as a forum for developer discussions and Q&A sessions, far exceeding the volume of interactions on HuggingFace. Analyzing the global distribution of contributors based on OpenRank data reveals that China, the U.S., and India form the first tier of contributors. The second tier includes the UK, Brazil, and Germany, while Australia, Pakistan, and Singapore follow in the third tier. Notably, despite having fewer contributors, Singapore ranks highly in terms of contribution quality. Israel's growing tech sector is also reflected in this data.
+
+<SimpleECharts divStyle={{ height: '480px', width: '960px' }} option={
+  {
+  title: { text: "DeepSeek Developers' Contribution Distribution", left: 'center', top: 'bottom' },
+  legend: null,
+  tooltip: {
+    trigger: 'item',
+    formatter: function (params) {
+      console.log(params);
+      if (params.data) {
+        if (params.data.ratio) {
+          return `${params.data.name}: ${params.data.ratio}%`;
+        } else {
+          return params.data.name;
+        }
+      }
+      return '';
+    }
+  },
+  visualMap: {
+    min: 0,
+    max: 4.79,
+    show: false,
+    calculable: true,
+    inRange: {
+      color: [
+        '#ffeda0',
+        '#fed976',
+        '#feb24c',
+        '#fd8d3c',
+        '#fc4e2a',
+        '#e31a1c',
+        '#b10026'
+      ]
+    }
+  },
+  geo: {
+    map: 'world',
+    roam: false,
+    itemStyle: { areaColor: '#eee', borderColor: '#333' },
+    label: {
+      show: true,
+      formatter: (params) => {
+        const data = new Map([
+          ['China', 37.79],
+          ['United States', 14.03],
+          ['India', 9.46],
+          ['United Kingdom', 4.71],
+          ['Brazil', 2.84],
+          ['Germany', 2.65],
+          ['Australia', 1.68],
+          ['Pakistan', 1.44],
+          ['Singapore', 1.33]
+        ]);
+        return data.has(params.name)
+          ? `${params.name}\n${data.get(params.name)}%`
+          : '';
+      }
+    },
+    left: 'center',
+    top: 'center',
+    width: '90%',
+    height: '90%'
+  },
+  series: [
+    {
+      name: '国家贡献比例',
+      type: 'map',
+      geoIndex: 0,
+      map: 'world',
+      data: [{"name":"China","value":4.79,"ratio":"37.86"},{"name":"United States","value":3.46,"ratio":"14.22"},{"name":"India","value":2.94,"ratio":"9.46"},{"name":"United Kingdom","value":2.11,"ratio":"4.71"},{"name":"Brazil","value":1.59,"ratio":"2.84"},{"name":"Germany","value":1.52,"ratio":"2.65"},{"name":"Australia","value":1.13,"ratio":"1.68"},{"name":"Pakistan","value":1.01,"ratio":"1.44"},{"name":"Singapore","value":0.96,"ratio":"1.33"},{"name":"Uganda","value":0.94,"ratio":"1.30"},{"name":"France","value":0.92,"ratio":"1.27"},{"name":"Canada","value":0.9,"ratio":"1.22"},{"name":"Poland","value":0.88,"ratio":"1.19"},{"name":"Sweden","value":0.74,"ratio":"0.95"},{"name":"Türkiye","value":0.71,"ratio":"0.90"},{"name":"Switzerland","value":0.7,"ratio":"0.88"},{"name":"Korea","value":0.7,"ratio":"0.88"},{"name":"Greece","value":0.7,"ratio":"0.88"},{"name":"Israel","value":0.69,"ratio":"0.87"},{"name":"Vietnam","value":0.62,"ratio":"0.75"},{"name":"Argentina","value":0.61,"ratio":"0.75"},{"name":"Russia","value":0.57,"ratio":"0.68"},{"name":"Japan","value":0.57,"ratio":"0.68"},{"name":"New Zealand","value":0.5,"ratio":"0.58"},{"name":"Italy","value":0.48,"ratio":"0.56"},{"name":"Indonesia","value":0.48,"ratio":"0.55"},{"name":"Tunisia","value":0.44,"ratio":"0.50"},{"name":"Malaysia","value":0.41,"ratio":"0.46"},{"name":"Thailand","value":0.36,"ratio":"0.40"},{"name":"Morocco","value":0.36,"ratio":"0.39"},{"name":"Sri Lanka","value":0.36,"ratio":"0.40"},{"name":"Austria","value":0.34,"ratio":"0.38"},{"name":"Iran","value":0.34,"ratio":"0.38"},{"name":"Bangladesh","value":0.33,"ratio":"0.37"},{"name":"Czechia","value":0.29,"ratio":"0.32"},{"name":"United Arab Emirates","value":0.28,"ratio":"0.30"},{"name":"Denmark","value":0.27,"ratio":"0.29"},{"name":"Netherlands","value":0.26,"ratio":"0.27"},{"name":"Yemen","value":0.26,"ratio":"0.28"},{"name":"Ethiopia","value":0.26,"ratio":"0.27"},{"name":"Philippines","value":0.24,"ratio":"0.25"},{"name":"Angola","value":0.23,"ratio":"0.24"},{"name":"Ukraine","value":0.23,"ratio":"0.24"},{"name":"Romania","value":0.22,"ratio":"0.23"},{"name":"Nigeria","value":0.21,"ratio":"0.22"},{"name":"Finland","value":0.21,"ratio":"0.21"},{"name":"Algeria","value":0.2,"ratio":"0.20"},{"name":"Bolivia","value":0.2,"ratio":"0.21"},{"name":"Portugal","value":0.18,"ratio":"0.18"},{"name":"South Africa","value":0.17,"ratio":"0.17"},{"name":"Afghanistan","value":0.17,"ratio":"0.18"},{"name":"Spain","value":0.17,"ratio":"0.18"},{"name":"Ireland","value":0.15,"ratio":"0.15"},{"name":"Kazakhstan","value":0.14,"ratio":"0.14"},{"name":"Ghana","value":0.13,"ratio":"0.13"},{"name":"Uzbekistan","value":0.12,"ratio":"0.11"},{"name":"Colombia","value":0.11,"ratio":"0.11"},{"name":"Georgia","value":0.11,"ratio":"0.11"},{"name":"Croatia","value":0.11,"ratio":"0.11"},{"name":"Latvia","value":0.11,"ratio":"0.11"},{"name":"Bosnia and Herzegovina","value":0.1,"ratio":"0.10"},{"name":"Nepal","value":0.1,"ratio":"0.09"},{"name":"Kenya","value":0.1,"ratio":"0.10"},{"name":"Mexico","value":0.1,"ratio":"0.10"},{"name":"Fiji","value":0.06,"ratio":"0.06"}]
+    }
+  ]
+}}
+/>
+
+Detailed analysis shows that DeepSeek has attracted numerous developers and enthusiasts who have been deeply involved in large language model research over the past six months. Prominent contributors include:
+
+- Krish Dholakia (@krrishdholakia), founder and CEO of LiteLLM (OpenRank 193)
+- Yineng Zhang (@zhyncs), core maintainer of SGLang (OpenRank 180)
+- Michael (@mldangelo), core maintainer of Promptfoo (OpenRank 46)
+- yetone (@yetone), author of avante.nvim (OpenRank 57)
+- Dev Khant (@Dev-Khant), co-founder of Mem0 AI (OpenRank 31)
+- Junyan Qin (@RockChinQ), author of LangBot
+- wong2 (@wong2), author of ChatHub
+- Dongbo Wang (@daxian-dbw) from Microsoft's PowerShell team on AIShell project
+- Wenhua Cheng (@wenhuach21) from Intel's AutoAround team
+
+This data indicates that while North American developers show strong interest in using DeepSeek, they are less actively engaged in discussions. Conversely, Chinese and Indian developers have been more proactive in participating and collaborating.
+
+### Key Findings
+
+The release of DeepSeek's large language models marks a significant milestone in the global AI landscape. Within two weeks of the R1 launch, DeepSeek's multiple GitHub repositories received over 150,000 stars, with nearly 1,700 active developers, underscoring the global recognition and enthusiasm for this innovation. DeepSeek's OpenRank score also saw a dramatic increase.
+
+Key observations from the data include:
+
+- Global Reach: DeepSeek-R1's influence extends across almost all major countries and regions, showcasing its broad appeal.
+- Rapid Response from U.S. Developers: U.S. developers exhibited a high level of sensitivity to technological advancements, responding faster than Chinese developers initially.
+- Contributor Diversity: Contributions come from students, individual AI enthusiasts, and corporate AI project leaders or founders of AI startups, forming a balanced community.
+- Indian Engagement: Indian developers play a crucial role in this AI wave, actively collaborating with Chinese counterparts.
+- North American Observation: While North American developers show significant interest, many remain observers rather than active contributors, with more engagement from student and Chinese-American communities.
+
+### Conclusion
+
+Historically, China has often been seen as a consumer in the open-source community, occasionally criticized for limited contributions. However, projects like DeepSeek are now leading the way, demonstrating not only technical breakthroughs but also fostering extensive global participation and contributions. We hope to see more European and North American developers deeply engage in the development of top-tier Chinese projects.
+
+In summary, DeepSeek's success is not just a technological triumph but also a social and industrial milestone. It has attracted global developers to contribute to the advancement of AI, setting the stage for future innovations in artificial intelligence. We look forward to DeepSeek continuing to lead the global AI revolution, opening up new possibilities for humanity.
