@@ -120,12 +120,12 @@ const config: Config = {
             label: 'blog',
             position: 'left'
           },
-          {
-            type: 'docSidebar',
-            sidebarId: 'activityDocSidebar',
-            label: 'activityDocs',
-            position: 'left',
-          },
+          // {
+          //   type: 'docSidebar',
+          //   sidebarId: 'activityDocSidebar',
+          //   label: 'activityDocs',
+          //   position: 'left',
+          // },
           {
             to: '/community_openrank_leaderboard',
             label: 'community_openrank_leaderboard',
