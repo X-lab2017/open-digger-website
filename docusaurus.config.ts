@@ -3,7 +3,6 @@ import type * as Preset from '@docusaurus/preset-classic';
 import { themes as prismThemes } from 'prism-react-renderer';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
-import path from 'path';
 
 const defaultLocale = 'zh';
 
@@ -127,7 +126,7 @@ const config: Config = {
           //   position: 'left',
           // },
           {
-            to: '/community_openrank_leaderboard',
+            to: '/community-openrank-leaderboard',
             label: 'community_openrank_leaderboard',
             position: 'left'
           },

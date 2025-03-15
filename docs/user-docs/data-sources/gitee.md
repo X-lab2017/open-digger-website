@@ -6,7 +6,7 @@ OpenDigger 与 [Gitee](https://gitee.com/) 进行官方合作，在内部长期�
 
 数据采集、清洗与入库的相关代码目前并未开源至 OpenDigger 项目，作为定时任务每天运行并导入数据到数据库。
 
-所有 Gitee 仓库的数据均会导出指标数据，如果您发现您的项目不在[导出列表](../metrics/metrics_usage_guide#导出范围)，请在 OpenDigger 仓库中提交 Issue，我们会将您的仓库加入到采集列表，同时也支持直接加入一个组织。
+所有 Gitee 仓库的数据均会导出指标数据，如果您发现您的项目不在[导出列表](../metrics/metrics-usage-guide#导出范围)，请在 OpenDigger 仓库中提交 Issue，我们会将您的仓库加入到采集列表，同时也支持直接加入一个组织。
 
 ## 注意
 

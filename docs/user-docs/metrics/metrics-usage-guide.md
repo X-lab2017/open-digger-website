@@ -335,7 +335,7 @@ OpenDigger 实现的所有指标对所有人开放使用，OpenDigger 的静态�
 }
 ```
 
-> 由于 OpenDigger 的 GitHub 数据源存在[时段数据缺失](../data_sources/github#数据缺失)的情况，因此若键值中存在 `2021-10-raw`，则该值为指标数据的原始值。为了使得指标数据具有时序上的连续性，对应的 `2021-10` 指标值为前后各两个月的插值结果，具体代码参见[这里](https://github.com/X-lab2017/open-digger/blob/master/src/cron/tasks/monthly_export.ts#L176)。
+> 由于 OpenDigger 的 GitHub 数据源存在[时段数据缺失](../data-sources/github#数据缺失)的情况，因此若键值中存在 `2021-10-raw`，则该值为指标数据的原始值。为了使得指标数据具有时序上的连续性，对应的 `2021-10` 指标值为前后各两个月的插值结果，具体代码参见[这里](https://github.com/X-lab2017/open-digger/blob/master/src/cron/tasks/monthly_export.ts#L176)。
 
 ## 导出范围
 

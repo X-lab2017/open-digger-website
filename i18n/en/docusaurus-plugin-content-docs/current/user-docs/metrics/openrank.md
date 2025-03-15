@@ -16,7 +16,7 @@ Inspired by PageRank, OpenRank has been optimized and expanded upon, allowing th
 
 The introduction of initial values for nodes allows, in practical applications, for the centrality of nodes to inherit historical data, thus maintaining good temporal continuity which has a great supports for the data insight.
 
-OpenRank in open source is composed of two sub-algorithms: [Global OpenRank Influence Algorithm](global_openrank) and [Community OpenRank Contribution Algorithm](community_openrank).
+OpenRank in open source is composed of two sub-algorithms: [Global OpenRank Influence Algorithm](global-openrank) and [Community OpenRank Contribution Algorithm](community-openrank).
 
 ## Value Proposition of OpenRank
 

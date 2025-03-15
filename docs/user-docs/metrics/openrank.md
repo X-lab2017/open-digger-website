@@ -16,7 +16,7 @@ OpenRank 受启发于 PageRank，但在其基础上进行了优化和扩展，�
 
 节点初值的引入使得在实际应用场景中，节点的中心性可以继承其历史数据，从而具有较好的时序连续性，为数据的洞察提供了有效的支撑。
 
-OpenRank 在开源中的应用由两个子算法组成，分别为[全域 OpenRank 影响力算法](global_openrank)和[社区 OpenRank 贡献度算法](community_openrank)。
+OpenRank 在开源中的应用由两个子算法组成，分别为[全域 OpenRank 影响力算法](global-openrank)和[社区 OpenRank 贡献度算法](community-openrank)。
 
 ## OpenRank 的价值主张
 
