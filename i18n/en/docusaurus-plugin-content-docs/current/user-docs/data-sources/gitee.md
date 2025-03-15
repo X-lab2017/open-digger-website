@@ -6,7 +6,7 @@ OpenDigger has an official partnership with [Gitee](https://gitee.com/) and main
 
 The code for data collection, cleaning, and database entry is not currently open sourced in the OpenDigger project and runs as a scheduled task daily to import data into the database.
 
-All data from Gitee repositories will be exported as metric data. If you find that your project is not in the [export list](../metrics/metrics_usage_guide#export-range), please submit an issue in the OpenDigger repository, and we will add your repository to the collection list, you can also directly add an organization.
+All data from Gitee repositories will be exported as metric data. If you find that your project is not in the [export list](../metrics/metrics-usage-guide#export-range), please submit an issue in the OpenDigger repository, and we will add your repository to the collection list, you can also directly add an organization.
 
 ## Note
 
