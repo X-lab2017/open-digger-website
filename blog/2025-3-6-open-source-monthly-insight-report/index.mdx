@@ -1,0 +1,132 @@
+---
+title: 2025 年 2 月开源生态数据洞察报告
+authors: [zsy, ww]
+slug: 2025-3-6-open-source-monthly-insight-report
+---
+
+import SimpleECharts from '@site/src/components/SimpleECharts';
+import SimpleTable from '@site/src/components/SimpleTable';
+
+> OpenRank 指标是对工信部电子标准院的“信息技术 开源治理”系列标准中评价指标的开源实现，能够有效反映开源项目在开发者中的协作影响力，从而帮助我们了解开源世界，发现开源趋势，洞察开源事件。
+
+# 本月 OpenRank 增长热点洞察
+
+## 热点事件：DeepSeek 开源周引爆全球 LLM 基础优化技术
+
+继 2025 年 1 月 DeepSeek 发布轰动全球的 DeepSeek-R1 模型后，2025 年 2 月 21 日宣布启动为期一周的“开源周”计划，从 2 月 24 日其连续五天开源一项核心技术，旨在推动 AI 技术共享与行业应用加速。这五项技术共开放了 7 个开源仓库，根据 OpenDigger 数据，凭借开源周的热度，DeepSeek 在 GitHub 上的组织在 2 月 24 日至 3 月 6 日间共获得 **56.2k+** Star，有 **805** 位开发者参与到讨论和协作中。最终 DeepSeek 在企业 OpenRank 中再次强劲增长近 **60%**，达到 **330** 并进军到中国企业榜第 **11** 位。
+
+开源周中提到的这五项技术包括：
+
+- Day 1 - FlashMLA
+  - 面向 Hopper GPU 的高效 MLA（多头潜在注意力机制）解码内核，针对可变长度序列优化算力分配，显著降低推理成本。
+- Day 2 - DeepEP
+  - 首个专为 MoE（混合专家）模型设计的 EP（专家并行）通信库，支持 FP8 低精度计算，提升 GPU 间通信效率 10 倍，兼顾高吞吐与低延迟。
+- Day 3 - DeepGEMM
+  - 基于 FP8 精度的通用矩阵乘法加速库，代码仅 300 行，高效优化深度学习矩阵运算，提升训练与推理效率。
+- Day 4 - 并行策略三连发
+  - DualPipe：双向流水线并行算法，优化模型训练流程。
+  - EPLB：MoE 负载均衡算法，解决专家模型资源分配不均问题。
+  - profile-data：公开训练框架数据，助力开发者复现与优化。
+- Day 5 - 3FS 分布式文件系统
+  - 面向 AI 训练的高性能分布式存储系统，结合固态硬盘与 RDMA 网络，极致压榨硬件带宽，被评价为 “数据处理新标杆”。
+
+<SimpleECharts divStyle={{ height: '400px' }} option={
+  {"title":{"text":"DeepSeek 仓库 Star 日增情况","left":"center","top":"bottom"},"xAxis":{"type":"category","data":["20250223","20250224","20250225","20250226","20250227","20250228","20250301","20250302","20250303","20250304","20250305","20250306"]},"yAxis":{"type":"value"},"legend":{},"series":[{"name":"deepseek-ai/FlashMLA","data":[0,7016,1640,631,362,173,117,81,86,70,29,33],"type":"line","smooth":true},{"name":"deepseek-ai/3FS","data":[0,0,0,0,0,3907,1051,754,594,312,161,146],"type":"line","smooth":true},{"name":"deepseek-ai/DeepEP","data":[0,0,4436,1071,351,202,112,78,75,63,28,34],"type":"line","smooth":true},{"name":"deepseek-ai/DeepGEMM","data":[0,0,0,3222,572,267,106,79,70,61,25,32],"type":"line","smooth":true},{"name":"deepseek-ai/DualPipe","data":[0,0,0,0,1674,332,110,57,61,44,31,11],"type":"line","smooth":true},{"name":"deepseek-ai/EPLB","data":[0,0,0,0,617,153,48,32,38,23,6,4],"type":"line","smooth":true},{"name":"deepseek-ai/profile-data","data":[0,0,0,0,527,104,63,35,44,20,13,11],"type":"line","smooth":true}]}
+}
+/>
+
+从 Star 增长情况来看，FlashMLA 凭借先发优势，在第一天就斩获了 7k+ Star，截止 3 月 6 日共获得 Star 数 11.3k+。而最后一天发布的分布式文件系统 3FS 格外受到开发者的关注，发布当天就获得了近 4k Star，截止 3 月 6 日共获得了超过 8k Star。
+
+<SimpleECharts divStyle={{ height: '480px', width: '960px' }} option={
+  {
+  title: {
+    text: 'DeepSeek 贡献度国家分布',
+    left: 'center',
+    top: 'bottom'
+  },
+  legend: null,
+  tooltip: {
+    trigger: 'item',
+    formatter: function (params) {
+      if (params.data && params.data.ratio) {
+        return `${params.data.name}: ${params.data.ratio}%`;
+      }
+      return '';
+    }
+  },
+  visualMap: {
+    min: 0,
+    max: 7,
+    show: false,
+    calculable: true,
+    inRange: {
+      color: [
+        '#ffeda0',
+        '#fed976',
+        '#feb24c',
+        '#fd8d3c',
+        '#fc4e2a',
+        '#e31a1c',
+        '#b10026'
+      ]
+    }
+  },
+  geo: {
+    map: 'world',
+    roam: false,
+    itemStyle: { areaColor: '#eee', borderColor: '#333' },
+    label: {
+      show: true,
+      formatter: (params) => {
+        const data = new Map([
+          ['China', 70.69],
+          ['United States', 8.08],
+          ['India', 3.38],
+          ['Canada', 1.51],
+          ['United Kingdom', 1.38],
+          ['Brazil', 1.14],
+          ['Singapore', 1.23]
+        ]);
+        return data.has(params.name)
+          ? `${params.name}\n${data.get(params.name)}%`
+          : '';
+      }
+    },
+    left: 'center',
+    top: 'center',
+    width: '90%',
+    height: '90%'
+  },
+  series: [
+    {
+      type: 'map',
+      geoIndex: 0,
+      map: 'world',
+      data: [
+        {"name":"China","value":6.48,"ratio":"70.69"},{"name":"United States","value":3.47,"ratio":"8.08"},{"name":"India","value":2.39,"ratio":"3.38"},{"name":"Canada","value":1.53,"ratio":"1.51"},{"name":"United Kingdom","value":1.45,"ratio":"1.38"},{"name":"Singapore","value":1.34,"ratio":"1.23"},{"name":"Brazil","value":1.28,"ratio":"1.14"},{"name":"Germany","value":1.09,"ratio":"0.90"},{"name":"Russia","value":1.02,"ratio":"0.82"},{"name":"Australia","value":0.97,"ratio":"0.77"},{"name":"Indonesia","value":0.91,"ratio":"0.70"},{"name":"Bangladesh","value":0.86,"ratio":"0.65"},{"name":"Portugal","value":0.84,"ratio":"0.63"},{"name":"United Arab Emirates","value":0.79,"ratio":"0.58"},{"name":"Sri Lanka","value":0.76,"ratio":"0.55"},{"name":"Korea","value":0.76,"ratio":"0.55"},{"name":"Vietnam","value":0.66,"ratio":"0.46"},{"name":"France","value":0.64,"ratio":"0.45"},{"name":"Spain","value":0.6,"ratio":"0.41"},{"name":"Uganda","value":0.57,"ratio":"0.39"},{"name":"Japan","value":0.5,"ratio":"0.33"},{"name":"Iran","value":0.48,"ratio":"0.31"},{"name":"Argentina","value":0.47,"ratio":"0.31"},{"name":"Romania","value":0.44,"ratio":"0.28"},{"name":"Ireland","value":0.41,"ratio":"0.26"},{"name":"Poland","value":0.4,"ratio":"0.26"},{"name":"Türkiye","value":0.39,"ratio":"0.25"},{"name":"Austria","value":0.38,"ratio":"0.24"},{"name":"Algeria","value":0.34,"ratio":"0.21"},{"name":"Denmark","value":0.33,"ratio":"0.20"},{"name":"Pakistan","value":0.33,"ratio":"0.21"},{"name":"Switzerland","value":0.31,"ratio":"0.19"},{"name":"Georgia","value":0.29,"ratio":"0.18"},{"name":"Sweden","value":0.28,"ratio":"0.17"},{"name":"Bolivia","value":0.27,"ratio":"0.16"},{"name":"Nepal","value":0.27,"ratio":"0.16"},{"name":"Kenya","value":0.26,"ratio":"0.15"},{"name":"Netherlands","value":0.26,"ratio":"0.16"},{"name":"Finland","value":0.25,"ratio":"0.15"},{"name":"Italy","value":0.19,"ratio":"0.11"},{"name":"Israel","value":0.19,"ratio":"0.11"},{"name":"Mexico","value":0.18,"ratio":"0.10"},{"name":"Togo","value":0.13,"ratio":"0.07"},{"name":"Bulgaria","value":0.12,"ratio":"0.07"},{"name":"Belgium","value":0.1,"ratio":"0.05"},{"name":"Greece","value":0.1,"ratio":"0.06"}
+      ]
+    }
+  ]
+}}
+/>
+
+从 Star 增长来看，2025 年 2 月 DeepSeek 的 Star 增长仍然遍布了全球 127 个国家和地区，且各国的贡献度比例与 1 月呈现类似的分布。对比上个月数据，中国的贡献度更为集中，以 **70.69%** 的比例领跑。而美国和印度分别以 8.08% 和 3.38% 位于第二梯队。后续为加拿大、英国、新加坡和巴西等国。
+
+- 作者点评：DeepSeek 开源周不仅是技术实力的展现，更是对 “开源精神” 的极致践行 —— 以开放代码推动行业共进，印证了 “越是开源，越能扩大生态” 的战略远见。
+
+- 进阶阅读：
+  - DeepSeek GitHub 地址：https://github.com/deepseek-ai/
+
+# 本月推荐项目
+
+DeepSeek 带来的热潮也开始对大模型基础技术生态产生重要影响，多个项目都受到其影响出现了爆发式的增长。
+
+## kvcache-ai/ktransformers
+
+- KTransformers 项目旨在提供基础模型的各类底层优化，2024 年 7 月开源以来一直没有太多关注度。2025 年 2 月，其开始支持对于 DeepSeek V3 和 R1 模型的优化，从减少推理显存、提升上下文长度等多个方面对模型进行了优化，2025 年 2 月该项目在创建半年多后迎来了爆发式增长，当月 OpenRank 影响力增长 34 倍达到 138，有 736 位开发者参与到了项目讨论和协作中，成为了一个现象级项目。
+- 仓库地址：https://github.com/kvcache-ai/ktransformers
+
+## huggingface/open-r1
+
+- DeepSeek-R1 发布后引发全球复现高潮，作为全球最模型托管平台，Hugging Face 也提供了一个完全开源的 DeepSeek-R1 的复现仓库 Open-R1，该仓库在开源后获得了 22.8k+ Star，2025 年 2 月有 359 位开发者参与到了讨论与协作中，OpenRank 值达到 88，成功进入全球仓库增长榜单。
+- 仓库地址：https://github.com/huggingface/open-r1
