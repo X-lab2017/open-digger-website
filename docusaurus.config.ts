@@ -84,6 +84,14 @@ const config: Config = {
         indexDocs: true,
       },
     ],
+    [
+      './src/plugins/DynamicRouterPlugin.ts',
+      {
+        name: 'community-openrank-leaderboards-router',
+        urlPath: '/community-openrank-leaderboards',
+        component: '@site/src/pages/CommunityOpenRankLeaderboards',
+      }
+    ]
   ],
 
   themes: ['@docusaurus/theme-mermaid'],
@@ -126,7 +134,7 @@ const config: Config = {
           //   position: 'left',
           // },
           {
-            to: '/community-openrank-leaderboard',
+            to: '/community-openrank-leaderboards',
             label: 'community_openrank_leaderboard',
             position: 'left'
           },
