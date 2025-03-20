@@ -1,0 +1,62 @@
+---
+title: 如何使用 OpenDigger MCP Server 定制你的开源数据报告
+authors: [zsy]
+slug: 2025-3-21-how-to-use-open-digger-mcp-server
+---
+
+> 近期 MCP 概念在开源生态中非常火热，OpenDigger 也实现并开源了自己的第一版 MCP 服务，并通过对于 Kubernetes 项目的分析验证了利用大模型实时获取开源数据指标并进行分析的可行性。
+
+## 什么是 MCP？
+
+MCP (Model Context Protocol，模型上下文协议) 是由 Claude 的母公司 Anthropic 在 2024 年底推出的一种开放协议，它通过提供一种标准化的接口，旨在实现大语言模型（LLM）与外部数据源及工具的无缝集成。MCP 服务可以提供如静态资源（Resource）、工具调用（Tool）、LLM 提示词（Prompt）等多种不同类型的能力，方便支持 MCP 的工具无缝访问外部的数据源或进行自动化工具调用，使大模型在生成过程中可以使用这些能力来辅助和增强生成效果。
+
+近期 MCP 技术在开发者中热度逐渐攀升，诸多的 AI 编辑器（如 Cursor，Windsurf）、VSCode 插件（如 Cline）、聊天客户端（如 Cherry Studio，NextChat）等都开始纷纷支持了 MCP 能力。而 Anthropic 为 MCP 开发的多语言 SDK 也可以使开发者快速开发自己的 MCP 服务，因此除了官方提供了大量主流平台的 MCP 服务外，开源生态中开始涌现出大量的 MCP 服务项目。
+
+## OpenDigger MCP Server
+
+OpenDigger 旨在为开源项目提供全面有效的开源数据指标，OpenDigger 所生产的数据指标一直以来被大量的下游应用所使用（如 HyperCRX、OpenLeaderboard、OpenGalaxy 等），然而这些应用都没有自主进行数据分析和洞察的能力。
+
+大语言模型具有极强的文本生成能力，这对于数据洞察有极佳的辅助作用，但如何在生成过程中动态引用真实数据，生成有效的数据报告也是近期一个研究的难点与热点，而 MCP 则为 LLM 生成数据报告时动态提供线上数据带来了一种新的实现方式。
+
+OpenDigger 也在 X-lab 的 GitHub 上开源了第一版基础的 MCP 服务（X-lab2017/open-digger-mcp-server），该服务提供了如下两个功能：
+
+- 数据指标获取工具（Tool）：该工具可以实时在线获取 OpenDigger 生产的开源项目数据指标文件，供 LLM 进行分析洞察及后续的生成过程。
+- 数据报告生成提示词（Prompt）：该提示词会向 LLM 解释各类指标的具体含义，并帮助开发者快速生成一个可直接在网页端预览的数据报告。
+
+安装该 MCP 服务后便可以在调用 LLM 生成开源数据洞察报告时调用 OpenDigger 的指标数据，以便进行数据可视化及数据洞察。
+
+## 数据报告示例
+
+本文以 Cline 插件为例，展示在具有在线数据访问能力后，如何使用 DeepSeek-V3 来生成开源项目的洞察报告。
+
+在本地安装 OpenDigger MCP Server 后，启用该服务，并开启 MCP 的 `Auto-approve` 选项，以便自动进行数据获取。之后使用该项目提供的 Prompt 让 DeepSeek-V3 模型来生成一个 Kubernetes 主仓库的数据报告。
+
+<img src="/img/blogs/mcp_server/cline_request.png" style={{height:"800px",display:"block",margin:"auto"}}/>
+<img src="/img/blogs/mcp_server/cline_result.png" style={{height:"400px",display:"block",margin:"auto"}}/>
+
+根据上图，我们可以看到，大模型在接到任务后先对任务进行了分析，分解为如下步骤：
+- 使用 MCP 服务来获取该仓库的 OpenRank、Star、Participants、Contributors 四个数据指标
+- 根据仓库的创建年限来确定数据分析使用的数据粒度（年度、季度、月度）
+- 生成一个 HTML 来展示数据的可视化效果及趋势解读
+- 使用 Chart.js 组件来进行数据可视化
+
+随后大模型自动调用了 MCP 的 `get_open_digger_metric` 工具来获取数据文件并得到了相应的数据，并根据仓库创建时间选择使用年度数据作为分析粒度，分析数据后大模型直接在编辑器中创建了一个名为 `kubernetes-report.html` 的文件，并将年度的数据趋势与解读内容生成到该文件中，最后提示用户使用命令行在浏览器中打开该网页。
+
+整个过程一气呵成，用户仅需提供需求，后续的数据获取与可视化报告生成全部由大模型配合 MCP 服务逐步完成。
+
+下图是最终页面中 OpenRank 指标的可视化及解读效果：
+
+<img src="/img/blogs/mcp_server/report.png" style={{height:"960px",display:"block",margin:"auto"}}/>
+
+根据上图，DeepSeek-V3 模型先将 Kubernetes 主仓库的 OpenRank 年度指标数据使用 Chart.js 组件绘制出来，然后给出了具体的洞察内容。它根据数据的趋势将 Kubernetes 主仓库的发展阶段分为了：
+
+- 2015 至 2017 年：快速发展期，OpenRank 指标在快速增长，该技术作为容器编排平台被快速认知和使用。
+- 2018 至 2019 年：平稳成熟期，OpenRank 指标维持在相对平稳的状态，几乎没有太多变化。
+- 2020 至 2022 年：缓慢下降期，OpenRank 指标开始逐渐下降，但其也指出这背后可能存在的多种因素，如发展逐渐稳定、开发者更多在扩展的生态项目中活跃、容器技术的标准化完成等。
+- 2023 至今：近期趋势相对稳定，甚至在 2023 年还略有回升，中间月度数据也存在震荡，可能是由于发版或特定特性带来的。
+
+可以看到，DeepSeek-V3 在生成数据报告过程中可以正确的识别 MCP 服务提供的接口和参数，并正确的调用接口得到数据，之后正确的生成了 HTML 文件对数据进行可视化并提供了数据的洞察分析内容。令人惊艳的是，虽然使用了年度数据进行分析，但在近两年的数据分析中，模型也同时使用了月度数据进行了细致的说明。
+
+## 结论
+
+MCP 是目前大模型生态中最优优势的大模型交互接口协议，已经发展出了繁荣的开源生态，有大量的开发者在上下游中围绕 MCP 进行开发和创作。OpenDigger 也通过实现自己的 MCP 服务验证了利用大模型（如 DeepSeek-V3）进行定制化数据分析的能力，有兴趣的小伙伴欢迎体验和共建。
