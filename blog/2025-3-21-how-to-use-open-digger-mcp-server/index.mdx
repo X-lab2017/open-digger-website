@@ -31,8 +31,8 @@ OpenDigger 也在 X-lab 的 GitHub 上开源了第一版基础的 MCP 服务（X
 
 在本地安装 OpenDigger MCP Server 后，启用该服务，并开启 MCP 的 `Auto-approve` 选项，以便自动进行数据获取。之后使用该项目提供的 Prompt 让 DeepSeek-V3 模型来生成一个 Kubernetes 主仓库的数据报告。
 
-<img src="/img/blogs/mcp_server/cline_request.png" style={{height:"800px",display:"block",margin:"auto"}}/>
-<img src="/img/blogs/mcp_server/cline_result.png" style={{height:"400px",display:"block",margin:"auto"}}/>
+<img src="/img/blogs/mcp-server/cline-request.png" style={{height:"800px",display:"block",margin:"auto"}}/>
+<img src="/img/blogs/mcp-server/cline-result.png" style={{height:"400px",display:"block",margin:"auto"}}/>
 
 根据上图，我们可以看到，大模型在接到任务后先对任务进行了分析，分解为如下步骤：
 - 使用 MCP 服务来获取该仓库的 OpenRank、Star、Participants、Contributors 四个数据指标
@@ -46,7 +46,7 @@ OpenDigger 也在 X-lab 的 GitHub 上开源了第一版基础的 MCP 服务（X
 
 下图是最终页面中 OpenRank 指标的可视化及解读效果：
 
-<img src="/img/blogs/mcp_server/report.png" style={{height:"960px",display:"block",margin:"auto"}}/>
+<img src="/img/blogs/mcp-server/report.png" style={{height:"960px",display:"block",margin:"auto"}}/>
 
 根据上图，DeepSeek-V3 模型先将 Kubernetes 主仓库的 OpenRank 年度指标数据使用 Chart.js 组件绘制出来，然后给出了具体的洞察内容。它根据数据的趋势将 Kubernetes 主仓库的发展阶段分为了：
 

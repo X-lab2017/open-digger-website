@@ -15,19 +15,19 @@ const FeatureList: FeatureItem[] = [
   {
     title: 'features.richMetrics.title',
     url: 'features.richMetrics.url',
-    Svg: require('@site/static/img/rich_metrics.svg').default,
+    Svg: require('@site/static/img/rich-metrics.svg').default,
     description: 'features.richMetrics.desc',
   },
   {
     title: 'features.easyToUse.title',
     url: 'features.easyToUse.url',
-    Svg: require('@site/static/img/easy_to_use.svg').default,
+    Svg: require('@site/static/img/easy-to-use.svg').default,
     description: 'features.easyToUse.desc',
   },
   {
     title: 'features.variousApplications.title',
     url: 'features.variousApplications.url',
-    Svg: require('@site/static/img/various_applications.svg').default,
+    Svg: require('@site/static/img/various-applications.svg').default,
     description: 'features.variousApplications.desc',
   },
 ];
