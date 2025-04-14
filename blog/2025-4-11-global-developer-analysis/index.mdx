@@ -1,0 +1,207 @@
+---
+title: GitHub、Gitee 数据揭秘开源世界 "人口普查"，中国开发者排名第几？
+authors: [zsy]
+slug: 2025-4-11-global-developer-analysis
+---
+
+import SimpleECharts from '@site/src/components/SimpleECharts';
+import SimpleTable from '@site/src/components/SimpleTable';
+
+## 前言
+
+当写下这篇文章时，GitHub 和 Gitee 的服务器集群还在不停轰鸣，每小时全球有 5000 多个 PR 将超过 600 万行代码变更合入到这些开源代码托管平台之中。
+
+从 Kubernetes 开始重构全球云计算版图，到 PyTorch 取代 MATLAB 的学术霸权、从 Hadoop 拉开大数据热潮的序幕，到 DeepSeek 开源引发中美科技竞速，过去十年浩浩荡荡的开源大潮，早已超越了技术迭代的范畴，每个开发者地域标签的背后，隐藏的是全球开源开发者的快速增长与变迁。然而全球有多少开发者，他们都在哪里，在做什么，却一直如同一团迷雾笼罩在开源生态研究者的头顶。
+
+本文旨在通过对 GitHub 和 Gitee 平台十年数据的考古，利用 Issue、PR 的网络来编织一副技术地缘的图景，带你走进那个尚不清晰的开源开发者世界。
+
+本文将给出如下一些数据要点：
+
+- 全球泛开发者总量已**超过 1 亿**，开源开发者数量**超过 2200 万人**。
+- 中国开发者数量**超 1000 万人**，开源开发者总量**约 198 万人**，紧随**美国**、**印度**均位居**全球第三**。
+- 2024 年中国开源开发者**影响力**与**贡献度**排名**全球第二**，增速分别为 **4.24%** 与 **7.48%** 为全球最快。
+
+并且从过去十年的趋势来看，世界开源格局正在发生剧变：
+
+- **美国**凭借其强大的科技力量与先发优势在开源开发者的各项指标中依然占据**绝对的领先位置**，但无论是影响力还是贡献度在近年来都出现了**明显下滑**。
+- **中国**开源开发者数量稳步增长，总规模已**将近 200 万人**。数量上虽然被印度超越，但**影响力**和**贡献度**均**稳居全球第二**，并且拥有**全球最快增速**，正在快速缩小与美国之间的差距，并快速拉开与其他国家间的距离，标志着中国开源进入**高质量发展时期**。
+- **德国、英国、法国、加拿大、荷兰**等传统强国凭借其扎实的基础在各指标中都稳居**全球前十**，并且保持平稳的发展趋势。
+- **俄罗斯**参与到全球开源生态中的开发者数量相当可观，但受到地缘政治等各种因素影响，其影响力和贡献度都无法与其开发者体量匹配。
+- **印度**、**巴西**和**印度尼西亚**已经成为了不可忽视的开发者大国，近年来显现出强劲的增长势头，虽然开发者数量优势明显，但相较而言其影响力和贡献度与传统欧美强国还无法匹敌，仍处于**相对早期的发展阶段**。
+
+中美自主开源项目的全球化程度差距较大：
+
+- **美国**自主开源项目全球化程度较高，非本土贡献占比在 **60% 以上**，**中国**以 **8.5%** 的贡献占比成为美国开源项目的**第二大贡献国**。
+- **中国**自主开源项目全球化程度较低，非本土贡献占比在 **20% 左右**，对全球开发者的吸引力和影响力仍有较大的提升空间。
+
+## 全球开发者总量
+
+全球到底有多少开发者，这个问题甚至比国家的人口普查更难，不同的统计口径与方法，都会带来不同的答案。
+
+例如 Statista 数据称 2024 年全球开发者数量为 2870 万，IDC 的报告则称 2024 年全球开发者的数量为 3700 万，但这些咨询机构通常会利用政府侧的就业数据或抽样调查来统计和估计全职开发者数量，将兼职、业余爱好者和学生等都排除在外，即便如此不同机构的数据结论也相去甚远。而且随着计算机教育的高度普及和开源模式带来的生产关系变革，数字游民的数量也开始激增，广义的开发者数量已经难以通过就业数据来反映。
+
+不过在所有基础软件和开发框架都默认选择开源的时代，开发者几乎都无法绕过 GitHub 这个全球最大的开源代码托管和开发者社交平台，即便是如 Gitee 这样的中国平台，其注册用户估计也有八成以上同时也是 GitHub 的用户。因此透过 GitHub 的用户数据来窥探软件开发者的总体规模成为了一个新的有效途径。
+
+2023 年 9 月，GitHub 发布了 Innovation Graph 项目，这是一个开放数据的发布与洞察平台。GitHub 会将内部的宏观统计数据进行清洗与整理，并以季度为粒度进行发布，其中就包含了一项全球各经济体的注册账号总量数据。根据该平台最新数据，截止到 2024 年第三季度，GitHub 注册用户覆盖全球 201 个国家和地区，**注册用户总量已突破 1.33 亿**。
+
+当然，在这 1.33 亿的注册用户中除了正常的开发者外，也包含了部分自动化账号、恶意注册的一次性账号、一人注册多个账号等的情况。根据 OpenDigger 的数据显示，过去十年在 GitHub 上留下了公开事件记录（如 Star、Fork、Commit、Issue，PR 活跃等）的账号总量超过了 7700 万，考虑到也有不少开发者只是开源软件的用户，可能从不会在 GitHub 进行协作，因此个人认为粗略估计全球的**泛开发者总量为 1 亿左右**是一个较为合理的数字。
+
+虽然开发者总量达到了 1 亿，但其中不少都是不活跃的账号，这个数量如果是用来当做是开源开发者数量显然是不合理的。如果我们定义在 GitHub 上有过任意的 Issue、PR 等协作行为的账号为开源开发者的话，那么根据 OpenDigger 的数据，GitHub 上过去十年的活跃**开源开发者数量约为 2208 万**。
+
+总结而言，透过 GitHub 数据，我们粗略认为**全球泛开发者总量已突破 1 亿**，其中**开源开发者数量超过了 2200 万**。
+
+<SimpleECharts divStyle={{ height: '400px' }} option={
+  {"title":{"text":"全球 GitHub 注册用户发展趋势","left":"center","top":"bottom"},"xAxis":{"type":"category","data":["2020","2021","2022","2023","2024"]},"yAxis":{"type":"value"},"legend":{"data":["US","IN","CN","GB","Others"]},"series":[{"name":"US","data":[11086139,13515151,16686238,20226711,23845773],"type":"line","smooth":true,"stack":"Total","areaStyle":{}},{"name":"IN","data":[5206926,7243683,9796437,13326416,17114921],"type":"line","smooth":true,"stack":"Total","areaStyle":{}},{"name":"CN","data":[7576250,9092544,10521274,11898754,13469081],"type":"line","smooth":true,"stack":"Total","areaStyle":{}},{"name":"GB","data":[1843208,2272740,2805910,3422806,4080458],"type":"line","smooth":true,"stack":"Total","areaStyle":{}},{"name":"Others","data":[27535908,36710553,47859912,61058848,74826612],"type":"line","smooth":true,"stack":"Total","areaStyle":{}}]}
+}
+/>
+
+## 国家分布情况
+
+### 开发者总体分布
+
+根据 Innovation Graph 的数据显示，截止到 2024 年第三季度，美国开发者总量为 2384 万居世界首位，印度 1711 万位居第二，中国（含港澳台，下同）1347 万排名第三，后续是巴西、英国、俄罗斯、印度尼西亚、德国、日本、加拿大，法国。而如果将欧盟 27 国看作统一的欧盟经济体，则其开发者总量为 1865 万仅次于美国。
+
+按照全球 1 亿开发者数量来推算，**中国的开发者总量已超过 1000 万，目前仅次于美国和印度，排名全球第三**。
+
+> GitHub 官方的国家统计是通过账号的登录 IP 地址来判断的，由于网络环境不稳定的因素，这会导致中国大陆的开发者数量偏低，但考虑到大陆很多开发者网络出口都在香港，而从数据上香港也确实有异常高的开发者数量（超过 220 万，达到香港总人口 30%），因此我们认为加上港澳台数据，可以大致反映中国的总体开发者数量。
+
+### 开源开发者分布
+
+涉及到 2200 万开源开发者的国家分布，由于 Innovation Graph 仅开放了宏观统计结果，因此无法得知确切的每个开发者所在的国家。OpenDigger 采集了这 2200 万个账号在 GitHub 上的公开信息，并通过他们填写的公开位置信息进行了解析，尽可能得到每个账号所在国家的信息。
+
+在这 2200 万个账号中，填写了公开的位置信息且可以被正确解析的账号数约为 **406 万**个，占总量的约 **18.4%**。虽然填写比例不高，但越是头部的开发者填写的信息一般也会越完整。根据 OpenDigger 数据显示，2024 年全球活跃的开源开发者总量超 **607 万人**，但其中 OpenRank 开发者影响力排名**前十万名**的开发者就占据全部开发者影响力的**三分之一**，而其中可以解析出国家信息的比例高达 **56%** 以上，因此已有数据具有较好的代表性。
+
+而又由于近年来的中美脱钩，大量的中国开源项目开始选择使用 Gitee 平台作为自己的主要协作平台，因此 Gitee 平台开源项目和开源开发者的数量都在过去几年快速增长。由于不少开发者会同时活跃于 GitHub 和 Gitee 平台，我们难以关联他们在不同平台的账号，因此我们仅使用所有 GVP 项目中的活跃开源开发者作为增量加入到中国开源开发者数量中，而不考虑长尾的大量开发者（暂忽略 Gitee 平台上的海外用户数量），这个数量大约为 **17.5 万**人。
+
+因此最终估计的开源开发者排名前三的国家分别是**美国 476 万，印度 240 万，中国 198 万**，随后是巴西、德国、英国、加拿大、法国、俄罗斯和波兰。
+
+开源开发者数量与开发者总量相比，可以看到前四位没有发生变化，但**俄罗斯**开发者总量第五，但开源开发者跌至第九，这应该与 GitHub 封禁俄罗斯开发者账号有关。而**印度尼西亚**开发者总量第六，但开源开发者总量跌出前十来到了第十四位，说明虽然作为新兴的软件外包大国，印尼的软件开发产业发展迅速，但总体在开源侧的参与度却不高。相较而言，大量的欧洲国家在开源开发者数量中明显更有优势，有更高比例的开发者会参与到开源生态的贡献之中。
+
+<SimpleECharts divStyle={{ height: '480px', width: '960px' }} option={
+  {
+  title: {
+    text: '全球开源开发者分布情况（万）',
+    left: 'center',
+    top: 'bottom'
+  },
+  legend: null,
+  tooltip: {
+    trigger: 'item',
+    formatter: function (params) {
+      if (params.data && params.data.value) {
+        return `${params.data.name}: ${params.data.value}万`;
+      }
+      return '';
+    }
+  },
+  visualMap: {
+    min: 0,
+    max: 480,
+    show: false,
+    calculable: true,
+    inRange: {
+      color: [
+        '#ffeda0',
+        '#fed976',
+        '#feb24c',
+        '#fd8d3c',
+        '#fc4e2a',
+        '#e31a1c',
+        '#b10026'
+      ]
+    }
+  },
+  geo: {
+    map: 'world',
+    roam: false,
+    itemStyle: { areaColor: '#eee', borderColor: '#333' },
+    label: {
+      show: true,
+      formatter: (params) => {
+        const data = new Map([
+          ['United States', 476.16],
+          ['India', 239.98],
+          ['China', 198.29],
+          ['Brazil', 142.84],
+          ['Germany', 107.93],
+          ['Canada', 79.69],
+          ['Russia', 57.14],
+          ['Australia', 38.03]
+        ]);
+        return data.has(params.name)
+          ? `${params.name}\n${data.get(params.name)}万`
+          : '';
+      }
+    },
+    left: 'center',
+    top: 'center',
+    width: '90%',
+    height: '90%'
+  },
+  series: [
+    {
+      type: 'map',
+      geoIndex: 0,
+      map: 'world',
+      data: [{"name":"United States","value":476.16},{"name":"India","value":239.98},{"name":"China","value":198.29},{"name":"Brazil","value":142.84},{"name":"Germany","value":107.93},{"name":"United Kingdom","value":98.3},{"name":"Canada","value":79.69},{"name":"France","value":68.88},{"name":"Russia","value":57.14},{"name":"Poland","value":38.62},{"name":"Australia","value":38.03},{"name":"Japan","value":36.79},{"name":"Spain","value":36.52},{"name":"Indonesia","value":36.46},{"name":"Netherlands","value":36.23},{"name":"South Korea","value":35.91},{"name":"Ukraine","value":32.48},{"name":"Italy","value":27.23},{"name":"Türkiye","value":27.21},{"name":"Argentina","value":25.71},{"name":"Sweden","value":24.05},{"name":"Mexico","value":22.23},{"name":"Vietnam","value":21.5},{"name":"Pakistan","value":18.89},{"name":"Bangladesh","value":18.38},{"name":"Colombia","value":18.35},{"name":"Switzerland","value":18.11},{"name":"Nigeria","value":17.69},{"name":"Portugal","value":14.69},{"name":"Taiwan","value":13.74},{"name":"Belgium","value":12.8},{"name":"Egypt","value":11.86},{"name":"Singapore","value":11.77},{"name":"Norway","value":11.76},{"name":"Denmark","value":11.66},{"name":"Finland","value":11.16},{"name":"Austria","value":10.81},{"name":"South Africa","value":10.5},{"name":"Czechia","value":10.44},{"name":"Iran","value":10.36},{"name":"Romania","value":10.23},{"name":"Philippines","value":10.12},{"name":"Kenya","value":9.37},{"name":"New Zealand","value":9.16},{"name":"Israel","value":9.14},{"name":"Belarus","value":8.54},{"name":"Chile","value":8.34},{"name":"Sri Lanka","value":8.24},{"name":"Thailand","value":7.64},{"name":"Greece","value":7.03},{"name":"Ireland","value":7.01},{"name":"Hungary","value":6.96},{"name":"Bulgaria","value":6.82},{"name":"Peru","value":6.4},{"name":"Serbia","value":6.08},{"name":"Malaysia","value":5.97},{"name":"Hong Kong","value":5.75},{"name":"Nepal","value":5.44},{"name":"United Arab Emirates","value":5.14},{"name":"Morocco","value":4.44},{"name":"Uzbekistan","value":3.67},{"name":"Kazakhstan","value":3.57},{"name":"Croatia","value":3.5},{"name":"Lithuania","value":3.47},{"name":"Saudi Arabia","value":3.35},{"name":"Venezuela","value":3.34},{"name":"Ghana","value":3.3},{"name":"Georgia","value":3.19},{"name":"Tunisia","value":3.01},{"name":"Estonia","value":2.92},{"name":"Slovakia","value":2.91},{"name":"Ecuador","value":2.81},{"name":"Costa Rica","value":2.79},{"name":"Uruguay","value":2.73},{"name":"Ethiopia","value":2.27},{"name":"Armenia","value":2.09},{"name":"Algeria","value":2.03},{"name":"Latvia","value":2.03},{"name":"Slovenia","value":1.94},{"name":"Uganda","value":1.8},{"name":"Azerbaijan","value":1.7},{"name":"Dominican Republic","value":1.65},{"name":"Guatemala","value":1.6},{"name":"Cyprus","value":1.4},{"name":"Bosnia and Herzegovina","value":1.39},{"name":"Myanmar (Burma)","value":1.36},{"name":"El Salvador","value":1.27},{"name":"Cameroon","value":1.23},{"name":"Bolivia","value":1.21},{"name":"Kyrgyzstan","value":1.21},{"name":"Rwanda","value":1.21},{"name":"Luxembourg","value":1.16},{"name":"Jordan","value":1.12},{"name":"Iraq","value":1.06},{"name":"Moldova","value":1.05},{"name":"Cambodia","value":1.02},{"name":"Lebanon","value":1.02},{"name":"Iceland","value":0.97},{"name":"North Macedonia","value":0.96},{"name":"Tanzania","value":0.95},{"name":"Paraguay","value":0.83},{"name":"Panama","value":0.78},{"name":"Angola","value":0.71},{"name":"Puerto Rico","value":0.7},{"name":"Malta","value":0.69},{"name":"Honduras","value":0.65},{"name":"Cuba","value":0.64},{"name":"Madagascar","value":0.63},{"name":"Zimbabwe","value":0.63},{"name":"Nicaragua","value":0.6},{"name":"Senegal","value":0.58},{"name":"Montenegro","value":0.56},{"name":"Albania","value":0.53},{"name":"Afghanistan","value":0.48},{"name":"Zambia","value":0.47},{"name":"Democratic Republic of the Congo","value":0.47},{"name":"Mozambique","value":0.44},{"name":"Mongolia","value":0.44},{"name":"Syria","value":0.42},{"name":"Côte d'Ivoire","value":0.42},{"name":"Mauritius","value":0.42},{"name":"Yemen","value":0.39},{"name":"Benin","value":0.39},{"name":"Qatar","value":0.38},{"name":"Palestine","value":0.38},{"name":"Kuwait","value":0.37},{"name":"Jamaica","value":0.36},{"name":"Sudan","value":0.33},{"name":"Somalia","value":0.3},{"name":"Antarctica","value":0.28},{"name":"Oman","value":0.27},{"name":"Bahrain","value":0.26},{"name":"Malawi","value":0.26},{"name":"Tajikistan","value":0.25},{"name":"Libya","value":0.23},{"name":"Togo","value":0.22},{"name":"Macao","value":0.22},{"name":"Fiji","value":0.22},{"name":"Trinidad and Tobago","value":0.21},{"name":"Réunion","value":0.19},{"name":"Namibia","value":0.18},{"name":"Cocos (Keeling) Islands","value":0.18},{"name":"Kosovo","value":0.17},{"name":"Eswatini","value":0.16},{"name":"Maldives","value":0.16},{"name":"Botswana","value":0.15},{"name":"Haiti","value":0.14},{"name":"Laos","value":0.14},{"name":"Bhutan","value":0.14},{"name":"Turkmenistan","value":0.13},{"name":"Hong Kong SAR","value":0.13},{"name":"North Korea","value":0.11},{"name":"Burkina Faso","value":0.11},{"name":"The Bahamas","value":0.11},{"name":"Andorra","value":0.1},{"name":"Cabo Verde","value":0.1},{"name":"New Caledonia","value":0.1},{"name":"Mali","value":0.09},{"name":"Sierra Leone","value":0.09},{"name":"Liberia","value":0.08},{"name":"Jersey","value":0.07},{"name":"Burundi","value":0.07},{"name":"Isle of Man","value":0.07},{"name":"Barbados","value":0.07},{"name":"Cayman Islands","value":0.07},{"name":"Lesotho","value":0.07},{"name":"Monaco","value":0.07},{"name":"Guinea","value":0.06},{"name":"Papua New Guinea","value":0.06},{"name":"French Polynesia","value":0.06},{"name":"Liechtenstein","value":0.06},{"name":"The Gambia","value":0.06},{"name":"Belize","value":0.06},{"name":"Mauritania","value":0.06},{"name":"Gabon","value":0.05},{"name":"Saint Helena, Ascension and Tristan da Cunha","value":0.05},{"name":"Niger","value":0.05},{"name":"Gibraltar","value":0.05},{"name":"Brunei","value":0.05},{"name":"Suriname","value":0.05},{"name":"Guadeloupe","value":0.05},{"name":"Republic of the Congo","value":0.05},{"name":"Guyana","value":0.04},{"name":"Guernsey","value":0.04},{"name":"Bermuda","value":0.04},{"name":"Seychelles","value":0.04},{"name":"Martinique","value":0.04},{"name":"Greenland","value":0.04},{"name":"Curaçao","value":0.04},{"name":"Myanmar","value":0.04},{"name":"Chad","value":0.04},{"name":"Faroe Islands","value":0.04},{"name":"U.S. Virgin Islands","value":0.03},{"name":"San Marino","value":0.03},{"name":"South Sudan","value":0.03},{"name":"Åland Islands","value":0.03},{"name":"Guam","value":0.03},{"name":"Saint Lucia","value":0.03},{"name":"Timor-Leste","value":0.02},{"name":"Grenada","value":0.02},{"name":"Vatican City","value":0.02},{"name":"Aruba","value":0.02},{"name":"Gaza Strip","value":0.02},{"name":"British Virgin Islands","value":0.02},{"name":"French Guiana","value":0.02},{"name":"Svalbard and Jan Mayen","value":0.02},{"name":"Vanuatu","value":0.02},{"name":"Djibouti","value":0.01},{"name":"Republic of Korea","value":0.01},{"name":"Saint Vincent and the Grenadines","value":0.01},{"name":"Solomon Islands","value":0.01},{"name":"Antigua and Barbuda","value":0.01},{"name":"Saint Kitts and Nevis","value":0.01},{"name":"Christmas Island","value":0.01},{"name":"Macao SAR","value":0.01},{"name":"Equatorial Guinea","value":0.01},{"name":"Dominica","value":0.01},{"name":"Samoa","value":0.01},{"name":"Eritrea","value":0.01},{"name":"Tonga","value":0.01},{"name":"Mayotte","value":0.01},{"name":"Northern Mariana Islands","value":0.01},{"name":"Comoros","value":0.01},{"name":"Turks and Caicos Islands","value":0.01},{"name":"Guinea-Bissau","value":0.01},{"name":"São Tomé and Príncipe","value":0.01},{"name":"Central African Republic","value":0.01},{"name":"Marshall Islands","value":0.01},{"name":"South Georgia and the South Sandwich Islands","value":0.01}]
+    }
+  ]
+}}
+/>
+
+## 开源开发者的十年变迁
+
+上面虽然给出了过去十年全球活跃过的开源开发者总量大约在 2200 万，但事实上开发者来来往往，不同国家每年活跃的开发者数量随时都在发生变化，只有加上时间的维度，才能洞悉开源开发者的变迁趋势。
+
+首先，我们从下图看一下 2024 年全年活跃开源开发者数量最多的 10 个国家在过去十年中每年的活跃开源开发者的数量变化情况。可以看到，美国的活跃开源开发者数量依然呈现出较明显的优势，2024 有约 **111 万美国开发者**在开源生态中活跃；排在第二名的印度在 2024 年有**约 57 万活跃开源开发者**，**印度**在 2020 年后增长迅猛，并于 2023 年超越中国成为活跃开源开发者全球第二；**中国**的活跃开源开发者数量增长速度相对稳定，并以 **51 万活跃开源开发者**的数量名列第三；而**巴西**同样是在 2020 年后开始迅速增长的，在 2023 年反超德国以 **39 万活跃开源开发者**的数量稳居全球第四。总体而言，全球的活跃开源开发者数量稳步增长，而印度和巴西则在 2020 年后显现出明显的高速增长，**德英法加**等传统强国则凭借其原有的开发者人口优势稳居前十，但明显增速缓慢，总量相对平稳。
+
+<SimpleECharts divStyle={{ height: '400px' }} option={
+  {"title":{"text":"各国活跃开源开发者十年变化","left":"center","top":"bottom"},"xAxis":{"type":"category","data":["2015","2016","2017","2018","2019","2020","2021","2022","2023","2024"]},"yAxis":{"type":"value"},"legend":{},"series":[{"name":"United States","data":[458348,724324,780799,848974,898619,1042932,1008504,1023130,1058769,1110347],"type":"line","smooth":true},{"name":"India","data":[53260,113770,151636,197646,242484,374397,394074,436685,512689,566181],"type":"line","smooth":true},{"name":"China","data":[100073,209310,264095,314010,370540,395712,408326,446112,479906,506901],"type":"line","smooth":true},{"name":"Brazil","data":[40658,74904,92516,114782,145269,209865,254498,308040,354106,389097],"type":"line","smooth":true},{"name":"Germany","data":[102561,159963,179306,204746,227368,280800,297093,312607,337487,366785],"type":"line","smooth":true},{"name":"United Kingdom","data":[93212,146033,161596,180445,195417,233861,236736,244635,258367,272818],"type":"line","smooth":true},{"name":"France","data":[56459,90016,100715,116007,128374,157458,165627,180064,196902,214588],"type":"line","smooth":true},{"name":"Canada","data":[61731,101701,112419,128079,142097,175182,179492,185728,199789,213311],"type":"line","smooth":true},{"name":"Russia","data":[26746,46838,55140,66411,78906,102751,117853,134856,144519,144638],"type":"line","smooth":true},{"name":"Netherlands","data":[38480,61321,66905,75504,81936,96696,98224,101464,108241,116492],"type":"line","smooth":true}]}
+}
+/>
+
+但开发者的数量背后代表的是产业在人口的分布情况或各国的用户习惯，但这些用户的质量或许才是我们更应该关注的。从开发者的 OpenRank 影响力角度出发，下图展示了 2024 年各国开发者影响力排名前 10 的国家在过去十年的影响力变化情况。可以看到**美国**依然是以断层式领先位居**全球第一**，但在 2020 年后显现出较为明显的震荡和下滑，2024 年**下跌 2.89%**；**中国**的发展则非常的迅猛，在 2019 年超过英国成为全球第三，随后在 2023 年超过德国成为了**全球第二**，并且依然保持着强劲的增长势头，2024 年以 **4.24% 的增速引领全球**。这中间 Gitee 平台上的项目，尤其是以 OpenHarmony、OpenEuler 为代表的一批国产项目的核心贡献者起到了相当的作用，中国开发者的 OpenRank 影响力中 Gitee 平台账号的占比在 2024 年已经来到了**近 17%**；在人口数量上并不占优的**德国、英国**虽然在开源开发者数量排行中屈居印度、巴西之后，但在影响力排行中依然紧随中国之后，坚守着**全球第三、第四**的位置，并且相较后面的国家具有明显的优势。**印度**、**巴西**虽然有明显的开发者数量优势，但在影响力方面，却还有较大的成长空间，分列**全球第五与第八位**；另外，值得注意的是相较于开源开发者数量排行，在影响力榜单中**俄罗斯**跌出了前十位，**日本**则紧随**荷兰**之后排名**全球第十**。
+
+<SimpleECharts divStyle={{ height: '400px' }} option={
+  {"title":{"text":"各国开源开发者 OpenRank 影响力十年变化","left":"center","top":"bottom"},"xAxis":{"type":"category","data":["2015","2016","2017","2018","2019","2020","2021","2022","2023","2024"]},"yAxis":{"type":"value"},"legend":{},"series":[{"name":"United States","data":[805397,1327041,1537445,1612446,1752576,2020467,1871216,1821882,1899940,1845082],"type":"line","smooth":true},{"name":"China","data":[96644,198107,280184,329880,412256,454861,482829,597534,659370,687321],"type":"line","smooth":true},{"name":"Germany","data":[189619,315736,387512,427843,474479,575384,592939,602060,636762,645216],"type":"line","smooth":true},{"name":"United Kingdom","data":[167523,279714,330512,353171,386215,454185,453471,446393,469574,462122],"type":"line","smooth":true},{"name":"India","data":[38699,80470,121464,156918,193541,308679,340457,363862,422915,420857],"type":"line","smooth":true},{"name":"France","data":[102738,171701,208877,229624,253095,301991,307337,318079,349059,356018],"type":"line","smooth":true},{"name":"Canada","data":[101001,167753,200028,218395,244160,298981,303434,307260,327041,328130],"type":"line","smooth":true},{"name":"Brazil","data":[42282,74520,96767,115775,141260,197836,242965,271036,295297,289985],"type":"line","smooth":true},{"name":"Netherlands","data":[66480,110075,132760,142247,159090,189742,189228,187019,200874,203527],"type":"line","smooth":true},{"name":"Japan","data":[60484,98394,118342,131504,152591,186101,188208,192571,198917,192758],"type":"line","smooth":true}]}
+}
+/>
+
+开源开发者影响力体现了开发者在开源生态中的位置优势，但贡献度则更可以体现开发者在开源生态中真实的贡献多少。以 GitHub 平台过去十年影响力头部 40 万个仓库与 Gitee 平台 GVP 项目为准，可以看到中国开发者的贡献度在 2020 年后迅速增长，2022 年时即超过德国来到**全球第二**。与影响力相较，可以看到中国开发者更注重深度贡献，以美国约三分之一的开发者影响力，却达到了美国开源开发者贡献度总量的近 50%，并且仍在以 **7.48% 的增速**快速发展，已与其他国家拉开了距离。而且由于美国开发者的贡献度在 2020 年后出现了下滑，2024 年**中美贡献度增速差已超过 10%**，按目前的发展态势，8 年后中国开发者的贡献度将超过美国成为全球第一。与影响力相较而言，**德英法加**依然有强劲的开源贡献进入到开源生态中，而**印度**、**巴西**的贡献度相较影响力则更低一些，分列**全球第七与第九位**，而**波兰**则替代**日本**进入贡献度全球前十。
+
+<SimpleECharts divStyle={{ height: '400px' }} option={
+  {"title":{"text":"各国开源开发者 OpenRank 贡献度十年变化","left":"center","top":"bottom"},"xAxis":{"type":"category","data":["2015","2016","2017","2018","2019","2020","2021","2022","2023","2024"]},"yAxis":{"type":"value"},"legend":{},"series":[{"name":"United States","data":[343044,624574,750099,811970,856587,940605,909195,867094,904663,879660],"type":"line","smooth":true},{"name":"China","data":[35791,76328,112791,136982,171123,199981,239557,316686,362552,389688],"type":"line","smooth":true},{"name":"Germany","data":[83811,149861,190068,214447,232264,269145,282827,278391,291153,292994],"type":"line","smooth":true},{"name":"United Kingdom","data":[71477,128378,154126,169688,181034,204940,210291,202798,213065,208070],"type":"line","smooth":true},{"name":"France","data":[44079,79240,98245,111938,121998,138571,146357,147944,159788,161676],"type":"line","smooth":true},{"name":"Canada","data":[43221,75886,92054,103696,112027,132624,140573,137912,145819,146407],"type":"line","smooth":true},{"name":"India","data":[13319,29476,46948,62886,74723,107264,126015,123046,141383,136765],"type":"line","smooth":true},{"name":"Netherlands","data":[27907,49923,61026,66882,73713,85923,87765,85210,92236,92438],"type":"line","smooth":true},{"name":"Brazil","data":[13603,25408,33983,41387,44504,54279,67330,61658,70229,72520],"type":"line","smooth":true},{"name":"Poland","data":[14455,28170,35130,41879,50022,59028,60013,60053,66413,66591],"type":"line","smooth":true}]}
+}
+/>
+
+## 中美开源顶级开源项目的贡献分布
+
+我们虽然可以看到中国过去几年在开源软件领域的快速发展，但无法忽视的是开源本身就是一个科技全球化的过程，优质的开源生态不仅依赖各个国家本土开发者的深度贡献，更需要吸引全球人才参与到技术生态的共建当中。目前不可忽视的是，虽然中国开源开发者正在加速深度参与到全球开源技术发展当中，开发者影响力和贡献度都在快速提升，但中国发起的开源项目的全球影响力依然不足，对于全球开源人才的吸引力非常有限。
+
+根据 OpenDigger 的数据显示，在 2024 年，**美国**科技企业发起的开源项目中，美国本土开发者的贡献占比仅为 **38.7**%，全球有 **17 个国家和地区**的贡献占比**超过 1%**，其中**中国以 8.5%** 的贡献占比位居全球第二。回溯过去十年，美国的开源全球化进展迅速，引领了全球的开源发展，美国开源项目的本土开发者贡献占比从 **2015 年的 51.8%** 降低到了 **2024 年的 38.7%**，中国开发者的贡献占比从 **2015 年的 3%** 位居**全球第六**增长到了 **2024 年的 8.5%** 稳居**全球第二**，高于**第三名德国 2 个百分点**。
+
+<SimpleTable title={"2024 美国自主开源项目全球贡献分布 Top 10"} data={
+  [{"rank":1,"name":"美国🇺🇸","value":"200492.15","ratio":"38.69%"},{"rank":2,"name":"中国🇨🇳","value":"43542.15","ratio":"8.40%"},{"rank":3,"name":"德国🇩🇪","value":"33845.51","ratio":"6.53%"},{"rank":4,"name":"英国🇬🇧","value":"28720.74","ratio":"5.54%"},{"rank":5,"name":"加拿大🇨🇦","value":"27072.93","ratio":"5.22%"},{"rank":6,"name":"印度🇮🇳","value":"20866.43","ratio":"4.03%"},{"rank":7,"name":"法国🇫🇷","value":"17518.46","ratio":"3.38%"},{"rank":8,"name":"荷兰🇳🇱","value":"12014.88","ratio":"2.32%"},{"rank":9,"name":"波兰🇵🇱","value":"9663.52","ratio":"1.86%"},{"rank":10,"name":"瑞士🇨🇭","value":"9049.63","ratio":"1.75%"}]
+} options={
+  [{"name":"#","type":"String","fields":["rank"],"width":80},{"name":"国家","type":"String","fields":["name"],"width":400},{"name":"OpenRank 贡献度","type":"String","fields":["value"],"width":400},{"name":"贡献度占比","type":"String","fields":["ratio"],"width":400}]
+}
+/>
+
+<br />
+
+相较而言，**中国**科技企业发起的开源项目的本土贡献比例在过去十年始终维持在 **80%** 左右，2024 年该数值为 **79.4%**，全球仅有 **7 个国家和地区**的贡献占比**超过了 1%**，其中**美国以 5.7%** 位居**全球第二**，剩余 5 个国家（**加拿大、德国、新加坡、印度、捷克**）的贡献占比均**不超过 1.5%**。虽然中国的科技企业在 GitHub 上对全球开发者抱有开放的姿态，大多采用英文进行协作交流，但总体而言全球化的程度并未得到显著的提升。
+
+<SimpleTable title={"2024 中国自主开源项目全球贡献分布 Top 10"} data={
+  [{"rank":1,"name":"中国🇨🇳","value":"44698.58","ratio":"79.33%"},{"rank":2,"name":"美国🇺🇸","value":"3241.15","ratio":"5.75%"},{"rank":3,"name":"加拿大🇨🇦","value":"774.71","ratio":"1.37%"},{"rank":4,"name":"德国🇩🇪","value":"769.57","ratio":"1.37%"},{"rank":5,"name":"新加坡🇸🇬","value":"767.51","ratio":"1.36%"},{"rank":6,"name":"印度🇮🇳","value":"727.49","ratio":"1.29%"},{"rank":7,"name":"捷克🇨🇿","value":"680.86","ratio":"1.21%"},{"rank":8,"name":"保加利亚🇧🇬","value":"332.93","ratio":"0.59%"},{"rank":9,"name":"瑞典🇸🇪","value":"326.98","ratio":"0.58%"},{"rank":10,"name":"英国🇬🇧","value":"295.21","ratio":"0.52%"}]
+} options={
+  [{"name":"#","type":"String","fields":["rank"],"width":80},{"name":"国家","type":"String","fields":["name"],"width":400},{"name":"OpenRank 贡献度","type":"String","fields":["value"],"width":400},{"name":"贡献度占比","type":"String","fields":["ratio"],"width":400}]
+}
+/>
+
+<br />
+
+未来的国家间的开源技术博弈将不仅仅是本土开发者参与到全球开源生态当中，而是本土主导的开源项目可以吸引到更多的全球开源人才深度参与贡献，从而进一步打造本国开源技术的全球影响力，引领科技的持续发展。
+
+## 一句话总结
+
+**全球泛开发者总量一超 1 亿人，开源开发者数量突破 2200 万。其中中国开发者数量全球第三，影响力与贡献度全球第二，已进入高质量发展阶段。但中国自主开源项目的全球化程度依然有待提高，未来需要技术创新与制度保障吸引全球科技人才，推动开源竞争力的进一步提升。**
