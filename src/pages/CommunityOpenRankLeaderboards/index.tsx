@@ -1,4 +1,5 @@
 import Layout from '@theme/Layout';
+import BrowserOnly from '@docusaurus/BrowserOnly';
 import { useEffect, useRef } from 'react';
 
 import { COMMUNITY_OPENRANK_LEADERBOARDS_URL_PATH } from '../../../constants';
@@ -7,7 +8,7 @@ import styles from './styles.module.css';
 
 const PREFIX_PATH = '/community-openrank-leaderboard/';
 
-export default function CommunityOpenRankLeaderboards({ location }): JSX.Element {
+function CommunityOpenRankLeaderboards({ location }): JSX.Element {
   const iframeRef = useRef<HTMLIFrameElement>(null);
 
   // communicate with the iframe
@@ -38,5 +39,16 @@ export default function CommunityOpenRankLeaderboards({ location }): JSX.Element
         <iframe ref={iframeRef} className={styles.mainRankingList} src={iframeUrl}></iframe>
       </Layout>
     </div>
+  );
+}
+
+export default function BrowserOnlyComponent() {
+  // to use the window object, we need to use BrowserOnly
+  return (
+    <BrowserOnly>
+      {() => {
+        return <CommunityOpenRankLeaderboards location={window.location} />;
+      }}
+    </BrowserOnly>
   );
 }
