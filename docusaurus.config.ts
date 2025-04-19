@@ -4,6 +4,8 @@ import { themes as prismThemes } from 'prism-react-renderer';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 
+import { COMMUNITY_OPENRANK_LEADERBOARDS_URL_PATH } from './constants';
+
 const defaultLocale = 'zh';
 
 const config: Config = {
@@ -88,7 +90,7 @@ const config: Config = {
       './src/plugins/DynamicRouterPlugin.ts',
       {
         name: 'community-openrank-leaderboards-router',
-        urlPath: '/community-openrank-leaderboards',
+        urlPath: COMMUNITY_OPENRANK_LEADERBOARDS_URL_PATH,
         component: '@site/src/pages/CommunityOpenRankLeaderboards',
       }
     ]
