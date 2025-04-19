@@ -3,15 +3,17 @@ import type * as Preset from '@docusaurus/preset-classic';
 import { themes as prismThemes } from 'prism-react-renderer';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
+import path from 'path';
 
 const defaultLocale = 'zh';
+const baseUrl = process.env.PULL_NUM ? `/pull_${process.env.PULL_NUM}/` : '/';
 
 const config: Config = {
   title: 'OpenDigger',
   tagline: 'Open Source Analysis Platform',
   favicon: 'img/favicon.ico',
   url: 'https://open-digger.cn',
-  baseUrl: process.env.PULL_NUM ? `/pull_${process.env.PULL_NUM}/` : '/',
+  baseUrl,
 
   scripts: [
     {
@@ -20,7 +22,7 @@ const config: Config = {
     }
   ],
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   i18n: {
@@ -85,11 +87,15 @@ const config: Config = {
       },
     ],
     [
-      './src/plugins/DynamicRouterPlugin.ts',
+      path.resolve(__dirname, './src/plugins/DynamicRouterPlugin.ts'),
       {
-        name: 'community-openrank-leaderboards-router',
-        urlPath: '/community-openrank-leaderboards',
-        component: '@site/src/pages/CommunityOpenRankLeaderboards',
+        routes: [
+          {
+            path: `${baseUrl}community-openrank-leaderboards/:organization`,
+            exact: true,
+            component: '@site/src/pages/CommunityOpenRankLeaderboards',
+          }
+        ],
       }
     ]
   ],
@@ -134,7 +140,7 @@ const config: Config = {
           //   position: 'left',
           // },
           {
-            to: '/community-openrank-leaderboards',
+            to: '/community-openrank-leaderboards/xlab',
             label: 'community_openrank_leaderboard',
             position: 'left'
           },

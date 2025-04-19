@@ -1,30 +1,31 @@
-import path from 'path';
-import { normalizeUrl, posixPath } from '@docusaurus/utils';
-import { LoadContext, Plugin } from '@docusaurus/types';
+import { LoadContext, Plugin, RouteConfig } from '@docusaurus/types';
 
-export default function DynamicRouterPlugin(context: LoadContext, options: { name: string; urlPath: string; component: string }): Plugin {
-  const { name, urlPath, component } = options;
+type DynamicRouterPluginOptions = {
+  routes: Array<RouteConfig & {
+    params?: Array<Record<string, string>>;
+  }>;
+};
+
+export default function DynamicRouterPlugin(context: LoadContext, options: DynamicRouterPluginOptions): Plugin {
   return {
-    name,
+    name: 'dynamic-router-plugin',
     contentLoaded: async ({ actions }) => {
-      const basePath = normalizeUrl([context.baseUrl, urlPath]);
-      const paths = await actions.createData(
-        'paths.json',
-        JSON.stringify(basePath),
-      );
+      const { routes } = options;
+      const { addRoute } = actions;
 
-      const aliasedSource = (source) =>
-        `@generated/${posixPath(
-          path.relative(context.generatedFilesDir, source),
-        )}`;
+      routes.forEach(routeOption => {
+        const { params, ...route } = routeOption;
 
-      actions.addRoute({
-        path: basePath,
-        exact: false,
-        component,
-        modules: {
-          basePath: aliasedSource(paths),
-        },
+        if (params != null) {
+          params.forEach(param => {
+            let { path, ...rest } = route;
+            Object.entries(param).forEach(([k, v]) => {
+              path = (path).replace(':' + k, String(v));
+            });
+            addRoute({ path, ...rest });
+          });
+        }
+        addRoute(route);
       });
     },
   };

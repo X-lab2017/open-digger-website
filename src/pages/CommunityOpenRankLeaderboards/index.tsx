@@ -1,14 +1,14 @@
 import Layout from '@theme/Layout';
+import { useRouteMatch } from 'react-router';
 import styles from './styles.module.css';
 
+interface CommunityOpenRankLeaderboardsPageParams {
+  organization: string;
+}
+
 export default function CommunityOpenRankLeaderboards({ location }): JSX.Element {
-  const currentPath = location.pathname;
-  const pathes = currentPath.split('/');
-  const org = pathes[pathes.length - 1];
-  let url = 'https://tyn1998.github.io/community-openrank-leaderboard/';
-  if (org !== 'community-openrank-leaderboards') {
-    url += `?organization=${org}`
-  }
+  const { params: { organization } } = useRouteMatch<CommunityOpenRankLeaderboardsPageParams>();
+  let url = `https://tyn1998.github.io/community-openrank-leaderboard/?organization=${organization ?? 'xlab'}`
   return (
     <div className='no-footer'>
       <Layout>
