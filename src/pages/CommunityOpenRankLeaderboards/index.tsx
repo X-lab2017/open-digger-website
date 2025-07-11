@@ -6,8 +6,8 @@ import { COMMUNITY_OPENRANK_LEADERBOARDS_URL_PATH } from '../../../constants';
 
 import styles from './styles.module.css';
 
-const PREFIX_PATH = '/community-openrank-leaderboard/';
-const END_POINT = 'https://tyn1998.github.io';
+const PREFIX_PATH = '/community-openrank-leaderboard-iframe/';
+const END_POINT = 'https://open-digger.cn';
 
 function CommunityOpenRankLeaderboards({ location }): JSX.Element {
   const iframeRef = useRef<HTMLIFrameElement>(null);
@@ -22,7 +22,7 @@ function CommunityOpenRankLeaderboards({ location }): JSX.Element {
         window.history.replaceState(null, '', newPath);
         // tell the iframe current window's url since the iframe has no access to the main window.location
         iframeRef.current?.contentWindow?.postMessage({
-          type: 'MAIN_WINDOW_URL_CHANGE', url: window.location.href 
+          type: 'MAIN_WINDOW_URL_CHANGE', url: window.location.href
         }, '*');
       }
     };

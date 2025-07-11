@@ -135,11 +135,11 @@ const config: Config = {
           //   label: 'activityDocs',
           //   position: 'left',
           // },
-          // {
-          //   to: '/community-openrank-leaderboards',
-          //   label: 'community_openrank_leaderboard',
-          //   position: 'left'
-          // },
+          {
+            to: '/community-openrank-leaderboards',
+            label: 'community_openrank_leaderboard',
+            position: 'left'
+          },
           {
             type: 'localeDropdown',
             position: 'right',
