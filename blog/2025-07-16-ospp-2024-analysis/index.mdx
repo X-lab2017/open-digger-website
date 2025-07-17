@@ -1,0 +1,115 @@
+---
+title: OSPP 2024 深度洞察报告
+authors: [zsy, ww]
+slug: 2025-07-16-ospp-2024-analysis
+---
+
+import SimpleECharts from '@site/src/components/SimpleECharts';
+import SimpleTable from '@site/src/components/SimpleTable';
+
+## 背景介绍
+
+[开源之夏 OSPP](https://summer-ospp.ac.cn/) 是中国科学院软件研究所发起的“开源软件供应链点亮计划”系列暑期活动，旨在鼓励高校学生积极参与开源软件的开发维护，促进优秀开源软件社区的蓬勃发展，至今已成功举办六届（2020 ~ 2025），X-lab 开放实验室从第一届就开始深度参与。
+
+OpenDigger 作为一直以来深入参与 OSPP 的开源数据研究项目，也在此就 OSPP 2024 年的数据做一次深度的分析，作为 OSPP 2023 年数据报告的延续。
+
+## OSPP 2024 宏观数据
+
+根据 OSPP 社区的数据报告，2024 年度，OSPP 总共发布了项目 **562** 个，有学生中选项目共计 **519** 个，最终结项项目为 **455** 个，结项率高达 **81%**。在更严格的筛选下，发布项目总数相较 2023 年有所降低，但其他数据均有显著提高，尤其参与高校数量增长高达 **30%**，活动的影响力之大可见一斑。
+
+<SimpleTable title={'OSPP 2024 年度高校贡献度排行榜'} data={
+  [{"year":2024,"totalCount":562,"selectedCount":519,"finishedCount":455,"univCount":186,"finishedRatio":81,"totalCountDelta":-31,"selectedCountDelta":15,"finishedCountDelta":34,"univCountDelta":42,"finishedRatioDelta":10}]
+} options={
+  [
+    {name: '项目总数', type: 'NumberWithDelta', fields: ['totalCount', 'totalCountDelta'], width: 180 },
+    {name: '中选项目数', type: 'NumberWithDelta', fields: ['selectedCount', 'selectedCountDelta'], width: 180 },
+    {name: '结项项目数', type: 'NumberWithDelta', fields: ['finishedCount', 'finishedCountDelta'], width: 180 },
+    {name: '结项率(%)', type: 'NumberWithDelta', fields: ['finishedRatio', 'finishedRatioDelta'], width: 180 },
+    {name: '高校数量', type: 'NumberWithDelta', fields: ['univCount', 'univCountDelta'], width: 180 }
+  ]
+}
+/>
+
+<br />
+
+最终结项项目大部分除了个别与操作系统内核相关的社区使用了自己的 git 仓库外，大部分社区均托管于 GitHub（315 个）、Gitee（136 个）等代码托管平台上，分布比例与 2023 年持平，平台的总体分布如下：
+
+<SimpleECharts divStyle={{ height: '300px' }} option={{
+  series: [{
+    type: 'pie',
+    data: [{value:315,name:'GitHub'},{value:136,name:'Gitee'},{value:2,name:'GitLab'},{value:2,name:'Others'}]
+  }]
+}}
+/>
+
+从结项项目的学生所属高校来看，结项的 **455** 个项目由分别来自 **186** 所高校的学生最终完成，其中华中科技大学、北京邮电大学以 **20** 个以上的学生数量领跑各高校，具体的分布如下所示：
+
+<SimpleECharts divStyle={{ height: '300px' }} option={{
+  series: [{
+    type: 'treemap',
+    data: [{"name":"华中科技大学","value":"21"},{"name":"北京邮电大学","value":"20"},{"name":"中国科学院大学","value":"18"},{"name":"西安邮电大学","value":"15"},{"name":"南京大学","value":"15"},{"name":"中国科学技术大学","value":"13"},{"name":"东南大学","value":"10"},{"name":"浙江大学","value":"10"},{"name":"华东师范大学","value":"9"},{"name":"电子科技大学","value":"9"},{"name":"南京邮电大学","value":"8"},{"name":"清华大学","value":"8"},{"name":"兰州大学","value":"8"},{"name":"上海交通大学","value":"7"},{"name":"重庆邮电大学","value":"6"},{"name":"广东工业大学","value":"6"},{"name":"吉林大学","value":"6"},{"name":"福州大学","value":"5"},{"name":"复旦大学","value":"5"},{"name":"西安电子科技大学","value":"5"},{"name":"山东大学","value":"5"},{"name":"西安交通大学","value":"5"},{"name":"北京航空航天大学","value":"5"},{"name":"南京航空航天大学","value":"5"},{"name":"西北工业大学","value":"5"},{"name":"华南理工大学","value":"4"},{"name":"湖南大学","value":"4"},{"name":"四川大学","value":"4"},{"name":"南开大学","value":"4"},{"name":"广州大学","value":"4"},{"name":"武汉大学","value":"4"},{"name":"中国人民解放军国防科技大学","value":"4"},{"name":"北京大学","value":"4"},{"name":"中南大学","value":"4"},{"name":"东北大学","value":"4"},{"name":"吉首大学","value":"3"},{"name":"哈尔滨工业大学","value":"3"},{"name":"燕山大学","value":"3"},{"name":"杭州电子科技大学","value":"3"},{"name":"Duke University","value":"3"},{"name":"北京工业大学","value":"3"},{"name":"武汉理工大学","value":"3"},{"name":"华中师范大学","value":"3"},{"name":"西安财经大学","value":"3"},{"name":"曲阜师范大学","value":"2"},{"name":"中国地质大学（武汉）","value":"2"},{"name":"深圳大学","value":"2"},{"name":"哈尔滨工程大学","value":"2"},{"name":"郑州航空工业管理学院","value":"2"},{"name":"同济大学","value":"2"},{"name":"北京理工大学珠海学院","value":"2"},{"name":"北京交通大学","value":"2"},{"name":"中山大学","value":"2"},{"name":"上海工程技术大学","value":"2"},{"name":"上海科技大学","value":"2"},{"name":"西南石油大学","value":"2"},{"name":"北京理工大学","value":"2"},{"name":"西南大学","value":"2"},{"name":"重庆大学","value":"2"},{"name":"上海大学","value":"2"},{"name":"东华大学","value":"2"}]
+  }]
+}}
+/>
+
+## 年度贡献度分析
+
+除了上述一些统计数据外，我们也希望可以给出一些更加深入的洞察，例如每个高校中不同学生在社区中具体的贡献度等，这种精细化的分析也有助于我们进一步观察学生在整个过程中对于项目的协同参与程度，而不仅仅局限于学生是否仅是完成了一个特定的任务。
+
+> 注意：受限于 OpenDigger 目前的底层基础数据，下述分析将仅包含 GitHub、Gitee 平台上的数据。
+
+我们使用了 2024 全年的贡献度数据和社区 OpenRank 算法对参与到各社区学生的参与度进行了详细的分析，最终统计到各高校总体贡献度前 20 名如下表所示：
+
+<SimpleTable title={'OSPP 2024 年度高校贡献度排行榜'} data={
+  [{"__index__":1,"name":"西安邮电大学","openrank":85.13,"openrankDelta":29.46,"totalCount":15,"totalCountDelta":5,"openrankAverage":5.68,"openrankAverageDelta":0.11},{"__index__":2,"name":"陇东学院","openrank":61.37,"openrankDelta":21.89,"totalCount":1,"totalCountDelta":0,"openrankAverage":61.37,"openrankAverageDelta":21.89},{"__index__":3,"name":"上海大学","openrank":42.21,"openrankDelta":"-","totalCount":2,"totalCountDelta":"-","openrankAverage":21.11,"openrankAverageDelta":"-"},{"__index__":4,"name":"北京邮电大学","openrank":42.21,"openrankDelta":-17.98,"totalCount":17,"totalCountDelta":-10,"openrankAverage":2.48,"openrankAverageDelta":0.25},{"__index__":5,"name":"华中科技大学","openrank":32.37,"openrankDelta":-34.93,"totalCount":17,"totalCountDelta":-4,"openrankAverage":1.9,"openrankAverageDelta":-1.3},{"__index__":6,"name":"西安财经大学","openrank":27.25,"openrankDelta":"-","totalCount":3,"totalCountDelta":"-","openrankAverage":9.08,"openrankAverageDelta":"-"},{"__index__":7,"name":"清华大学","openrank":26.77,"openrankDelta":"-","totalCount":8,"totalCountDelta":"-","openrankAverage":3.35,"openrankAverageDelta":"-"},{"__index__":8,"name":"重庆邮电大学","openrank":24.54,"openrankDelta":-24.38,"totalCount":4,"totalCountDelta":-1,"openrankAverage":6.13,"openrankAverageDelta":-3.65},{"__index__":9,"name":"南京大学","openrank":20.81,"openrankDelta":-13.09,"totalCount":14,"totalCountDelta":-3,"openrankAverage":1.49,"openrankAverageDelta":-0.51},{"__index__":10,"name":"东南大学","openrank":19.44,"openrankDelta":0.88,"totalCount":8,"totalCountDelta":0,"openrankAverage":2.43,"openrankAverageDelta":0.11},{"__index__":11,"name":"浙江大学","openrank":19.24,"openrankDelta":-41.99,"totalCount":9,"totalCountDelta":-14,"openrankAverage":2.14,"openrankAverageDelta":-0.52},{"__index__":12,"name":"中国科学技术大学","openrank":19.15,"openrankDelta":"-","totalCount":11,"totalCountDelta":"-","openrankAverage":1.74,"openrankAverageDelta":"-"},{"__index__":13,"name":"山东大学","openrank":16.1,"openrankDelta":"-","totalCount":5,"totalCountDelta":"-","openrankAverage":3.22,"openrankAverageDelta":"-"},{"__index__":14,"name":"上海交通大学","openrank":16.09,"openrankDelta":-32.25,"totalCount":5,"totalCountDelta":-1,"openrankAverage":3.22,"openrankAverageDelta":-4.84},{"__index__":15,"name":"中国科学院大学","openrank":14.89,"openrankDelta":-22.47,"totalCount":14,"totalCountDelta":-4,"openrankAverage":1.06,"openrankAverageDelta":-1.01},{"__index__":16,"name":"武汉大学","openrank":14.62,"openrankDelta":-4.4,"totalCount":3,"totalCountDelta":2,"openrankAverage":4.87,"openrankAverageDelta":-14.14},{"__index__":17,"name":"华南理工大学","openrank":14.57,"openrankDelta":"-","totalCount":4,"totalCountDelta":"-","openrankAverage":3.64,"openrankAverageDelta":"-"},{"__index__":18,"name":"北京航空航天大学","openrank":14.35,"openrankDelta":"-","totalCount":5,"totalCountDelta":"-","openrankAverage":2.87,"openrankAverageDelta":"-"},{"__index__":19,"name":"华东师范大学","openrank":13.83,"openrankDelta":-40.32,"totalCount":7,"totalCountDelta":-6,"openrankAverage":1.98,"openrankAverageDelta":-2.19},{"__index__":20,"name":"广东工业大学","openrank":12.95,"openrankDelta":"-","totalCount":5,"totalCountDelta":"-","openrankAverage":2.59,"openrankAverageDelta":"-"}]
+} options={
+  [
+    {name: '高校名称', type: 'String', fields: ['name'], width: 260 },
+    {name: 'OpenRank', type: 'NumberWithDelta', fields: ['openrank', 'openrankDelta'], width: 200 },
+    {name: '参数学生数', type: 'NumberWithDelta', fields: ['totalCount', 'totalCountDelta'], width: 200 },
+    {name: '人均 OpenRank', type: 'NumberWithDelta', fields: ['openrankAverage', 'openrankAverageDelta'], width: 200 }
+  ]
+}
+/>
+
+<br />
+
+我们在给出了高校总体贡献度的同时也给出了校人均 OpenRank 贡献度，可以看到西安邮电大学凭借多名学生在 Linux 内核之旅开源社区的活跃与贡献获得本年度的高校贡献度第一名，并且在贡献度前 20 位的高校中，有 8 所都是本年度新上榜的高校。
+
+为了进一步观察学生的贡献情况，我们也对学生贡献者进行了 OpenRank 贡献度的排名，OpenRank 前 20 的学生如下：
+
+<SimpleTable title={'OSPP 2024 年度学生贡献度排行榜'} data={
+  [{"__index__":1,"name":"姬**","openrank":61.37,"univ":"陇东学院","community":"Spring Cloud Alibaba"},{"__index__":2,"name":"杨*","openrank":41.03,"univ":"上海大学","community":"昇思MindSpore"},{"__index__":3,"name":"邵**","openrank":23.18,"univ":"西安财经大学","community":"OI Wiki"},{"__index__":4,"name":"杨**","openrank":19.85,"univ":"西安邮电大学","community":"Linux内核之旅开源社区"},{"__index__":5,"name":"徐**","openrank":19.29,"univ":"西安邮电大学","community":"Linux内核之旅开源社区"},{"__index__":6,"name":"陈**","openrank":18.43,"univ":"重庆邮电大学","community":"PikiwiDB(Pika)开源社区"},{"__index__":7,"name":"张**","openrank":16.2,"univ":"西安邮电大学","community":"Linux内核之旅开源社区"},{"__index__":8,"name":"张**","openrank":13.19,"univ":"西安邮电大学","community":"Linux内核之旅开源社区"},{"__index__":9,"name":"杨**","openrank":12.83,"univ":"电子科技大学成都学院","community":"清华大学 TUNA 协会"},{"__index__":10,"name":"刘**","openrank":11.47,"univ":"天津中德应用技术大学","community":"BMF字节跳动多媒体框架"},{"__index__":11,"name":"陈**","openrank":11.46,"univ":"浙江科技大学","community":"Apache ShenYu"},{"__index__":12,"name":"宋*","openrank":10.99,"univ":"北京邮电大学","community":"KubeEdge"},{"__index__":13,"name":"林**","openrank":10.88,"univ":"上海交通大学","community":"Kmesh"},{"__index__":14,"name":"周**","openrank":9.42,"univ":"湖北文理学院","community":"Volcano社区"},{"__index__":15,"name":"甘**","openrank":9.17,"univ":"华南师范大学","community":"KubeBlocks"},{"__index__":16,"name":"曾**","openrank":8.94,"univ":"山东大学","community":"Embox"},{"__index__":17,"name":"范**","openrank":8.62,"univ":"清华大学","community":"清华大学 TUNA 协会"},{"__index__":18,"name":"陈**","openrank":8.56,"univ":"北京理工大学","community":"DragonOS开源社区"},{"__index__":19,"name":"李**","openrank":8.39,"univ":"武汉大学","community":"OceanBase"},{"__index__":20,"name":"吴**","openrank":8.13,"univ":"西安电子科技大学","community":"PikiwiDB(Pika)开源社区"}]
+} options={
+  [
+    {name: '学生姓名', type: 'String', fields: ['name'], width: 150 },
+    {name: 'OpenRank', type: 'String', fields: ['openrank'], width: 150 },
+    {name: '学校', type: 'String', fields: ['univ'], width: 280 },
+    {name: '参与社区', type: 'String', fields: ['community'], width: 280 }
+  ]
+}
+/>
+
+<br />
+
+通过对于学生个体的分析，一些贡献度极高的学生就可以清晰的看到，例如来自陇东学院的姬同学在 Spring Cloud Alibaba 社区、来自上海大学的杨同学在 MindSpore 社区、来自西安财经大学的邵同学在 IO Wiki 社区的参与，他们都仅凭一己之力将自己学校的总体贡献度拉入到高校前 10 位。
+
+## 全域贡献分析
+
+我们可以看到，OSPP 拉动了大量高校的优秀学生在校期间就深入参与到开源社区的贡献之中，那么这些学生是否还深入参与到其他开源社区中，以及他们在全域的贡献度如何呢？我们也统计了这些同学在整个开源的领域的贡献度以及主要贡献项目的情况，如下表所示：
+
+<SimpleTable title={'学生全域贡献度排行榜'} data={
+  [{"__index__":1,"name":"殷**","openrank":211.13,"univ":"西北工业大学","repos":"mdn/translated-content<br />mdn/content<br />yin1999/translated-content"},{"__index__":2,"name":"姬**","openrank":93.64,"univ":"陇东学院","repos":"alibaba/spring-cloud-alibaba<br />apache/hertzbeat<br />spring-cloud-alibaba-group/spring-cloud-alibaba-group.github.io"},{"__index__":3,"name":"李**","openrank":90.92,"univ":"中南大学","repos":"project-trans/MtF-wiki<br />project-trans/RLE-wiki<br />felixonmars/archriscv-packages"},{"__index__":4,"name":"杨*","openrank":42.89,"univ":"上海大学","repos":"mindspore/mindquantum<br />mindspore/docs<br />mindspore/mindspore"},{"__index__":5,"name":"吕*","openrank":34.53,"univ":"华中科技大学","repos":"datenlord/datenlord<br />antrea-io/antrea<br />goplus/community"},{"__index__":6,"name":"杨**","openrank":30.5,"univ":"电子科技大学成都学院","repos":"llvm/circt<br />chipsalliance/chisel<br />chipsalliance/t1"},{"__index__":7,"name":"蒋**","openrank":29.49,"univ":"Aalto University","repos":"mit-cml/workspace-multiselect<br />Igalia/wolvic<br />oceanbase/oceanbase"},{"__index__":8,"name":"蔡**","openrank":25.85,"univ":"重庆邮电大学","repos":"youngyangyang04/KVstorageBaseRaft-cpp<br />OpenAtomFoundation/pikiwidb<br />OpenAtomFoundation/pika"},{"__index__":9,"name":"邵**","openrank":24.53,"univ":"西安财经大学","repos":"OI-wiki/feedback-sys<br />OI-wiki/OI-wiki<br />satorijs/satori"},{"__index__":10,"name":"孙*","openrank":21.76,"univ":"南昌大学","repos":"openeuler/community<br />openeuler/mugen<br />openeuler/utsudo"}]
+} options={
+  [
+    {name: '学生姓名', type: 'String', fields: ['name'], width: 100 },
+    {name: 'OpenRank', type: 'String', fields: ['openrank'], width: 150 },
+    {name: '学校', type: 'String', fields: ['univ'], width: 200 },
+    {name: '参与项目', type: 'String', fields: ['repos'], width: 450 }
+  ]
+}
+/>
+
+<br />
+
+我们可以看到除了 OSPP 的开源社区外，很多同学还大量参与了其他开源社区的贡献。
