@@ -1,11 +1,11 @@
 ---
-title: OpenRank 系列开源评价算法介绍
+title: OpenRank 开源评价系列算法介绍
 authors: [zsy]
 tags: [openrank]
 slug: 2024-01-23-openrank-introduction
 ---
 
-> OpenRank 系列开源评价算法使用开发者协作网络，配合将 PageRank 算法推广至具初值的高维异质网络的 OpenRank 算法，针对不同开源评价应用场景所提出的系列算法，主要包括了 **OpenRank 影响力评价算法**与 **OpenRank 贡献度评价算法**。
+> OpenRank 开源评价系列算法使用开发者协作网络，配合将 PageRank 算法推广至具初值的高维异质网络的 OpenRank 算法，针对不同开源评价应用场景所提出的系列算法，主要包括了 **OpenRank 影响力评价算法**与 **OpenRank 贡献度评价算法**。
 
 ## OpenRank 影响力评价算法
 
@@ -21,11 +21,11 @@ slug: 2024-01-23-openrank-introduction
 
 ## OpenRank 贡献度评价算法
 
-- **简介**：OpenRank 贡献度评价算法是 OpenRank 算法在开源评价领域的又一应用，利用开源社区内部的协作网络，配合协作单元的价值量化，形成具有时序连续性的开发者贡献度评价方法。该方法可广泛应用于具有协作特性的数字制品生产过程中的贡献度度量，从而为开发者经济生态量化提供坚实的理论基础。
+- **简介**：OpenRank 贡献度评价算法是 OpenRank 算法在开源评价领域的又一重要应用，利用开源社区内部的协作网络，配合协作单元的价值量化，形成具有时序连续性的开发者贡献度评价方法。该方法可广泛应用于具有协作特性的数字制品生产过程中的贡献度度量，从而为开发者经济生态量化提供坚实的理论基础。
 
-- **学术**：OpenRank 贡献度算法对应的学术论文[《OpenRank Leaderboard: Motivating Open Source Collaborations Through Social Network Evaluation in Alibaba》](https://dl.acm.org/doi/10.1145/3639477.3639734)发表在软件工程国际顶会 [ICSE 2024](https://conf.researchr.org/track/icse-2024/icse-2024-software-engineering-in-practice?#event-overview)，[赵生宇博士在葡萄牙里斯本针对该论文进行了学术汇报](https://mp.weixin.qq.com/s/gVPmo0lxSxm6TMxRxkFzJw)，得到广泛关注与认可。该论文利用 OpenRank 算法构建社区贡献度度量算法，并在阿里巴巴集团进行落地与持续一年的追踪研究，证明了该算法在开源贡献度量中的有效性，同时证明该算法在公开算法机制的前提下依然可以促进社区的有效协作与健康发展。值得一提的是，该论文作者中包含[爱尔兰软件研究中心（Lero）](https://lero.ie/)创始人兼首席科学家 [Brian Fitzgerald](https://lero.ie/people/brian-fitzgerald)、Oulu 大学教授 [Davide Taibi](http://www.taibi.it/) 团队、蚂蚁开源办公室开源数据科学家夏小雅以及阿里巴巴开源办公室高级社区经理王蓉。另外，利用开源社区群体博弈仿真实验对 OpenRank 贡献度评价算法的模拟与有效性验证文章也已发布至[微信公众号](https://mp.weixin.qq.com/s/7kNzypdEpW9tAuWJg4byHg)。
+- **学术**：OpenRank 贡献度算法对应的学术论文[《OpenRank Leaderboard: Motivating Open Source Collaborations Through Social Network Evaluation in Alibaba》](https://dl.acm.org/doi/10.1145/3639477.3639734)发表在软件工程国际学术顶级会议 [ICSE 2024](https://conf.researchr.org/track/icse-2024/icse-2024-software-engineering-in-practice?#event-overview)，[赵生宇博士在葡萄牙里斯本针对该论文进行了学术汇报](https://mp.weixin.qq.com/s/gVPmo0lxSxm6TMxRxkFzJw)，得到广泛关注与认可。该论文利用 OpenRank 算法构建社区贡献度度量算法，并在阿里巴巴集团进行落地与持续一年的追踪研究，证明了该算法在开源贡献度量中的有效性，同时证明该算法在公开算法机制的前提下依然可以促进社区的有效协作与健康发展。值得一提的是，该论文作者中包含[爱尔兰软件研究中心（Lero）](https://lero.ie/)创始人兼首席科学家 [Brian Fitzgerald](https://lero.ie/people/brian-fitzgerald)、Oulu 大学教授 [Davide Taibi](http://www.taibi.it/) 团队、蚂蚁开源办公室开源数据科学家夏小雅以及阿里巴巴开源办公室高级社区经理王蓉。另外，利用开源社区群体博弈仿真实验对 OpenRank 贡献度评价算法下的社区演化模拟与有效性验证文章也已发布至[微信公众号](https://mp.weixin.qq.com/s/7kNzypdEpW9tAuWJg4byHg)。
 
-- **标准**：OpenRank 贡献度算法作为一种开源开发者贡献度量评价算法已进入[《信息技术 开源治理 第5部分：开源贡献者评价模型》](https://www.ttbz.org.cn/StandardManage/Detail/101699/)标准之中，该系列标准同时入选 2024 年团体标准应用推广典型案例（工信部科函〔2025〕19号），作为一种开源开发者贡献度量评价方法**被数十家企业所采纳与使用**。
+- **标准**：OpenRank 贡献度评价算法作为一种开源开发者贡献度量评价算法已进入[《信息技术 开源治理 第5部分：开源贡献者评价模型》](https://www.ttbz.org.cn/StandardManage/Detail/101699/)标准之中，该系列标准同时入选 2024 年团体标准应用推广典型案例（工信部科函〔2025〕19号），作为一种开源开发者贡献度量评价方法**被数十家企业所采纳与使用**。
 
 - **应用**：OpenRank 贡献度度量算法形成了丰富的下游生态，如 [OpenTalent](https://open-talent.x-lab.info/)、[开放原子基金会开源人才评价平台](https://talent.openatom.cn/)、[阿里巴巴开源开发者贡献榜](https://opensource.alibaba.com/contribution_leaderboard/details?projectValue=kubevela)、[蚂蚁集团开源开发者贡献榜](https://open-digger.cn/community-openrank-leaderboards/?locale=zh&organization=antgroup&timeUnit=month&timeValue=1751556025429&project=antd)等。OpenRank 同时已于 2025 年 8 月[与天工开物开源基金会达成战略合作](https://mp.weixin.qq.com/s/RBeAtsSaQCk353c-p4Qg9g)，将构建服务于开源基金会的开源开发者激励平台，助力共建开源开发者经济生态。目前部分社区已尝试基于 OpenRank 贡献度度量算法的社区激励机制，总体分配金额规模已超过百万元人民币。
 
@@ -35,6 +35,6 @@ OpenDigger 项目作为上述 OpenRank 系列指标生产的基础设施平台�
 
 OpenDigger 项目包含百亿级开源仓库托管平台开发者行为数据（GitHub、Gitee、GitCode、GitLink 等），千万级软件供应链数据（Maven、PyPI、npm 等）、4000+ 开源项目标签数据等开源生态核心数据，生产数据指标文件超 2000 万个，指标接口月度消费超百万次。
 
-OpenDigger 项目荣获 [2023 上海开源创新卓越成果特等奖](https://mp.weixin.qq.com/s/LlzOFzcPPtb2zE5WKEtfUw)、2024 国际测试委员会 BenchCouncil 全球开源 Top 100 成果奖、[2025 上海开源创新菁英优秀开源项目奖](https://mp.weixin.qq.com/s/hmg_08mqyM5TcPIUehGj1g)等，上海市经信委代表在 2024 开放原子生态大会的《上海市开源生态体系建设思考》发言中指出 **OpenDigger 为上海市优秀开源项目与重点支持开源项目**。
+OpenDigger 项目荣获 [2023 上海开源创新卓越成果特等奖](https://mp.weixin.qq.com/s/LlzOFzcPPtb2zE5WKEtfUw)、[2024 国际测试委员会 BenchCouncil 全球开源 Top 100 成果奖](https://www.benchcouncil.org/)、[2025 上海开源创新菁英优秀开源项目奖](https://mp.weixin.qq.com/s/hmg_08mqyM5TcPIUehGj1g)等，上海市经信委代表在 2024 开放原子生态大会的《上海市开源生态体系建设思考》发言中指出 **OpenDigger 为上海市优秀开源项目与重点支持开源项目**。
 
 另外，OpenDigger 孵化的下游浏览器插件项目 HyperCRX 荣获 [2024 上海开源创新卓越成果奖特等奖](https://mp.weixin.qq.com/s/EVH5KHq-yT5Ix5cLefxBiw)，学术论文发表于软件工程国际顶会 [ICSE 2025](https://conf.researchr.org/track/icse-2025/icse-2025-demonstrations?#Accepted-Papers)。
