@@ -398,7 +398,7 @@
     "message": "当月数据未找到"
   },
   "leaderboards.projects.title": {
-    "message": "2024 全球项目 OpenRank 排行榜 Top 100"
+    "message": "全球项目 OpenRank 排行榜 Top 100"
   },
   "leaderboards.projects.name": {
     "message": "项目名"
@@ -413,7 +413,7 @@
     "message": "发起组织所在国家"
   },
   "leaderboards.companies.title": {
-    "message": "2024 全球企业 OpenRank 排行榜 Top 100"
+    "message": "全球企业 OpenRank 排行榜 Top 100"
   },
   "leaderboards.companies.name": {
     "message": "企业"
@@ -428,7 +428,7 @@
     "message": "所在国家"
   },
   "leaderboards.provinces.title": {
-    "message": "2024 全球各国行政区划开发者 OpenRank 排行榜 Top 100"
+    "message": "全球各国行政区划开发者 OpenRank 排行榜 Top 100"
   },
   "leaderboards.provinces.name": {
     "message": "行政区划"

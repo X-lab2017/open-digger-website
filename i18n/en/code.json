@@ -398,7 +398,7 @@
     "message": "No data found for this month"
   },
   "leaderboards.projects.title": {
-    "message": "2024 Global Project OpenRank Leaderboard Top 100"
+    "message": "Global Project OpenRank Leaderboard Top 100"
   },
   "leaderboards.projects.name": {
     "message": "Project Name"
@@ -413,7 +413,7 @@
     "message": "Initiator Country"
   },
   "leaderboards.companies.title": {
-    "message": "2024 Global Company OpenRank Leaderboard Top 100"
+    "message": "Global Company OpenRank Leaderboard Top 100"
   },
   "leaderboards.companies.name": {
     "message": "Company Name"
@@ -428,7 +428,7 @@
     "message": "Country"
   },
   "leaderboards.provinces.title": {
-    "message": "2024 Global Administrative Divisions Developer OpenRank Top 100"
+    "message": "Global Administrative Divisions Developer OpenRank Top 100"
   },
   "leaderboards.provinces.name": {
     "message": "Administrative Division"
