@@ -4,7 +4,7 @@
 
 ## Definition
 
-Project OpenRank is an open-source metric proposed by Dr. Shengyu Zhao from the X-lab Open Laboratory. For detailed algorithm specifications, please refer to[this blog post](https://blog.frankzhao.cn/openrank_in_project/)。
+Community OpenRank is an open-source metric proposed by Dr. Shengyu Zhao from the X-lab Open Laboratory. For detailed algorithm specifications, please refer to[this blog post](https://blog.frankzhao.cn/openrank_in_project/)。
 
 Similar to the global OpenRank metric, this algorithm constructs a network using project collaboration data such as Issues and PRs. The network model is:
 
@@ -30,11 +30,11 @@ erDiagram
 
 ## Code
 
-The Project OpenRank algorithm implementation has not yet been open-sourced in OpenDigger. However, the underlying Neo4j [plugin project](https://github.com/X-lab2017/openrank-neo4j-gds)used for calculating general OpenRank is already open-source and ready for use.
+The Community OpenRank algorithm implementation has not yet been open-sourced in OpenDigger. However, the underlying Neo4j [plugin project](https://github.com/X-lab2017/openrank-neo4j-gds) used for calculating general OpenRank is already open-source and ready for use.
 
 ## Parameters
 
-Project OpenRank is more complex than global OpenRank and includes several parameters:
+Community OpenRank is more complex than global OpenRank and includes several parameters:
 
 | Parameter Name | Value | Description | Notes |
 | :------------- | :---- | :---------- | :--- |
