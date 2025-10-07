@@ -1,12 +1,12 @@
 # Community OpenRank
 
-![From](https://img.shields.io/badge/来自-X--lab-blue) ![For](https://img.shields.io/badge/用于-开发者-blue)
+![From](https://img.shields.io/badge/From-X--lab-blue) ![For](https://img.shields.io/badge/For-Developers-blue)
 
-## 定义
+## Definition
 
-项目 OpenRank 是一个由 X-lab 开放实验室提出的开源指标，该指标由赵生宇博士提出，关于项目 OpenRank 的算法细节可以参考[这篇博客](https://blog.frankzhao.cn/openrank_in_project/)。
+Community OpenRank is an open-source metric proposed by Dr. Shengyu Zhao from the X-lab Open Laboratory. For detailed algorithm specifications, please refer to[this blog post](https://blog.frankzhao.cn/openrank_in_project/)。
 
-与全域 OpenRank 指标的计算方法类似，该算法使用项目内的 Issue、PR 等协作数据来构建网络，其网络模型为：
+Similar to the global OpenRank metric, this algorithm constructs a network using project collaboration data such as Issues and PRs. The network model is:
 
 ```mermaid
 erDiagram
@@ -28,28 +28,28 @@ erDiagram
   }
 ```
 
-## 代码
+## Code
 
-项目 OpenRank 算法实现尚未开源到 OpenDigger 中，但其底层使用的用于计算通用 OpenRank 的 Neo4j [插件项目](https://github.com/X-lab2017/openrank-neo4j-gds)已经开源，欢迎大家使用。
+The Community OpenRank algorithm implementation has not yet been open-sourced in OpenDigger. However, the underlying Neo4j [plugin project](https://github.com/X-lab2017/openrank-neo4j-gds) used for calculating general OpenRank is already open-source and ready for use.
 
-## 参数
+## Parameters
 
-项目 OpenRank 相较于全域 OpenRank 更加复杂，包含较多参数：
+Community OpenRank is more complex than global OpenRank and includes several parameters:
 
-| 参数名 | 值 | 描述 | 注 |
+| Parameter Name | Value | Description | Notes |
 | :------------- | :---- | :---------- | :--- |
-| 开发者/仓库 OpenRank 默认值 | 1.0 | 网络中开发者与仓库的 OpenRank 默认值，例如新加入社区的开发者或新仓库 | |
-| Issue OpenRank 默认值 | 2.0 | 网络中 Issue 节点的 OpenRank 默认值 | |
-| 未合入 PR OpenRank 默认值 | 3.0 | 网络中未合入的 PR 节点的 OpenRank 默认值 | |
-| 已合入 PR OpenRank 默认值 | 5.0 | 网络中已合入的 PR 节点的 OpenRank 默认值 | |
-| 开发者/仓库继承比例 | 0.15 | 网络中开发者/仓库节点对上月历史 OpenRank 或初始 OpenRank 的继承比例 | 项目内 OpenRank 中，开发者的价值更应依赖于当月的活跃情况 |
-| Issue/PR 继承比例 | 0.8 | 网络中 Issue/PR 节点对上个月历史 OpenRank 或初始 OpenRank 的继承比例 | Issue/PR 的价值应当相对稳定且更依赖于自身的价值 |
-| OpenRank 衰减系数 | 0.8 | 对于当月不活跃开发者/Issue/PR 的 OpenRank 衰减比例 | 网络中各节点的 OpenRank 不应在当月不活跃后立即清零 |
-| OpenRank 最小值 | 0.1 | 当网络中节点 OpenRank 值衰减至该值以下时将清零 | |
-| Issue/PR 节点延属于边流向仓库节点的 OpenRank 比例 | 0.1 | Issue/PR 节点的 OpenRank 有多少比例转移到仓库节点 | |
-| 仓库节点延属于边流向 Issue/PR 节点的 OpenRank 比例 | 平均 | 仓库节点的 OpenRank 将平均分配到所有 Issue/PR 节点 | |
-| Issue/PR 节点延活跃边流向开发者节点的 OpenRank 比例 | 0.9 | Issue/PR 节点的 OpenRank 有多少比例转移到开发者节点 | |
-| 开发者节点延活跃边流向 Issue/PR 节点的 OpenRank 比例 | 1.0 | 开发者节点的 OpenRank 有多少比例转移到 Issue/PR 节点 | |
-| `发起`动作活跃比例 | 0.5 | Issue/PR 的价值有多少将转移到其作者 | Issue/PR 作者将优先获取其 50% 的价值，剩余 50% 由其他参与者获得 |
-| `发起`/`评论`/`Review`/`关闭` 动作权重 | 2/1/1/2 | 用于计算活跃边权重时各类事件的权重 | |
-| 👍/❤️/🚀 表情权重 | 2/3/4 | 用于计算 Issue/PR 初始 OpenRank 的表情的权重 | Issue/PR 的初始 OpenRank 将由其社区中开发者对其添加的表情所决定 |
+| Default OpenRank for Developer/Repo | 1.0 | The default OpenRank value for developers and repositories in the network, such as new community members or new repositories | |
+| Default OpenRank for Issue | 2.0 | The default OpenRank value for Issue nodes in the network | |
+| Default OpenRank for Unmerged PR | 3.0 | The default OpenRank value for unmerged PR nodes in the network | |
+| Default OpenRank for Merged PR | 5.0 | The default OpenRank value for merged PR nodes in the network | |
+| Developer/Repo Inheritance Ratio | 0.15 | The proportion of a developer's/repository's OpenRank inherited from last month's historical OpenRank or initial OpenRank | In project OpenRank, a developer's value should depend more on their current month's activity |
+| Issue/PR Inheritance Ratio | 0.8 | The proportion of an Issue's/PR's OpenRank inherited from last month's historical OpenRank or initial OpenRank | The value of Issues/PRs should remain relatively stable and depend more on their own value |
+| OpenRank Decay Coefficient | 0.8 | The decay ratio for inactive developers/Issues/PRs in the current month | Nodes' OpenRank should not be immediately reset to zero after a month of inactivity |
+| Minimum OpenRank Value | 0.1 | The threshold below which a node's OpenRank will be reset to zero | |
+| Proportion of Issue/PR OpenRank flowing to Repo along "belong" edge | 0.1 | How much of an Issue's/PR's OpenRank is transferred to its repository | |
+| Proportion of Repo OpenRank flowing to Issue/PR along "belong" edge | Average | The repository's OpenRank is evenly distributed among all its Issues/PRs | |
+| Proportion of Issue/PR OpenRank flowing to Developer along "activity" edge | 0.9 | How much of an Issue's/PR's OpenRank is transferred to its contributing developers | |
+| Proportion of Developer OpenRank flowing to Issue/PR along "activity" edge | 1.0 | How much of a developer's OpenRank is transferred to the Issues/PRs they contribute to | |
+| "Initiate" action activity proportion | 0.5 | How much of an Issue's/PR's value is transferred to its author | The author receives 50% of the value, with the remaining 50% distributed among other participants |
+| Weights for "Initiate"/"Comment"/"Review"/"Close" actions | 2/1/1/2 | The weights assigned to different event types when calculating activity edge weights | |
+| Weights for 👍/❤️/🚀 reactions | 2/3/4 | The weights of reactions used to calculate the initial OpenRank of Issues/PRs | The initial OpenRank is determined by the community's reactions to the Issue/PR |
