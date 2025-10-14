@@ -397,46 +397,7 @@
   "communityLeaderboard.noDataForMonth": {
     "message": "当月数据未找到"
   },
-  "leaderboards.projects.title": {
-    "message": "全球项目 OpenRank 排行榜 Top 100"
-  },
-  "leaderboards.projects.name": {
-    "message": "项目名"
-  },
-  "leaderboards.projects.developers": {
-    "message": "开发者规模"
-  },
-  "leaderboards.projects.initiator": {
-    "message": "发起组织"
-  },
-  "leaderboards.projects.country": {
-    "message": "发起组织所在国家"
-  },
-  "leaderboards.companies.title": {
-    "message": "全球企业 OpenRank 排行榜 Top 100"
-  },
-  "leaderboards.companies.name": {
-    "message": "企业"
-  },
-  "leaderboards.companies.repos": {
-    "message": "仓库规模"
-  },
-  "leaderboards.companies.developers": {
-    "message": "开发者规模"
-  },
-  "leaderboards.companies.country": {
-    "message": "所在国家"
-  },
-  "leaderboards.provinces.title": {
-    "message": "全球各国行政区划开发者 OpenRank 排行榜 Top 100"
-  },
-  "leaderboards.provinces.name": {
-    "message": "行政区划"
-  },
-  "leaderboards.provinces.developers": {
-    "message": "开发者规模(万)"
-  },
-  "leaderboards.provinces.country": {
-    "message": "所属国家"
+  "leaderboards.data_not_found": {
+    "message": "排行榜（{type}）数据未找到，请检查排行榜类型是否正确"
   }
 }
