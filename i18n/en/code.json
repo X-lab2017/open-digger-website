@@ -397,46 +397,7 @@
   "communityLeaderboard.noDataForMonth": {
     "message": "No data found for this month"
   },
-  "leaderboards.projects.title": {
-    "message": "Global Project OpenRank Leaderboard Top 100"
-  },
-  "leaderboards.projects.name": {
-    "message": "Project Name"
-  },
-  "leaderboards.projects.developers": {
-    "message": "Developer Count"
-  },
-  "leaderboards.projects.initiator": {
-    "message": "Initiator"
-  },
-  "leaderboards.projects.country": {
-    "message": "Initiator Country"
-  },
-  "leaderboards.companies.title": {
-    "message": "Global Company OpenRank Leaderboard Top 100"
-  },
-  "leaderboards.companies.name": {
-    "message": "Company Name"
-  },
-  "leaderboards.companies.repos": {
-    "message": "Repo Count"
-  },
-  "leaderboards.companies.developers": {
-    "message": "Developer Count"
-  },
-  "leaderboards.companies.country": {
-    "message": "Country"
-  },
-  "leaderboards.provinces.title": {
-    "message": "Global Administrative Divisions Developer OpenRank Top 100"
-  },
-  "leaderboards.provinces.name": {
-    "message": "Administrative Division"
-  },
-  "leaderboards.provinces.developers": {
-    "message": "Developer Count (10k)"
-  },
-  "leaderboards.provinces.country": {
-    "message": "Country"
+  "leaderboards.data_not_found": {
+    "message": "Leaderboard ({type}) data not found, please check the leaderboard type"
   }
 }
