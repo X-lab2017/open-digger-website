@@ -2,7 +2,8 @@ name: publish
 
 on:
   push:
-    branches: [ master ]
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
@@ -13,11 +14,11 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Setup node 18 env
+      - name: Setup node 20 env
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
-          cache: "npm"
+          node-version: '20'
+          cache: 'npm'
 
       - name: build
         run: |
@@ -25,12 +26,19 @@ jobs:
           npm install
           npm run build
 
+      - name: Install ossutil
+        run: |
+          curl -L https://gosspublic.alicdn.com/ossutil/1.7.14/ossutil64 -o /usr/local/bin/ossutil
+          chmod +x /usr/local/bin/ossutil
+
+      - name: Configure ossutil
+        run: |
+          ossutil config -e oss-${{ secrets.OSS_REGION }}.aliyuncs.com -i ${{ secrets.OSS_ACCESS_KEY_ID }} -k ${{ secrets.OSS_ACCESS_KEY_SECRET }} -L CH
+
       - name: Publish to OSS
-        uses: tvrcgo/oss-action@master
-        with:
-          key-id: ${{ secrets.OSS_ACCESS_KEY_ID }}
-          key-secret: ${{ secrets.OSS_ACCESS_KEY_SECRET }}
-          region: ${{ secrets.OSS_REGION }}
-          bucket: ${{ secrets.OSS_BUCKET }}
-          assets: |
-            ./build/**:${{ secrets.OSS_TARGET_PATH }}
+        run: |
+          if [ "${{ secrets.OSS_TARGET_PATH }}" = "." ]; then
+            ossutil sync ./dist oss://${{ secrets.OSS_BUCKET }}/ --update
+          else
+            ossutil sync ./dist oss://${{ secrets.OSS_BUCKET }}/${{ secrets.OSS_TARGET_PATH }}/ --update
+          fi
