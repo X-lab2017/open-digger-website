@@ -38,7 +38,7 @@ jobs:
       - name: Publish to OSS
         run: |
           if [ "${{ secrets.OSS_TARGET_PATH }}" = "." ]; then
-            ossutil sync ./dist oss://${{ secrets.OSS_BUCKET }}/ --update
+            ossutil sync ./build oss://${{ secrets.OSS_BUCKET }}/ --update
           else
-            ossutil sync ./dist oss://${{ secrets.OSS_BUCKET }}/${{ secrets.OSS_TARGET_PATH }}/ --update
+            ossutil sync ./build oss://${{ secrets.OSS_BUCKET }}/${{ secrets.OSS_TARGET_PATH }}/ --update
           fi
